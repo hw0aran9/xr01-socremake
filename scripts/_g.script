@@ -12,7 +12,7 @@ if (jit == nil) then
 	profiler.setup_hook	()
 end
 
-GAME_VERSION = "0.01 work in progress"
+GAME_VERSION = "0.01 dev"
 
 if string.find(command_line(), "-dbg") then
 	DEV_DEBUG = true
