@@ -53,7 +53,7 @@ function main_menu:InitControls()
 
 	local _ver = xml:InitStatic		("static_version",self)
 	local mm						= _G.main_menu.get_main_menu()
-	_ver:TextControl():SetText		("Тень Чернобыля - remake ver.  " .. (_G.GAME_VERSION))
+	_ver:TextControl():SetText		("Shadow of Chernobyl remake ver.  " .. (_G.GAME_VERSION))
 	
 	-- Message Window 
 	self.msg_wnd = xml:InitFrame("msg_wnd:background",self)
