@@ -12,7 +12,7 @@ if (jit == nil) then
 	profiler.setup_hook	()
 end
 
-GAME_VERSION = "Зов Чернобыля 1.4.22 / Сборка от Stone (Антон Паскевич)"
+GAME_VERSION = "Shadow of Chernobyl Remake ver 0.03 DEV (based on Stone)"
 
 if string.find(command_line(), "-dbg") then
 	DEV_DEBUG = true
