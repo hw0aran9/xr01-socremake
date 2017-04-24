@@ -12,7 +12,7 @@ if (jit == nil) then
 	profiler.setup_hook	()
 end
 
-GAME_VERSION = "0.02 DEV"
+GAME_VERSION = "Зов Чернобыля 1.4.22 / Сборка от Stone (Антон Паскевич)"
 
 if string.find(command_line(), "-dbg") then
 	DEV_DEBUG = true
@@ -25,7 +25,7 @@ USE_INI_MEMOIZE = true
 
 -- Improves performance if true, by disabling update methods for squads and smart terrains on levels not linked in configs\ai_tweaks\simulation_objects.ltx
 -- But this means simulation will only be active on actor level and linked levels everything else will remain in an idle state
-DEACTIVATE_SIM_ON_NON_LINKED_LEVELS = true
+DEACTIVATE_SIM_ON_NON_LINKED_LEVELS = false
 
 -------------------------------------------------------------------------------------------------
 -- Use marshal library for saving persistent data (like xr_logic pstor)
@@ -44,7 +44,7 @@ b_discard_settings_shown = false
 
 function start_game_callback()
 	math.randomseed(os.time())
-	printf("Shadow of Chernobyl Remake %s",GAME_VERSION)
+	printf("Call of Chernobyl version %s",GAME_VERSION)
 	if (USE_MARSHAL) then
 		printf("using marshal library")
 	end

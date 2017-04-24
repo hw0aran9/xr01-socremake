@@ -12,7 +12,7 @@ description                              = st_bread_descr
 
 inv_name                                 = st_bread
 inv_name_short                           = st_bread
-inv_weight                               = 0.3 ;0.2               
+inv_weight                               = 0.2              
 
 inv_grid_width                           = 1
 inv_grid_height                          = 1
@@ -44,7 +44,7 @@ description                              = st_kolbasa_descr
 
 inv_name                                 = st_kolbasa
 inv_name_short                           = st_kolbasa
-inv_weight                               = 0.4
+inv_weight                               = 0.3
 
 inv_grid_width                           = 1
 inv_grid_height                          = 1
@@ -76,7 +76,7 @@ description                              = st_conserva_descr
 
 inv_name                                 = st_conserva
 inv_name_short                           = st_conserva
-inv_weight                               = 0.5
+inv_weight                               = 0.3
 
 inv_grid_width                           = 1
 inv_grid_height                          = 1
@@ -109,7 +109,7 @@ description                              = st_vodka_descr
 
 inv_name                                 = st_vodka
 inv_name_short                           = st_vodka
-inv_weight                               = 0.9
+inv_weight                               = 0.5
 
 inv_grid_width                           = 1
 inv_grid_height                          = 1
@@ -136,8 +136,8 @@ eat_satiety                              = -0.2
 
 use_sound                                = interface\inv_vodka
 
-use_condition                            = true
-max_uses                                 = 3
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.4
 allow_repair                             = false
@@ -246,7 +246,7 @@ eat_satiety                              = 0.0
 
 use_sound                                = interface\inv_softdrink
 empty_weight                             = 0.01
-max_uses                                 = 2
+max_uses                                 = 1
 
 [bandage]:booster
 $spawn                                   = "food and drugs\bandage"
@@ -255,7 +255,7 @@ description                              = st_bandage_descr
 
 inv_name                                 = st_bandage
 inv_name_short                           = st_bandage
-inv_weight                               = 0.05 ;0.2               
+inv_weight                               = 0.03              
 cost                                     = 80
 
 inv_grid_width                           = 1
@@ -342,8 +342,8 @@ boost_bleeding_restore                   = 0.005
 
 use_sound                                = interface\inv_medkit
 
-use_condition                            = true
-max_uses                                 = 2
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.02
 
@@ -368,8 +368,8 @@ boost_bleeding_restore                   = 0.02
 
 use_sound                                = interface\inv_medkit
 
-use_condition                            = true
-max_uses                                 = 2
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.02
 
@@ -394,8 +394,8 @@ boost_bleeding_restore                   = 0.005
 
 use_sound                                = interface\inv_medkit
 
-use_condition                            = true
-max_uses                                 = 2
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.02
 
@@ -438,8 +438,8 @@ boost_bleeding_restore                   = 0.0015
 
 use_sound                                = interface\inv_pills
 
-use_condition                            = true
-max_uses                                 = 5
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.01
 
@@ -462,8 +462,8 @@ boost_telepat_protection                 = 0.05
 
 use_sound                                = interface\inv_pills
 
-use_condition                            = true
-max_uses                                 = 5
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.01
 
@@ -486,8 +486,8 @@ boost_chemburn_protection                = 0.1
 
 use_sound                                = interface\inv_pills
 
-use_condition                            = true
-max_uses                                 = 3
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.01
 
@@ -510,8 +510,8 @@ boost_radiation_protection               = 0.015
 
 use_sound                                = interface\inv_pills
 
-use_condition                            = true
-max_uses                                 = 2
+use_condition                            = false
+max_uses                                 = 1
 remove_after_use                         = true
 empty_weight                             = 0.01
 
@@ -617,7 +617,7 @@ script_binding                           = bind_physic_object.init
 
 inv_name                                 = st_pda_name
 inv_name_short                           = st_pda_name
-inv_weight                               = 0.1 ;0.2               
+inv_weight                               = 0.1               
 
 inv_grid_width                           = 1
 inv_grid_height                          = 1
@@ -1459,7 +1459,7 @@ inv_name_short                           = st_itm_gunsmith_toolkit
 can_trade                                = true
 quest_item                               = false
 cost                                     = 2400
-inv_weight                               = 3.65
+inv_weight                               = 1.5
 visual                                   = dynamics\devices\dev_instrument_1\dev_instrument_1.ogf
 inv_grid_width                           = 2
 inv_grid_height                          = 2
@@ -1486,7 +1486,7 @@ empty_weight                             = 1.65
 description                              = st_itm_outfit_toolkit_descr
 inv_name                                 = st_itm_outfit_toolkit
 inv_name_short                           = st_itm_outfit_toolkit
-inv_weight                               = 1.65
+inv_weight                               = 1.5
 visual                                   = dynamics\equipments\item_sewingkit.ogf
 
 inv_grid_height                          = 1
@@ -1503,7 +1503,7 @@ inv_grid_x                               = 6
 inv_grid_y                               = 7
 inv_grid_width                           = 2
 inv_grid_height                          = 1
-inv_weight                               = 3.5
+inv_weight                               = 1.5
 
 cost                                     = 2000
 visual                                   = dynamics\equipments\quest\box_toolkit_1.ogf
@@ -1519,7 +1519,7 @@ inv_grid_x                               = 8
 inv_grid_y                               = 7
 inv_grid_width                           = 2
 inv_grid_height                          = 1
-inv_weight                               = 3
+inv_weight                               = 1.5
 
 cost                                     = 2500
 visual                                   = dynamics\equipments\quest\box_toolkit_2.ogf
@@ -1533,7 +1533,7 @@ inv_grid_x                               = 10
 inv_grid_y                               = 7
 inv_grid_width                           = 2
 inv_grid_height                          = 1
-inv_weight                               = 2.5
+inv_weight                               = 1.5
 
 cost                                     = 3500
 visual                                   = dynamics\equipments\quest\box_toolkit_3.ogf
@@ -1612,7 +1612,7 @@ dont_stack                               = true
 [artefact_container]:test_container
 visual                                   = dynamics\box\konteyner_03b.ogf
 empty_weight                             = 5.0
-inv_weight                               = 5.0
+inv_weight								 = 2.0
 inv_name                                 = st_itm_artefact_container_name
 inv_name_short                           = st_itm_artefact_container_name
 inv_grid_width                           = 2

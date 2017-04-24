@@ -5,153 +5,96 @@
 -------------------------
 ----- Miscellaneous -----
 -------------------------
-
+local sys_ini = system_ini()
 -- Table of all items to consider as addons.
-local addons_table = alun_utils.collect_sections(system_ini(), {"addons_table"})
+local addons_table = alun_utils.collect_sections(sys_ini, {"addons_table"})
 
--- Determines whether an addon is valid.
-local function check_addon(addon_sect, weapon_sect)
-	local valid_addons = alun_utils.parse_list(system_ini(), weapon_sect, "scopes")
-	for k, v in pairs(valid_addons) do
-		if (v == addon_sect) then
-			return true
-		end
-	end
-	return false
+-- Creates an item on the ground next to the actor.
+local function create_item(section)
+	return alife():create(section, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id())
 end
 
 -- Determines which weapon is to be modified.
 function get_weapon()
-	local slot = db.actor:active_slot()
-	local item
-	
-	if (slot == 3 or slot == 2) then
-		item = db.actor:item_in_slot(slot)
-		if (item and IsWeapon(item)) then 
-			return item
-		end
-	end
-	
-	item = db.actor:item_in_slot(3)
-	if (item and IsWeapon(item)) then 
-		return item 
-	end
-	
-	item = db.actor:item_in_slot(2)
-	if (item and IsWeapon(item)) then 
-		return item 
-	end
+	return db.actor:item_in_slot(db.actor:active_slot())
+				or db.actor:item_in_slot(3)
+				or db.actor:item_in_slot(2)
 end
 
 -- Initialises callbacks and other dependencies.
 function on_game_start()
-	-- Only fire if the "addons_table" section exists.
-	-- This will only be true if an addon requiring this script is installed.
-	if (system_ini():section_exist("addons_table")) then
-		local console = get_console()
-		local snd_targets = console:get_float("snd_targets")
-		if (snd_targets < 1000) then
-			console:execute("snd_targets 1000")
-			console:execute("snd_restart")
-		end
+	if (sys_ini:section_exist("addons_table")) then
+		get_console():execute("snd_targets 1000")
+		get_console():execute("snd_restart")
 		RegisterScriptCallback("actor_on_item_use", on_item_use)
 		RegisterScriptCallback("CUIActorMenu_OnItemFocusReceive",on_item_focus)
 		RegisterScriptCallback("CUIActorMenu_OnItemDropped",drag_scope)
 	end
 end
 
--- Attaches a scope to a weapon via drag-and-drop.
-function drag_scope(addon, weapon, from_slot, to_slot)
-	-- Return if not an addon scope.
-	if not (addons_table[addon:section()]) then 
+function check_addon(wpn, item)
+	local addon, valid_addons = item:section(), alun_utils.parse_list(sys_ini, wpn:section(), "scopes")
+	for k, v in pairs(valid_addons) do
+		if (v == addon) then
+			return true
+		end
+	end
+	return false
+end
+	
+function validate(wpn)
+		-- Return if the weapon is invalid.
+	if not (wpn and IsWeapon(wpn)) then
 		return
 	end
 	
-	-- Validate that the object on the 'to_slot' is a weapon.
-	if not (weapon and IsWeapon(weapon)) then 
-		return 
-	end
-	
-	-- Can only drag scope to a weapon actor owns.
-	local parent = weapon:parent()
-	if not (parent and parent:id() == db.actor:id()) then 
+	local p = wpn:parent()
+	if not (p and p:id() == db.actor:id()) then 
 		return 
 	end
 
-	-- Not a supported addon.
-	if not (check_addon(addon:section(), weapon:section())) then 
-		return 
-	end
-
-	-- Attach the addon.
-	if (from_slot == EDDListType.iActorBag) and (to_slot == EDDListType.iActorSlot or to_slot == EDDListType.iActorBag) then
-		attach_addon(addon, weapon)
-	end
+	local wpn_sect = wpn:section()
+	return sys_ini:r_string_ex(wpn_sect,"parent_section"), wpn_sect
 end
-
--- Transfers an item to the actor.
-local function transfer_item(id)
-	local item = level.object_by_id(id)
-	if not (item) then 
-		return false 
-	end 
-	db.actor:transfer_item(item, db.actor)
-	return true
-end
-
-
 -------------------
 ----- Context -----
 -------------------
 
 -- Called when a context option is required.
-function context_functor(weapon)
-	-- Return if the weapon is invalid.
-	if (not weapon) then
+function context_functor(wpn)
+	local parent_sect, wpn_sect = validate(wpn)
+	if not parent_sect or  wpn_sect == parent_sect then
 		return
 	end
-	
-	-- Return if the weapon has no parent section.
-	local parent_section = system_ini():r_string_ex(weapon:section(),"parent_section")
-	if (not parent_section or weapon:section() == parent_section) then
-		return
-	end
-	
-	-- Return if the weapon is not in the actor's inventory.
-	local p = weapon:parent()
-	if not (p and p:id() == db.actor:id()) then 
-		return
-	end
-	
 	-- Return the context option to detach an addon.
 	return game.translate_string("st_detach_scope")
 end
 
 -- Called when the context option is clicked.
-function context_action_functor(weapon)
-	detach_addon(weapon)
+function context_action_functor(wpn)
+	detach_addon(wpn)
 end
 
 ---------------------
 ----- Callbacks -----
 ---------------------
+-- drag scope onto weapon to attach
+function drag_scope(scope,wpn,from_slot,to_slot)
+	if validate(wpn) and check_addon(wpn, scope) and from_slot == EDDListType.iActorBag and 
+	  (to_slot == EDDListType.iActorSlot or to_slot == EDDListType.iActorBag) then
+		attach_addon(wpn,scope, true)
+	end
+end
 
 -- Called when the cursor focuses on an item.
 function on_item_focus(item)
-	local parent = item:parent()
-	if not (parent and parent:id() == db.actor:id()) then 
-		return 
-	end
-	
-	-- No "scopes" section found for the weapon.
-	if not (system_ini():line_exist(item:section(),"scopes")) then return end
+	local parent_sect, wpn_sect = validate(item)
 	
 	-- An addon has already been attached or none can be used.
-	local parent_section = system_ini():r_string_ex(item:section(),"parent_section")
-	if (not parent_section or item:section() ~= parent_section) then return end
-	
+	if (not parent_sect or wpn_sect ~= parent_sect) then return end
+
 	-- Highlight all addons this item can use.
-	local scopes = alun_utils.parse_list(system_ini(), item:section(), "scopes")
+	local scopes = alun_utils.parse_list(sys_ini, wpn_sect, "scopes")
 	local inventory = ActorMenu.get_actor_menu()
 	if not (scopes or (inventory and inventory:IsShown())) then return end
 	for i=1,#scopes do 
@@ -161,13 +104,14 @@ end
 
 -- Called when an item is used.
 function on_item_use(item)
+	local item_sect = item:section()
 	-- Attachments
-	if (addons_table[item:section()]) then
-		attach_addon(item,get_weapon())
+	if (addons_table[item_sect]) then
+		attach_addon(get_weapon(),item)
 	end
 	
 	-- Multi-Tool (Compatibility)
-	if (item:section() == "addons_box") then
+	if (item_sect == "addons_box") then
 		detach_addon(get_weapon())
 	end
 end
@@ -175,73 +119,63 @@ end
 ----------------------------
 ----- Addon Management -----
 ----------------------------
-
--- Attaches an addon to the weapon.
-function attach_addon(item, weapon)
-	-- Return if the addon or weapon aren't valid.
-	if not (item and weapon) then 
-		return 
-	end 
-	
-	-- An addon has already been attached or none can be used.
-	local parent_section = system_ini():r_string_ex(weapon:section(),"parent_section")
-	if (not parent_section or weapon:section() ~= parent_section) then return end
-	
+function clean_up(wpn,parent_sect,addon)
 	-- Modified weapon does not exist and as such can't be used.
-	local child_section = (parent_section .. "_" .. item:section())
-	if not (system_ini():section_exist(child_section)) then return end
-	
-	-- Determine whether the addon is valid for the weapon selected.
-	if not (check_addon(item:section(), weapon:section())) then
+	local new_section = addon and parent_sect .. "_" .. addon:section() or parent_sect
+	if not (sys_ini:section_exist(new_section)) then
 		return
 	end
-	
+
 	-- Create objects for the 'before' and 'after' attachment weapons.
-	local old_weapon = alife_object(weapon:id())
-	if (old_weapon) then
-		local new_weapon = alife():clone_weapon(old_weapon, child_section, old_weapon.position, old_weapon.m_level_vertex_id, old_weapon.m_game_vertex_id, old_weapon.parent_id, false)
-		if (new_weapon) then
-			-- Release the addon and old unmodified weapon.
-			local addon_object = alife_object(item:id())
-			alife():release(addon_object, true)
-			alife():release(old_weapon, true)
-			
-			-- Register the new modified weapon.
-			alife():register(new_weapon)
-		end
+	local old_weapon = alife_object(wpn:id())
+	local new_weapon = alife():clone_weapon(old_weapon, new_section, old_weapon.position, old_weapon.m_level_vertex_id, old_weapon.m_game_vertex_id, old_weapon.parent_id, false)
+	if mag_sys and (axr_main.config:r_value("mm_options","enable_weapon_mags",1,false) == true) then
+		mag_sys.del_wpn_id, mag_sys.new_wpn_id = old_weapon.id, new_weapon.id
+	end
+	if weapon_heat and (axr_main.config:r_value("mm_options","enable_weapon_heat",1,false) == true) then
+		weapon_heat.del_wpn_id, weapon_heat.new_wpn_id = old_weapon.id, new_weapon.id
+	end
+
+	-- Release the addon and old unmodified weapon.
+	if addon then
+		alife():release(alife_object(addon:id()), true)
+	end
+	alife():release(old_weapon, true)
+
+	-- Register the new modified weapon.
+	alife():register(new_weapon)
+end
+
+-- Attaches an addon to the weapon.
+function attach_addon(wpn, addon, chk)
+	-- Determines whether an addon is valid.
+	local parent_sect, wpn_sect = validate(wpn)
+	if not (parent_sect and (wpn_sect == parent_sect)) then
+		return
+	end
+
+	-- Determine whether the addon is valid for the weapon selected.
+	if (chk or check_addon(wpn,addon)) then
+		clean_up(wpn, parent_sect, addon)
 	end
 end
 
 -- Detaches an addon from the weapon.
-function detach_addon(weapon)
-	-- Return if the weapon is not valid.
-	if not (weapon) then
+function detach_addon(wpn)
+
+	local parent_sect, wpn_sect = validate(wpn)
+	if not parent_sect or (wpn_sect == parent_sect) then
 		return
 	end
-	
-	-- An addon has not been attached or none can be detached.
-	local parent_section = system_ini():r_string_ex(weapon:section(),"parent_section")
-	if (not parent_section or weapon:section() == parent_section) then return end
 	
 	-- Determine which addon is attached to the weapon.
 	-- Create the item in the actor's inventory when found.
 	for k, v in pairs(addons_table) do
-		if (string.find(weapon:section(), k)) then
+		local scp = wpn_sect:match("([%w%-]+)$")
+		if (scp == k) then
 			give_object_to_actor(k)
 			break
 		end
 	end
-	
-	-- Create objects for the 'before' and 'after' detachment weapons.
-	local old_weapon = alife_object(weapon:id())
-	if (old_weapon) then
-		local new_weapon = alife():clone_weapon(old_weapon, parent_section, old_weapon.position, old_weapon.m_level_vertex_id, old_weapon.m_game_vertex_id, old_weapon.parent_id, false)
-		if (new_weapon) then
-			-- Release the old modified weapon.
-			alife():release(old_weapon, true)
-			
-			-- Register the new unmodified weapon.
-			alife():register(new_weapon)
-		end
-	end
+	clean_up(wpn, parent_sect)
 end

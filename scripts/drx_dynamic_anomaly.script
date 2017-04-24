@@ -1,0 +1,431 @@
+--=============================================================
+--
+-- Dynamic Anomaly Generator (drx_dynamic_anomaly.script)
+--	CoC 1.4.22 - DoctorX Dynamic Anomalies 1.2
+--
+--	- Setting file: configs\plugins\drx\drx_dynamic_anomaly.ltx
+--
+--	Created by: DoctorX
+--	Last revised: April 01, 2017
+--
+--=============================================================
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- Settings File
+--
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 1.0
+--	March 14, 2017
+--
+-- ------------------------------------------------------------------------------------------------
+
+-- Location of the settings file:
+local ini = ini_file( "plugins\\drx\\drx_dynamic_anomaly.ltx" )
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_spawn_anomalies_current_level function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Creates random anomaly fields at random locations on the current map
+--
+--	Usage:
+--		drx_da_spawn_anomalies_current_level( )
+--
+--	Parameters:
+--		none
+--
+--	Ini requirements:
+--		plugins\drx\drx_dynamic_anomaly.ltx
+--			[field_properties]
+--				spawn_percent (type: int)
+--					- Percent chance an anomaly field will be spawned at a specific smart (default = 0)
+--				anomaly_max_number (type: int)
+--					- Maximum number of anomalies in each anomaly field (default = 0)
+--			[location_offset]
+--				max_offset_x (type: float, meters)
+--					- Magnitude of maximum offset from smart terrain center in x (north-south) direction (optional; default = 0)
+--				max_offset_y (type: float, meters)
+--					- Magnitude of maximum offset from smart terrain center in y (up-down) direction (optional; default = 0)
+--				max_offset_z (type: float, meters)
+--					- Magnitude of maximum offset from smart terrain center in z (east-west) direction (optional; default = 0)
+--			[anomaly_types]
+--				{anomaly type name} (type: string, anomaly name)
+--					- List of potential anomalies to spawn
+--			[{level name}]
+--				{smart terrain name} (type: string, smart terrain name)
+--					- List of allowable smart terrain names for each level for anomaly fields to spawn
+--
+--	Return value (type: nil):
+--		none, creates random anomaly fields on the current map
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 1.2
+--	Last modified April 01, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Spawn random anomaly fields at a random locations on the current map:
+function drx_da_spawn_anomalies_current_level( )
+
+	-- Get the current level name:
+	local level_name = level.name( )
+	if ( (not level_name) or (level_name == "") ) then
+		printf( "DRX DA Error: drx_da_spawn_anomalies_current_level - Cannot spawn dynamic anomaly, actor not on a level" )
+		return
+	end
+
+	-- Build a list of available smart terrains:
+	local smart_list = alun_utils.collect_section( ini, level_name )
+	if ( (not smart_list) or (#smart_list < 1) ) then
+		return
+	end
+
+	-- Get the percent chance for anomalies to spawn:
+	local spawn_percent = (ini:r_float_ex( "field_properties", "spawn_percent" ) or 0)
+	if ( (not spawn_percent) or (spawn_percent == 0) ) then
+		return
+	end
+
+	-- Determine the maximum amount of anomalies to spawn in each anomaly field:
+	local anomaly_max_number = (ini:r_float_ex( "field_properties", "anomaly_max_number" ) or 0)
+	if ( (not anomaly_max_number) or (anomaly_max_number < 1) ) then
+		return
+	end
+
+	-- Build a list of available anomaly types:
+	local anomaly_list = alun_utils.collect_section( ini, "anomaly_types" )
+	if ( (not anomaly_list) or (#anomaly_list < 1) ) then
+		printf( "DRX DA Error: drx_da_spawn_anomalies_current_level - No dynamic anomaly types found!" )
+		return
+	end
+
+	-- Get maximum offset values:
+	local max_offset_x = (ini:r_float_ex( "location_offset", "max_offset_x" ) or 0)
+	local max_offset_y = (ini:r_float_ex( "location_offset", "max_offset_y" ) or 0)
+	local max_offset_z = (ini:r_float_ex( "location_offset", "max_offset_z" ) or 0)
+
+	-- Spawn each dynamic anomaly field at random locations on the current map:
+	for i = 1, ( #smart_list ) do
+
+		-- Determine if an anomaly field should be spawned at the current smart location:
+		if ( math.random( ) < spawn_percent ) then
+
+			-- Choose an anomaly field type to spawn:
+			local anomaly_type = anomaly_list[math.random( #anomaly_list )]
+
+			-- Determine the number of anomalies to spawn in the field:
+			local anomaly_number = math.random( anomaly_max_number )
+
+			-- Spawn the anomaly field at the current smart location:
+			drx_da_spawn_anomaly_field( smart_list[i], anomaly_type, anomaly_number, max_offset_x, max_offset_y, max_offset_z )
+
+		end
+
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_spawn_anomaly_field function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Spawns an anomaly field at the specified smart terrain
+--
+--	Usage:
+--		drx_da_spawn_anomaly_field( smart_name, anom_type, num_anoms, max_offset_x, max_offset_y, max_offset_z )
+--
+--	Parameters:
+--		smart_name (type: string, smart terrain name)
+--			- Name of the smart terrain
+--		anom_type (type: string, anomaly type name)
+--			- Type of anomaly to spawn
+--		num_anoms (type: int)
+--			- Number of anomalies in the field
+--		max_offset_x (type: float, meters)
+--			- Maximum allowable offset from center of smart terrain in x-direction (east)
+--		max_offset_y (type: float, meters)
+--			- Maximum allowable offset from center of smart terrain in y-direction (up)
+--		max_offset_z (type: float, meters)
+--			- Maximum allowable offset from center of smart terrain in z-direction (north)
+--
+--	Return value (type: nil):
+--		none, creates the anomaly field
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 1.2
+--	Last modified April 01, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Spawn an anomaly field:
+function drx_da_spawn_anomaly_field( smart_name, anom_type, num_anoms, max_offset_x, max_offset_y, max_offset_z )
+
+	-- Get the smart terrain:
+	local smart = SIMBOARD.smarts_by_names[smart_name]
+	if not ( smart ) then
+		printf( "DRX DA Error: Unable to create dynamic anomaly field, specified smart location does not exist!" )
+		return
+	end
+
+	-- Generate each anomaly in the field:
+	for i = 1, ( num_anoms ) do
+
+		-- Select a location for the current anomaly:
+		local pos = drx_da_generate_position( smart_name, max_offset_x, max_offset_y, max_offset_z )
+
+		-- Spawn the current anomaly:
+		if ( pos ) then
+			local se_obj = drx_da_spawn_anomaly( anom_type, pos, smart.m_level_vertex_id, smart.m_game_vertex_id )
+		end
+
+	end
+
+	-- Send update to the console:
+	printf( "DRX DA: Dynamic anomaly field %s spawned at %s", anom_type, smart_name )
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_spawn_anomaly function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Spawns an anomaly at the specified location
+--
+--	Usage:
+--		drx_da_spawn_anomaly( anom_type, pos, lvid, gvid )
+--
+--	Parameters:
+--		anom_type (type: string, anomaly type name)
+--			- Type of anomaly to spawn
+--		pos (type: vector)
+--			- Positional data for the anomaly
+--		lvid (type: int, level vertex id)
+--			- Level vertex id
+--		gvid (type: int, game vertex id)
+--			- Game vertex id
+--
+--	Return value (type: object):
+--		Returns an object containing the spawned anomaly
+--		Returns nil on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 1.2
+--	Last modified April 01, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Spawn a dynamic anomaly:
+function drx_da_spawn_anomaly( anom_type, pos, lvid, gvid )
+
+	-- Spawn the anomaly:
+	local se_obj = alife( ):create( anom_type, pos, lvid, gvid )
+	if not ( se_obj ) then
+		printf( "DRX DA Error: Unable to spawn dynamic anomaly!" )
+		return
+	end
+
+	-- Set anomaly properties:
+	local data = stpk_utils.get_anom_zone_data( se_obj )
+	if not ( data ) then
+		printf( "DRX DA Error: Unable to set dynamic anomaly properties!" )
+		return
+	end
+	data.restrictor_type = 0
+	data.shapes = {}
+	data.shapes[1] = {}
+	data.shapes[1].shtype = 0
+	data.shapes[1].center = vector( ):set( 0, 0, 0 )
+	data.shapes[1].radius = 3
+	data.shapes[1].offset = vector( ):set( 0, 0, 0 )		-- Leave for compatibility with CoC 1.4.22 stpk_utils, delete later
+	data.shapes[1].v1 = vector( ):set( 3, 0, 0 )		-- Leave for compatibility with CoC 1.4.22 stpk_utils, delete later
+	data.shapes[1].v2 = vector( ):set( 0, 3, 0 )		-- Leave for compatibility with CoC 1.4.22 stpk_utils, delete later
+	data.shapes[1].v3 = vector( ):set( 0, 0, 3 )		-- Leave for compatibility with CoC 1.4.22 stpk_utils, delete later
+	stpk_utils.set_anom_zone_data( data, se_obj )
+
+	-- Return the anomaly:
+	return se_obj
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_generate_position function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Generates a random position vector on the ground within a smart terrain location
+--
+--	Usage:
+--		drx_da_generate_position( smart_name, max_offset_x, max_offset_y, max_offset_z )
+--
+--	Parameters:
+--		smart_name (type: string, smart terrain name)
+--			- Name of the smart terrain
+--		max_offset_x (type: float, meters)
+--			- Maximum allowable offset from center of smart terrain in x-direction (east)
+--		max_offset_y (type: float, meters)
+--			- Maximum allowable offset from center of smart terrain in y-direction (up)
+--		max_offset_z (type: float, meters)
+--			- Maximum allowable offset from center of smart terrain in z-direction (north)
+--
+--	Return value (type: vector):
+--		Returns the generated positional data
+--		Returns nil on failure
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX, (modification of method suggested by Alundaio)
+--	for DoctorX Dynamic Anomalies 1.2
+--	Last modified April 01, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Generate positional data:
+function drx_da_generate_position( smart_name, max_offset_x, max_offset_y, max_offset_z )
+
+	-- Get the smart terrain:
+	local smart = SIMBOARD.smarts_by_names[smart_name]
+	if not ( smart ) then
+		printf( "DRX DA Error: Unable to generate positional data, specified smart location does not exist!" )
+		return
+	end
+
+	-- Try to generate valid positional data on the ground:
+	local num_tries = 64  -- Prevents infinite loop
+	local pos = vector( ):set( 0, 0, 0 )
+	local valid_lvid = false
+	while ( (valid_lvid ~= true) and (num_tries > 0) ) do
+
+		-- Randomly offset anomaly x-position from center of smart terrain:
+		local offset_x = (max_offset_x * math.random( ))
+		if (math.random( ) < 0.5) then
+			offset_x = -(offset_x)
+		end
+		local pos_x = (smart.position.x + offset_x)
+
+		-- Randomly offset anomaly y-position from center of smart terrain:
+		local offset_y = (max_offset_y * math.random( ))
+		if (math.random( ) < 0.5) then
+			offset_y = -(offset_y)
+		end
+		local pos_y = (smart.position.y + offset_y)
+
+		-- Randomly offset anomaly z-position from center of smart terrain:
+		local offset_z = (max_offset_z * math.random( ))
+		if (math.random( ) < 0.5) then
+			offset_z = -(offset_z)
+		end
+		local pos_z = (smart.position.z + offset_z)
+
+		-- Set anomaly position at location vertex and check if valid:
+		pos = vector( ):set( pos_x, pos_y, pos_z )
+		local lvid = level.vertex_id( pos )
+		if ( lvid < 4294967295 ) then
+			pos = level.vertex_position( lvid )
+			valid_lvid = true
+		end
+
+		-- Decrement the number of tries left:
+		num_tries = (num_tries - 1)
+		if ( (num_tries <= 0) and (valid_lvid ~= true) ) then
+			printf( "DRX DA Error: Unable to generate valid lvid pos, aborting" )
+			return
+		end
+
+	end
+
+	-- Return the position vector:
+	return pos
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_da_on_game_load_callback function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Scripts to run when a game loads or level change occurs
+--
+--	Usage:
+--		(called when a game loads or level change occurs)
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: nil):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Dynamic Anomalies 1.0
+--	Last modified March 13, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Scripts to run when the game loads:
+local function drx_da_on_game_load_callback( )
+
+	-- Generate new dynamic anomalies:
+	drx_da_spawn_anomalies_current_level( )
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- on_game_start function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Registers callback scripts
+--
+--	Usage:
+--		(called when a game session begins)
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: nil):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Added by DoctorX
+--	for DoctorX Dynamic Anomalies 1.2
+--	Last modified April 01, 2017
+-- ------------------------------------------------------------------------------------------------
+
+-- Register callback scripts:
+function on_game_start( )
+	RegisterScriptCallback( "on_game_load", drx_da_on_game_load_callback )
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

@@ -1,0 +1,30 @@
+[extension_pda]:booster
+GroupControlSection                      = spawn_group
+discovery_dependency                     =
+$spawn                                   = "devices\pda"
+$prefetch                                = 16
+cform                                    = skeleton
+visual                                   = dynamics\devices\dev_pda\dev_pda.ogf
+description                              = Радио/Чат
+radius                                   = 68	                                       ; 50
+slot                                     = 7
+default_to_ruck                          = false
+sprint_allowed                           = true
+control_inertion_factor                  = 1
+script_binding                           = bind_physic_object.init
+
+inv_name                                 = ПДА/Плеер
+inv_name_short                           = ПДА/Плеер
+inv_weight                               = 0.1	                                       ;0.2
+
+inv_grid_width                           = 1
+inv_grid_height                          = 1
+inv_grid_x                               = 7
+inv_grid_y                               = 3
+cost                                     = 5000
+attach_angle_offset                      = -1.303,0.107,-1.702
+attach_position_offset                   = 0.14,0.001,0.02
+attach_bone_name                         = bip01_l_hand
+auto_attach                              = false
+
+remove_after_use                         = false

@@ -1,3 +1,13 @@
+-- ============================================================
+--
+-- Script Functions for Task Dialogs in Great Swamp (dialogs_marsh.script)
+--	CoC 1.4.14 - DoctorX Questlines 1.9
+--
+--	Modified by: DoctorX
+--	Last revised: October 29, 2016
+--
+-- ============================================================
+
 
 ------ ecolog_companion_task_1
 
@@ -7,7 +17,7 @@ end
 
 function ecolog_companion_task_1_not_complete(a,b)
 	return not ecolog_companion_task_1_complete(a,b)
-end 
+end
 
 function ecolog_companion_task_1_complete_task(a,b)
 	task_manager.get_task_manager():set_task_completed("mar_base_owl_stalker_trader_task_3")
@@ -25,16 +35,51 @@ function ecolog_companion_task_1_give_reward(a,b)
 	xr_effects.inc_faction_goodwill_to_actor(db.actor, nil, {"killer", 25})
 end
 
--- transfer key from doctor
-function take_key(first_speaker, second_speaker)
-    dialogs.relocate_item_section_to_actor(first_speaker, second_speaker, "cit_doctors_key")
-	task_manager.get_task_manager():give_task("cit_doctor_task")
-	task_manager.get_task_manager():give_task("main_1_search_agr_ug")
-	task_manager.get_task_manager():give_task("main_2_search_labx18")
-	task_manager.get_task_manager():give_task("main_3_search_labx16")
-	task_manager.get_task_manager():give_task("main_4_search_labx10")
-	task_manager.get_task_manager():give_task("main_5_search_labx8")
-	task_manager.get_task_manager():give_task("main_6_search_jup_ug")
-	task_manager.get_task_manager():give_task("main_7_search_mon_con")
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- take_key function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Gives actor Pripyat room key and story tasks
+--
+--	Usage:
+--		take_key( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: none):
+--		none
+--
+-- ------------------------------------------------------------------------------------------------
+--	Modified by DoctorX
+--	for DoctorX Questlines 1.9
+--	Last modified October 11, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Give actor Pripyat room key and story tasks:
+function take_key( first_speaker, second_speaker )
+
+	-- Give actor Pripyat room key:
+    dialogs.relocate_item_section_to_actor( first_speaker, second_speaker, "cit_doctors_key" )
+
+	-- Give actor Pripyat room task:
+	task_manager.get_task_manager( ):give_task( "cit_doctor_task" )
+
+	-- Give actor story tasks if in story mode:
+	if ( not has_alife_info( "story_mode_disabled" ) ) then
+		task_manager.get_task_manager( ):give_task( "main_1_search_agr_ug" )
+		task_manager.get_task_manager( ):give_task( "main_2_search_labx18" )
+		task_manager.get_task_manager( ):give_task( "main_3_search_labx16" )
+		task_manager.get_task_manager( ):give_task( "main_4_search_labx10" )
+		task_manager.get_task_manager( ):give_task( "main_5_search_labx8" )
+		task_manager.get_task_manager( ):give_task( "main_6_search_jup_ug" )
+		task_manager.get_task_manager( ):give_task( "main_7_search_mon_con" )
+	end
+
 end
 
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

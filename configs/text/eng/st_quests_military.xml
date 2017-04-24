@@ -3,19 +3,220 @@
 <!--===========================================================
 <
 < TEXT  STRINGS FOR TASKS ON MILITARY WAREHOUSES MAP
-<	CoC 1.3.11
+<	CoC 1.4.18 - DoctorX Questlines 1.18
 <
 <	Modified by: DoctorX
-<	March 18, 2016
+<	Last revised: December 08, 2016
 <
 <===========================================================-->
 
 <string_table>
 
 
-	<!-- FIND MUTANT MEAT FOR FREEDOM TASK -->
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.9
+	<!--	October 29, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Default Storyline Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_name">
+		<text>Get Next Task</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_text">
+		<text>Receive your next task.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_about">
+		<text>I want you to meet with someone. He is no friend of mine but he could use your assistance.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_default_task_finish">
+		<text>Good luck stalker.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Assassination Storyline Task- -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_name">
+		<text>Assassination for Lukash</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_text">
+		<text>Lukash has a target he needs eliminated.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_about">
+		<text>Hey, I'm glad you came. I have something I need you to do for me. There is a mutual enemy of ours that needs to be eliminated. He is dangerous. Take him down immediately.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_1_finish">
+		<text>Awesome bro! Thanks.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Freedom Assault on Monolith Storyline Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_name">
+		<text>Freedom Assault on Monolith</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_text">
+		<text>Lukash has asked you to lead Freedom in an assault against the Monolith.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_about">
+		<text>Monolith forces keep breaking through our blockade. I want to take the fight to them for once. I've recruited an assault squad and want you to lead them in an invasion on Monolith territory. Take them out.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_2_finish">
+		<text>Man, you've got a set on you. Great job.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Search Lab X-8 (Outskirts) Storyline Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_name">
+		<text>Search Lab X-8</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_text">
+		<text>Search Lab X-8 in Outskirts for evidence of Clear Sky occupation.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_about">
+		<text>I have received information that former members of Clear Sky might have occupied Lab X-8 some time ago. I need you to investigate the Lab and see if you can recover any documents they might have left there.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_task_3_finish">
+		<text>Excellent work. You have done well.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- CHANGE FACTIONS TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	December 08, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Payoff Change Factions Task -->
+
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_name">
+		<text>Raise Money To Join Freedom</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_text">
+		<text>Lukash wants 15,000 RU to let you join Freedom.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_about">
+		<text>Ah, good. You will enjoy joining Freedom. Just pay the 15,000 RU fee and you're in.</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_cf_task_1_finish">
+		<text>Welcome to Freedom, bro.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DYNAMIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Stop Enemy Assault Task -->
+
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_name">
+		<text>Repel Assault on Freedom Base</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_text">
+		<text>Intercept the assault squad closing in on Freedom camp. Report back to Lukash once you have cleared the area.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_about">
+		<text>Forces hostile to Freedom are moving in on our camp. I need someone capable to repel the incursion. Are you the man for the job?</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_finish">
+		<text>The task is done? Good.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Recapture Territory Task -->
+
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_name">
+		<text>Recapture Territory for Freedom</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_text">
+		<text>You have been tasked to capture a faction territory. Report back to Lukash after the job is done.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_about">
+		<text>I have an important mission if you are willing. Duty has taken over one of our camps and I need an infiltrator to reclaim it.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_finish">
+		<text>Excellent. Well done.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Capture Monolith Member Task -->
+
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_name">
+		<text>Capture Monolith Member</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_text">
+		<text>Lukash has tasked you with finding and capturing a member of Monolith.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_about">
+		<text>I have a very dangerous mission. I've asked for volunteers but so far no one has stepped forward. I need someone to take a Monolith member hostage. Before you agree, know that no one has ever captured a Monolith member alive. Do you think you can be the first?</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_finish">
+		<text>Ah, you survived! I see your hostage did not. Well, a dead Monolith is a dead Monolith. Here is your payment.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Assassinate Duty Task -->
+
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_name">
+		<text>Assassinate Duty Member</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_text">
+		<text>Lukash has tasked you with finding and eliminating a target.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_about">
+		<text>There is a certain individual who has been very loud in his opposition to Freedom and needs to be quieted. Are you any good at shutting people up?</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_finish">
+		<text>Great! You do us proud. Here is what I promised:</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Lukash (Freedom Honcho) Gun Runner Task -->
+
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_name">
+		<text>%s Gun Runner</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_text">
+		<text>Lukash has asked you to find a %s. Return to him when you find what he is looking for.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_about">
+		<text>With Duty to the south of us and Monolith to the north, we are cut off. Our weaponry is wearing out and we need replacements. Have you ever done any gun running?</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_fetch_about">
+		<text>We could really use a new %s. If you can find us one in great condition I would be willing to pay a good price for it.</text>
+	</string>
+	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_fetch_finish">
+		<text>Well done. This will go a long way in helping us defend the Zone. Here is the payment I promised.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Skinflint (Freedom Mechanic) Find Mutant Meat Task -->
+
 	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_name">
-		<text>Wild Game Meat</text>
+		<text>Wild Game %s for Skinflint</text>
 	</string>
 	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_1_text">
 		<text>Field dress freshly dead mutants to collect game meat. Then deliver %s to Skinflint in the Military Warehouse base camp.</text>
@@ -30,88 +231,40 @@
 		<text>Great, you are a good hunter! I have payment for you.</text>
 	</string>
 
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Skinflint (Freedom Mechanic) Deliver Equipment Dynamic Task -->
 
-	<!-- STOP ENEMY ASSAULT FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_name">
-		<text>Repel Assault</text>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_name">
+		<text>Deliver Equipment to Skinflint</text>
 	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_text">
-		<text>Intercept the assault squad closing in on a Freedom camp. Report back to Lukash once you have cleared the area.</text>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_text">
+		<text>Skinflint has a delivery that needs to be picked up.</text>
 	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_about">
-		<text>Forces hostile to Freedom are moving in on one of our camps. I need someone capable to repel the incursion. Are you the man for the job?</text>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_about">
+		<text>I have a delivery that I need to pick up. If you're willing to get it for me I can give you an item from my inventory.</text>
 	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_1_finish">
-		<text>The task is done? Good.</text>
-	</string>
-
-
-	<!-- RECAPTURE TERRITORY FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_name">
-		<text>Recapture Territory for Freedom</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_text">
-		<text>You have been tasked to defend a faction territory. Report back to Lukash after the job is done.</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_about">
-		<text>I have an important mission if you are willing. Duty has taken over one of our camps and I need an infiltrator to reclaim it.</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_2_finish">
-		<text>Excellent. Well done.</text>
+	<string id="mil_smart_terrain_7_10_freedom_trader_stalker_task_2_finish">
+		<text>Thank you stalker!</text>
 	</string>
 
-
-	<!-- ASSASSINATE MONOLITH FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_name">
-		<text>Assassinate Monolith Member</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_text">
-		<text>Lukash has tasked you with finding and eliminating a member of Monolith.</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_about">
-		<text>I have a very dangerous mission. I've asked for volunteers but so far no one has stepped forward. Monolith forces keep breaking through our blockade. I want to take the fight to them for once. I need someone to enter their territory and take out a certain member of their faction to send them a message. What do you think? Are you the biggest daredevil in this camp?</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_3_finish">
-		<text>Ah, you survived! Man, you've got a set on you. Great job.</text>
-	</string>
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 
-	<!-- ASSASSINATE DUTY FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_name">
-		<text>Assassinate Target</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_text">
-		<text>Lukash has tasked you with finding and eliminating a target.</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_about">
-		<text>There is a certain individual who has been very loud in his opposition to Freedom and needs to be quieted. Are you any good at shutting people up?</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_4_finish">
-		<text>Great! You do us proud. Here is what I promised:</text>
-	</string>
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- MECHANIC TASK TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
 
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Screw (Freedom Mechanic) Find Level 1 Toolkit Task -->
 
-	<!-- FIND WEAPON FOR FREEDOM TASK -->
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_name">
-		<text>Find %s</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_text">
-		<text>Lukash has asked you to find a specific firearm in mint condition. Return to him when you find what he is looking for.</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_about">
-		<text>With Duty to the south of us and Monolith to the north, we are cut off. Our weaponry is wearing out and we need replacements. Have you ever done any gun running?</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_fetch_about">
-		<text>We could really use a new %s. If you can find us one in great condition I would be willing to pay a good price for it.</text>
-	</string>
-	<string id="mil_smart_terrain_7_7_freedom_leader_stalker_task_5_fetch_finish">
-		<text>Well done. This will go a long way in helping us defend the Zone. Here is the payment I promised.</text>
-	</string>
-
-
-	<!-- FIND LEVEL 1 TOOLS FOR SCREW TASK -->
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_name">
-		<text>Find %s</text>
+		<text>Find %s for Screw</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_1_text">
 		<text>%s are required by Screw to install basic equipment upgrades, you should bring them back to him if you find any.</text>
@@ -126,10 +279,11 @@
 		<text>Thanks, man! I knew there was a reason I asked you. You look like a man who can get shit done.</text>
 	</string>
 
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Screw (Freedom Mechanic) Find Level 2 Toolkit Task -->
 
-	<!-- FIND LEVEL 2 TOOLS FOR SCREW TASK -->
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_name">
-		<text>Find %s</text>
+		<text>Find %s for Screw</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_2_text">
 		<text>%s are required by Screw to install advanced equipment upgrades, you should bring them back to him if you find any.</text>
@@ -144,10 +298,11 @@
 		<text>You keep this shit up, everyone around here is going to love you. Thanks, man.</text>
 	</string>
 
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- Screw (Freedom Mechanic) Find Level 3 Toolkit Task -->
 
-	<!-- FIND LEVEL 3 TOOLS FOR SCREW TASK -->
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_name">
-		<text>Find %s</text>
+		<text>Find %s for Screw</text>
 	</string>
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_text">
 		<text>%s are required by Screw to install expert equipment upgrades, you should bring them back to him if you find any.</text>
@@ -161,6 +316,8 @@
 	<string id="mil_smart_terrain_7_7_freedom_mechanic_stalker_task_3_fetch_finish">
 		<text>You keep this shit up, everyone around here is going to love you. Thanks, man.</text>
 	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 
 </string_table>

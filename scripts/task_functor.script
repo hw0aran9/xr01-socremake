@@ -1,3 +1,208 @@
+-- ============================================================
+--
+-- Target Functors for Tasks  (task_functor.script)
+--	CoC 1.4.18 - DoctorX Questlines 1.18
+--
+--	Modified by: DoctorX
+--	Last revised: December 06, 2016
+--
+-- ============================================================
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_money_task_target function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for a money task
+--
+--	Usage:
+--		drx_sl_money_task_target( task_id )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function drx_sl_money_task_target( task_id, field, p, tsk )
+
+	if (field == "target") then
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_quest_item_task_1_target function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the quest item task
+--
+--	Usage:
+--		drx_sl_quest_item_task_1_target( task_id )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function drx_sl_quest_item_task_1_target( task_id, field, p, tsk )
+
+	if (field == "target") then
+
+		-- If quest item is found then return the quest giver id:
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+
+		-- Otherwise return the quest stash location:
+		local stash_id = alun_utils.load_var( db.actor, "drx_sl_quest_stash_1_id", nil )
+		if ( stash_id ) then
+			return stash_id
+		else
+			local se_obj = get_story_se_object( "drx_sl_quest_item_1" )
+			if ( se_obj ) then
+				return se_obj.id
+			end
+		end
+
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_quest_item_task_2_target function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the quest item task
+--
+--	Usage:
+--		drx_sl_quest_item_task_2_target( task_id )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function drx_sl_quest_item_task_2_target( task_id, field, p, tsk )
+
+	if (field == "target") then
+
+		-- If quest item is found then return the quest giver id:
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+
+		-- Otherwise return the quest stash location:
+		local stash_id = alun_utils.load_var( db.actor, "drx_sl_quest_stash_2_id", nil )
+		if ( stash_id ) then
+			return stash_id
+		else
+			local se_obj = get_story_se_object( "drx_sl_quest_item_2" )
+			if ( se_obj ) then
+				return se_obj.id
+			end
+		end
+
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_quest_item_task_3_target function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the quest item task
+--
+--	Usage:
+--		drx_sl_quest_item_task_3_target( task_id )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function drx_sl_quest_item_task_3_target( task_id, field, p, tsk )
+
+	if (field == "target") then
+
+		-- If quest item is found then return the quest giver id:
+		if (tsk.stage == 1) then
+			return tsk.task_giver_id
+		end
+
+		-- Otherwise return the quest stash location:
+		local stash_id = alun_utils.load_var( db.actor, "drx_sl_quest_stash_3_id", nil )
+		if ( stash_id ) then
+			return stash_id
+		else
+			local se_obj = get_story_se_object( "drx_sl_quest_item_3" )
+			if ( se_obj ) then
+				return se_obj.id
+			end
+		end
+
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 --'*************************************************************************************
 --' Функторы тайтла и описания квеста (должны возвращать строку)
 --'*************************************************************************************
@@ -142,19 +347,89 @@ function yan_ecolog_semenov_task_target(task_id,field,p,tsk)
 	end
 end
 
--- Marsh
-function mar_base_stalker_barmen_task_target(task_id,field,p,tsk)
 
-	if (tsk and tsk.stage == 1 and tsk.task_giver_id) then
-		return tsk.task_giver_id
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- yan_ecolog_semenov_task_target_1 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Semenov (Ecologist Honcho) Research Hunt task
+--
+--	Usage:
+--		yan_ecolog_semenov_task_target_1( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function yan_ecolog_semenov_task_target_1( task_id, field, p, tsk )
+
+	local squad = get_story_squad( "yan_ecolog_semenov_squad" )
+	if ( db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50 ) then
+		return squad.id
 	end
 
-	if (task_id == "mar_base_stalker_barmen_task_1") then
-		return under_faction_control_target_id(task_id)
-	elseif (task_id == "mar_base_stalker_barmen_task_2") then
-		return under_faction_control_target_id(task_id)
+	if ( tsk.stage >= 1 ) then
+		return squad.id
 	end
+
 end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- mar_base_stalker_barmen_task_target  function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for Cold (Clear Sky Trader) dynamic tasks
+--
+--	Usage:
+--		mar_base_stalker_barmen_task_target( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified  October 13, 2016  (removed - not used)
+-- ------------------------------------------------------------------------------------------------
+
+-- -- Marsh
+-- function mar_base_stalker_barmen_task_target(task_id,field,p,tsk)
+--
+-- 	if (tsk and tsk.stage == 1 and tsk.task_giver_id) then
+-- 		return tsk.task_giver_id
+-- 	end
+--
+-- 	if (task_id == "mar_base_stalker_barmen_task_1") then
+-- 		return under_faction_control_target_id(task_id)
+-- 	elseif (task_id == "mar_base_stalker_barmen_task_2") then
+-- 		return under_faction_control_target_id(task_id)
+-- 	end
+-- end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 function mar_base_owl_stalker_trader_task_target(task_id,field,p)
 	if (task_id == "mar_base_owl_stalker_trader_task_1") then
@@ -188,6 +463,132 @@ function mar_base_owl_stalker_trader_task_target(task_id,field,p)
 	end
 end
 
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- mar_base_owl_stalker_trader_task_target_1 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Suslov (Clear Sky Trader) Deliver PDA task
+--
+--	Usage:
+--		mar_base_owl_stalker_trader_task_target_1( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function mar_base_owl_stalker_trader_task_target_1( task_id, field, p )
+
+	local se_npc = get_story_se_object( "esc_2_12_stalker_nimble" )
+	return se_npc and se_npc.id or nil
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- mar_base_owl_stalker_trader_task_target_2 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Suslov (Clear Sky Trader) Destroy Helicopter task
+--
+--	Usage:
+--		mar_base_owl_stalker_trader_task_target_2( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 14, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function mar_base_owl_stalker_trader_task_target_2( task_id, field, p )
+
+	if ( level.name( ) == "k00_marsh" ) then
+		for id, obj in pairs( db.heli ) do
+			if ( obj and obj.id ) then
+				return id
+			end
+		end
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- mar_base_owl_stalker_trader_task_target_3 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Suslov (Clear Sky Trader) Escort Great Swamp Scientists task
+--
+--	Usage:
+--		mar_base_owl_stalker_trader_task_target_3( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 14, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function mar_base_owl_stalker_trader_task_target_3( task_id, field, p )
+
+	local squad = get_story_squad( "ecolog_companion_task_1" )
+	if ( db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50 ) then
+		return squad.id
+	end
+
+	local n = db.actor and utils.load_var( db.actor, "task_target_anomaly" )
+	if ( n ) then
+		local anomaly = db.anomaly_by_name[n]
+		if ( anomaly and anomaly.object ) then
+			return anomaly.object:id( )
+		end
+	else
+		local smart = SIMBOARD.smarts_by_names["mar_smart_terrain_base"]
+		if ( smart ) then
+			return smart.id
+		end
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 -- Escape
 function esc_m_trader_task_target(task_id,field,p,tsk)
 	if (field == "target") then
@@ -209,6 +610,57 @@ function esc_m_trader_task_target(task_id,field,p,tsk)
 	end
 end
 
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- esc_m_trader_task_target_1 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Sidorovich (Loner Trader) Eliminate Car Park Bandits task
+--
+--	Usage:
+--		esc_m_trader_task_target_1( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 14, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function esc_m_trader_task_target_1( task_id, field, p, tsk )
+
+	if ( field == "target" ) then
+
+		if ( tsk.stage == 1 ) then
+			return tsk.task_giver_id
+		end
+
+		local smart = SIMBOARD.smarts_by_names["esc_smart_terrain_7_11"]
+		local target_id = db.actor and utils.load_var(db.actor,"esc_m_trader_task_1_target_id")
+		local se_target = target_id and alife( ):object( target_id )
+
+		if ( se_target and smart.position:distance_to_sqr( se_target.position ) > 2500 ) then
+			return target_id
+		end
+
+		return smart and smart.id or nil
+
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 -- Darkvalley
 function val_smart_terrain_7_4_bandit_trader_stalker_task_target(task_id,field,p,tsk)
 	if (task_id == "val_smart_terrain_7_4_bandit_trader_stalker_task_3") then
@@ -218,6 +670,44 @@ function val_smart_terrain_7_4_bandit_trader_stalker_task_target(task_id,field,p
 		end
 	end
 end
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- val_smart_terrain_7_4_bandit_trader_stalker_task_target_1 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Olivius (Bandit Trader) Dark Valley Raiders task
+--
+--	Usage:
+--		val_smart_terrain_7_4_bandit_trader_stalker_task_target_1( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 14, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function val_smart_terrain_7_4_bandit_trader_stalker_task_target_1( task_id, field, p, tsk )
+
+	local squad = get_story_squad( "bandit_companion_task_1" )
+	if ( squad and squad.dist_to_actor and squad.dist_to_actor > 50 ) then
+		return squad.id
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 -- soc pripyat
 
@@ -244,112 +734,222 @@ function jup_b6_scientist_tech_task_target(task_id,field,p,tsk)
 	end
 end
 
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- jup_b6_scientist_tech_task_target_1 function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for the Tukarev (Ecog Mechanic) Escort Jupiter Scientists task
+--
+--	Usage:
+--		jup_b6_scientist_tech_task_target_1( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current task target:
+function jup_b6_scientist_tech_task_target_1( task_id, field, p, tsk )
+
+	local squad = get_story_squad( "ecolog_companion_task_2" )
+	if ( db.actor and squad and squad.dist_to_actor and squad.dist_to_actor > 50 ) then
+		return squad.id
+	end
+
+	local n = db.actor and utils.load_var( db.actor, "task_target_anomaly" )
+	if ( n ) then
+		local anomaly = db.anomaly_by_name[n]
+		if ( anomaly and anomaly.object ) then
+			return anomaly.object:id( )
+		end
+	else
+		local smart = SIMBOARD.smarts_by_names["jup_b41"]
+		if ( smart ) then
+			return smart.id
+		end
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 function jup_b19_freedom_yar_task_target(task_id,field,p,tsk)
-	if (task_id == "jup_b19_freedom_yar_task_1") then 
-		if (tsk) then 
+	if (task_id == "jup_b19_freedom_yar_task_1") then
+		if (tsk) then
 			local squad
-			if (tsk.stage == 0) then 
+			if (tsk.stage == 0) then
 				squad = get_story_squad("jup_a6_freedom_trader_ashot_squad")
-			elseif (tsk.stage == 1) then 
+			elseif (tsk.stage == 1) then
 				squad = get_story_squad("jup_b19_freedom_yar_squad")
-			end	
+			end
 			return squad and squad.id or nil
 		end
 	end
-end 
+end
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- zat_b7_bandit_boss_sultan_task_target  function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for Sultan (Bandit Honcho) dynamic tasks
+--
+--	Usage:
+--		zat_b7_bandit_boss_sultan_task_target()
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: ):
+--		ID of the current task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016   (removed - not used)
+-- ------------------------------------------------------------------------------------------------
 
 -- Zaton
-function zat_b7_bandit_boss_sultan_task_target(task_id,field,p)
-	if (task_id == "zat_b7_bandit_boss_sultan_task_1") then
-		return get_squad_id_by_task_var("zat_b7_bandit_boss_sultan_bounty_target_id") --add to axr_main remove_non_story_squads to ensure squad never removed
+-- function zat_b7_bandit_boss_sultan_task_target(task_id,field,p)
+-- 	if (task_id == "zat_b7_bandit_boss_sultan_task_1") then
+-- 		return get_squad_id_by_task_var("zat_b7_bandit_boss_sultan_bounty_target_id") --add to axr_main remove_non_story_squads to ensure squad never removed
+-- 	end
+-- end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- simulation_task_target function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Returns the id of the current target for a simulation hostage task
+--
+--	Usage:
+--		simulation_task_target( )
+--
+--	Parameters:
+--
+--
+--	Return value (type: ):
+--		ID of the current simulation hostage task target
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine current simulation hostage task target:
+function simulation_task_target( task_id, field, p, tsk )
+
+	if not ( db.actor ) then
+		return
 	end
-end
 
--- Simulation
-function simulation_task_target(task_id,field,p,tsk)
-	if (task_id == "simulation_task_7" or task_id == "simulation_task_8" or task_id == "simulation_task_9" or task_id == "simulation_task_10") then
-		local squad = get_story_squad("hostage_companion_task_1")
-		if not (squad and squad:clsid() == clsid.online_offline_group_s) then
-			return -- quest will auto-fail via section condition
-		end
+	local squad = get_story_squad( "hostage_companion_task_1" )
+	if not ( squad and squad:clsid( ) == clsid.online_offline_group_s ) then
+		return  -- quest will auto-fail via section condition
+	end
 
-		if (tsk) then
-			if (tsk.stage == 0) or (squad and squad.dist_to_actor and squad.dist_to_actor > 60) then
-				return squad and squad.id
-			elseif (tsk.stage >= 1 or (db.actor and db.actor:has_info("hostage_companion_task_1_hostage_rescued"))) then
-				local id = tsk.task_giver_id
-				if (id) then
-					return id
-				end
+	if ( tsk ) then
+		if ( tsk.stage == 0 ) or ( squad and squad.dist_to_actor and squad.dist_to_actor > 50 ) then
+			return squad and squad.id
+		elseif ( tsk.stage >= 1 or db.actor:has_info( "hostage_companion_task_1_hostage_rescued" ) ) then
+			local id = tsk.task_giver_id
+			if ( id ) then
+				return id
 			end
 		end
-
-		return squad.id
 	end
+
+	return squad.id
+
 end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 function faction_base_defense_target(task_id,field,p,tsk)
 	local squad = get_story_squad("faction_base_defense_flesh_squad")
-	if (squad) then 
-		return squad.id 
+	if (squad) then
+		return squad.id
 	end
 	squad = get_story_squad("faction_base_defense_boar_squad")
-	if (squad) then 
-		return squad.id 
-	end 
+	if (squad) then
+		return squad.id
+	end
 	squad = get_story_squad("faction_base_defense_dog_squad")
-	if (squad) then 
-		return squad.id 
-	end 
+	if (squad) then
+		return squad.id
+	end
 	squad = get_story_squad("faction_base_defense_flesh_second_squad")
-	if (squad) then 
-		return squad.id 
-	end 
+	if (squad) then
+		return squad.id
+	end
 	squad = get_story_squad("faction_base_defense_boar_second_squad")
-	if (squad) then 
-		return squad.id 
-	end 
+	if (squad) then
+		return squad.id
+	end
 	squad = get_story_squad("faction_base_defense_dog_second_squad")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base1")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base2")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base3")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base4")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 	
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base5")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 	
+	end
 	squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base6")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base7")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 	
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base8")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 	
+	end
     squad = get_story_squad("yan_faction_base_defense_zombi_in_sci_base9")
-	if (squad) then 
+	if (squad) then
 		return squad.id
-	end 		
-end 
+	end
+end
 
 --[[
 ==================================================================

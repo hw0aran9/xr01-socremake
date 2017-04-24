@@ -1,6 +1,18 @@
 <?xml version='1.0' encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< CHARACTER DESCRIPTIONS FOR BAR (ROSTOK) MAP
+<	CoC 1.4.10 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 14, 2016
+<
+<===========================================================-->
+
+
 <xml>
-    <!-------------------------- BARMAN ------------------------>
+    <!-------------------------- BARMAN ---------------------- -->
     <specific_character id="bar_visitors_barman_stalker_trader" team_default = "1">
     <name>bar_barmen_name</name>
     <icon>ui_inGame2_barman</icon>
@@ -20,8 +32,8 @@
         <actor_dialog>dm_broker_dialog</actor_dialog>
         <actor_dialog>actor_break_dialog</actor_dialog>
         </specific_character>
-        
-        <!-------------------------- GARIK ------------------------>
+
+        <!-------------------------- GARIK ---------------------- -->
         <specific_character id="bar_visitors_garik_stalker_guard" team_default = "1">
         <name>bar_bar_guard_name</name>
         <icon>ui_inGame2_garik_guard</icon>
@@ -43,8 +55,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!-------------------------- ZHORIK ------------------------>
+
+    <!-------------------------- ZHORIK ---------------------- -->
     <specific_character id="bar_visitors_zhorik_stalker_guard2" team_default = "1">
     <name>bar_bar_guard2_name</name>
     <icon>ui_inGame2_zhorik_guard</icon>
@@ -66,8 +78,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!---------------------------VORONIN---------------------->
+
+    <!---------------------------VORONIN-------------------- -->
     <specific_character id="bar_dolg_leader" team_default = "1">
     <name>bar_voronin_name</name>
     <icon>ui_inGame2_voronin</icon>
@@ -94,8 +106,8 @@
     <start_dialog>hello_dialog</start_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
-    <!-------------------------- KITSENKO ------------------------>
+
+    <!-------------------------- KITSENKO ---------------------- -->
     <specific_character id="bar_zastava_2_commander" team_default = "1">
     <name>bar_kicenko_name</name>
     <icon>ui_inGame2_kitsenko</icon>
@@ -123,7 +135,7 @@
 #include "gameplay\character_criticals_6.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="bar_duty_security_squad_leader" team_default = "1">
     <name>st_bar_duty_security_squad_leader_name</name>
     <icon>ui_inGame2_Dolg_4</icon>
@@ -150,8 +162,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
-    <!-------------------------- ZONEGUARD ------------------------>
+
+    <!-------------------------- ZONEGUARD ---------------------- -->
     <specific_character id="bar_dolg_general_zoneguard_stalker" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Dolg_3</icon>
@@ -182,8 +194,18 @@
     <actor_dialog>dm_broker_dialog</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
-    <!--------------------------- PETRENKO ---------------------->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- General Petrenko  (Duty Trader) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 10, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="bar_dolg_general_petrenko_stalker" team_default = "1">
     <name>bar_petrenko_name</name>
     <icon>ui_inGame2_petrenko</icon>
@@ -208,20 +230,38 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals_6.xml"
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>drx_sl_bar_dolg_general_petrenko_stalker_game_start_dialog_1</actor_dialog>
+		<actor_dialog>drx_sl_cf_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_bar_dolg_general_petrenko_stalker_meet_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>drx_sl_change_faction_dialog</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
-    <!------------ bar_visitors_stalker_mechanic ---------------------------->
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Mangun (Duty Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 10, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="bar_visitors_stalker_mechanic" team_default = "1">
     <name>bar_visitors_stalker_mechanic_name</name>
     <icon>ui_inGame2_dolg_tech</icon>
     <map_icon x="1" y="0"></map_icon>
     <bio>Опытный сталкер. Детальная информация отсутствует.</bio>
     <class>bar_visitors_stalker_mechanic</class>
-    <community>dolg</community> 
+    <community>dolg</community>
 	<terrain_sect>stalker_terrain</terrain_sect>
     <mechanic_mode>1</mechanic_mode>
     <snd_config>characters_voice\human_01\dolg\</snd_config>
@@ -231,18 +271,36 @@
     <visual>actors\stalker_dolg\stalker_dolg_mehanik</visual>
     <supplies></supplies>
 #include "gameplay\character_criticals_4.xml"
-        <start_dialog>bar_visitors_stalker_mechanic_start</start_dialog>
-        <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-        <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-        <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-        <actor_dialog>dm_tech_repair</actor_dialog>
-        <actor_dialog>bar_visitors_stalker_mechanic_drink_1</actor_dialog>
-        <actor_dialog>bar_visitors_stalker_mechanic_drink_2</actor_dialog>
-        <actor_dialog>bar_visitors_stalker_mechanic_drink_3</actor_dialog>
-        <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>bar_visitors_stalker_mechanic_start</start_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_bar_visitors_stalker_mechanic_meet_dialog</actor_dialog>
+		<actor_dialog>drx_sl_mechanic_task_dialog</actor_dialog>
+		<actor_dialog>dm_tech_repair</actor_dialog>
+		<actor_dialog>zat_b3_stalker_tech_drink_1</actor_dialog>
+		<actor_dialog>zat_b3_stalker_tech_drink_2</actor_dialog>
+		<actor_dialog>zat_b3_stalker_tech_drink_3</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
         </specific_character>
-        
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
         <!-- ******************* ARENA ********************** -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Arnie (Loner Arena Manager) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
         <specific_character id="bar_arena_manager" team_default = "1">
         <name>bar_arny_name</name>
         <icon>ui_inGame2_arnie</icon>
@@ -264,14 +322,19 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <start_dialog>bar_arena_manager_start</start_dialog>
-    <actor_dialog>bar_arena_manager_rules</actor_dialog>
-    <actor_dialog>bar_arena_manager_info</actor_dialog>
-    <actor_dialog>bar_arena_man_job</actor_dialog>
-    <actor_dialog>bar_arena_manager_game</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>bar_arena_manager_start</start_dialog>
+		<actor_dialog>bar_arena_man_job</actor_dialog>
+		<actor_dialog>bar_arena_manager_game</actor_dialog>
+		<actor_dialog>bar_arena_manager_info</actor_dialog>
+		<actor_dialog>bar_arena_manager_rules</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <specific_character id="bar_arena_guard" team_default = "1">
     <name>bar_lelik_name</name>
     <icon>ui_inGame2_lelik_guard</icon>
@@ -295,8 +358,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!------------------------OLD ARENA----------------------------------->
+
+    <!------------------------OLD ARENA--------------------------------- -->
     <specific_character id="bar_arena_savage" team_default = "1">
     <name>bar_beast_name</name>
     <icon>ui_inGame2_Zombied_4</icon>
@@ -318,9 +381,9 @@
 #include "gameplay\character_criticals_1.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!------------------------NEW ARENA----------------------------------->
-    <!---------------------------STALKER 1---------------------->
+
+    <!------------------------NEW ARENA--------------------------------- -->
+    <!---------------------------STALKER 1-------------------- -->
     <specific_character id="bar_arena_stalker_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -342,8 +405,8 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
-    <!-----------------STALKER 2---------------------------------->
+
+    <!-----------------STALKER 2-------------------------------- -->
     <specific_character id="bar_arena_stalker_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -364,8 +427,8 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
-    <!--------------------STALKER 3_1 and 3_2---------------------->
+
+    <!--------------------STALKER 3_1 and 3_2-------------------- -->
     <specific_character id="bar_arena_stalker_3_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -386,7 +449,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_3_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -407,9 +470,9 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
-    <!---------------STALKER 4_1, 4_2, 4_3,4_4,4_5--------------->
-    <!---enemy--->
+
+    <!---------------STALKER 4_1, 4_2, 4_3,4_4,4_5------------- -->
+    <!---enemy- -->
     <specific_character id="bar_arena_stalker_4_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -430,7 +493,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_4_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -451,7 +514,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_4_3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_nauchniy</icon>
@@ -472,8 +535,8 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
-    <!----friends---->
+
+    <!----friends-- -->
     <specific_character id="bar_arena_stalker_4_4" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_4</icon>
@@ -495,7 +558,7 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_4_5" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_3</icon>
@@ -517,8 +580,8 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
-    <!------------STALKER 5_1,5_2------------------------->
+
+    <!------------STALKER 5_1,5_2----------------------- -->
     <specific_character id="bar_arena_stalker_5_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Soldier_4</icon>
@@ -540,7 +603,7 @@
     </supplies>
 #include "gameplay\character_criticals_6.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_5_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Soldier_4</icon>
@@ -561,8 +624,8 @@
     </supplies>
 #include "gameplay\character_criticals_6.xml"
     </specific_character>
-    
-    <!---------------STALKER 6_1,6_2,6_3,6_4,6_5,6_6------------->
+
+    <!---------------STALKER 6_1,6_2,6_3,6_4,6_5,6_6----------- -->
     <specific_character id="bar_arena_stalker_6_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_3</icon>
@@ -583,7 +646,7 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_6_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_4</icon>
@@ -604,7 +667,7 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_6_3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_4</icon>
@@ -625,7 +688,7 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_6_4" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_5</icon>
@@ -646,7 +709,7 @@
     </supplies>
 #include "gameplay\character_criticals_3.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_6_5" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_exo</icon>
@@ -667,7 +730,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_6_6" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_exo</icon>
@@ -688,8 +751,8 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
-    <!------ STALKER 7 ------------------->
+
+    <!------ STALKER 7 ----------------- -->
     <specific_character id="bar_arena_stalker_7" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_4</icon>
@@ -711,8 +774,8 @@
     </supplies>
 #include "gameplay\character_criticals_2.xml"
     </specific_character>
-    
-    <!-----------STALKER 8_1,8_2,8_3,8_4-------------------->
+
+    <!-----------STALKER 8_1,8_2,8_3,8_4------------------ -->
     <specific_character id="bar_arena_stalker_8_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_4</icon>
@@ -733,7 +796,7 @@
     </supplies>
 #include "gameplay\character_criticals_2.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_8_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_4</icon>
@@ -754,7 +817,7 @@
     </supplies>
 #include "gameplay\character_criticals_2.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_8_3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_4</icon>
@@ -775,7 +838,7 @@
     </supplies>
 #include "gameplay\character_criticals_2.xml"
     </specific_character>
-    
+
     <specific_character id="bar_arena_stalker_8_4" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_4</icon>
@@ -796,5 +859,5 @@
     </supplies>
 #include "gameplay\character_criticals_2.xml"
     </specific_character>
-    
+
 </xml>

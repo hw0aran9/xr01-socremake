@@ -1,3 +1,14 @@
+-- ============================================================
+--
+-- utils.script
+--	CoC 1.4.21 - DoctorX Questlines 1.20
+--
+--	Modified by: DoctorX
+--	Last revised: December 21, 2016
+--
+-- ============================================================
+
+
 function clamp(val, min, max)
 	return val < min and min or val > max and max or val
 end
@@ -93,12 +104,12 @@ function cfg_get_bool(char_ini, section, field, object, mandatory, default_val)
 
 	if not (char_ini) then
 		--printf("cfg_get_bool: ini is nil! section=%s field=%s object=%s",section,field,object and object:name())
-		return default_val 
+		return default_val
 	end
-	
+
 	--printf("DEBUG: conf_get_bool: section='%s', field='%s'", section, field)
 	if section and char_ini:section_exist(section) and char_ini:line_exist(section, field) then
-		local ret = char_ini:r_bool_ex(section,field,default_val) 
+		local ret = char_ini:r_bool_ex(section,field,default_val)
 		return ret
 	end
 	if not mandatory then
@@ -123,7 +134,7 @@ function cfg_get_string(char_ini, section, field, object, mandatory, gulag_name,
 
 	if not (char_ini) then
 		--printf("cfg_get_string: ini is nil! section=%s field=%s object=%s",section,field,object and object:name())
-		return default_val 
+		return default_val
 	end
 
 	--printf("DEBUG: conf_get_string: section='%s', field='%s'", section, field)
@@ -147,10 +158,10 @@ function cfg_get_number(char_ini, section, field, object, mandatory, default_val
 	if mandatory == nil then
 		printf("section '%s': wrong arguments order in call to cfg_get_number", section)
 	end
-	
+
 	if not (char_ini) then
 		--printf("cfg_get_number: ini is nil! section=%s field=%s object=%s",section,field,object and object:name())
-		return default_val 
+		return default_val
 	end
 
 	--printf("DEBUG: conf_get_number: section='%s', field='%s'", section, field)
@@ -303,12 +314,12 @@ function path_parse_waypoints(pathname)
 	end
 
 	--printf("_bp: path_parse_waypoints: pathname='%s'", pathname)
-	
-	if not (level.patrol_path_exists(pathname)) then 
+
+	if not (level.patrol_path_exists(pathname)) then
 		printf("ERROR: utils.path_parse_waypoints: patrol path %s don't exist!",pathname)
 		return
-	end 
-	
+	end
+
 	local ptr = patrol(pathname)
 	local cnt = ptr:count()
 	local rslt = {}
@@ -497,17 +508,17 @@ end
 
 -- запись CTime в пакет. если t=nil, то запишет один нулевой байт
 function w_CTime(p, t, caller)
-	if (t == nil) then 
+	if (t == nil) then
 		p:w_bool(false)
 		return
-	end 
-	
+	end
+
 	p:w_bool(true)
-	
+
 	if not (type(t) == "userdata" and t.timeToString) then
 		t = game.get_game_time()
 	end
-	
+
 	local Y, M, D, h, m, s, ms = 0, 0, 0, 0, 0, 0, 0
 	Y, M, D, h, m, s, ms = t:get( Y, M, D, h, m, s, ms )
 
@@ -522,10 +533,10 @@ end
 
 -- чтение CTime из пакета
 function r_CTime(p, caller)
-	if (p:r_bool() == false) then 
+	if (p:r_bool() == false) then
 		return
 	end
-	
+
 	local t = game.CTime()
 	local Y, M, D, h, m, s, ms = p:r_u8(), p:r_u8(), p:r_u8(), p:r_u8(), p:r_u8(), p:r_u8(), p:r_u16()
 	t:set( Y + 2000,  M, D, h, m, s, ms)
@@ -739,10 +750,10 @@ end
 
 function prefix_r_string(ini,sec,key,prefix)
 	local rslt = ini:r_string_ex(sec,key)
-	if not (rslt) then 
-		return 
+	if not (rslt) then
+		return
 	end
-	if (prefix and prefix ~= "" and prefix ~= "nil") then 
+	if (prefix and prefix ~= "" and prefix ~= "nil") then
 		return prefix .. "_" .. rslt
 	end
 	return rslt
@@ -761,7 +772,7 @@ function pstor_is_registered_type(tv)
 end
 
 function save_var(obj,varname,val)
-	if (obj == nil) then 
+	if (obj == nil) then
 		callstack()
 	end
 	local id = obj:id()
@@ -769,7 +780,7 @@ function save_var(obj,varname,val)
 		printf("utils.save_var: Warning: no db.storage for %s, db.storage is for online objects only",id)
 		return
 	end
-	
+
 	if not (db.storage[id].pstor) then
 		db.storage[id].pstor = {}
 	end
@@ -781,7 +792,7 @@ function save_var(obj,varname,val)
 			return
 		end
 	end
-	
+
 	if (type(val) == "userdata") then
 		printf("WARNING: utils.save_var ONLY USE LUA DATA TYPES!!! %s",varname)
 	else
@@ -789,21 +800,60 @@ function save_var(obj,varname,val)
 	end
 end
 
-function load_var(obj,varname,defval)
-	if (obj == nil) then 
-		callstack()
-	end
-	local id = obj:id()
-	if not (db.storage[id]) then
-		printf("utils.load_var: Warning: no db.storage for %s, db.storage is for online objects only",id)
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- load_var function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Loads a var from storage
+--
+--	Usage:
+--		load_var( obj, varname, defval )
+--
+--	Parameters:
+--		obj
+--			-
+--		varname
+--			-
+--		defval
+--			-
+--
+--	Return value (type: ):
+--
+--
+-- ------------------------------------------------------------------------------------------------
+--	Modified by DoctorX
+--	for DoctorX Questlines 1.19
+--	Last modified December 11, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Load the var:
+function load_var( obj, varname, defval )
+
+	if ( obj == nil ) then
+-- 		callstack( )
+		printf( "utils.load_var failed for %s", varname )
 		return defval
 	end
-	
+	local id = obj:id( )
+	if not ( db.storage[id] ) then
+-- 		printf( "utils.load_var: Warning: no db.storage for %s, db.storage is for online objects only", id )
+		printf( "utils.load_var: Warning: no db.storage, db.storage is for online objects only" )
+		return defval
+	end
+
 	return db.storage[id].pstor and db.storage[id].pstor[varname] or defval
+
 end
 
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 function save_ctime(obj,varname,val)
-	if (obj == nil) then 
+	if (obj == nil) then
 		callstack()
 	end
 	local id = obj:id()
@@ -811,16 +861,16 @@ function save_ctime(obj,varname,val)
 		printf("utils.save_ctime: Warning: no db.storage for %s, db.storage is for online objects only",id)
 		return
 	end
-	
+
 	if not (db.storage[id].pstor_ctime) then
 		db.storage[id].pstor_ctime = {}
 	end
-	
+
 	db.storage[id].pstor_ctime[varname] = val
 end
 
 function load_ctime(obj, varname)
-	if (obj == nil) then 
+	if (obj == nil) then
 		callstack()
 	end
 	local id = obj:id()
@@ -835,7 +885,7 @@ end
 function se_obj_save_var(id,name,varname,val)
 	local m_data = alife_storage_manager.get_state()
 	if (m_data.se_object[id]) then
-		m_data.se_object[id][varname] = val 
+		m_data.se_object[id][varname] = val
 	end
 end
 

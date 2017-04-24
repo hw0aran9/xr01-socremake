@@ -1,837 +1,1739 @@
 #include "trade_discounts.ltx"
-
 [trader]
-buy_condition                            = trade_generic_buy
-buy_item_condition_factor                = 0.7
-buy_supplies                             = {=actor_community(actor_dolg) =heavy_pockets_functor} supplies_heavy_pockets, supplies_generic
-discounts                                = {=actor_goodwill_ge(dolg:2000)} discount_10, {=actor_goodwill_ge(dolg:1800)} discount_9, {=actor_goodwill_ge(dolg:1600)} discount_8, {=actor_goodwill_ge(dolg:1400)} discount_7, {=actor_goodwill_ge(dolg:1200)} discount_6, {=actor_goodwill_ge(dolg:1000)} discount_5, {=actor_goodwill_ge(dolg:800)} discount_4, {=actor_goodwill_ge(dolg:600)} discount_3, {=actor_goodwill_ge(dolg:400)} discount_2, {=actor_goodwill_ge(dolg:200)} discount_1, discount_0
-price_profile                            = barman
-sell_condition                           = trade_generic_sell
+buy_condition                                      = trade_generic_buy
+buy_item_condition_factor                          = 0.7
+buy_supplies                                       = {=actor_community(actor_dolg) =heavy_pockets_functor} supplies_heavy_pockets, supplies_generic
+discounts                                          = {=actor_goodwill_ge(dolg:2000)} discount_10, {=actor_goodwill_ge(dolg:1800)} discount_9, {=actor_goodwill_ge(dolg:1600)} discount_8, {=actor_goodwill_ge(dolg:1400)} discount_7, {=actor_goodwill_ge(dolg:1200)} discount_6, {=actor_goodwill_ge(dolg:1000)} discount_5, {=actor_goodwill_ge(dolg:800)} discount_4, {=actor_goodwill_ge(dolg:600)} discount_3, {=actor_goodwill_ge(dolg:400)} discount_2, {=actor_goodwill_ge(dolg:200)} discount_1, discount_0
+price_profile                                      = barman
+sell_condition                                     = trade_generic_sell
 
 [trade_generic_sell]
-
-;D_PDA
-itm_pda_common                           ;NO TRADE
-itm_pda_rare                             ;NO TRADE
-itm_pda_uncommon                         ;NO TRADE
-pri_a25_explosive_charge_item            ;NO TRADE
-
-;II_ATTCH
-anomaly_scaner                           ;NO TRADE
-army_patch                               = 1.3, 2
-bad_psy_helmet                           ;NO TRADE
-bandit_patch                             = 1.2, 2
-cit_doctors_key                          ;NO TRADE
-csky_patch                               = 1.1, 1.8
-decoder                                  ;NO TRADE
-duty_patch                               = 1.1, 1.8
-ecolog_patch                             = 1.2, 2
-freedom_patch                            = 1.1, 1.8
-good_psy_helmet                          ;NO TRADE
-main_story_1_quest_case                  ;NO TRADE
-main_story_2_lab_x18_documents           ;NO TRADE
-main_story_3_lab_x16_documents           ;NO TRADE
-merc_patch                               = 1.1, 1.8
-monolith_patch                           = 1.3, 1.9
-mutant_part_boar_leg                     ;NO TRADE
-mutant_part_burer_hand                   ;NO TRADE
-mutant_part_cat_tail                     ;NO TRADE
-mutant_part_chimera_claw                 ;NO TRADE
-mutant_part_chimera_kogot                ;NO TRADE
-mutant_part_controller_glass             ;NO TRADE
-mutant_part_controller_hand              ;NO TRADE
-mutant_part_dog_tail                     ;NO TRADE
-mutant_part_flesh_eye                    ;NO TRADE
-mutant_part_fracture_hand                ;NO TRADE
-mutant_part_krovosos_jaw                 ;NO TRADE
-mutant_part_pseudogigant_eye             ;NO TRADE
-mutant_part_pseudogigant_hand            ;NO TRADE
-mutant_part_psevdodog_tail               ;NO TRADE
-mutant_part_snork_hand                   ;NO TRADE
-mutant_part_snork_leg                    ;NO TRADE
-mutant_part_tushkano_head                ;NO TRADE
-mutant_part_zombi_hand                   ;NO TRADE
-pri_a15_documents                        ;NO TRADE
-pri_a15_wpn_ak74                         ;NO TRADE
-pri_a15_wpn_ak74u                        ;NO TRADE
-pri_a15_wpn_svu                          ;NO TRADE
-pri_a15_wpn_wincheaster1300              ;NO TRADE
-pri_decoder_documents                    ;NO TRADE
-stalker_patch                            = 1.3, 2
-
-;DET_SIMP
-detector_simple                          = 1.1, 1.9
-
-;DET_ADVA
-detector_advanced                        = 1.3, 2
-
-;DET_ELIT
-detector_elite                           = 1.3, 1.8
-
-;DET_SCIE
-detector_scientific                      = 1.3, 1.8
-
-;ARTEFACT
-af_ameba_mica                            = 1.3, 2
-af_ameba_slime                           = 1.3, 2
-af_ameba_slug                            = 1.1, 1.8
-af_baloon                                = 1.2, 2
-af_blood                                 = 1.3, 1.8
-af_cristall                              = 1.1, 2
-af_cristall_flower                       = 1.1, 2
-af_drops                                 = 1.3, 1.8
-af_dummy_battery                         = 1.3, 1.8
-af_dummy_dummy                           = 1.1, 1.8
-af_dummy_glassbeads                      = 1.3, 1.8
-af_dummy_pellicle                        = 1.1, 1.8
-af_dummy_spring                          = 1.2, 2
-af_eye                                   = 1.3, 1.8
-af_fire                                  = 1.3, 2
-af_fireball                              = 1.1, 1.9
-af_glass                                 = 1.2, 1.9
-af_gold_fish                             = 1.1, 1.8
-af_gravi                                 = 1.1, 1.9
-af_ice                                   = 1.1, 2
-af_medusa                                = 1.2, 1.8
-af_mincer_meat                           = 1.1, 1.9
-af_night_star                            = 1.2, 2
-af_rusty_kristall                        = 1.1, 1.9
-af_rusty_sea                             = 1.3, 1.8
-af_rusty_thorn                           = 1.1, 1.8
-af_soul                                  = 1.3, 1.9
-af_vyvert                                = 1.2, 2
-
-;SCRPTART
-af_electra_flash                         = 1.1, 2
-af_electra_moonlight                     = 1.1, 2
-af_electra_sparkler                      = 1.2, 1.9
-af_fuzz_kolobok                          = 1.3, 2
-
-;II_FOOD
-antirad                                  = 1.2, 1.8
-bandage                                  = 1.2, 2
-bread                                    = 1.3, 1.8
-conserva                                 = 1.2, 1.8
-drug_anabiotic                           = 1.3, 2
-drug_antidot                             = 1.1, 1.9
-drug_booster                             = 1.2, 2
-drug_coagulant                           = 1.3, 1.8
-drug_psy_blockade                        = 1.1, 1.9
-drug_radioprotector                      = 1.2, 2
-energy_drink                             = 1.3, 1.9
-itm_gunsmith_toolkit                     = 1.3, 1.8
-itm_outfit_toolkit                       = 1.1, 1.9
-itm_repairkit_tier_1                     = 1.1, 1.9
-itm_repairkit_tier_2                     = 1.2, 1.8
-itm_repairkit_tier_3                     = 1.3, 1.9
-kolbasa                                  = 1.1, 1.9
-medkit                                   = 1.1, 2
-medkit_army                              = 1.3, 2
-medkit_scientic                          = 1.2, 1.8
-mutant_part_boar_chop                    = 1.3, 1.9
-mutant_part_chimera_meat                 = 1.2, 1.8
-mutant_part_dog_meat                     = 1.2, 2
-mutant_part_flesh_meat                   = 1.2, 1.9
-mutant_part_krovosos_meat                = 1.2, 1.8
-mutant_part_psevdodog_meat               = 1.1, 2
-mutant_part_tushkano_meat                = 1.1, 1.8
-vodka                                    = 1.1, 1.8
-
-;II_ANTIR
-artefact_container                       ;NO TRADE
-itm_actor_backpack                       = 1.2, 2
-itm_backpack                             = 1.1, 2
-itm_deployable_mgun                      ;NO TRADE
-itm_sleepbag                             = 1.1, 2
-test_container                           = 1.2, 2
-wpn_mine                                 = 1.1, 1.9
-
-;G_F1
-grenade_f1                               = 1.2, 2
-grenade_gd-05                            = 1.2, 1.8
-
-;G_RGD5
-grenade_rgd5                             = 1.3, 1.8
-
-;AMMO
-ammo_11.43x23_fmj                        = 1.1, 1.7
-ammo_11.43x23_hydro                      = 1.2, 1.7
-ammo_12x70_buck                          = 1.2, 1.7
-ammo_12x76_zhekan                        = 1.2, 1.7
-ammo_5.45x39_ap                          = 1, 1.6
-ammo_5.45x39_fmj                         = 1.1, 1.5
-ammo_5.56x45_ap                          = 1.2, 1.5
-ammo_5.56x45_ss190                       = 1.2, 1.5
-ammo_7.62x54_7h1                         = 1, 1.7
-ammo_9x18_fmj                            = 1.2, 1.7
-ammo_9x18_pmm                            = 1, 1.5
-ammo_9x19_fmj                            = 1, 1.5
-ammo_9x19_pbp                            = 1.2, 1.5
-ammo_9x39_ap                             = 1.1, 1.6
-ammo_9x39_pab9                           = 1, 1.5
-ammo_gauss                               = 1.1, 1.6
-ammo_gauss_cardan                        = 1, 1.5
-ammo_pkm_100                             = 1.2, 1.6
-
-;S_OG7B
-ammo_og-7b                               = 1.2, 1.5
-
-;S_VOG25
-ammo_vog-25                              = 1, 1.5
-
-;S_M209
-ammo_m209                                = 1.2, 2
-
-;WP_SCOPE
-wpn_addon_scope                          = 1.1, 1.8
-wpn_addon_scope_detector                 = 1.1, 1.8
-wpn_addon_scope_night                    = 1.1, 1.9
-wpn_addon_scope_susat                    = 1.1, 2
-wpn_addon_scope_susat_custom             = 1.1, 1.9
-wpn_addon_scope_susat_dusk               = 1.2, 2
-wpn_addon_scope_susat_night              = 1.3, 1.8
-wpn_addon_scope_susat_x1.6               = 1.2, 1.9
-wpn_addon_scope_x2.7                     = 1.3, 2
-
-;WP_SILEN
-wpn_addon_silencer                       = 1.3, 2
-
-;WP_GLAUN
-wpn_addon_grenade_launcher               = 1.3, 1.9
-wpn_addon_grenade_launcher_m203          = 1.3, 1.9
-
-;WP_AK74
-wpn_abakan                               = 1.5, 1.8
-wpn_ak74                                 = 1.6, 2
-wpn_ak74u                                = 1.7, 1.8
-wpn_ak74u_snag                           = 1.5, 1.9
-wpn_g36                                  = 1.6, 1.9
-wpn_g36_nimble                           = 1.6, 1.9
-wpn_groza                                = 1.5, 1.9
-wpn_groza_nimble                         = 1.7, 2
-wpn_groza_specops                        = 1.5, 1.9
-wpn_l85                                  = 1.7, 2
-wpn_lr300                                = 1.6, 1.8
-wpn_pkm                                  = 1.6, 1.9
-wpn_pkm_zulus                            = 1.7, 1.8
-wpn_sig550                               = 1.6, 1.8
-wpn_sig550_luckygun                      = 1.7, 1.8
-wpn_vintorez                             = 1.6, 2
-wpn_vintorez_nimble                      = 1.6, 1.9
-
-;WP_ASHTG
-wpn_protecta                             = 1.6, 1.8
-wpn_protecta_nimble                      = 1.7, 1.9
-wpn_spas12                               = 1.7, 1.9
-wpn_spas12_nimble                        = 1.6, 1.8
-wpn_wincheaster1300                      = 1.5, 1.9
-wpn_wincheaster1300_trapper              = 1.7, 1.8
-
-;WP_BINOC
-wpn_binoc                                = 1.6, 1.8
-
-;WP_BM16
-wpn_bm16                                 = 1.5, 1.9
-wpn_toz34                                = 1.7, 1.8
-
-;WP_GROZA
-wpn_fn2000                               = 1.5, 2
-wpn_fn2000_nimble                        = 1.5, 2
-
-;WP_HPSA
-wpn_hpsa                                 = 1.7, 1.9
-
-;WP_KNIFE
-wpn_knife                                = 1.6, 2
-
-;WP_LR300
-wpn_beretta                              = 1.5, 2
-wpn_mp5                                  = 1.7, 1.9
-wpn_mp5_nimble                           = 1.6, 1.8
-wpn_sig220                               = 1.7, 2
-wpn_sig220_nimble                        = 1.7, 1.9
-wpn_usp                                  = 1.5, 2
-wpn_usp_nimble                           = 1.6, 1.8
-wpn_walther                              = 1.5, 1.8
-
-;WP_PM
-wpn_colt1911                             = 1.6, 2
-wpn_desert_eagle                         = 1.5, 2
-wpn_desert_eagle_nimble                  = 1.5, 1.8
-wpn_fort                                 = 1.5, 2
-wpn_fort_snag                            = 1.7, 1.8
-wpn_pb                                   = 1.5, 2
-wpn_pm                                   = 1.6, 1.8
-wpn_pm_actor                             = 1.5, 2
-
-;WP_RG6
-wpn_rg-6                                 = 1.7, 2
-
-;WP_RPG7
-wpn_rpg7                                 = 1.5, 1.8
-
-;WP_SVD
-pri_a17_gauss_rifle                      ;NO TRADE
-wpn_gauss                                = 1.7, 2
-wpn_svd                                  = 1.7, 1.8
-wpn_svd_nimble                           = 1.7, 1.8
-
-;WP_SVU
-wpn_svu                                  = 1.5, 2
-wpn_svu_nimble                           = 1.7, 1.9
-
-;WP_VAL
-wpn_val                                  = 1.6, 2
-
-;EQU_STLK
-bandit_exo_outfit                        = 1.2, 2
-bandit_novice_outfit                     = 1.3, 1.8
-banditmerc_outfit                        = 1.2, 1.8
-cs_heavy_outfit                          = 1.1, 1.9
-cs_light_novice_outfit                   = 1.3, 2
-cs_light_outfit                          = 1.2, 1.8
-cs_medium_outfit                         = 1.3, 1.9
-cs_novice_outfit                         = 1.3, 1.8
-dolg_exo_outfit                          = 1.3, 1.9
-dolg_heavy_outfit                        = 1.2, 1.8
-dolg_novice_outfit                       = 1.2, 1.9
-dolg_outfit                              = 1.3, 1.8
-dolg_scientific_outfit                   = 1.2, 2
-ecolog_guard_outfit                      = 1.2, 1.9
-ecolog_outfit_green                      = 1.1, 2
-ecolog_outfit_orange                     = 1.2, 1.8
-exo_outfit                               = 1.3, 2
-merc_exo_outfit                          = 1.1, 2
-merc_novice_outfit                       = 1.1, 1.8
-merc_outfit                              = 1.2, 1.8
-merc_scientific_outfit                   = 1.3, 1.9
-military_exo_outfit                      = 1.3, 1.9
-military_novice_outfit                   = 1.3, 2
-military_outfit                          = 1.3, 1.8
-monolith_exo_outfit                      = 1.2, 2
-monolith_novice_outfit                   = 1.1, 1.9
-monolith_outfit                          = 1.1, 1.8
-monolith_scientific_outfit               = 1.3, 1.9
-novice_outfit                            = 1.1, 1.9
-scientific_outfit                        = 1.3, 1.8
-specops_outfit                           = 1.2, 2
-stalker_outfit                           = 1.1, 2
-stalker_outfit_barge                     = 1.2, 1.8
-svoboda_exo_outfit                       = 1.2, 1.9
-svoboda_heavy_outfit                     = 1.1, 2
-svoboda_heavy_outfit_2                   = 1.3, 1.9
-svoboda_light_outfit                     = 1.2, 2
-svoboda_novice_outfit                    = 1.2, 1.8
-svoboda_scientific_outfit                = 1.1, 2
-trenchcoat_outfit                        = 1.2, 1.9
-
-;E_HLMET
-helm_battle                              = 1.3, 2
-helm_hardhat                             = 1.2, 1.9
-helm_hardhat_snag                        = 1.2, 1.8
-helm_m40                                 = 1.1, 2
-helm_protective                          = 1.1, 1.8
-helm_respirator                          = 1.1, 1.9
-helm_respirator_joker                    = 1.1, 1.9
-helm_tactic                              = 1.3, 1.9
-deployable_mgun                          ;NO TRADE
-wpn_rpg7_missile                         ;NO TRADE
-yantar_deployable_mgun                   ;NO TRADE
+trenchcoat_brown_outfit					= 1.2, 1.9
+army_outfit								= 1.1, 2
+barmerc_outfit							= 1.2, 1.8
+cs_scientific_outfit					= 1.2, 1.8
+nbc_outfit								= 1.2, 1.8
+cs_nbc_outfit							= 1.2, 1.8
+monolith_nbc_outfit						= 1.2, 1.8
+radiation_outfit						= 1.2, 1.8
+dolg_radiation_outfit					= 1.2, 1.8
+svoboda_radiation_outfit				= 1.2, 1.8
+merc_radiation_outfit					= 1.2, 1.8
+monolith_radiation_outfit				= 1.2, 1.8
+isg_scientific_outfit					= 1.2, 1.8
+isg_outfit								= 1.1, 1.9
+bandit_specops_outfit					= 1.2, 1.9
+cs_exo_outfit							= 1.2, 1.8
+helm_tactic_2							= 1.1, 1.9
+cs_stalker_outfit						= 1.2, 1.8
+exo_proto_outfit						= 1.2, 1.8
+helm_respirator_2						= 1.2, 1.8
+helm_facemask							= 1.2, 1.8
+scientific_heavy_outfit					= 1.2, 1.8
+ecolog_outfit_white						= 1.2, 1.8
+ecolog_outfit_blue						= 1.2, 1.8
+helm_respirator_gp5						= 1.2, 1.8
+helm_respirator_half					= 1.2, 1.8
+1p29                                               = 1.27, 1.96
+9x39scope                                          ; NO TRADE
+ac10632                                            ; NO TRADE
+ac11090                                            = 1.47, 1.82
+acog                                               = 1.9, 1.94
+addon                                              ; NO TRADE
+af_ameba_mica                                      = 1.3, 2
+af_ameba_slime                                     = 1.3, 2
+af_ameba_slug                                      = 1.1, 1.8
+af_baloon                                          = 1.2, 2
+af_blood                                           = 1.3, 1.8
+af_cristall                                        = 1.1, 2
+af_cristall_flower                                 = 1.1, 2
+af_drops                                           = 1.3, 1.8
+af_dummy_battery                                   = 1.3, 1.8
+af_dummy_dummy                                     = 1.1, 1.8
+af_dummy_glassbeads                                = 1.3, 1.8
+af_dummy_pellicle                                  = 1.1, 1.8
+af_dummy_spring                                    = 1.2, 2
+af_electra_flash                                   = 1.1, 2
+af_electra_moonlight                               = 1.1, 2
+af_electra_sparkler                                = 1.2, 1.9
+af_eye                                             = 1.3, 1.8
+af_fire                                            = 1.3, 2
+af_fireball                                        = 1.1, 1.9
+af_fuzz_kolobok                                    = 1.3, 2
+af_glass                                           = 1.2, 1.9
+af_gold_fish                                       = 1.1, 1.8
+af_gravi                                           = 1.1, 1.9
+af_ice                                             = 1.1, 2
+af_medusa                                          = 1.2, 1.8
+af_mincer_meat                                     = 1.1, 1.9
+af_night_star                                      = 1.2, 2
+af_rusty_kristall                                  = 1.1, 1.9
+af_rusty_sea                                       = 1.3, 1.8
+af_rusty_thorn                                     = 1.1, 1.8
+af_soul                                            = 1.3, 1.9
+af_vyvert                                          = 1.2, 2
+ammo_10x22_fmj                                     = 1.2, 1.72
+ammo_10x22_hp                                      = 1.33, 1.72
+ammo_10x25_fmj                                     = 1.30, 1.73
+ammo_10x25_hp                                      = 1.12, 1.90
+ammo_11.43x23_fmj                                  = 1.27, 1.52
+ammo_11.43x23_hydro                                = 1.46, 1.60
+ammo_12.7x55                                       = 1.39, 1.68
+ammo_12x70_buck                                    = 1.20, 1.60
+ammo_12x76_zhekan                                  = 1.31, 1.75
+ammo_12x76_zhekan_heli                             = 1.38, 1.70
+ammo_357_fmj                                       = 1.7, 1.74
+ammo_357_hp                                        = 1.6, 1.95
+ammo_4.6x30_ap                                     = 1.39, 1.93
+ammo_4.6x30_fmj                                    = 1.38, 1.94
+ammo_5.45x39_ap                                    = 1.22, 1.66
+ammo_5.45x39_fmj                                   = 1.47, 1.56
+ammo_5.56x45_ap                                    = 1.39, 1.84
+ammo_5.56x45_ss190                                 = 1.27, 1.54
+ammo_5.7x28_ss190                                  = 1.18, 1.72
+ammo_5.7x28_ss192                                  = 1.25, 1.52
+ammo_50_beowulf_hp                                 = 1.5, 1.67
+ammo_50_beowulf_jfp                                = 1.24, 1.88
+ammo_50ae_fmj                                      = 1.46, 1.70
+ammo_50ae_hp                                       = 1.29, 1.93
+ammo_6.8x43_fmj                                    = 1.14, 1.55
+ammo_6.8x43_sst                                    = 1.7, 1.76
+ammo_7.62x25_fmj                                   = 1.28, 1.93
+ammo_7.62x25_hp                                    = 1.22, 1.54
+ammo_7.62x39_ap                                    = 1.48, 1.88
+ammo_7.62x39_fmj                                   = 1.1, 1.80
+ammo_7.62x51_ap                                    = 1.38, 1.90
+ammo_7.62x51_fmj                                   = 1.25, 1.76
+ammo_7.62x54_7h1                                   = 1.42, 1.54
+ammo_7.62x54_fmj                                   = 1.11, 1.80
+ammo_8.58x70_ap                                    = 1.45, 1.52
+ammo_8.58x70_jsp                                   = 1.1, 1.85
+ammo_9x18_fmj                                      = 1.38, 1.93
+ammo_9x18_pmm                                      = 1.32, 1.77
+ammo_9x19_fmj                                      = 1.13, 1.73
+ammo_9x19_pbp                                      = 1.44, 1.82
+ammo_9x39_ap                                       = 1.2, 1.67
+ammo_9x39_pab9                                     = 1.31, 1.55
+ammo_gauss                                         = 1.46, 1.54
+ammo_gauss_cardan                                  = 1.31, 1.94
+ammo_m134                                          = 1.22, 1.87
+ammo_m209                                          = 1.34, 1.70
+ammo_og-7b                                         = 1.25, 1.78
+ammo_pkm_100                                       = 1.45, 1.77
+ammo_vog-25                                        = 1.26, 1.97
+anomaly_scaner                                     ; NO TRADE
+antirad                                            = 1.2, 1.8
+army_patch                                         = 1.3, 2
+artefact_container                                 ; NO TRADE
+bad_psy_helmet                                     ; NO TRADE
+bandage                                            = 1.2, 2
+bandit_exo_outfit                                  = 1.2, 2
+bandit_novice_outfit                               = 1.3, 1.8
+bandit_patch                                       = 1.2, 2
+banditmerc_outfit                                  = 1.2, 1.8
+bread                                              = 1.3, 1.8
+c-more                                             ; NO TRADE
+c-more                                             = 1.1, 1.83
+cit_doctors_key                                    ; NO TRADE
+conserva                                           = 1.2, 1.8
+cs_heavy_outfit                                    = 1.1, 1.9
+cs_light_novice_outfit                             = 1.3, 2
+cs_light_outfit                                    = 1.2, 1.8
+cs_medium_outfit                                   = 1.3, 1.9
+cs_novice_outfit                                   = 1.3, 1.8
+csky_patch                                         = 1.1, 1.8
+decoder                                            ; NO TRADE
+deployable_mgun                                    ; NO TRADE
+detector_advanced                                  = 1.3, 2
+detector_elite                                     = 1.3, 1.8
+detector_scientific                                = 1.3, 1.8
+detector_simple                                    = 1.1, 1.9
+docter_sight                                       ; NO TRADE
+dolg_exo_outfit                                    = 1.3, 1.9
+dolg_heavy_outfit                                  = 1.2, 1.8
+dolg_novice_outfit                                 = 1.2, 1.9
+dolg_outfit                                        = 1.3, 1.8
+dolg_scientific_outfit                             = 1.2, 2
+drug_anabiotic                                     = 1.3, 2
+drug_antidot                                       = 1.1, 1.9
+drug_booster                                       = 1.2, 2
+drug_coagulant                                     = 1.3, 1.8
+drug_psy_blockade                                  = 1.1, 1.9
+drug_radioprotector                                = 1.2, 2
+duty_patch                                         = 1.1, 1.8
+ecolog_guard_outfit                                = 1.2, 1.9
+ecolog_outfit_green                                = 1.1, 2
+ecolog_outfit_orange                               = 1.2, 1.8
+ecolog_patch                                       = 1.2, 2
+ekp                                                = 1.35, 1.77
+energy_drink                                       = 1.3, 1.9
+eot                                                ; NO TRADE
+eot                                                = 1.45, 1.74
+exo_outfit                                         = 1.3, 2
+freedom_patch                                      = 1.1, 1.8
+good_psy_helmet                                    ; NO TRADE
+grenade_f1                                         = 1.24, 1.74
+grenade_gd-05                                      = 1.31, 1.79
+grenade_rgd5                                       = 1.28, 1.96
+helm_battle                                        = 1.3, 2
+helm_hardhat                                       = 1.2, 1.9
+helm_hardhat_snag                                  = 1.2, 1.8
+helm_m40                                           = 1.1, 2
+helm_protective                                    = 1.1, 1.8
+helm_respirator                                    = 1.1, 1.9
+helm_respirator_joker                              = 1.1, 1.9
+helm_tactic                                        = 1.3, 1.9
+itm_actor_backpack                                 = 1.2, 2
+itm_backpack                                       = 1.1, 2
+itm_deployable_mgun                                ; NO TRADE
+itm_gunsmith_toolkit                               = 1.3, 1.8
+itm_outfit_toolkit                                 = 1.1, 1.9
+itm_pda_common                                     ; NO TRADE
+itm_pda_rare                                       ; NO TRADE
+itm_pda_uncommon                                   ; NO TRADE
+itm_repairkit_tier_1                               = 1.1, 1.9
+itm_repairkit_tier_2                               = 1.2, 1.8
+itm_repairkit_tier_3                               = 1.3, 1.9
+itm_sleepbag                                       = 1.1, 2
+kobra                                              ; NO TRADE
+kobra                                              = 1.32, 1.90
+kolbasa                                            = 1.1, 1.9
+main_story_1_quest_case                            ; NO TRADE
+main_story_2_lab_x18_documents                     ; NO TRADE
+main_story_3_lab_x16_documents                     ; NO TRADE
+medkit                                             = 1.1, 2
+medkit_army                                        = 1.3, 2
+medkit_scientic                                    = 1.2, 1.8
+merc_exo_outfit                                    = 1.1, 2
+merc_outfit                                        = 1.2, 1.8
+merc_patch                                         = 1.1, 1.8
+merc_scientific_outfit                             = 1.3, 1.9
+military_exo_outfit                                = 1.3, 1.9
+military_outfit                                    = 1.3, 1.8
+monolith_exo_outfit                                = 1.2, 2
+novice_2_outfit                		               = 1.1, 1.9
+monolith_outfit                                    = 1.1, 1.8
+monolith_patch                                     = 1.3, 1.9
+monolith_scientific_outfit                         = 1.3, 1.9
+mutant_part_boar_chop                              = 1.3, 1.9
+mutant_part_boar_leg                               ; NO TRADE
+mutant_part_burer_hand                             ; NO TRADE
+mutant_part_cat_tail                               ; NO TRADE
+mutant_part_chimera_claw                           ; NO TRADE
+mutant_part_chimera_kogot                          ; NO TRADE
+mutant_part_chimera_meat                           = 1.2, 1.8
+mutant_part_controller_glass                       ; NO TRADE
+mutant_part_controller_hand                        ; NO TRADE
+mutant_part_dog_meat                               = 1.2, 2
+mutant_part_dog_tail                               ; NO TRADE
+mutant_part_flesh_eye                              ; NO TRADE
+mutant_part_flesh_meat                             = 1.2, 1.9
+mutant_part_fracture_hand                          ; NO TRADE
+mutant_part_krovosos_jaw                           ; NO TRADE
+mutant_part_krovosos_meat                          = 1.2, 1.8
+mutant_part_pseudogigant_eye                       ; NO TRADE
+mutant_part_pseudogigant_hand                      ; NO TRADE
+mutant_part_psevdodog_meat                         = 1.1, 2
+mutant_part_psevdodog_tail                         ; NO TRADE
+mutant_part_snork_hand                             ; NO TRADE
+mutant_part_snork_leg                              ; NO TRADE
+mutant_part_tushkano_head                          ; NO TRADE
+mutant_part_tushkano_meat                          = 1.1, 1.8
+mutant_part_zombi_hand                             ; NO TRADE
+novice_outfit                                      = 1.1, 1.9
+po4x34                                             ; NO TRADE
+pri_a15_documents                                  ; NO TRADE
+pri_a15_wpn_ak74                                   ; NO TRADE
+pri_a15_wpn_ak74u                                  ; NO TRADE
+pri_a15_wpn_svu                                    ; NO TRADE
+pri_a15_wpn_wincheaster1300                        ; NO TRADE
+pri_a17_gauss_rifle                                ; NO TRADE
+pri_a25_explosive_charge_item                      ; NO TRADE
+pri_decoder_documents                              ; NO TRADE
+pso                                                = 1.27, 1.63
+pu                                                 = 1.13, 1.66
+scientific_outfit                                  = 1.3, 1.8
+specops_outfit                                     = 1.2, 2
+stalker_outfit                                     = 1.1, 2
+stalker_outfit_barge                               = 1.2, 1.8
+stalker_patch                                      = 1.3, 2
+svoboda_exo_outfit                                 = 1.2, 1.9
+svoboda_heavy_outfit                               = 1.1, 2
+svoboda_heavy_outfit_2                             = 1.3, 1.9
+svoboda_light_outfit                               = 1.2, 2
+svoboda_novice_outfit                              = 1.2, 1.8
+svoboda_scientific_outfit                          = 1.1, 2
+test_container                                     = 1.2, 2
+trenchcoat_outfit                                  = 1.2, 1.9
+vodka                                              = 1.1, 1.8
+wpn_9a91                                           = 1.41, 1.63
+wpn_9a91_1p29                                      = 1.7, 1.84
+wpn_9a91_ekp                                       = 1.29, 1.58
+wpn_9a91_kobra                                     = 1.47, 1.88
+wpn_9a91_pso                                       = 1.11, 1.58
+wpn_abakan                                         = 1.36, 1.86
+wpn_abakan_1p29                                    = 1.7, 1.79
+wpn_abakan_ekp                                     = 1.28, 1.56
+wpn_abakan_kobra                                   = 1.35, 1.87
+wpn_abakan_pso                                     = 1.36, 1.86
+wpn_addon_grenade_launcher                         = 1.18, 1.65
+wpn_addon_grenade_launcher_ag36                    = 1.38, 1.97
+wpn_addon_grenade_launcher_m203                    = 1.35, 1.75
+wpn_addon_silencer                                 = 1.18, 1.72
+wpn_addon_silencer10                               = 1.29, 1.63
+wpn_addon_silencer12                               = 1.33, 1.58
+wpn_addon_silencer45                               = 1.2, 1.51
+wpn_addon_silencer50                               = 1.8, 1.83
+wpn_addon_silencer545                              = 1.16, 1.85
+wpn_addon_silencer556                              = 1.20, 1.54
+wpn_addon_silencer68                               = 1.7, 1.59
+wpn_addon_silencer762                              = 1.23, 1.97
+wpn_addon_silencer9x39                             = 1.14, 1.91
+wpn_aek971                                         = 1.41, 1.65
+wpn_aek971                                         = 1.48, 1.76
+wpn_aek971_1p29                                    = 1.22, 1.68
+wpn_aek971_ekp                                     = 1.8, 1.93
+wpn_aek971_kobra                                   = 1.19, 1.95
+wpn_aek971_pso                                     = 1.47, 1.87
+wpn_aek973                                         = 1.12, 1.96
+wpn_aek973                                         = 1.42, 1.71
+wpn_aek973_1p29                                    = 1.1, 1.96
+wpn_aek973_ekp                                     = 1.10, 1.90
+wpn_aek973_kobra                                   = 1.28, 1.80
+wpn_aek973_pso                                     = 1.6, 1.70
+wpn_ak101                                          = 1.25, 1.68
+wpn_ak101                                          = 1.48, 1.77
+wpn_ak101_1p29                                     = 1.11, 1.88
+wpn_ak101_ekp                                      = 1.13, 1.65
+wpn_ak101_kobra                                    = 1.18, 1.77
+wpn_ak101_pso                                      = 1.12, 1.58
+wpn_ak102                                          = 1.40, 1.55
+wpn_ak102                                          = 1.41, 1.52
+wpn_ak102_1p29                                     = 1.12, 1.62
+wpn_ak102_ekp                                      = 1.6, 1.86
+wpn_ak102_kobra                                    = 1.14, 1.88
+wpn_ak102_pso                                      = 1.13, 1.83
+wpn_ak103                                          = 1.13, 1.67
+wpn_ak103                                          = 1.15, 1.86
+wpn_ak103_1p29                                     = 1.12, 1.74
+wpn_ak103_ekp                                      = 1.35, 1.98
+wpn_ak103_kobra                                    = 1.6, 1.85
+wpn_ak103_pso                                      = 1.38, 1.58
+wpn_ak104                                          = 1.22, 1.58
+wpn_ak104                                          = 1.46, 1.95
+wpn_ak104_1p29                                     = 1.3, 1.77
+wpn_ak104_ekp                                      = 1.17, 1.67
+wpn_ak104_kobra                                    = 1.14, 1.52
+wpn_ak104_pso                                      = 1.45, 1.98
+wpn_ak105                                          = 1.26, 1.68
+wpn_ak105                                          = 1.36, 1.88
+wpn_ak105_1p29                                     = 1.21, 1.80
+wpn_ak105_ekp                                      = 1.45, 1.61
+wpn_ak105_kobra                                    = 1.49, 1.76
+wpn_ak105_pso                                      = 1.21, 1.59
+wpn_ak12                                           = 1.19, 1.74
+wpn_ak12                                           = 1.21, 1.93
+wpn_ak12_762                                       = 1.19, 1.90
+wpn_ak12_762                                       = 1.43, 1.67
+wpn_ak12_762_ac11090                               = 1.8, 1.95
+wpn_ak12_762_acog                                  = 1.16, 1.73
+wpn_ak12_762_c-more                                = 1.27, 1.57
+wpn_ak12_762_eot                                   = 1.17, 1.59
+wpn_ak12_ac11090                                   = 1.31, 1.72
+wpn_ak12_acog                                      = 1.34, 1.95
+wpn_ak12_c-more                                    = 1.39, 1.60
+wpn_ak12_eot                                       = 1.12, 1.91
+wpn_ak47                                           = 1.40, 1.92
+wpn_ak47                                           = 1.7, 1.78
+wpn_ak74                                           = 1.13, 1.53
+wpn_ak74                                           = 1.44, 1.91
+wpn_ak74_1p29                                      = 1.20, 1.64
+wpn_ak74_ekp                                       = 1.7, 1.93
+wpn_ak74_kobra                                     = 1.35, 1.60
+wpn_ak74_pso                                       = 1.25, 1.73
+wpn_ak74m                                          = 1.12, 1.90
+wpn_ak74m                                          = 1.46, 1.83
+wpn_ak74m_1p29                                     = 1.18, 1.94
+wpn_ak74m_ekp                                      = 1.2, 1.67
+wpn_ak74m_kobra                                    = 1.39, 1.89
+wpn_ak74m_pso                                      = 1.20, 1.89
+wpn_ak74u                                          = 1.31, 1.56
+wpn_ak74u                                          = 1.33, 1.63
+wpn_ak74u_1p29                                     = 1.2, 1.52
+wpn_ak74u_ekp                                      = 1.29, 1.71
+wpn_ak74u_snag                                     = 1.14, 1.87
+wpn_akm                                            = 1.26, 1.74
+wpn_akm_1p29                                       = 1.10, 1.94
+wpn_akm_ekp                                        = 1.33, 1.52
+wpn_akm_kobra                                      = 1.43, 1.87
+wpn_akm_pso                                        = 1.5, 1.66
+wpn_akms                                           = 1.27, 1.56
+wpn_akms_1p29                                      = 1.29, 1.55
+wpn_akms_ekp                                       = 1.4, 1.70
+wpn_akms_kobra                                     = 1.35, 1.85
+wpn_akms_pso                                       = 1.22, 1.89
+wpn_aks47                                          = 1.27, 1.94
+wpn_aks74                                          = 1.41, 1.94
+wpn_aks74_1p29                                     = 1.36, 1.83
+wpn_aks74_ekp                                      = 1.22, 1.72
+wpn_aks74_kobra                                    = 1.17, 1.57
+wpn_aks74_pso                                      = 1.40, 1.56
+wpn_aks74n                                         = 1.36, 1.51
+wpn_aks74n_1p29                                    = 1.42, 1.93
+wpn_aks74n_ekp                                     = 1.32, 1.90
+wpn_aks74n_kobra                                   = 1.8, 1.88
+wpn_aks74n_pso                                     = 1.34, 1.65
+wpn_aps                                            = 1.7, 1.72
+wpn_ar15                                           = 1.37, 1.89
+wpn_ar15_ac11090                                   = 1.29, 1.65
+wpn_ar15_acog                                      = 1.32, 1.82
+wpn_ar15_c-more                                    = 1.3, 1.53
+wpn_ar15_eot                                       = 1.27, 1.82
+wpn_aug                                            = 1.37, 1.81
+wpn_avt40                                          = 1.25, 1.97
+wpn_avt40_pu                                       = 1.5, 1.87
+wpn_beretta                                        = 1.12, 1.75
+wpn_beretta                                        = 1.20, 1.56
+wpn_beretta96                                      = 1.44, 1.79
+wpn_beretta96                                      = 1.9, 1.83
+wpn_binoc                                          = 1.9, 1.81
+wpn_bizon                                          = 1.22, 1.61
+wpn_bizon_1p29                                     = 1.29, 1.90
+wpn_bizon_ekp                                      = 1.9, 1.73
+wpn_bizon_kobra                                    = 1.46, 1.92
+wpn_bizon_pso                                      = 1.3, 1.93
+wpn_bm16                                           = 1.26, 1.71
+wpn_bm16_full                                      = 1.24, 1.64
+wpn_colt1911                                       = 1.39, 1.57
+wpn_colt1911_sk2                                   = 1.46, 1.92
+wpn_colt1911_sk3                                   = 1.7, 1.90
+wpn_coltde                                         = 1.49, 1.65
+wpn_cz40                                           = 1.6, 1.55
+wpn_cz52                                           = 1.38, 1.69
+wpn_cz75                                           = 1.36, 1.88
+wpn_desert_eagle                                   = 1.9, 1.93
+wpn_desert_eagle_357                               = 1.39, 1.97
+wpn_desert_eagle_nimble                            = 1.39, 1.95
+wpn_fiveseven                                      = 1.9, 1.83
+wpn_fiveseven                                      = 1.9, 1.90
+wpn_fn2000                                         = 1.12, 1.92
+wpn_fn2000                                         = 1.3, 1.54
+wpn_fn2000_acog                                    = 1.18, 1.57
+wpn_fn2000_nimble                                  = 1.33, 1.58
+wpn_fnp40                                          = 1.14, 1.72
+wpn_fnp40                                          = 1.29, 1.84
+wpn_fnp45                                          = 1.40, 1.55
+wpn_fnp45                                          = 1.49, 1.74
+wpn_fort                                           = 1.11, 1.62
+wpn_fort                                           = 1.35, 1.95
+wpn_fort_snag                                      = 1.35, 1.65
+wpn_g3                                             = 1.26, 1.84
+wpn_g36                                            = 1.48, 1.61
+wpn_g36_nimble                                     = 1.38, 1.88
+wpn_g36c                                           = 1.16, 1.55
+wpn_g36c                                           = 1.24, 1.55
+wpn_g36c_ac11090                                   = 1.25, 1.79
+wpn_g36c_acog                                      = 1.36, 1.86
+wpn_g36c_c-more                                    = 1.46, 1.88
+wpn_g36c_eot                                       = 1.35, 1.59
+wpn_g3_acog                                        = 1.28, 1.76
+wpn_g3a3                                           = 1.31, 1.53
+wpn_g3a3_ac11090                                   = 1.7, 1.75
+wpn_g3a3_acog                                      = 1.24, 1.53
+wpn_g3a3_c-more                                    = 1.13, 1.60
+wpn_g3a3_eot                                       = 1.1, 1.75
+wpn_g3sg1                                          = 1.29, 1.53
+wpn_galil                                          = 1.14, 1.63
+wpn_gauss                                          = 1.37, 1.84
+wpn_glock17                                        = 1.44, 1.58
+wpn_glock20                                        = 1.40, 1.57
+wpn_glock21                                        = 1.12, 1.57
+wpn_glock35                                        = 1.40, 1.69
+wpn_groza                                          = 1.22, 1.55
+wpn_groza1                                         = 1.27, 1.97
+wpn_groza1_pso                                     = 1.35, 1.51
+wpn_groza_nimble                                   = 1.47, 1.52
+wpn_groza_pso                                      = 1.45, 1.59
+wpn_gsh18                                          = 1.17, 1.51
+wpn_gsh18                                          = 1.18, 1.54
+wpn_hk416                                          = 1.21, 1.80
+wpn_hk416                                          = 1.45, 1.82
+wpn_hk416_ac11090                                  = 1.6, 1.69
+wpn_hk416_acog                                     = 1.18, 1.78
+wpn_hk416_c-more                                   = 1.7, 1.51
+wpn_hk416_eot                                      = 1.39, 1.86
+wpn_hk417                                          = 1.19, 1.62
+wpn_hk417                                          = 1.29, 1.59
+wpn_hk417_acog                                     = 1.5, 1.92
+wpn_hk417_eot                                      = 1.22, 1.59
+wpn_hpsa                                           = 1.25, 1.71
+wpn_hpsa                                           = 1.46, 1.69
+wpn_hpsa40                                         = 1.20, 1.73
+wpn_hpsa40                                         = 1.46, 1.61
+wpn_knife                                          = 1.10, 1.81
+wpn_l115a3                                         = 1.38, 1.64
+wpn_l85                                            = 1.20, 1.88
+wpn_l85_acog                                       = 1.22, 1.87
+wpn_l96                                            = 1.46, 1.80
+wpn_l96                                            = 1.6, 1.60
+wpn_lr300                                          = 1.10, 1.65
+wpn_lr300                                          = 1.39, 1.62
+wpn_lr300_ac11090                                  = 1.29, 1.68
+wpn_lr300_acog                                     = 1.19, 1.85
+wpn_lr300_c-more                                   = 1.40, 1.52
+wpn_lr300_eot                                      = 1.43, 1.75
+wpn_lr680                                          = 1.31, 1.78
+wpn_lr680                                          = 1.45, 1.80
+wpn_lr680_ac11090                                  = 1.28, 1.55
+wpn_lr680_acog                                     = 1.33, 1.55
+wpn_lr680_c-more                                   = 1.27, 1.85
+wpn_lr680_eot                                      = 1.30, 1.73
+wpn_m134                                           = 1.19, 1.60
+wpn_m134                                           = 1.35, 1.92
+wpn_m14                                            = 1.34, 1.91
+wpn_m14                                            = 1.36, 1.58
+wpn_m16                                            = 1.4, 1.89
+wpn_m16                                            = 1.42, 1.56
+wpn_m16_68                                         = 1.34, 1.59
+wpn_m16_68                                         = 1.38, 1.89
+wpn_m16_68_acog                                    = 1.17, 1.73
+wpn_m16_acog                                       = 1.35, 1.71
+wpn_m249                                           = 1.17, 1.56
+wpn_m249                                           = 1.47, 1.78
+wpn_m249_eot                                       = 1.32, 1.95
+wpn_m249_nimble                                    = 1.44, 1.80
+wpn_m249_nimble_eot                                = 1.31, 1.83
+wpn_m4a1                                           = 1.39, 1.64
+wpn_m4a1_50                                        = 1.49, 1.69
+wpn_m4a1_50_ac11090                                = 1.47, 1.76
+wpn_m4a1_50_acog                                   = 1.3, 1.95
+wpn_m4a1_50_c-more                                 = 1.3, 1.91
+wpn_m4a1_50_eot                                    = 1.39, 1.80
+wpn_m4a1_ac11090                                   = 1.46, 1.65
+wpn_m4a1_acog                                      = 1.4, 1.68
+wpn_m4a1_c-more                                    = 1.19, 1.57
+wpn_m4a1_eot                                       = 1.48, 1.78
+wpn_m4bm                                           = 1.38, 1.54
+wpn_m4bm_ac11090                                   = 1.2, 1.68
+wpn_m4bm_acog                                      = 1.36, 1.86
+wpn_m4bm_c-more                                    = 1.18, 1.55
+wpn_m4bm_eot                                       = 1.34, 1.92
+wpn_m60                                            = 1.43, 1.78
+wpn_mine                                           = 1.47, 1.87
+wpn_mn91                                           = 1.19, 1.88
+wpn_mn91                                           = 1.46, 1.85
+wpn_mn91_pu                                        = 1.34, 1.78
+wpn_mossberg                                       = 1.32, 1.92
+wpn_mp412                                          = 1.41, 1.79
+wpn_mp440                                          = 1.14, 1.96
+wpn_mp443                                          = 1.13, 1.79
+wpn_mp5                                            = 1.40, 1.96
+wpn_mp5_ac11090                                    = 1.25, 1.84
+wpn_mp5_acog                                       = 1.17, 1.85
+wpn_mp5_c-more                                     = 1.13, 1.96
+wpn_mp5_eot                                        = 1.40, 1.89
+wpn_mp5_nimble                                     = 1.39, 1.61
+wpn_mp5_nimble_ac11090                             = 1.24, 1.78
+wpn_mp5_nimble_acog                                = 1.6, 1.82
+wpn_mp5_nimble_c-more                              = 1.29, 1.75
+wpn_mp5_nimble_eot                                 = 1.32, 1.73
+wpn_mp5sd                                          = 1.29, 1.90
+wpn_mp5sd                                          = 1.6, 1.70
+wpn_mp5sd_ac11090                                  = 1.19, 1.62
+wpn_mp5sd_acog                                     = 1.34, 1.63
+wpn_mp5sd_c-more                                   = 1.31, 1.86
+wpn_mp5sd_eot                                      = 1.42, 1.71
+wpn_mp5sd_nimble                                   = 1.29, 1.73
+wpn_mp5sd_nimble_ac11090                           = 1.4, 1.92
+wpn_mp5sd_nimble_acog                              = 1.22, 1.78
+wpn_mp5sd_nimble_c-more                            = 1.34, 1.82
+wpn_mp5sd_nimble_eot                               = 1.41, 1.98
+wpn_mp7                                            = 1.8, 1.75
+wpn_mp7_acog                                       = 1.32, 1.69
+wpn_mp7_eot                                        = 1.25, 1.51
+wpn_ots33                                          = 1.8, 1.66
+wpn_p90                                            = 1.29, 1.97
+wpn_p90_ac11090                                    = 1.19, 1.71
+wpn_p90_acog                                       = 1.44, 1.63
+wpn_p90_c-more                                     = 1.49, 1.88
+wpn_pb                                             = 1.10, 1.86
+wpn_pb                                             = 1.43, 1.72
+wpn_pkm                                            = 1.22, 1.77
+wpn_pkm                                            = 1.35, 1.73
+wpn_pkm_ekp                                        = 1.1, 1.86
+wpn_pkm_zulus                                      = 1.13, 1.51
+wpn_pkm_zulus_ekp                                  = 1.32, 1.74
+wpn_pm                                             = 1.32, 1.86
+wpn_pm_actor                                       = 1.14, 1.67
+wpn_pmm                                            = 1.38, 1.83
+wpn_pmm                                            = 1.8, 1.89
+wpn_pp2000                                         = 1.14, 1.65
+wpn_pp2000                                         = 1.37, 1.67
+wpn_protecta                                       = 1.8, 1.95
+wpn_protecta                                       = 1.9, 1.64
+wpn_protecta_nimble                                = 1.5, 1.73
+wpn_remington870                                   = 1.24, 1.65
+wpn_remington870_ac11090                           = 1.14, 1.84
+wpn_remington870_c-more                            = 1.4, 1.62
+wpn_remington870_eot                               = 1.27, 1.53
+wpn_rg-6                                           = 1.23, 1.80
+wpn_rg-6                                           = 1.33, 1.97
+wpn_rpg7                                           = 1.41, 1.59
+wpn_rpg7                                           = 1.49, 1.70
+wpn_rpk                                            = 1.22, 1.98
+wpn_rpk                                            = 1.25, 1.64
+wpn_rpk74                                          = 1.17, 1.64
+wpn_rpk74                                          = 1.20, 1.93
+wpn_rpk74_1p29                                     = 1.18, 1.80
+wpn_rpk74_ekp                                      = 1.5, 1.78
+wpn_rpk74_pso                                      = 1.5, 1.80
+wpn_saiga                                          = 1.21, 1.68
+wpn_saiga_1p29                                     = 1.11, 1.88
+wpn_saiga_ekp                                      = 1.45, 1.59
+wpn_saiga_kobra                                    = 1.22, 1.97
+wpn_saiga_nimble                                   = 1.22, 1.84
+wpn_saiga_nimble_1p29                              = 1.19, 1.96
+wpn_saiga_nimble_ekp                               = 1.30, 1.54
+wpn_saiga_nimble_kobra                             = 1.29, 1.96
+wpn_saiga_nimble_pso                               = 1.41, 1.62
+wpn_saiga_pso                                      = 1.41, 1.91
+wpn_scar-h                                         = 1.14, 1.98
+wpn_scar-h                                         = 1.15, 1.66
+wpn_scar-h_ac11090                                 = 1.8, 1.69
+wpn_scar-h_acog                                    = 1.34, 1.90
+wpn_scar-h_c-more                                  = 1.7, 1.85
+wpn_scar-h_eot                                     = 1.19, 1.75
+wpn_sig220                                         = 1.12, 1.72
+wpn_sig220                                         = 1.30, 1.96
+wpn_sig220_nimble                                  = 1.27, 1.97
+wpn_sig550                                         = 1.47, 1.83
+wpn_sig550_ac11090                                 = 1.28, 1.73
+wpn_sig550_acog                                    = 1.24, 1.77
+wpn_sig550_c-more                                  = 1.3, 1.72
+wpn_sig550_eot                                     = 1.11, 1.88
+wpn_sig550_luckygun                                = 1.9, 1.59
+wpn_sig550_luckygun_ac11090                        = 1.48, 1.66
+wpn_sig550_luckygun_acog                           = 1.29, 1.60
+wpn_sig550_luckygun_c-more                         = 1.46, 1.60
+wpn_sig550_luckygun_eot                            = 1.26, 1.78
+wpn_sks                                            = 1.19, 1.62
+wpn_sks                                            = 1.26, 1.57
+wpn_sks_pu                                         = 1.23, 1.86
+wpn_spas12                                         = 1.31, 1.80
+wpn_spas12_nimble                                  = 1.14, 1.86
+wpn_sr3m                                           = 1.20, 1.74
+wpn_sr3m                                           = 1.6, 1.55
+wpn_sr3m_1p29                                      = 1.6, 1.54
+wpn_sr3m_ekp                                       = 1.43, 1.95
+wpn_sr3m_kobra                                     = 1.46, 1.97
+wpn_sr3m_pso                                       = 1.49, 1.73
+wpn_stg58                                          = 1.32, 1.90
+wpn_stg58                                          = 1.8, 1.98
+wpn_stg58_acog                                     = 1.33, 1.85
+wpn_sv98                                           = 1.31, 1.60
+wpn_svd                                            = 1.36, 1.84
+wpn_svd_nimble                                     = 1.31, 1.85
+wpn_svt40                                          = 1.16, 1.56
+wpn_svt40                                          = 1.49, 1.60
+wpn_svt40_pu                                       = 1.28, 1.79
+wpn_svu                                            = 1.5, 1.64
+wpn_svu_nimble                                     = 1.26, 1.89
+wpn_toz34                                          = 1.29, 1.78
+wpn_toz34                                          = 1.9, 1.84
+wpn_toz34_sk1                                      = 1.15, 1.76
+wpn_toz34_sk1                                      = 1.48, 1.82
+wpn_toz34_so                                       = 1.31, 1.65
+wpn_toz34_so                                       = 1.49, 1.97
+wpn_toz34_so_sk1                                   = 1.18, 1.82
+wpn_toz34_so_sk1                                   = 1.22, 1.96
+wpn_trg22                                          = 1.27, 1.77
+wpn_trg22                                          = 1.39, 1.96
+wpn_trg42                                          = 1.28, 1.56
+wpn_trg42                                          = 1.33, 1.77
+wpn_tt33                                           = 1.41, 1.72
+wpn_tt33                                           = 1.49, 1.71
+wpn_tt33_2                                         = 1.10, 1.76
+wpn_tt33_2                                         = 1.40, 1.61
+wpn_ump40                                          = 1.12, 1.97
+wpn_ump40                                          = 1.9, 1.59
+wpn_ump40_ac11090                                  = 1.31, 1.66
+wpn_ump40_acog                                     = 1.2, 1.71
+wpn_ump40_c-more                                   = 1.46, 1.60
+wpn_ump40_eot                                      = 1.27, 1.82
+wpn_ump45                                          = 1.20, 1.55
+wpn_ump45                                          = 1.47, 1.89
+wpn_ump45_ac11090                                  = 1.10, 1.63
+wpn_ump45_acog                                     = 1.6, 1.72
+wpn_ump45_c-more                                   = 1.11, 1.86
+wpn_ump45_eot                                      = 1.48, 1.85
+wpn_usp                                            = 1.15, 1.75
+wpn_usp                                            = 1.48, 1.60
+wpn_usp10                                          = 1.17, 1.76
+wpn_usp10                                          = 1.22, 1.65
+wpn_usp40                                          = 1.14, 1.58
+wpn_usp40                                          = 1.5, 1.88
+wpn_usp_nimble                                     = 1.14, 1.66
+wpn_val                                            = 1.8, 1.60
+wpn_val_1p29                                       = 1.13, 1.68
+wpn_val_ekp                                        = 1.49, 1.95
+wpn_val_kobra                                      = 1.8, 1.74
+wpn_val_pso                                        = 1.7, 1.81
+wpn_vepr12                                         = 1.44, 1.70
+wpn_vepr12_1p29                                    = 1.6, 1.78
+wpn_vepr12_ekp                                     = 1.11, 1.96
+wpn_vepr12_kobra                                   = 1.12, 1.79
+wpn_vepr12_pso                                     = 1.2, 1.70
+wpn_vintorez                                       = 1.25, 1.86
+wpn_vintorez_nimble                                = 1.38, 1.65
+wpn_vks                                            = 1.14, 1.90
+wpn_vks                                            = 1.32, 1.53
+wpn_vsk94                                          = 1.40, 1.54
+wpn_vsk94                                          = 1.45, 1.63
+wpn_vsk94_pso                                      = 1.13, 1.77
+wpn_vz65                                           = 1.42, 1.66
+wpn_walther                                        = 1.4, 1.60
+wpn_walther40                                      = 1.27, 1.53
+wpn_wincheaster1300                                = 1.9, 1.77
+wpn_wincheaster1300_trapper                        = 1.35, 1.86
+yantar_deployable_mgun                             ; NO TRADE
 
 [trade_generic_buy]
-
-;D_PDA
-itm_pda_common                           ;NO TRADE
-itm_pda_rare                             ;NO TRADE
-itm_pda_uncommon                         ;NO TRADE
-pri_a25_explosive_charge_item            ;NO TRADE
-
-;II_ATTCH
-anomaly_scaner                           ;NO TRADE
-army_patch                               = 0.37, 0.37
-bad_psy_helmet                           ;NO TRADE
-bandit_patch                             = 0.4, 0.25
-cit_doctors_key                          ;NO TRADE
-csky_patch                               = 0.59, 0.46
-decoder                                  ;NO TRADE
-duty_patch                               = 0.35, 0.23
-ecolog_patch                             = 0.3, 0.25
-freedom_patch                            = 0.25, 0.15
-good_psy_helmet                          ;NO TRADE
-main_story_1_quest_case                  ;NO TRADE
-main_story_2_lab_x18_documents           ;NO TRADE
-main_story_3_lab_x16_documents           ;NO TRADE
-merc_patch                               = 0.59, 0.52
-monolith_patch                           = 0.62, 0.59
-mutant_part_boar_leg                     ;NO TRADE
-mutant_part_burer_hand                   ;NO TRADE
-mutant_part_cat_tail                     ;NO TRADE
-mutant_part_chimera_claw                 ;NO TRADE
-mutant_part_chimera_kogot                ;NO TRADE
-mutant_part_controller_glass             ;NO TRADE
-mutant_part_controller_hand              ;NO TRADE
-mutant_part_dog_tail                     ;NO TRADE
-mutant_part_flesh_eye                    ;NO TRADE
-mutant_part_fracture_hand                ;NO TRADE
-mutant_part_krovosos_jaw                 ;NO TRADE
-mutant_part_pseudogigant_eye             ;NO TRADE
-mutant_part_pseudogigant_hand            ;NO TRADE
-mutant_part_psevdodog_tail               ;NO TRADE
-mutant_part_snork_hand                   ;NO TRADE
-mutant_part_snork_leg                    ;NO TRADE
-mutant_part_tushkano_head                ;NO TRADE
-mutant_part_zombi_hand                   ;NO TRADE
-pri_a15_documents                        ;NO TRADE
-pri_a15_wpn_ak74                         ;NO TRADE
-pri_a15_wpn_ak74u                        ;NO TRADE
-pri_a15_wpn_svu                          ;NO TRADE
-pri_a15_wpn_wincheaster1300              ;NO TRADE
-pri_decoder_documents                    ;NO TRADE
-stalker_patch                            = 0.29, 0.16
-
-;DET_SIMP
-detector_simple                          = 0.33, 0.25
-
-;DET_ADVA
-detector_advanced                        = 0.36, 0.35
-
-;DET_ELIT
-detector_elite                           = 0.48, 0.38
-
-;DET_SCIE
-detector_scientific                      = 0.63, 0.56
-
-;ARTEFACT
-af_ameba_mica                            = 0.41, 0.3
-af_ameba_slime                           = 0.47, 0.43
-af_ameba_slug                            = 0.44, 0.34
-af_baloon                                = 0.42, 0.28
-af_blood                                 = 0.43, 0.35
-af_cristall                              = 0.44, 0.4
-af_cristall_flower                       = 0.4, 0.25
-af_drops                                 = 0.48, 0.39
-af_dummy_battery                         = 0.47, 0.46
-af_dummy_dummy                           = 0.43, 0.34
-af_dummy_glassbeads                      = 0.45, 0.35
-af_dummy_pellicle                        = 0.4, 0.28
-af_dummy_spring                          = 0.41, 0.27
-af_eye                                   = 0.43, 0.42
-af_fire                                  = 0.47, 0.45
-af_fireball                              = 0.48, 0.41
-af_glass                                 = 0.5, 0.41
-af_gold_fish                             = 0.46, 0.42
-af_gravi                                 = 0.5, 0.48
-af_ice                                   = 0.43, 0.4
-af_medusa                                = 0.45, 0.42
-af_mincer_meat                           = 0.41, 0.32
-af_night_star                            = 0.46, 0.41
-af_rusty_kristall                        = 0.43, 0.42
-af_rusty_sea                             = 0.47, 0.42
-af_rusty_thorn                           = 0.41, 0.4
-af_soul                                  = 0.44, 0.36
-af_vyvert                                = 0.4, 0.38
-
-;SCRPTART
-af_electra_flash                         = 0.5, 0.36
-af_electra_moonlight                     = 0.47, 0.46
-af_electra_sparkler                      = 0.45, 0.32
-af_fuzz_kolobok                          = 0.43, 0.38
-
-;II_FOOD
-antirad                                  = 0.35, 0.29
-bandage                                  = 0.31, 0.22
-bread                                    = 0.29, 0.26
-conserva                                 = 0.46, 0.35
-drug_anabiotic                           = 0.33, 0.23
-drug_antidot                             = 0.63, 0.54
-drug_booster                             = 0.47, 0.47
-drug_coagulant                           = 0.36, 0.32
-drug_psy_blockade                        = 0.64, 0.49
-drug_radioprotector                      = 0.48, 0.41
-energy_drink                             = 0.47, 0.47
-itm_gunsmith_toolkit                     = 0.55, 0.5
-itm_outfit_toolkit                       = 0.64, 0.61
-itm_repairkit_tier_1                     = 0.65, 0.52
-itm_repairkit_tier_2                     = 0.62, 0.61
-itm_repairkit_tier_3                     = 0.26, 0.15
-kolbasa                                  = 0.29, 0.21
-medkit                                   = 0.41, 0.41
-medkit_army                              = 0.31, 0.24
-medkit_scientic                          = 0.67, 0.67
-mutant_part_boar_chop                    = 0.45, 0.42
-mutant_part_chimera_meat                 = 0.34, 0.34
-mutant_part_dog_meat                     = 0.49, 0.43
-mutant_part_flesh_meat                   = 0.42, 0.28
-mutant_part_krovosos_meat                = 0.65, 0.61
-mutant_part_psevdodog_meat               = 0.6, 0.52
-mutant_part_tushkano_meat                = 0.25, 0.18
-vodka                                    = 0.62, 0.52
-
-;II_ANTIR
-artefact_container                       ;NO TRADE
-itm_actor_backpack                       = 0.44, 0.3
-itm_backpack                             = 0.51, 0.41
-itm_deployable_mgun                      ;NO TRADE
-itm_sleepbag                             = 0.34, 0.33
-test_container                           = 0.32, 0.19
-wpn_mine                                 = 0.52, 0.37
-
-;G_F1
-grenade_f1                               = 0.25, 0.18
-grenade_gd-05                            = 0.21, 0.11
-
-;G_RGD5
-grenade_rgd5                             = 0.28, 0.16
-
-;AMMO
-ammo_11.43x23_fmj                        = 0.7, 0.67
-ammo_11.43x23_hydro                      = 0.61, 0.56
-ammo_12x70_buck                          = 0.66, 0.58
-ammo_12x76_zhekan                        = 0.63, 0.54
-ammo_5.45x39_ap                          = 0.68, 0.63
-ammo_5.45x39_fmj                         = 0.69, 0.58
-ammo_5.56x45_ap                          = 0.65, 0.57
-ammo_5.56x45_ss190                       = 0.61, 0.57
-ammo_7.62x54_7h1                         = 0.65, 0.6
-ammo_9x18_fmj                            = 0.63, 0.49
-ammo_9x18_pmm                            = 0.7, 0.65
-ammo_9x19_fmj                            = 0.62, 0.48
-ammo_9x19_pbp                            = 0.62, 0.57
-ammo_9x39_ap                             = 0.7, 0.57
-ammo_9x39_pab9                           = 0.67, 0.57
-ammo_gauss                               = 0.64, 0.62
-ammo_gauss_cardan                        = 0.69, 0.57
-ammo_pkm_100                             = 0.7, 0.68
-
-;S_OG7B
-ammo_og-7b                               = 0.63, 0.63
-
-;S_VOG25
-ammo_vog-25                              = 0.62, 0.5
-
-;S_M209
-ammo_m209                                = 0.47, 0.41
-
-;WP_SCOPE
-wpn_addon_scope                          = 0.25, 0.23
-wpn_addon_scope_detector                 = 0.27, 0.18
-wpn_addon_scope_night                    = 0.23, 0.21
-wpn_addon_scope_susat                    = 0.24, 0.24
-wpn_addon_scope_susat_custom             = 0.25, 0.2
-wpn_addon_scope_susat_dusk               = 0.2, 0.18
-wpn_addon_scope_susat_night              = 0.29, 0.26
-wpn_addon_scope_susat_x1.6               = 0.28, 0.15
-wpn_addon_scope_x2.7                     = 0.27, 0.14
-
-;WP_SILEN
-wpn_addon_silencer                       = 0.3, 0.16
-
-;WP_GLAUN
-wpn_addon_grenade_launcher               = 0.2, 0.07
-wpn_addon_grenade_launcher_m203          = 0.22, 0.18
-
-;WP_AK74
-wpn_abakan                               = 0.19, 0.05
-wpn_ak74                                 = 0.22, 0.09
-wpn_ak74u                                = 0.18, 0.16
-wpn_ak74u_snag                           = 0.22, 0.11
-wpn_g36                                  = 0.21, 0.09
-wpn_g36_nimble                           = 0.25, 0.15
-wpn_groza                                = 0.24, 0.16
-wpn_groza_nimble                         = 0.23, 0.18
-wpn_groza_specops                        = 0.18, 0.05
-wpn_l85                                  = 0.23, 0.14
-wpn_lr300                                = 0.25, 0.16
-wpn_pkm                                  = 0.2, 0.2
-wpn_pkm_zulus                            = 0.18, 0.17
-wpn_sig550                               = 0.19, 0.11
-wpn_sig550_luckygun                      = 0.23, 0.11
-wpn_vintorez                             = 0.25, 0.15
-wpn_vintorez_nimble                      = 0.2, 0.08
-
-;WP_ASHTG
-wpn_protecta                             = 0.23, 0.12
-wpn_protecta_nimble                      = 0.24, 0.16
-wpn_spas12                               = 0.18, 0.18
-wpn_spas12_nimble                        = 0.24, 0.11
-wpn_wincheaster1300                      = 0.25, 0.25
-wpn_wincheaster1300_trapper              = 0.23, 0.11
-
-;WP_BINOC
-wpn_binoc                                = 0.22, 0.16
-
-;WP_BM16
-wpn_bm16                                 = 0.21, 0.12
-wpn_toz34                                = 0.22, 0.14
-
-;WP_GROZA
-wpn_fn2000                               = 0.25, 0.17
-wpn_fn2000_nimble                        = 0.22, 0.22
-
-;WP_HPSA
-wpn_hpsa                                 = 0.22, 0.08
-
-;WP_KNIFE
-wpn_knife                                = 0.25, 0.19
-
-;WP_LR300
-wpn_beretta                              = 0.24, 0.1
-wpn_mp5                                  = 0.23, 0.08
-wpn_mp5_nimble                           = 0.24, 0.22
-wpn_sig220                               = 0.24, 0.24
-wpn_sig220_nimble                        = 0.18, 0.14
-wpn_usp                                  = 0.18, 0.13
-wpn_usp_nimble                           = 0.21, 0.07
-wpn_walther                              = 0.2, 0.14
-
-;WP_PM
-wpn_colt1911                             = 0.25, 0.18
-wpn_desert_eagle                         = 0.23, 0.2
-wpn_desert_eagle_nimble                  = 0.23, 0.18
-wpn_fort                                 = 0.21, 0.06
-wpn_fort_snag                            = 0.22, 0.13
-wpn_pb                                   = 0.21, 0.1
-wpn_pm                                   = 0.2, 0.17
-wpn_pm_actor                             = 0.19, 0.12
-
-;WP_RG6
-wpn_rg-6                                 = 0.22, 0.13
-
-;WP_RPG7
-wpn_rpg7                                 = 0.22, 0.18
-
-;WP_SVD
-pri_a17_gauss_rifle                      ;NO TRADE
-wpn_gauss                                = 0.23, 0.1
-wpn_svd                                  = 0.23, 0.09
-wpn_svd_nimble                           = 0.19, 0.06
-
-;WP_SVU
-wpn_svu                                  = 0.21, 0.18
-wpn_svu_nimble                           = 0.23, 0.1
-
-;WP_VAL
-wpn_val                                  = 0.22, 0.17
-
-;EQU_STLK
-bandit_exo_outfit                        = 0.4, 0.36
-bandit_novice_outfit                     = 0.64, 0.61
-banditmerc_outfit                        = 0.4, 0.39
-cs_heavy_outfit                          = 0.34, 0.19
-cs_light_novice_outfit                   = 0.43, 0.31
-cs_light_outfit                          = 0.29, 0.22
-cs_medium_outfit                         = 0.37, 0.35
-cs_novice_outfit                         = 0.53, 0.42
-dolg_exo_outfit                          = 0.68, 0.65
-dolg_heavy_outfit                        = 0.44, 0.29
-dolg_novice_outfit                       = 0.35, 0.35
-dolg_outfit                              = 0.3, 0.26
-dolg_scientific_outfit                   = 0.53, 0.41
-ecolog_guard_outfit                      = 0.31, 0.31
-ecolog_outfit_green                      = 0.65, 0.5
-ecolog_outfit_orange                     = 0.36, 0.32
-exo_outfit                               = 0.43, 0.36
-merc_exo_outfit                          = 0.47, 0.38
-merc_novice_outfit                       = 0.4, 0.36
-merc_outfit                              = 0.41, 0.38
-merc_scientific_outfit                   = 0.28, 0.14
-military_exo_outfit                      = 0.46, 0.42
-military_novice_outfit                   = 0.46, 0.38
-military_outfit                          = 0.59, 0.48
-monolith_exo_outfit                      = 0.59, 0.56
-monolith_novice_outfit                   = 0.57, 0.46
-monolith_outfit                          = 0.61, 0.52
-monolith_scientific_outfit               = 0.26, 0.23
-novice_outfit                            = 0.48, 0.34
-scientific_outfit                        = 0.51, 0.46
-specops_outfit                           = 0.48, 0.35
-stalker_outfit                           = 0.27, 0.24
-stalker_outfit_barge                     = 0.32, 0.23
-svoboda_exo_outfit                       = 0.35, 0.28
-svoboda_heavy_outfit                     = 0.56, 0.45
-svoboda_heavy_outfit_2                   = 0.64, 0.53
-svoboda_light_outfit                     = 0.66, 0.65
-svoboda_novice_outfit                    = 0.32, 0.25
-svoboda_scientific_outfit                = 0.36, 0.24
-trenchcoat_outfit                        = 0.6, 0.52
-
-;E_HLMET
-helm_battle                              = 0.26, 0.21
-helm_hardhat                             = 0.28, 0.21
-helm_hardhat_snag                        = 0.33, 0.24
-helm_m40                                 = 0.29, 0.17
-helm_protective                          = 0.39, 0.26
-helm_respirator                          = 0.26, 0.11
-helm_respirator_joker                    = 0.64, 0.59
-helm_tactic                              = 0.54, 0.42
-deployable_mgun                          ;NO TRADE
-wpn_rpg7_missile                         ;NO TRADE
-yantar_deployable_mgun                   ;NO TRADE
+trenchcoat_brown_outfit					= 0.62, 0.57
+army_outfit								= 0.28, 0.23
+barmerc_outfit							= 0.32, 0.3
+cs_scientific_outfit					= 0.49, 0.43
+nbc_outfit								= 0.49, 0.43
+cs_nbc_outfit							= 0.49, 0.43
+monolith_nbc_outfit						= 0.49, 0.43
+radiation_outfit						= 0.58, 0.49
+dolg_radiation_outfit					= 0.58, 0.49
+svoboda_radiation_outfit				= 0.58, 0.49
+merc_radiation_outfit					= 0.58, 0.49
+monolith_radiation_outfit				= 0.58, 0.49
+isg_scientific_outfit					= 0.49, 0.43
+isg_outfit								= 0.56, 0.5
+bandit_specops_outfit					= 0.27, 0.16
+cs_exo_outfit							= 0.58, 0.49
+helm_tactic_2							= 0.59, 0.57
+cs_stalker_outfit						= 0.56, 0.5
+exo_proto_outfit						= 0.58, 0.49
+helm_respirator_2						= 0.59, 0.57
+helm_facemask							= 0.59, 0.57
+scientific_heavy_outfit					= 0.58, 0.49
+ecolog_outfit_white						= 0.49, 0.43
+ecolog_outfit_blue						= 0.49, 0.43
+helm_respirator_gp5						= 0.59, 0.57
+helm_respirator_half					= 0.59, 0.57
+1p29                                               = 0.17, 0.40
+9x39scope                                          ; NO TRADE
+ac10632                                            ; NO TRADE
+ac11090                                            = 0.15, 0.39
+acog                                               = 0.20, 0.48
+addon                                              ; NO TRADE
+af_ameba_mica                                      = 0.41, 0.3
+af_ameba_slime                                     = 0.47, 0.43
+af_ameba_slug                                      = 0.44, 0.34
+af_baloon                                          = 0.42, 0.28
+af_blood                                           = 0.43, 0.35
+af_cristall                                        = 0.44, 0.4
+af_cristall_flower                                 = 0.4, 0.25
+af_drops                                           = 0.48, 0.39
+af_dummy_battery                                   = 0.47, 0.46
+af_dummy_dummy                                     = 0.43, 0.34
+af_dummy_glassbeads                                = 0.45, 0.35
+af_dummy_pellicle                                  = 0.4, 0.28
+af_dummy_spring                                    = 0.41, 0.27
+af_electra_flash                                   = 0.5, 0.36
+af_electra_moonlight                               = 0.47, 0.46
+af_electra_sparkler                                = 0.45, 0.32
+af_eye                                             = 0.43, 0.42
+af_fire                                            = 0.47, 0.45
+af_fireball                                        = 0.48, 0.41
+af_fuzz_kolobok                                    = 0.43, 0.38
+af_glass                                           = 0.5, 0.41
+af_gold_fish                                       = 0.46, 0.42
+af_gravi                                           = 0.5, 0.48
+af_ice                                             = 0.43, 0.4
+af_medusa                                          = 0.45, 0.42
+af_mincer_meat                                     = 0.41, 0.32
+af_night_star                                      = 0.46, 0.41
+af_rusty_kristall                                  = 0.43, 0.42
+af_rusty_sea                                       = 0.47, 0.42
+af_rusty_thorn                                     = 0.41, 0.4
+af_soul                                            = 0.44, 0.36
+af_vyvert                                          = 0.4, 0.38
+ammo_10x22_fmj                                     = 0.8, 0.29
+ammo_10x22_hp                                      = 0.12, 0.48
+ammo_10x25_fmj                                     = 0.10, 0.44
+ammo_10x25_hp                                      = 0.18, 0.40
+ammo_11.43x23_fmj                                  = 0.13, 0.36
+ammo_11.43x23_hydro                                = 0.10, 0.33
+ammo_12.7x55                                       = 0.8, 0.26
+ammo_12x70_buck                                    = 0.15, 0.49
+ammo_12x76_zhekan                                  = 0.2, 0.44
+ammo_12x76_zhekan_heli                             = 0.6, 0.45
+ammo_357_fmj                                       = 0.8, 0.42
+ammo_357_hp                                        = 0.4, 0.28
+ammo_4.6x30_ap                                     = 0.22, 0.31
+ammo_4.6x30_fmj                                    = 0.10, 0.28
+ammo_5.45x39_ap                                    = 0.13, 0.26
+ammo_5.45x39_fmj                                   = 0.14, 0.31
+ammo_5.56x45_ap                                    = 0.2, 0.37
+ammo_5.56x45_ss190                                 = 0.4, 0.49
+ammo_5.7x28_ss190                                  = 0.22, 0.49
+ammo_5.7x28_ss192                                  = 0.9, 0.33
+ammo_50_beowulf_hp                                 = 0.18, 0.36
+ammo_50_beowulf_jfp                                = 0.24, 0.42
+ammo_50ae_fmj                                      = 0.3, 0.48
+ammo_50ae_hp                                       = 0.5, 0.29
+ammo_6.8x43_fmj                                    = 0.19, 0.41
+ammo_6.8x43_sst                                    = 0.6, 0.28
+ammo_7.62x25_fmj                                   = 0.24, 0.27
+ammo_7.62x25_hp                                    = 0.10, 0.29
+ammo_7.62x39_ap                                    = 0.6, 0.38
+ammo_7.62x39_fmj                                   = 0.17, 0.49
+ammo_7.62x51_ap                                    = 0.23, 0.39
+ammo_7.62x51_fmj                                   = 0.20, 0.32
+ammo_7.62x54_7h1                                   = 0.11, 0.36
+ammo_7.62x54_fmj                                   = 0.22, 0.27
+ammo_8.58x70_ap                                    = 0.11, 0.35
+ammo_8.58x70_jsp                                   = 0.7, 0.30
+ammo_9x18_fmj                                      = 0.14, 0.39
+ammo_9x18_pmm                                      = 0.17, 0.48
+ammo_9x19_fmj                                      = 0.15, 0.33
+ammo_9x19_pbp                                      = 0.11, 0.40
+ammo_9x39_ap                                       = 0.22, 0.39
+ammo_9x39_pab9                                     = 0.19, 0.46
+ammo_gauss                                         = 0.2, 0.35
+ammo_gauss_cardan                                  = 0.16, 0.27
+ammo_m134                                          = 0.24, 0.27
+ammo_m209                                          = 0.22, 0.45
+ammo_og-7b                                         = 0.13, 0.48
+ammo_pkm_100                                       = 0.3, 0.35
+ammo_vog-25                                        = 0.15, 0.37
+anomaly_scaner                                     ; NO TRADE
+antirad                                            = 0.35, 0.29
+army_patch                                         = 0.37, 0.37
+artefact_container                                 ; NO TRADE
+bad_psy_helmet                                     ; NO TRADE
+bandage                                            = 0.31, 0.22
+bandit_exo_outfit                                  = 0.4, 0.36
+bandit_novice_outfit                               = 0.64, 0.61
+bandit_patch                                       = 0.4, 0.25
+banditmerc_outfit                                  = 0.4, 0.39
+bread                                              = 0.29, 0.26
+c-more                                             ; NO TRADE
+c-more                                             = 0.21, 0.49
+cit_doctors_key                                    ; NO TRADE
+conserva                                           = 0.46, 0.35
+cs_heavy_outfit                                    = 0.34, 0.19
+cs_light_novice_outfit                             = 0.43, 0.31
+cs_light_outfit                                    = 0.29, 0.22
+cs_medium_outfit                                   = 0.37, 0.35
+cs_novice_outfit                                   = 0.53, 0.42
+csky_patch                                         = 0.59, 0.46
+decoder                                            ; NO TRADE
+deployable_mgun                                    ; NO TRADE
+detector_advanced                                  = 0.36, 0.35
+detector_elite                                     = 0.48, 0.38
+detector_scientific                                = 0.63, 0.56
+detector_simple                                    = 0.33, 0.25
+docter_sight                                       ; NO TRADE
+dolg_exo_outfit                                    = 0.68, 0.65
+dolg_heavy_outfit                                  = 0.44, 0.29
+dolg_novice_outfit                                 = 0.35, 0.35
+dolg_outfit                                        = 0.3, 0.26
+dolg_scientific_outfit                             = 0.53, 0.41
+drug_anabiotic                                     = 0.33, 0.23
+drug_antidot                                       = 0.63, 0.54
+drug_booster                                       = 0.47, 0.47
+drug_coagulant                                     = 0.36, 0.32
+drug_psy_blockade                                  = 0.64, 0.49
+drug_radioprotector                                = 0.48, 0.41
+duty_patch                                         = 0.35, 0.23
+ecolog_guard_outfit                                = 0.31, 0.31
+ecolog_outfit_green                                = 0.65, 0.5
+ecolog_outfit_orange                               = 0.36, 0.32
+ecolog_patch                                       = 0.3, 0.25
+ekp                                                = 0.24, 0.46
+energy_drink                                       = 0.47, 0.47
+eot                                                ; NO TRADE
+eot                                                = 0.9, 0.46
+exo_outfit                                         = 0.43, 0.36
+freedom_patch                                      = 0.25, 0.15
+good_psy_helmet                                    ; NO TRADE
+grenade_f1                                         = 0.14, 0.26
+grenade_gd-05                                      = 0.18, 0.38
+grenade_rgd5                                       = 0.23, 0.34
+helm_battle                                        = 0.26, 0.21
+helm_hardhat                                       = 0.28, 0.21
+helm_hardhat_snag                                  = 0.33, 0.24
+helm_m40                                           = 0.29, 0.17
+helm_protective                                    = 0.39, 0.26
+helm_respirator                                    = 0.26, 0.11
+helm_respirator_joker                              = 0.64, 0.59
+helm_tactic                                        = 0.54, 0.42
+itm_actor_backpack                                 = 0.44, 0.3
+itm_backpack                                       = 0.51, 0.41
+itm_deployable_mgun                                ; NO TRADE
+itm_gunsmith_toolkit                               = 0.55, 0.5
+itm_outfit_toolkit                                 = 0.64, 0.61
+itm_pda_common                                     ; NO TRADE
+itm_pda_rare                                       ; NO TRADE
+itm_pda_uncommon                                   ; NO TRADE
+itm_repairkit_tier_1                               = 0.65, 0.52
+itm_repairkit_tier_2                               = 0.62, 0.61
+itm_repairkit_tier_3                               = 0.26, 0.15
+itm_sleepbag                                       = 0.34, 0.33
+kobra                                              ; NO TRADE
+kobra                                              = 0.4, 0.33
+kolbasa                                            = 0.29, 0.21
+main_story_1_quest_case                            ; NO TRADE
+main_story_2_lab_x18_documents                     ; NO TRADE
+main_story_3_lab_x16_documents                     ; NO TRADE
+medkit                                             = 0.41, 0.41
+medkit_army                                        = 0.31, 0.24
+medkit_scientic                                    = 0.67, 0.67
+merc_exo_outfit                                    = 0.47, 0.38
+merc_outfit                                        = 0.41, 0.38
+merc_patch                                         = 0.59, 0.52
+merc_scientific_outfit                             = 0.28, 0.14
+military_exo_outfit                                = 0.46, 0.42
+military_outfit                                    = 0.59, 0.48
+monolith_exo_outfit                                = 0.59, 0.56
+novice_2_outfit              		               = 0.57, 0.46
+monolith_outfit                                    = 0.61, 0.52
+monolith_patch                                     = 0.62, 0.59
+monolith_scientific_outfit                         = 0.26, 0.23
+mutant_part_boar_chop                              = 0.45, 0.42
+mutant_part_boar_leg                               ; NO TRADE
+mutant_part_burer_hand                             ; NO TRADE
+mutant_part_cat_tail                               ; NO TRADE
+mutant_part_chimera_claw                           ; NO TRADE
+mutant_part_chimera_kogot                          ; NO TRADE
+mutant_part_chimera_meat                           = 0.34, 0.34
+mutant_part_controller_glass                       ; NO TRADE
+mutant_part_controller_hand                        ; NO TRADE
+mutant_part_dog_meat                               = 0.49, 0.43
+mutant_part_dog_tail                               ; NO TRADE
+mutant_part_flesh_eye                              ; NO TRADE
+mutant_part_flesh_meat                             = 0.42, 0.28
+mutant_part_fracture_hand                          ; NO TRADE
+mutant_part_krovosos_jaw                           ; NO TRADE
+mutant_part_krovosos_meat                          = 0.65, 0.61
+mutant_part_pseudogigant_eye                       ; NO TRADE
+mutant_part_pseudogigant_hand                      ; NO TRADE
+mutant_part_psevdodog_meat                         = 0.6, 0.52
+mutant_part_psevdodog_tail                         ; NO TRADE
+mutant_part_snork_hand                             ; NO TRADE
+mutant_part_snork_leg                              ; NO TRADE
+mutant_part_tushkano_head                          ; NO TRADE
+mutant_part_tushkano_meat                          = 0.25, 0.18
+mutant_part_zombi_hand                             ; NO TRADE
+novice_outfit                                      = 0.48, 0.34
+po4x34                                             ; NO TRADE
+pri_a15_documents                                  ; NO TRADE
+pri_a15_wpn_ak74                                   ; NO TRADE
+pri_a15_wpn_ak74u                                  ; NO TRADE
+pri_a15_wpn_svu                                    ; NO TRADE
+pri_a15_wpn_wincheaster1300                        ; NO TRADE
+pri_a17_gauss_rifle                                ; NO TRADE
+pri_a25_explosive_charge_item                      ; NO TRADE
+pri_decoder_documents                              ; NO TRADE
+pso                                                = 0.24, 0.41
+pu                                                 = 0.19, 0.30
+scientific_outfit                                  = 0.51, 0.46
+specops_outfit                                     = 0.48, 0.35
+stalker_outfit                                     = 0.27, 0.24
+stalker_outfit_barge                               = 0.32, 0.23
+stalker_patch                                      = 0.29, 0.16
+svoboda_exo_outfit                                 = 0.35, 0.28
+svoboda_heavy_outfit                               = 0.56, 0.45
+svoboda_heavy_outfit_2                             = 0.64, 0.53
+svoboda_light_outfit                               = 0.66, 0.65
+svoboda_novice_outfit                              = 0.32, 0.25
+svoboda_scientific_outfit                          = 0.36, 0.24
+test_container                                     = 0.32, 0.19
+trenchcoat_outfit                                  = 0.6, 0.52
+vodka                                              = 0.62, 0.52
+wpn_9a91                                           = 0.18, 0.46
+wpn_9a91_1p29                                      = 0.10, 0.45
+wpn_9a91_ekp                                       = 0.22, 0.45
+wpn_9a91_kobra                                     = 0.23, 0.45
+wpn_9a91_pso                                       = 0.15, 0.40
+wpn_abakan                                         = 0.22, 0.43
+wpn_abakan_1p29                                    = 0.1, 0.45
+wpn_abakan_ekp                                     = 0.12, 0.47
+wpn_abakan_kobra                                   = 0.16, 0.47
+wpn_abakan_pso                                     = 0.21, 0.47
+wpn_addon_grenade_launcher                         = 0.1, 0.49
+wpn_addon_grenade_launcher_ag36                    = 0.8, 0.28
+wpn_addon_grenade_launcher_m203                    = 0.3, 0.45
+wpn_addon_silencer                                 = 0.8, 0.49
+wpn_addon_silencer10                               = 0.18, 0.46
+wpn_addon_silencer12                               = 0.6, 0.49
+wpn_addon_silencer45                               = 0.16, 0.41
+wpn_addon_silencer50                               = 0.13, 0.45
+wpn_addon_silencer545                              = 0.8, 0.39
+wpn_addon_silencer556                              = 0.14, 0.40
+wpn_addon_silencer68                               = 0.13, 0.27
+wpn_addon_silencer762                              = 0.17, 0.49
+wpn_addon_silencer9x39                             = 0.1, 0.40
+wpn_aek971                                         = 0.24, 0.43
+wpn_aek971                                         = 0.24, 0.44
+wpn_aek971_1p29                                    = 0.13, 0.37
+wpn_aek971_ekp                                     = 0.19, 0.44
+wpn_aek971_kobra                                   = 0.3, 0.26
+wpn_aek971_pso                                     = 0.10, 0.27
+wpn_aek973                                         = 0.13, 0.29
+wpn_aek973                                         = 0.15, 0.29
+wpn_aek973_1p29                                    = 0.16, 0.35
+wpn_aek973_ekp                                     = 0.3, 0.26
+wpn_aek973_kobra                                   = 0.2, 0.33
+wpn_aek973_pso                                     = 0.4, 0.34
+wpn_ak101                                          = 0.11, 0.41
+wpn_ak101                                          = 0.14, 0.27
+wpn_ak101_1p29                                     = 0.22, 0.31
+wpn_ak101_ekp                                      = 0.20, 0.41
+wpn_ak101_kobra                                    = 0.15, 0.36
+wpn_ak101_pso                                      = 0.17, 0.48
+wpn_ak102                                          = 0.14, 0.49
+wpn_ak102                                          = 0.17, 0.32
+wpn_ak102_1p29                                     = 0.14, 0.41
+wpn_ak102_ekp                                      = 0.19, 0.37
+wpn_ak102_kobra                                    = 0.16, 0.32
+wpn_ak102_pso                                      = 0.1, 0.41
+wpn_ak103                                          = 0.15, 0.48
+wpn_ak103                                          = 0.16, 0.31
+wpn_ak103_1p29                                     = 0.7, 0.32
+wpn_ak103_ekp                                      = 0.18, 0.45
+wpn_ak103_kobra                                    = 0.5, 0.44
+wpn_ak103_pso                                      = 0.12, 0.28
+wpn_ak104                                          = 0.12, 0.42
+wpn_ak104                                          = 0.23, 0.28
+wpn_ak104_1p29                                     = 0.18, 0.29
+wpn_ak104_ekp                                      = 0.15, 0.34
+wpn_ak104_kobra                                    = 0.14, 0.42
+wpn_ak104_pso                                      = 0.5, 0.43
+wpn_ak105                                          = 0.20, 0.45
+wpn_ak105                                          = 0.4, 0.48
+wpn_ak105_1p29                                     = 0.10, 0.32
+wpn_ak105_ekp                                      = 0.12, 0.47
+wpn_ak105_kobra                                    = 0.13, 0.43
+wpn_ak105_pso                                      = 0.9, 0.32
+wpn_ak12                                           = 0.21, 0.45
+wpn_ak12                                           = 0.24, 0.35
+wpn_ak12_762                                       = 0.15, 0.37
+wpn_ak12_762                                       = 0.6, 0.26
+wpn_ak12_762_ac11090                               = 0.20, 0.47
+wpn_ak12_762_acog                                  = 0.16, 0.48
+wpn_ak12_762_c-more                                = 0.21, 0.32
+wpn_ak12_762_eot                                   = 0.15, 0.35
+wpn_ak12_ac11090                                   = 0.10, 0.43
+wpn_ak12_acog                                      = 0.22, 0.39
+wpn_ak12_c-more                                    = 0.22, 0.35
+wpn_ak12_eot                                       = 0.9, 0.44
+wpn_ak47                                           = 0.1, 0.30
+wpn_ak47                                           = 0.2, 0.47
+wpn_ak74                                           = 0.1, 0.48
+wpn_ak74                                           = 0.22, 0.44
+wpn_ak74_1p29                                      = 0.3, 0.44
+wpn_ak74_ekp                                       = 0.21, 0.28
+wpn_ak74_kobra                                     = 0.16, 0.43
+wpn_ak74_pso                                       = 0.1, 0.40
+wpn_ak74m                                          = 0.20, 0.28
+wpn_ak74m                                          = 0.9, 0.33
+wpn_ak74m_1p29                                     = 0.24, 0.32
+wpn_ak74m_ekp                                      = 0.11, 0.36
+wpn_ak74m_kobra                                    = 0.23, 0.49
+wpn_ak74m_pso                                      = 0.16, 0.33
+wpn_ak74u                                          = 0.4, 0.42
+wpn_ak74u                                          = 0.7, 0.33
+wpn_ak74u_1p29                                     = 0.19, 0.39
+wpn_ak74u_ekp                                      = 0.4, 0.43
+wpn_ak74u_snag                                     = 0.9, 0.31
+wpn_akm                                            = 0.18, 0.30
+wpn_akm_1p29                                       = 0.11, 0.35
+wpn_akm_ekp                                        = 0.3, 0.46
+wpn_akm_kobra                                      = 0.16, 0.48
+wpn_akm_pso                                        = 0.21, 0.33
+wpn_akms                                           = 0.23, 0.41
+wpn_akms_1p29                                      = 0.6, 0.37
+wpn_akms_ekp                                       = 0.11, 0.41
+wpn_akms_kobra                                     = 0.3, 0.44
+wpn_akms_pso                                       = 0.23, 0.37
+wpn_aks47                                          = 0.11, 0.27
+wpn_aks74                                          = 0.24, 0.44
+wpn_aks74_1p29                                     = 0.24, 0.35
+wpn_aks74_ekp                                      = 0.18, 0.43
+wpn_aks74_kobra                                    = 0.23, 0.37
+wpn_aks74_pso                                      = 0.18, 0.33
+wpn_aks74n                                         = 0.19, 0.32
+wpn_aks74n_1p29                                    = 0.3, 0.44
+wpn_aks74n_ekp                                     = 0.15, 0.44
+wpn_aks74n_kobra                                   = 0.13, 0.31
+wpn_aks74n_pso                                     = 0.24, 0.29
+wpn_aps                                            = 0.15, 0.41
+wpn_ar15                                           = 0.2, 0.49
+wpn_ar15_ac11090                                   = 0.21, 0.34
+wpn_ar15_acog                                      = 0.2, 0.35
+wpn_ar15_c-more                                    = 0.21, 0.44
+wpn_ar15_eot                                       = 0.8, 0.34
+wpn_aug                                            = 0.8, 0.39
+wpn_avt40                                          = 0.6, 0.37
+wpn_avt40_pu                                       = 0.12, 0.35
+wpn_beretta                                        = 0.24, 0.38
+wpn_beretta                                        = 0.5, 0.41
+wpn_beretta96                                      = 0.15, 0.30
+wpn_beretta96                                      = 0.18, 0.34
+wpn_binoc                                          = 0.10, 0.37
+wpn_bizon                                          = 0.19, 0.27
+wpn_bizon_1p29                                     = 0.6, 0.49
+wpn_bizon_ekp                                      = 0.14, 0.29
+wpn_bizon_kobra                                    = 0.3, 0.34
+wpn_bizon_pso                                      = 0.4, 0.46
+wpn_bm16                                           = 0.19, 0.33
+wpn_bm16_full                                      = 0.13, 0.39
+wpn_colt1911                                       = 0.17, 0.40
+wpn_colt1911_sk2                                   = 0.17, 0.32
+wpn_colt1911_sk3                                   = 0.17, 0.26
+wpn_coltde                                         = 0.3, 0.45
+wpn_cz40                                           = 0.14, 0.34
+wpn_cz52                                           = 0.12, 0.35
+wpn_cz75                                           = 0.8, 0.44
+wpn_desert_eagle                                   = 0.18, 0.41
+wpn_desert_eagle_357                               = 0.4, 0.49
+wpn_desert_eagle_nimble                            = 0.3, 0.38
+wpn_fiveseven                                      = 0.11, 0.33
+wpn_fiveseven                                      = 0.19, 0.49
+wpn_fn2000                                         = 0.7, 0.39
+wpn_fn2000                                         = 0.9, 0.48
+wpn_fn2000_acog                                    = 0.17, 0.28
+wpn_fn2000_nimble                                  = 0.1, 0.30
+wpn_fnp40                                          = 0.17, 0.44
+wpn_fnp40                                          = 0.7, 0.34
+wpn_fnp45                                          = 0.21, 0.45
+wpn_fnp45                                          = 0.9, 0.29
+wpn_fort                                           = 0.11, 0.33
+wpn_fort                                           = 0.12, 0.41
+wpn_fort_snag                                      = 0.5, 0.47
+wpn_g3                                             = 0.8, 0.35
+wpn_g36                                            = 0.6, 0.28
+wpn_g36_nimble                                     = 0.19, 0.39
+wpn_g36c                                           = 0.1, 0.48
+wpn_g36c                                           = 0.23, 0.31
+wpn_g36c_ac11090                                   = 0.13, 0.49
+wpn_g36c_acog                                      = 0.1, 0.38
+wpn_g36c_c-more                                    = 0.10, 0.43
+wpn_g36c_eot                                       = 0.10, 0.38
+wpn_g3_acog                                        = 0.11, 0.49
+wpn_g3a3                                           = 0.20, 0.40
+wpn_g3a3_ac11090                                   = 0.6, 0.33
+wpn_g3a3_acog                                      = 0.10, 0.43
+wpn_g3a3_c-more                                    = 0.5, 0.41
+wpn_g3a3_eot                                       = 0.11, 0.39
+wpn_g3sg1                                          = 0.8, 0.47
+wpn_galil                                          = 0.9, 0.30
+wpn_gauss                                          = 0.3, 0.37
+wpn_glock17                                        = 0.4, 0.30
+wpn_glock20                                        = 0.2, 0.40
+wpn_glock21                                        = 0.8, 0.27
+wpn_glock35                                        = 0.8, 0.43
+wpn_groza                                          = 0.7, 0.26
+wpn_groza1                                         = 0.7, 0.37
+wpn_groza1_pso                                     = 0.16, 0.34
+wpn_groza_nimble                                   = 0.10, 0.27
+wpn_groza_pso                                      = 0.9, 0.44
+wpn_gsh18                                          = 0.22, 0.28
+wpn_gsh18                                          = 0.7, 0.35
+wpn_hk416                                          = 0.12, 0.26
+wpn_hk416                                          = 0.19, 0.41
+wpn_hk416_ac11090                                  = 0.8, 0.30
+wpn_hk416_acog                                     = 0.2, 0.49
+wpn_hk416_c-more                                   = 0.24, 0.41
+wpn_hk416_eot                                      = 0.3, 0.38
+wpn_hk417                                          = 0.18, 0.29
+wpn_hk417                                          = 0.2, 0.41
+wpn_hk417_acog                                     = 0.9, 0.34
+wpn_hk417_eot                                      = 0.5, 0.40
+wpn_hpsa                                           = 0.20, 0.43
+wpn_hpsa                                           = 0.3, 0.48
+wpn_hpsa40                                         = 0.13, 0.40
+wpn_hpsa40                                         = 0.14, 0.26
+wpn_knife                                          = 0.16, 0.32
+wpn_l115a3                                         = 0.14, 0.44
+wpn_l85                                            = 0.22, 0.26
+wpn_l85_acog                                       = 0.20, 0.29
+wpn_l96                                            = 0.18, 0.32
+wpn_l96                                            = 0.6, 0.34
+wpn_lr300                                          = 0.17, 0.47
+wpn_lr300                                          = 0.7, 0.30
+wpn_lr300_ac11090                                  = 0.11, 0.40
+wpn_lr300_acog                                     = 0.7, 0.40
+wpn_lr300_c-more                                   = 0.5, 0.40
+wpn_lr300_eot                                      = 0.16, 0.33
+wpn_lr680                                          = 0.12, 0.36
+wpn_lr680                                          = 0.6, 0.27
+wpn_lr680_ac11090                                  = 0.23, 0.37
+wpn_lr680_acog                                     = 0.9, 0.49
+wpn_lr680_c-more                                   = 0.2, 0.44
+wpn_lr680_eot                                      = 0.22, 0.35
+wpn_m134                                           = 0.24, 0.39
+wpn_m134                                           = 0.7, 0.27
+wpn_m14                                            = 0.10, 0.31
+wpn_m14                                            = 0.15, 0.28
+wpn_m16                                            = 0.1, 0.42
+wpn_m16                                            = 0.22, 0.43
+wpn_m16_68                                         = 0.15, 0.47
+wpn_m16_68                                         = 0.4, 0.43
+wpn_m16_68_acog                                    = 0.4, 0.34
+wpn_m16_acog                                       = 0.19, 0.39
+wpn_m249                                           = 0.10, 0.34
+wpn_m249                                           = 0.10, 0.40
+wpn_m249_eot                                       = 0.10, 0.47
+wpn_m249_nimble                                    = 0.6, 0.34
+wpn_m249_nimble_eot                                = 0.10, 0.39
+wpn_m4a1                                           = 0.9, 0.29
+wpn_m4a1_50                                        = 0.7, 0.33
+wpn_m4a1_50_ac11090                                = 0.20, 0.39
+wpn_m4a1_50_acog                                   = 0.20, 0.37
+wpn_m4a1_50_c-more                                 = 0.5, 0.40
+wpn_m4a1_50_eot                                    = 0.11, 0.38
+wpn_m4a1_ac11090                                   = 0.11, 0.33
+wpn_m4a1_acog                                      = 0.18, 0.35
+wpn_m4a1_c-more                                    = 0.5, 0.30
+wpn_m4a1_eot                                       = 0.17, 0.39
+wpn_m4bm                                           = 0.16, 0.45
+wpn_m4bm_ac11090                                   = 0.8, 0.38
+wpn_m4bm_acog                                      = 0.20, 0.27
+wpn_m4bm_c-more                                    = 0.6, 0.44
+wpn_m4bm_eot                                       = 0.16, 0.47
+wpn_m60                                            = 0.4, 0.43
+wpn_mine                                           = 0.15, 0.34
+wpn_mn91                                           = 0.10, 0.38
+wpn_mn91                                           = 0.9, 0.28
+wpn_mn91_pu                                        = 0.7, 0.32
+wpn_mossberg                                       = 0.7, 0.45
+wpn_mp412                                          = 0.20, 0.43
+wpn_mp440                                          = 0.24, 0.39
+wpn_mp443                                          = 0.2, 0.46
+wpn_mp5                                            = 0.5, 0.44
+wpn_mp5_ac11090                                    = 0.4, 0.49
+wpn_mp5_acog                                       = 0.20, 0.34
+wpn_mp5_c-more                                     = 0.14, 0.47
+wpn_mp5_eot                                        = 0.10, 0.45
+wpn_mp5_nimble                                     = 0.21, 0.48
+wpn_mp5_nimble_ac11090                             = 0.10, 0.43
+wpn_mp5_nimble_acog                                = 0.18, 0.43
+wpn_mp5_nimble_c-more                              = 0.3, 0.29
+wpn_mp5_nimble_eot                                 = 0.23, 0.31
+wpn_mp5sd                                          = 0.11, 0.30
+wpn_mp5sd                                          = 0.3, 0.42
+wpn_mp5sd_ac11090                                  = 0.9, 0.47
+wpn_mp5sd_acog                                     = 0.18, 0.26
+wpn_mp5sd_c-more                                   = 0.15, 0.46
+wpn_mp5sd_eot                                      = 0.1, 0.38
+wpn_mp5sd_nimble                                   = 0.13, 0.49
+wpn_mp5sd_nimble_ac11090                           = 0.1, 0.34
+wpn_mp5sd_nimble_acog                              = 0.9, 0.48
+wpn_mp5sd_nimble_c-more                            = 0.16, 0.35
+wpn_mp5sd_nimble_eot                               = 0.14, 0.33
+wpn_mp7                                            = 0.15, 0.35
+wpn_mp7_acog                                       = 0.6, 0.33
+wpn_mp7_eot                                        = 0.15, 0.38
+wpn_ots33                                          = 0.19, 0.47
+wpn_p90                                            = 0.7, 0.33
+wpn_p90_ac11090                                    = 0.6, 0.47
+wpn_p90_acog                                       = 0.20, 0.37
+wpn_p90_c-more                                     = 0.17, 0.32
+wpn_pb                                             = 0.24, 0.45
+wpn_pb                                             = 0.9, 0.28
+wpn_pkm                                            = 0.4, 0.48
+wpn_pkm                                            = 0.8, 0.35
+wpn_pkm_ekp                                        = 0.11, 0.41
+wpn_pkm_zulus                                      = 0.9, 0.48
+wpn_pkm_zulus_ekp                                  = 0.11, 0.29
+wpn_pm                                             = 0.24, 0.42
+wpn_pm_actor                                       = 0.23, 0.37
+wpn_pmm                                            = 0.14, 0.39
+wpn_pmm                                            = 0.7, 0.36
+wpn_pp2000                                         = 0.10, 0.44
+wpn_pp2000                                         = 0.22, 0.44
+wpn_protecta                                       = 0.24, 0.46
+wpn_protecta                                       = 0.6, 0.42
+wpn_protecta_nimble                                = 0.23, 0.30
+wpn_remington870                                   = 0.22, 0.27
+wpn_remington870_ac11090                           = 0.7, 0.42
+wpn_remington870_c-more                            = 0.23, 0.32
+wpn_remington870_eot                               = 0.2, 0.42
+wpn_rg-6                                           = 0.2, 0.40
+wpn_rg-6                                           = 0.9, 0.43
+wpn_rpg7                                           = 0.2, 0.42
+wpn_rpg7                                           = 0.2, 0.46
+wpn_rpk                                            = 0.13, 0.35
+wpn_rpk                                            = 0.3, 0.45
+wpn_rpk74                                          = 0.21, 0.42
+wpn_rpk74                                          = 0.3, 0.35
+wpn_rpk74_1p29                                     = 0.24, 0.43
+wpn_rpk74_ekp                                      = 0.22, 0.35
+wpn_rpk74_pso                                      = 0.11, 0.31
+wpn_saiga                                          = 0.21, 0.43
+wpn_saiga_1p29                                     = 0.17, 0.30
+wpn_saiga_ekp                                      = 0.1, 0.45
+wpn_saiga_kobra                                    = 0.21, 0.34
+wpn_saiga_nimble                                   = 0.6, 0.47
+wpn_saiga_nimble_1p29                              = 0.18, 0.43
+wpn_saiga_nimble_ekp                               = 0.9, 0.40
+wpn_saiga_nimble_kobra                             = 0.21, 0.30
+wpn_saiga_nimble_pso                               = 0.16, 0.38
+wpn_saiga_pso                                      = 0.8, 0.44
+wpn_scar-h                                         = 0.12, 0.27
+wpn_scar-h                                         = 0.23, 0.26
+wpn_scar-h_ac11090                                 = 0.11, 0.49
+wpn_scar-h_acog                                    = 0.3, 0.49
+wpn_scar-h_c-more                                  = 0.14, 0.38
+wpn_scar-h_eot                                     = 0.15, 0.39
+wpn_sig220                                         = 0.1, 0.38
+wpn_sig220                                         = 0.22, 0.31
+wpn_sig220_nimble                                  = 0.12, 0.34
+wpn_sig550                                         = 0.5, 0.26
+wpn_sig550_ac11090                                 = 0.22, 0.32
+wpn_sig550_acog                                    = 0.18, 0.34
+wpn_sig550_c-more                                  = 0.17, 0.30
+wpn_sig550_eot                                     = 0.8, 0.33
+wpn_sig550_luckygun                                = 0.10, 0.39
+wpn_sig550_luckygun_ac11090                        = 0.20, 0.27
+wpn_sig550_luckygun_acog                           = 0.18, 0.45
+wpn_sig550_luckygun_c-more                         = 0.9, 0.46
+wpn_sig550_luckygun_eot                            = 0.21, 0.31
+wpn_sks                                            = 0.2, 0.44
+wpn_sks                                            = 0.22, 0.34
+wpn_sks_pu                                         = 0.9, 0.46
+wpn_spas12                                         = 0.23, 0.35
+wpn_spas12_nimble                                  = 0.2, 0.38
+wpn_sr3m                                           = 0.10, 0.31
+wpn_sr3m                                           = 0.18, 0.42
+wpn_sr3m_1p29                                      = 0.10, 0.46
+wpn_sr3m_ekp                                       = 0.18, 0.40
+wpn_sr3m_kobra                                     = 0.6, 0.43
+wpn_sr3m_pso                                       = 0.12, 0.33
+wpn_stg58                                          = 0.17, 0.42
+wpn_stg58                                          = 0.3, 0.39
+wpn_stg58_acog                                     = 0.11, 0.46
+wpn_sv98                                           = 0.23, 0.34
+wpn_svd                                            = 0.8, 0.45
+wpn_svd_nimble                                     = 0.5, 0.34
+wpn_svt40                                          = 0.14, 0.43
+wpn_svt40                                          = 0.4, 0.36
+wpn_svt40_pu                                       = 0.16, 0.37
+wpn_svu                                            = 0.22, 0.34
+wpn_svu_nimble                                     = 0.24, 0.32
+wpn_toz34                                          = 0.14, 0.40
+wpn_toz34                                          = 0.4, 0.44
+wpn_toz34_sk1                                      = 0.19, 0.34
+wpn_toz34_sk1                                      = 0.9, 0.44
+wpn_toz34_so                                       = 0.10, 0.39
+wpn_toz34_so                                       = 0.17, 0.31
+wpn_toz34_so_sk1                                   = 0.10, 0.34
+wpn_toz34_so_sk1                                   = 0.20, 0.34
+wpn_trg22                                          = 0.16, 0.34
+wpn_trg22                                          = 0.4, 0.36
+wpn_trg42                                          = 0.13, 0.31
+wpn_trg42                                          = 0.20, 0.41
+wpn_tt33                                           = 0.14, 0.45
+wpn_tt33                                           = 0.21, 0.44
+wpn_tt33_2                                         = 0.19, 0.48
+wpn_tt33_2                                         = 0.9, 0.38
+wpn_ump40                                          = 0.3, 0.40
+wpn_ump40                                          = 0.6, 0.28
+wpn_ump40_ac11090                                  = 0.4, 0.29
+wpn_ump40_acog                                     = 0.21, 0.40
+wpn_ump40_c-more                                   = 0.12, 0.27
+wpn_ump40_eot                                      = 0.5, 0.39
+wpn_ump45                                          = 0.12, 0.48
+wpn_ump45                                          = 0.15, 0.45
+wpn_ump45_ac11090                                  = 0.18, 0.44
+wpn_ump45_acog                                     = 0.21, 0.33
+wpn_ump45_c-more                                   = 0.6, 0.31
+wpn_ump45_eot                                      = 0.13, 0.40
+wpn_usp                                            = 0.13, 0.41
+wpn_usp                                            = 0.6, 0.44
+wpn_usp10                                          = 0.1, 0.43
+wpn_usp10                                          = 0.15, 0.48
+wpn_usp40                                          = 0.18, 0.37
+wpn_usp40                                          = 0.4, 0.45
+wpn_usp_nimble                                     = 0.6, 0.38
+wpn_val                                            = 0.9, 0.33
+wpn_val_1p29                                       = 0.13, 0.38
+wpn_val_ekp                                        = 0.14, 0.40
+wpn_val_kobra                                      = 0.5, 0.28
+wpn_val_pso                                        = 0.23, 0.47
+wpn_vepr12                                         = 0.9, 0.43
+wpn_vepr12_1p29                                    = 0.18, 0.38
+wpn_vepr12_ekp                                     = 0.4, 0.28
+wpn_vepr12_kobra                                   = 0.11, 0.45
+wpn_vepr12_pso                                     = 0.19, 0.37
+wpn_vintorez                                       = 0.5, 0.34
+wpn_vintorez_nimble                                = 0.13, 0.29
+wpn_vks                                            = 0.12, 0.40
+wpn_vks                                            = 0.7, 0.26
+wpn_vsk94                                          = 0.11, 0.47
+wpn_vsk94                                          = 0.9, 0.29
+wpn_vsk94_pso                                      = 0.11, 0.36
+wpn_vz65                                           = 0.6, 0.39
+wpn_walther                                        = 0.8, 0.35
+wpn_walther40                                      = 0.8, 0.47
+wpn_wincheaster1300                                = 0.15, 0.38
+wpn_wincheaster1300_trapper                        = 0.14, 0.27
+yantar_deployable_mgun                             ; NO TRADE
 
 [supplies_heavy_pockets]
-
-;DET_ADVA
-detector_advanced                        = 1, 0.5
-
-;II_FOOD
-antirad                                  = 2, 0.8
-bandage                                  = 3, 0.8
-bread                                    = 2, 0.5
-conserva                                 = 2, 0.5
-drug_antidot                             = 3, 0.25
-drug_booster                             = 3, 0.25
-drug_coagulant                           = 2, 0.25
-drug_psy_blockade                        = 4, 0.2
-drug_radioprotector                      = 3, 0.25
-energy_drink                             = 3, 0.8
-itm_gunsmith_toolkit                     = 2, 0.25
-itm_outfit_toolkit                       = 2, 0.25
-kolbasa                                  = 3, 0.5
-medkit                                   = 2, 0.8
-vodka                                    = 3, 0.8
-
-;II_ANTIR
-itm_backpack                             = 5, 	0.3
-wpn_mine                                 = 3,	0.25
-
-;G_RGD5
-grenade_rgd5                             = 4,	0.7
-
-;AMMO
-ammo_11.43x23_fmj                        = 2,	0.7
-ammo_12x70_buck                          = 6,	0.7
-ammo_5.45x39_ap                          = 2,	0.5
-ammo_5.45x39_fmj                         = 4,	0.7
-ammo_5.56x45_ap                          = 2,	0.5
-ammo_5.56x45_ss190                       = 4,	0.7
-ammo_9x18_fmj                            = 4,	0.7
-ammo_9x18_pmm                            = 4,	0.5
-ammo_9x19_fmj                            = 4,	0.7
-ammo_9x19_pbp                            = 4,	0.5
-
-;S_OG7B
-ammo_og-7b                               = 5, 	0.25
-
-;S_M209
-ammo_m209                                = 4,   0.5
-
-;WP_SCOPE
-wpn_addon_scope                          = 1,	0.5
-wpn_addon_scope_susat                    = 1,	0.5
-
-;WP_SILEN
-wpn_addon_silencer                       = 2,	0.3
-
-;WP_AK74
-wpn_abakan                               = 1,	0.3
-wpn_ak74                                 = 1,	0.8
-wpn_ak74u                                = 1,	0.8
-wpn_l85                                  = 1,	0.8
-wpn_lr300                                = 1,	0.3
-
-;WP_ASHTG
-wpn_wincheaster1300                      = 1,	0.8
-
-;WP_HPSA
-wpn_hpsa                                 = 1,	0.8
-
-;WP_LR300
-wpn_beretta                              = 1,	0.8
-wpn_mp5                                  = 1,	0.8
-
-;WP_PM
-wpn_colt1911                             = 1,	0.8
-wpn_fort                                 = 1,	0.8
-
-;EQU_STLK
-exo_outfit                               = 1, 1
-stalker_outfit                           = 1,	0.8
-
-;E_HLMET
-helm_battle                              = 1, 0.4
-helm_hardhat                             = 1, 0.4
-helm_m40                                 = 1, 0.4
-helm_protective                          = 1, 0.4
-helm_respirator                          = 1, 0.4
-helm_tactic                              = 1, 0.4
+1p29                                               = 3, 0.74
+ac11090                                            = 3, 0.92
+acog                                               = 1, 0.54
+ammo_10x22_fmj                                     = 3, 0.67
+ammo_10x22_hp                                      = 3, 0.75
+ammo_10x25_fmj                                     = 3, 0.67
+ammo_10x25_hp                                      = 1, 0.64
+ammo_11.43x23_fmj                                  = 3, 0.83
+ammo_11.43x23_hydro                                = 4, 0.65
+ammo_12.7x55                                       = 4, 0.77
+ammo_12x70_buck                                    = 4, 0.85
+ammo_12x76_zhekan                                  = 3, 0.84
+ammo_357_fmj                                       = 3, 0.69
+ammo_357_hp                                        = 2, 0.65
+ammo_4.6x30_ap                                     = 4, 0.85
+ammo_4.6x30_fmj                                    = 1, 0.57
+ammo_5.45x39_ap                                    = 3, 0.80
+ammo_5.45x39_fmj                                   = 2, 0.87
+ammo_5.56x45_ap                                    = 3, 0.52
+ammo_5.56x45_ss190                                 = 3, 0.75
+ammo_5.7x28_ss190                                  = 1, 0.55
+ammo_5.7x28_ss192                                  = 4, 0.94
+ammo_50_beowulf_hp                                 = 4, 0.85
+ammo_50_beowulf_jfp                                = 1, 0.65
+ammo_50ae_fmj                                      = 2, 0.87
+ammo_50ae_hp                                       = 4, 0.65
+ammo_6.8x43_fmj                                    = 1, 0.82
+ammo_6.8x43_sst                                    = 2, 0.57
+ammo_7.62x25_fmj                                   = 2, 0.89
+ammo_7.62x25_hp                                    = 4, 0.53
+ammo_7.62x39_ap                                    = 1, 0.79
+ammo_7.62x39_fmj                                   = 2, 0.62
+ammo_7.62x51_ap                                    = 2, 0.77
+ammo_7.62x51_fmj                                   = 4, 0.54
+ammo_7.62x54_7h1                                   = 4, 0.60
+ammo_7.62x54_fmj                                   = 1, 0.66
+ammo_8.58x70_ap                                    = 4, 0.96
+ammo_8.58x70_jsp                                   = 3, 0.79
+ammo_9x18_fmj                                      = 4, 0.82
+ammo_9x18_pmm                                      = 3, 0.82
+ammo_9x19_fmj                                      = 2, 0.72
+ammo_9x19_pbp                                      = 1, 0.64
+ammo_9x39_ap                                       = 2, 0.98
+ammo_9x39_pab9                                     = 4, 0.55
+ammo_gauss_cardan                                  = 1, 0.68
+ammo_m134                                          = 3, 0.87
+ammo_m209                                          = 2, 0.91
+ammo_og-7b                                         = 1, 0.81
+ammo_pkm_100                                       = 3, 0.78
+ammo_vog-25                                        = 1, 0.58
+antirad                                            = 2, 0.8
+bandage                                            = 3, 0.8
+bread                                              = 2, 0.5
+c-more                                             = 2, 0.94
+conserva                                           = 2, 0.5
+detector_advanced                                  = 1, 0.5
+drug_antidot                                       = 3, 0.25
+drug_booster                                       = 3, 0.25
+drug_coagulant                                     = 2, 0.25
+drug_psy_blockade                                  = 4, 0.2
+drug_radioprotector                                = 3, 0.25
+ekp                                                = 3, 0.60
+energy_drink                                       = 3, 0.8
+eot                                                = 2, 0.98
+stalker_outfit                           = 1,	0.95
+novice_outfit                            = 1,	0.95
+novice_2_outfit                            = 1,	0.95
+exo_outfit                               = 1,	0.7
+barmerc_outfit                           = 1,	0.3
+trenchcoat_outfit						 = 1,	0.6
+nbc_outfit                           	 = 1,	0.8
+radiation_outfit                         = 1,	0.8
+scientific_outfit                        = 1, 	0.8
+scientific_heavy_outfit					 = 1,	0.8
+helm_respirator                          = 1,	0.8
+helm_m40								 = 1,	0.8
+helm_respirator_2						 = 1,	0.95
+helm_facemask							 = 1,	0.95
+grenade_f1                                         = 3, 0.51
+grenade_gd-05                                      = 3, 0.91
+grenade_rgd5                                       = 3, 0.90
+helm_battle                                        = 1, 0.4
+helm_hardhat                                       = 1, 0.4
+helm_m40                                           = 1, 0.4
+helm_protective                                    = 1, 0.4
+helm_respirator                                    = 1, 0.4
+helm_tactic                                        = 1, 0.4
+helm_respirator_gp5						 = 1,	0.95
+helm_respirator_half					 = 1,	0.95
+itm_backpack                                       = 5, 	0.3
+itm_gunsmith_toolkit                               = 2, 0.25
+itm_outfit_toolkit                                 = 2, 0.25
+kobra                                              = 4, 0.74
+kolbasa                                            = 3, 0.5
+medkit                                             = 2, 0.8
+pso                                                = 2, 0.78
+pu                                                 = 3, 0.93
+stalker_outfit                                     = 1,	0.8
+vodka                                              = 3, 0.8
+wpn_addon_grenade_launcher                         = 3, 0.86
+wpn_addon_grenade_launcher_ag36                    = 3, 0.87
+wpn_addon_grenade_launcher_m203                    = 4, 0.54
+wpn_addon_silencer                                 = 3, 0.60
+wpn_addon_silencer10                               = 1, 0.92
+wpn_addon_silencer12                               = 2, 0.58
+wpn_addon_silencer45                               = 1, 0.64
+wpn_addon_silencer50                               = 2, 0.82
+wpn_addon_silencer545                              = 1, 0.97
+wpn_addon_silencer556                              = 2, 0.55
+wpn_addon_silencer68                               = 1, 0.78
+wpn_addon_silencer762                              = 2, 0.98
+wpn_addon_silencer9x39                             = 2, 0.93
+wpn_ak101                                          = 1, 0.62
+wpn_ak102                                          = 2, 0.75
+wpn_ak103                                          = 1, 0.47
+wpn_ak104                                          = 1, 0.54
+wpn_ak105                                          = 2, 0.75
+wpn_ak47                                           = 2, 0.73
+wpn_ak74                                           = 2, 0.42
+wpn_ak74m                                          = 2, 0.74
+wpn_ak74u                                          = 2, 0.69
+wpn_akm                                            = 1, 0.64
+wpn_akms                                           = 2, 0.42
+wpn_aks47                                          = 1, 0.73
+wpn_aks74                                          = 2, 0.61
+wpn_aks74n                                         = 1, 0.53
+wpn_aps                                            = 1, 0.46
+wpn_ar15                                           = 2, 0.53
+wpn_beretta                                        = 1, 0.77
+wpn_bizon                                          = 2, 0.51
+wpn_bm16                                           = 1, 0.50
+wpn_bm16_full                                      = 2, 0.58
+wpn_colt1911                                       = 2, 0.49
+wpn_colt1911_sk2                                   = 2, 0.41
+wpn_colt1911_sk3                                   = 1, 0.44
+wpn_cz52                                           = 1, 0.69
+wpn_fort                                           = 1, 0.47
+wpn_glock17                                        = 2, 0.50
+wpn_glock20                                        = 1, 0.52
+wpn_glock21                                        = 1, 0.69
+wpn_glock35                                        = 1, 0.41
+wpn_gsh18                                          = 2, 0.59
+wpn_hpsa                                           = 2, 0.76
+wpn_lr300                                          = 2, 0.49
+wpn_m16                                            = 2, 0.58
+wpn_m4a1                                           = 1, 0.59
+wpn_mine                                           = 3, 0.89
+wpn_mn91                                           = 2, 0.66
+wpn_mossberg                                       = 2, 0.63
+wpn_mp440                                          = 1, 0.54
+wpn_mp443                                          = 2, 0.78
+wpn_mp5                                            = 1, 0.45
+wpn_mp5sd                                          = 2, 0.44
+wpn_mp7                                            = 2, 0.61
+wpn_ots33                                          = 1, 0.59
+wpn_pb                                             = 1, 0.56
+wpn_pm                                             = 1, 0.59
+wpn_pmm                                            = 2, 0.49
+wpn_pp2000                                         = 2, 0.68
+wpn_remington870                                   = 1, 0.79
+wpn_rpk                                            = 1, 0.74
+wpn_rpk74                                          = 1, 0.77
+wpn_saiga                                          = 2, 0.71
+wpn_sig220                                         = 2, 0.47
+wpn_sks                                            = 2, 0.75
+wpn_spas12                                         = 1, 0.66
+wpn_svt40                                          = 2, 0.70
+wpn_toz34                                          = 1, 0.60
+wpn_toz34_sk1                                      = 1, 0.75
+wpn_toz34_so                                       = 1, 0.76
+wpn_toz34_so_sk1                                   = 1, 0.67
+wpn_tt33                                           = 1, 0.73
+wpn_tt33_2                                         = 1, 0.61
+wpn_vepr12                                         = 1, 0.79
+wpn_vintorez                                       = 2, 0.42
+wpn_walther                                        = 1, 0.58
+wpn_wincheaster1300                                = 1, 0.71
 
 [supplies_generic]
-
-;DET_ADVA
-detector_advanced                        = 1, 0.5
-
-;II_FOOD
-antirad                                  = 2, 0.8
-bandage                                  = 3, 0.8
-bread                                    = 2, 0.5
-conserva                                 = 2, 0.5
-drug_antidot                             = 3, 0.25
-drug_booster                             = 3, 0.25
-drug_coagulant                           = 2, 0.25
-drug_psy_blockade                        = 4, 0.2
-drug_radioprotector                      = 3, 0.25
-energy_drink                             = 3, 0.8
-itm_gunsmith_toolkit                     = 2, 0.25
-itm_outfit_toolkit                       = 2, 0.25
-kolbasa                                  = 3, 0.5
-medkit                                   = 2, 0.8
-vodka                                    = 3, 0.8
-
-;II_ANTIR
-itm_backpack                             = 5, 	0.3
-wpn_mine                                 = 3,	0.25
-
-;G_RGD5
-grenade_rgd5                             = 4,	0.7
-
-;AMMO
-ammo_11.43x23_fmj                        = 2,	0.7
-ammo_12x70_buck                          = 6,	0.7
-ammo_5.45x39_ap                          = 2,	0.5
-ammo_5.45x39_fmj                         = 4,	0.7
-ammo_5.56x45_ap                          = 2,	0.5
-ammo_5.56x45_ss190                       = 4,	0.7
-ammo_9x18_fmj                            = 4,	0.7
-ammo_9x18_pmm                            = 4,	0.5
-ammo_9x19_fmj                            = 4,	0.7
-ammo_9x19_pbp                            = 4,	0.5
-
-;S_OG7B
-ammo_og-7b                               = 5, 	0.25
-
-;S_M209
-ammo_m209                                = 4,   0.5
-
-;WP_SCOPE
-wpn_addon_scope                          = 1,	0.5
-wpn_addon_scope_susat                    = 1,	0.5
-
-;WP_SILEN
-wpn_addon_silencer                       = 2,	0.3
-
-;WP_AK74
-wpn_abakan                               = 1,	0.3
-wpn_ak74                                 = 1,	0.8
-wpn_ak74u                                = 1,	0.8
-wpn_l85                                  = 1,	0.8
-wpn_lr300                                = 1,	0.3
-
-;WP_ASHTG
-wpn_wincheaster1300                      = 1,	0.8
-
-;WP_HPSA
-wpn_hpsa                                 = 1,	0.8
-
-;WP_LR300
-wpn_beretta                              = 1,	0.8
-wpn_mp5                                  = 1,	0.8
-
-;WP_PM
-wpn_colt1911                             = 1,	0.8
-wpn_fort                                 = 1,	0.8
-
-;EQU_STLK
-stalker_outfit                           = 1,	0.8
-
-;E_HLMET
+1p29                                               = 2, 0.47
+ac11090                                            = 4, 0.35
+acog                                               = 3, 0.34
+ammo_10x22_fmj                                     = 2, 0.49
+ammo_10x22_hp                                      = 4, 0.42
+ammo_10x25_fmj                                     = 4, 0.39
+ammo_10x25_hp                                      = 3, 0.48
+ammo_11.43x23_fmj                                  = 1, 0.28
+ammo_11.43x23_hydro                                = 1, 0.41
+ammo_12.7x55                                       = 4, 0.44
+ammo_12x70_buck                                    = 3, 0.26
+ammo_12x76_zhekan                                  = 4, 0.37
+ammo_357_fmj                                       = 3, 0.36
+ammo_357_hp                                        = 4, 0.37
+ammo_4.6x30_ap                                     = 2, 0.31
+ammo_4.6x30_fmj                                    = 2, 0.40
+ammo_5.45x39_ap                                    = 4, 0.27
+ammo_5.45x39_fmj                                   = 2, 0.39
+ammo_5.56x45_ap                                    = 1, 0.36
+ammo_5.56x45_ss190                                 = 1, 0.43
+ammo_5.7x28_ss190                                  = 2, 0.42
+ammo_5.7x28_ss192                                  = 3, 0.37
+ammo_50_beowulf_hp                                 = 3, 0.48
+ammo_50_beowulf_jfp                                = 3, 0.49
+ammo_50ae_fmj                                      = 3, 0.35
+ammo_50ae_hp                                       = 1, 0.47
+ammo_6.8x43_fmj                                    = 3, 0.44
+ammo_6.8x43_sst                                    = 1, 0.46
+ammo_7.62x25_fmj                                   = 2, 0.32
+ammo_7.62x25_hp                                    = 1, 0.30
+ammo_7.62x39_ap                                    = 3, 0.39
+ammo_7.62x39_fmj                                   = 4, 0.33
+ammo_7.62x51_ap                                    = 3, 0.35
+ammo_7.62x51_fmj                                   = 1, 0.31
+ammo_7.62x54_7h1                                   = 2, 0.39
+ammo_7.62x54_fmj                                   = 3, 0.35
+ammo_8.58x70_ap                                    = 1, 0.26
+ammo_8.58x70_jsp                                   = 2, 0.38
+ammo_9x18_fmj                                      = 3, 0.49
+ammo_9x18_pmm                                      = 1, 0.40
+ammo_9x19_fmj                                      = 1, 0.46
+ammo_9x19_pbp                                      = 2, 0.34
+ammo_9x39_ap                                       = 4, 0.45
+ammo_9x39_pab9                                     = 4, 0.47
+ammo_gauss_cardan                                  = 4, 0.31
+ammo_m134                                          = 2, 0.25
+ammo_m209                                          = 2, 0.42
+ammo_og-7b                                         = 2, 0.47
+ammo_pkm_100                                       = 2, 0.36
+ammo_vog-25                                        = 4, 0.43
+antirad                                            = 2, 0.8
+bandage                                            = 3, 0.8
+bread                                              = 2, 0.5
+c-more                                             = 3, 0.33
+conserva                                           = 2, 0.5
+detector_advanced                                  = 1, 0.5
+drug_antidot                                       = 3, 0.25
+drug_booster                                       = 3, 0.25
+drug_coagulant                                     = 2, 0.25
+drug_psy_blockade                                  = 4, 0.2
+drug_radioprotector                                = 3, 0.25
+ekp                                                = 3, 0.33
+energy_drink                                       = 3, 0.8
+eot                                                = 4, 0.40
+grenade_f1                                         = 3, 0.36
+grenade_gd-05                                      = 2, 0.35
+grenade_rgd5                                       = 4, 0.43
+stalker_outfit                           = 1,	0.95
+novice_outfit                            = 1,	0.95
+novice_2_outfit                            = 1,	0.95
+exo_outfit                               = 1,	0.5
+barmerc_outfit                           = 1,	0.3
+trenchcoat_outfit						 = 1,	0.6
+nbc_outfit                           	 = 1,	0.7
+radiation_outfit                         = 1,	0.7
+scientific_outfit                        = 1, 	0.7
+scientific_heavy_outfit					 = 1,	0.5
 helm_respirator                          = 1,	0.8
+helm_m40								 = 1,	0.8
+helm_respirator_2						 = 1,	0.95
+helm_facemask							 = 1,	0.95
+helm_respirator_gp5						 = 1,	0.95
+helm_respirator_half					 = 1,	0.95
+itm_backpack                                       = 5, 	0.3
+itm_gunsmith_toolkit                               = 2, 0.25
+itm_outfit_toolkit                                 = 2, 0.25
+kobra                                              = 4, 0.46
+kolbasa                                            = 3, 0.5
+medkit                                             = 2, 0.8
+pso                                                = 1, 0.28
+pu                                                 = 1, 0.37
+vodka                                              = 3, 0.8
+wpn_addon_grenade_launcher                         = 4, 0.29
+wpn_addon_grenade_launcher_ag36                    = 1, 0.41
+wpn_addon_grenade_launcher_m203                    = 4, 0.30
+wpn_addon_silencer                                 = 1, 0.37
+wpn_addon_silencer10                               = 2, 0.41
+wpn_addon_silencer12                               = 3, 0.28
+wpn_addon_silencer45                               = 1, 0.44
+wpn_addon_silencer50                               = 3, 0.25
+wpn_addon_silencer545                              = 1, 0.38
+wpn_addon_silencer556                              = 4, 0.32
+wpn_addon_silencer68                               = 4, 0.48
+wpn_addon_silencer762                              = 4, 0.37
+wpn_addon_silencer9x39                             = 4, 0.26
+wpn_ak101                                          = 2, 0.23
+wpn_ak102                                          = 2, 0.21
+wpn_ak103                                          = 1, 0.31
+wpn_ak104                                          = 2, 0.23
+wpn_ak105                                          = 2, 0.26
+wpn_ak47                                           = 2, 0.20
+wpn_ak74                                           = 2, 0.35
+wpn_ak74m                                          = 2, 0.35
+wpn_ak74u                                          = 2, 0.24
+wpn_akm                                            = 1, 0.23
+wpn_akms                                           = 2, 0.30
+wpn_aks47                                          = 2, 0.20
+wpn_aks74                                          = 2, 0.23
+wpn_aks74n                                         = 1, 0.28
+wpn_aps                                            = 2, 0.39
+wpn_ar15                                           = 2, 0.31
+wpn_beretta                                        = 1, 0.25
+wpn_bizon                                          = 1, 0.21
+wpn_bm16                                           = 1, 0.36
+wpn_bm16_full                                      = 1, 0.38
+wpn_colt1911                                       = 2, 0.26
+wpn_colt1911_sk2                                   = 1, 0.24
+wpn_colt1911_sk3                                   = 2, 0.32
+wpn_cz52                                           = 1, 0.24
+wpn_fort                                           = 2, 0.24
+wpn_glock17                                        = 1, 0.23
+wpn_glock20                                        = 1, 0.28
+wpn_glock21                                        = 2, 0.39
+wpn_glock35                                        = 1, 0.24
+wpn_gsh18                                          = 2, 0.35
+wpn_hpsa                                           = 2, 0.20
+wpn_lr300                                          = 2, 0.39
+wpn_m16                                            = 1, 0.31
+wpn_m4a1                                           = 2, 0.33
+wpn_mine                                           = 4, 0.40
+wpn_mn91                                           = 1, 0.20
+wpn_mossberg                                       = 2, 0.30
+wpn_mp440                                          = 2, 0.32
+wpn_mp443                                          = 2, 0.30
+wpn_mp5                                            = 2, 0.37
+wpn_mp5sd                                          = 2, 0.20
+wpn_mp7                                            = 2, 0.39
+wpn_ots33                                          = 2, 0.36
+wpn_pb                                             = 1, 0.20
+wpn_pm                                             = 1, 0.22
+wpn_pmm                                            = 2, 0.37
+wpn_pp2000                                         = 2, 0.36
+wpn_remington870                                   = 2, 0.31
+wpn_rpk                                            = 1, 0.28
+wpn_rpk74                                          = 1, 0.28
+wpn_saiga                                          = 2, 0.25
+wpn_sig220                                         = 1, 0.21
+wpn_sks                                            = 2, 0.25
+wpn_spas12                                         = 1, 0.21
+wpn_svt40                                          = 2, 0.24
+wpn_toz34                                          = 1, 0.32
+wpn_toz34_sk1                                      = 1, 0.35
+wpn_toz34_so                                       = 2, 0.25
+wpn_toz34_so_sk1                                   = 2, 0.24
+wpn_tt33                                           = 2, 0.30
+wpn_tt33_2                                         = 1, 0.25
+wpn_vepr12                                         = 2, 0.26
+wpn_vintorez                                       = 1, 0.32
+wpn_walther                                        = 2, 0.26
+wpn_wincheaster1300                                = 2, 0.31

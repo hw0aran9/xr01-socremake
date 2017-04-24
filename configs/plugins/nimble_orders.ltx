@@ -1,52 +1,82 @@
 [settings]
-nimble_trade_instead = false  	; Set true if you want nimble to open trade window instead (see: configs\misc\trade\trade_nimble.ltx)
-item_count = 7 					; Set this to how many categories you have
+item_count                                         = 7
+nimble_trade_instead                               = true
 
 [item_count]
-category_1 = 3
-category_2 = 3
-category_3 = 3
-category_4 = 3
-category_5 = 1
-category_6 = 1
-category_7 = 1
+category_1                                         = 2
+category_2                                         = 2
+category_3                                         = 13
+category_4                                         = 8
+category_5                                         = 2
+category_6                                         = 5
+category_7                                         = 7
 
-[costs_table] ;prepay_agreed, prepay_refused, cost
-category_1 = 700, 1400, 2800
-category_2 = 2000, 4000, 8000
-category_3 = 4000,8000, 16000
-category_4 = 4000,8000, 16000
-category_5 = 8000,16000, 32000
-category_6 = 6000,12000, 24000
-category_7 = 12000, 24000, 48000
+[costs_table]
+category_1                                         = 700, 1400, 2800
+category_2                                         = 2000, 4000, 8000
+category_3                                         = 4000,8000, 16000
+category_4                                         = 4000,8000, 16000
+category_5                                         = 8000,16000, 32000
+category_6                                         = 6000,12000, 24000
+category_7                                         = 12000, 24000, 48000
 
-;	Possible to give more than a single item by listing them as value separated by comma
-;	item1 = item1, item2, item3, item4
+; Pistol.
 [buy_item_table_1]
-item1 = wpn_desert_eagle_nimble
-item2 = wpn_sig220_nimble
-item3 = wpn_usp_nimble
+wpn_desert_eagle_nimble
+wpn_usp_nimble
 
+; SMG.
 [buy_item_table_2]
-item1 = wpn_mp5_nimble
-item2 = wpn_spas12_nimble
-item3 = wpn_protecta_nimble
+wpn_9a91
+wpn_mp5_nimble
+wpn_mp5sd_nimble
 
+; Assault.
 [buy_item_table_3]
-item1 = wpn_groza_nimble
-item2 = wpn_g36_nimble
-item3 = wpn_fn2000_nimble
+wpn_fn2000_nimble
+wpn_g36_nimble
+wpn_groza_nimble
+wpn_m134
+wpn_m249_nimble
+wpn_m4a1_50
+wpn_m60
+wpn_protecta_nimble
+wpn_saiga_nimble
+wpn_sig220_nimble
+wpn_spas12_nimble
+wpn_sr3m
+wpn_wincheaster1300_trapper
 
+; Sniper.
 [buy_item_table_4]
-item1 = wpn_vintorez_nimble
-item2 = wpn_svu_nimble
-item3 = wpn_svd_nimble
+wpn_avt40
+wpn_gauss
+wpn_l96
+wpn_svd_nimble
+wpn_svu_nimble
+wpn_svt40
+wpn_vintorez_nimble
+wpn_vks
 
+; Helmet.
 [buy_item_table_5]
-item1 = helm_hardhat,cs_heavy_outfit
+helm_protective
+helm_tactic
 
+; Seva outfits.
 [buy_item_table_6]
-item1 = scientific_outfit
+dolg_scientific_outfit
+merc_scientific_outfit
+monolith_scientific_outfit
+scientific_outfit
+svoboda_scientific_outfit
 
+; Exo outfits.
 [buy_item_table_7]
-item1 = exo_outfit
+bandit_exo_outfit
+dolg_exo_outfit
+exo_outfit
+merc_exo_outfit
+military_exo_outfit
+monolith_exo_outfit
+svoboda_exo_outfit

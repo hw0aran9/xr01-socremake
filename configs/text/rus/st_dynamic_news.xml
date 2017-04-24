@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
 	<string id="st_dyn_news_boar_1">
-		<text>кабан</text>
+		<text>кабана</text>
 	</string>
 	<string id="st_dyn_news_boar_2">
 		<text>На нас напал кабан</text>
@@ -16,11 +16,14 @@
 		<text>Нарвались на стадо кабанов</text>
 	</string>
 	<string id="st_dyn_news_boar_6">
-		<text>Стадо кабанов</text>
+		<text>стадо кабанов</text>
+	</string>
+	<string id="st_dyn_news_boar_7">
+		<text>Кабан</text>
 	</string>
 
 	<string id="st_dyn_news_dog_1">
-		<text>пёс</text>
+		<text>пса</text>
 	</string>
 	<string id="st_dyn_news_dog_2">
 		<text>На нас напал слепой пёс</text>
@@ -32,10 +35,13 @@
 		<text>На нас напала стая собак</text>
 	</string>
 	<string id="st_dyn_news_dog_5">
-		<text>Нарвались на стаю собак</text>
+		<text>Нарвались на собачью стаю</text>
 	</string>
 	<string id="st_dyn_news_dog_6">
-		<text>Собачья стая</text>
+		<text>стая собак</text>
+	</string>
+	<string id="st_dyn_news_dog_7">
+		<text>Слепой пёс</text>
 	</string>
 
 	<string id="st_dyn_news_flesh_1">
@@ -54,11 +60,14 @@
 		<text>Нарвались на стадо плотей</text>
 	</string>
 	<string id="st_dyn_news_flesh_6">
-		<text>Стадо плотей</text>
+		<text>стадо плотей</text>
+	</string>
+	<string id="st_dyn_news_flesh_7">
+		<text>Плоть</text>
 	</string>
 
 	<string id="st_dyn_news_pseudodog_1">
-		<text>псевдособака</text>
+		<text>псевдособаку</text>
 	</string>
 	<string id="st_dyn_news_pseudodog_2">
 		<text>На нас напал псевдопёс</text>
@@ -73,11 +82,14 @@
 		<text>нарвались на стаю псевдособак</text>
 	</string>
 	<string id="st_dyn_news_pseudodog_6">
-		<text>Стая псевдособак</text>
+		<text>стая псевдособак</text>
+	</string>
+	<string id="st_dyn_news_pseudodog_7">
+		<text>Псевдособака</text>
 	</string>
 
 	<string id="st_dyn_news_snork_1">
-		<text>снорк</text>
+		<text>снорка</text>
 	</string>
 	<string id="st_dyn_news_snork_2">
 		<text>На нас напал снорк</text>
@@ -92,11 +104,14 @@
 		<text>Нарвались на стаю снорков</text>
 	</string>
 	<string id="st_dyn_news_snork_6">
-		<text>Стая снорков</text>
+		<text>стая снорков</text>
+	</string>
+	<string id="st_dyn_news_snork_7">
+		<text>Снорк</text>
 	</string>
 
 	<string id="st_dyn_news_bloodsucker_1">
-		<text>кровосос</text>
+		<text>кровососа</text>
 	</string>
 	<string id="st_dyn_news_bloodsucker_2">
 		<text>На нас напал кровосос</text>
@@ -111,11 +126,14 @@
 		<text>Нарвались на стаю кровососов</text>
 	</string>
 	<string id="st_dyn_news_bloodsucker_6">
-		<text>Выводок кровососов</text>
+		<text>выводок кровососов</text>
+	</string>
+	<string id="st_dyn_news_bloodsucker_7">
+		<text>Кровосос</text>
 	</string>
 
 	<string id="st_dyn_news_burer_1">
-		<text>бюрер</text>
+		<text>бюрера</text>
 	</string>
 	<string id="st_dyn_news_burer_2">
 		<text>На нас напал бюрер</text>
@@ -130,11 +148,14 @@
 		<text>Нарвались на бюреров</text>
 	</string>
 	<string id="st_dyn_news_burer_6">
-		<text>Группа бюреров</text>
+		<text>группа бюреров</text>
+	</string>
+	<string id="st_dyn_news_burer_7">
+		<text>Бюрер</text>
 	</string>
 
 	<string id="st_dyn_news_chimera_1">
-		<text>химера</text>
+		<text>химеру</text>
 	</string>
 	<string id="st_dyn_news_chimera_2">
 		<text>На нас напала химера</text>
@@ -149,11 +170,14 @@
 		<text>Нарвались на химер</text>
 	</string>
 	<string id="st_dyn_news_chimera_6">
-		<text>Выводок химер</text>
+		<text>выводок химер</text>
+	</string>
+	<string id="st_dyn_news_chimera_7">
+		<text>Химера</text>
 	</string>
 
 	<string id="st_dyn_news_controller_1">
-		<text>контролёр</text>
+		<text>контролёра</text>
 	</string>
 	<string id="st_dyn_news_controller_2">
 		<text>На нас напал контролёр</text>
@@ -168,11 +192,14 @@
 		<text>Нарвались на контролёров</text>
 	</string>
 	<string id="st_dyn_news_controller_6">
-		<text>Группа контролёров</text>
+		<text>группа контролёров</text>
+	</string>
+	<string id="st_dyn_news_controller_7">
+		<text>Контролёр</text>
 	</string>
 
 	<string id="st_dyn_news_poltergeist_1">
-		<text>полтергейст</text>
+		<text>полтергейста</text>
 	</string>
 	<string id="st_dyn_news_poltergeist_2">
 		<text>На нас напал полтергейст</text>
@@ -187,11 +214,14 @@
 		<text>Нарвались на полтергейстов</text>
 	</string>
 	<string id="st_dyn_news_poltergeist_6">
-		<text>Полтергейсты</text>
+		<text>полтергейсты</text>
+	</string>
+	<string id="st_dyn_news_poltergeist_7">
+		<text>Полтергейст</text>
 	</string>
 
 	<string id="st_dyn_news_gigant_1">
-		<text>псевдогигант</text>
+		<text>псевдогиганта</text>
 	</string>
 	<string id="st_dyn_news_gigant_2">
 		<text>На нас напал псевдогигант</text>
@@ -206,11 +236,14 @@
 		<text>Нарвались на псевдогигантов</text>
 	</string>
 	<string id="st_dyn_news_gigant_6">
-		<text>Группа псевдогигантов</text>
+		<text>группа псевдогигантов</text>
+	</string>
+	<string id="st_dyn_news_gigant_7">
+		<text>Псевдогигант</text>
 	</string>
 
 	<string id="st_dyn_news_tushkano_1">
-		<text>тушкан</text>
+		<text>тушкана</text>
 	</string>
 	<string id="st_dyn_news_tushkano_2">
 		<text>На нас напал тушкан</text>
@@ -225,11 +258,14 @@
 		<text>Нарвались на стаю тушканов</text>
 	</string>
 	<string id="st_dyn_news_tushkano_6">
-		<text>Стая тушканов</text>
+		<text>стая тушканов</text>
+	</string>
+	<string id="st_dyn_news_tushkano_7">
+		<text>Тушкан</text>
 	</string>
 
 	<string id="st_dyn_news_psy_dog_1">
-		<text>пси-собака</text>
+		<text>пси-собаку</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_2">
 		<text>На нас напала пси-собака</text>
@@ -244,11 +280,14 @@
 		<text>Нарвались на стаю пси-собак</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_6">
-		<text>Стая пси-собак</text>
+		<text>стая пси-собак</text>
+	</string>
+	<string id="st_dyn_news_psy_dog_7">
+		<text>Пси-собака</text>
 	</string>
 
 	<string id="st_dyn_news_psy_dog_phantom_1">
-		<text>фантом</text>
+		<text>фантома</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_2">
 		<text>На нас напала пси-собака</text>
@@ -263,11 +302,14 @@
 		<text>Нарвались на пси-собак</text>
 	</string>
 	<string id="st_dyn_news_psy_dog_phantom_6">
-		<text>Стая пси-собак</text>
+		<text>стая пси-собак</text>
+	</string>
+	<string id="st_dyn_news_psy_dog_phantom_7">
+		<text>Фантом пси-собаки</text>
 	</string>
 
 	<string id="st_dyn_news_zombied_1">
-		<text>зомбированный</text>
+		<text>зомбированного</text>
 	</string>
 	<string id="st_dyn_news_zombied_2">
 		<text>На нас напал зомбированный</text>
@@ -282,11 +324,14 @@
 		<text>Нарвались на зомбированных</text>
 	</string>
 	<string id="st_dyn_news_zombied_6">
-		<text>Отряд зомбированных</text>
+		<text>отряд зомбированных</text>
+	</string>
+	<string id="st_dyn_news_zombied_7">
+		<text>Зомбированный</text>
 	</string>
 
 	<string id="st_dyn_news_cat_1">
-		<text>кот</text>
+		<text>кота</text>
 	</string>
 	<string id="st_dyn_news_cat_2">
 		<text>На нас напала кошка</text>
@@ -301,11 +346,14 @@
 		<text>Нарвались на стаю котов</text>
 	</string>
 	<string id="st_dyn_news_cat_6">
-		<text>Стая котов</text>
+		<text>стая котов</text>
+	</string>
+	<string id="st_dyn_news_cat_7">
+		<text>Кот</text>
 	</string>
 
 	<string id="st_dyn_news_fracture_1">
-		<text>излом</text>
+		<text>излома</text>
 	</string>
 	<string id="st_dyn_news_fracture_2">
 		<text>На нас напал излом</text>
@@ -320,7 +368,10 @@
 		<text>Нарвались на стаю изломов</text>
 	</string>
 	<string id="st_dyn_news_fracture_6">
-		<text>Стая изломов</text>
+		<text>стая изломов</text>
+	</string>
+	<string id="st_dyn_news_fracture_7">
+		<text>Излом</text>
 	</string>
 
 	<string id="st_dyn_news_zombie_1">
@@ -339,11 +390,14 @@
 		<text>Нарвались на толпу зомби</text>
 	</string>
 	<string id="st_dyn_news_zombie_6">
-		<text>Орда зомби</text>
+		<text>орда зомби</text>
+	</string>
+	<string id="st_dyn_news_zombie_7">
+		<text>Зомби</text>
 	</string>
 
 	<string id="st_dyn_news_rat_1">
-		<text>крыса</text>
+		<text>крысу</text>
 	</string>
 	<string id="st_dyn_news_rat_2">
 		<text>На нас напала крыса</text>
@@ -358,7 +412,10 @@
 		<text>Нарвались на крысиную стаю</text>
 	</string>
 	<string id="st_dyn_news_rat_6">
-		<text>Стая крыс</text>
+		<text>стая крыс</text>
+	</string>
+	<string id="st_dyn_news_rat_7">
+		<text>Крысы</text>
 	</string>
 
 	
@@ -450,7 +507,7 @@
 		<text>бандит</text>
 	</string>
 	<string id="st_dyn_news_comm_bandit_2">
-		<text>бандос</text>
+		<text>бандит</text>
 	</string>
 	<string id="st_dyn_news_comm_bandit_3">
 		<text>бандита</text>
@@ -546,7 +603,7 @@
 		<text>учёный</text>
 	</string>
 	<string id="st_dyn_news_comm_ecolog_6">
-		<text>Ученые:</text>
+		<text>Учёные:</text>
 	</string>
 	<string id="st_dyn_news_comm_ecolog_7">
 		<text>учёный</text>
@@ -786,7 +843,7 @@
 		<text>свободовец</text>
 	</string>
 	<string id="st_dyn_news_comm_freedom_2">
-		<text>a guy from Freedom</text>
+		<text>свободовец</text>
 	</string>
 	<string id="st_dyn_news_comm_freedom_3">
 		<text>свободовца</text>
@@ -798,7 +855,7 @@
 		<text>свободовец</text>
 	</string>
 	<string id="st_dyn_news_comm_freedom_6">
-		<text>Freedom</text>
+		<text>Свобода:</text>
 	</string>
 	<string id="st_dyn_news_comm_freedom_7">
 		<text>свободовец</text>
@@ -826,7 +883,7 @@
 	</string>
 	<!-- weapon class description -->
 	<string id="st_dyn_news_wpn_cls_1_1">
-		<text>Неизвестно</text>
+		<text>Причина неизвестна</text>
 	</string>
 	<string id="st_dyn_news_wpn_cls_1_2">
 		<text>какие-то выстрелы</text>
@@ -1279,7 +1336,7 @@
 		<text>аномалий Карусель</text>
 	</string>
 	<string id="st_dyn_l07_military_daleko_3">
-		<text>базы Свободы</text>
+		<text>входа на базу</text>
 	</string>
 	<string id="st_dyn_l07_military_daleko_4">
 		<text>Кислотного болота</text>
@@ -1309,7 +1366,7 @@
 		<text>ж/д насыпи</text>
 	</string>
 	<string id="st_dyn_l01_escape_daleko_6">
-		<text>свинофермы</text>
+		<text>старой фермы</text>
 	</string>
 	<string id="st_dyn_l01_escape_daleko_7">
 		<text>аномалии Костянка</text>
@@ -1342,10 +1399,10 @@
 		<text>Нижнего Пепелища</text>
 	</string>
 	<string id="st_dyn_k00_marsh_daleko_8">
-		<text>южного блокпоста</text>
+		<text>южного хутора</text>
 	</string>
 	<string id="st_dyn_k00_marsh_daleko_9">
-		<text>старой цекви</text>
+		<text>старой церкви</text>
 	</string>
 	<string id="st_dyn_l10_limansk_daleko_1">
 		<text>прохода в Мертвый Город</text>
@@ -1369,7 +1426,7 @@
 		<text>аномалии Смертельное облако</text>
 	</string>
 	<string id="st_dyn_l04_darkvalley_daleko_6">
-		<text>базы бандитов</text>
+		<text>Северной фабрики</text>
 	</string>
 	<string id="st_dyn_l04_darkvalley_daleko_7">
 		<text>перехода на Свалку</text>
@@ -1393,7 +1450,7 @@
 		<text>холма в лесу</text>
 	</string>
 	<string id="st_dyn_k02_trucks_cemetery_daleko_7">
-		<text>долины</text>
+		<text>оврага</text>
 	</string>
 	<string id="st_dyn_k02_trucks_cemetery_daleko_8">
 		<text>стоянки у контейнеров</text>
@@ -1447,10 +1504,10 @@
 		<text>перехода в Тёмную Долину</text>
 	</string>
 	<string id="st_dyn_l08_yantar_daleko_1">
-		<text>аномалии Отравленное озеро</text>
+		<text>Отравленного озера</text>
 	</string>
 	<string id="st_dyn_l08_yantar_daleko_2">
-		<text>бункера ученых</text>
+		<text>лагеря учёных</text>
 	</string>
 	<string id="st_dyn_l08_yantar_daleko_3">
 		<text>аномалии Загребущие руки</text>
@@ -1474,7 +1531,7 @@
 		<text>недостроенного здания</text>
 	</string>
 	<string id="st_dyn_l06_rostok_daleko_4">
-		<text>стоянки между строй.материалами</text>
+		<text>стоянки между стройматериалами</text>
 	</string>
 	<string id="st_dyn_l06_rostok_daleko_5">
 		<text>прохода в Бар</text>
@@ -1722,7 +1779,7 @@
 		<text>у аномалий Карусель</text>
 	</string>
 	<string id="st_dyn_l07_military_blizko_3">
-		<text>на базе Свободы</text>
+		<text>на территории базы</text>
 	</string>
 	<string id="st_dyn_l07_military_blizko_4">
 		<text>в Кислотном болоте</text>
@@ -1752,7 +1809,7 @@
 		<text>у ж/д насыпи</text>
 	</string>
 	<string id="st_dyn_l01_escape_blizko_6">
-		<text>на свиноферме</text>
+		<text>на старой ферме</text>
 	</string>
 	<string id="st_dyn_l01_escape_blizko_7">
 		<text>в аномалии Костянка</text>
@@ -1785,10 +1842,10 @@
 		<text>в Нижнем Пепелище</text>
 	</string>
 	<string id="st_dyn_k00_marsh_blizko_8">
-		<text>у южного блокпоста</text>
+		<text>на южном хуторе</text>
 	</string>
 	<string id="st_dyn_k00_marsh_blizko_9">
-		<text>в старой цекви</text>
+		<text>в старой церкви</text>
 	</string>
 	<string id="st_dyn_l10_limansk_blizko_1">
 		<text>у прохода в Мертвый Город</text>
@@ -1812,7 +1869,7 @@
 		<text>у аномалии Смертельное облако</text>
 	</string>
 	<string id="st_dyn_l04_darkvalley_blizko_6">
-		<text>на базе бандитов</text>
+		<text>на Северной фабрике</text>
 	</string>
 	<string id="st_dyn_l04_darkvalley_blizko_7">
 		<text>у перехода на Свалку</text>
@@ -1836,7 +1893,7 @@
 		<text>на холме в лесу</text>
 	</string>
 	<string id="st_dyn_k02_trucks_cemetery_blizko_7">
-		<text>в долине</text>
+		<text>в овраге</text>
 	</string>
 	<string id="st_dyn_k02_trucks_cemetery_blizko_8">
 		<text>на стоянке у контейнеров</text>
@@ -1890,10 +1947,10 @@
 		<text>у перехода в Тёмную Долину</text>
 	</string>
 	<string id="st_dyn_l08_yantar_blizko_1">
-		<text>в аномалии Отравленное озеро</text>
+		<text>в Отравленном озере</text>
 	</string>
 	<string id="st_dyn_l08_yantar_blizko_2">
-		<text>у бункера ученых</text>
+		<text>в лагере учёных</text>
 	</string>
 	<string id="st_dyn_l08_yantar_blizko_3">
 		<text>в аномалии Загребущие руки</text>
@@ -1917,7 +1974,7 @@
 		<text>в недостроенном здании</text>
 	</string>
 	<string id="st_dyn_l06_rostok_blizko_4">
-		<text>у стоянки между строй.материалами</text>
+		<text>у стоянки между стройматериалами</text>
 	</string>
 	<string id="st_dyn_l06_rostok_blizko_5">
 		<text>у прохода в Бар</text>
@@ -2011,23 +2068,23 @@
 		<text>%s сам не свой в последнее время. Обычно он торчит %s. Похоже скрывается от кого-то.</text>
 	</string>
 	<string id="st_dyn_news_gossip_bounty_3">
-		<text> %s. Я его только что видел %s. Слышал Сидорович его ищет"</text>
+		<text> %s. Я его только что видел %s. Слышал, Сидорович его ищет"</text>
 	</string>
 	<string id="st_dyn_news_gossip_bounty_4">
-		<text> %s. кому-то дорогу перешёл. За его голову кругленькую сумму обещают.</text>
+		<text> %s кому-то дорогу перешёл. За его голову кругленькую сумму обещают.</text>
 	</string>
 	<!-- Arte gossip -->
 	<string id="st_dyn_news_gossip_arte_1">
-		<text>Удачный день! Нашёл артефакт %s .</text>
+		<text>Удачный день! Нашёл артефакт %s.</text>
 	</string>
 	<string id="st_dyn_news_gossip_arte_2">
-		<text>Кто нибудь знает где можно найти артефакт %s?</text>
+		<text>Кто-нибудь знает где можно найти артефакт %s?</text>
 	</string>
 	<string id="st_dyn_news_gossip_arte_3">
-		<text>О, %s! Теперь можно и домой!</text>
+		<text>О! %s! Теперь можно и домой!</text>
 	</string>
 	<string id="st_dyn_news_gossip_arte_4">
-		<text>Ого, %s.Торговцы это с руками оторвут!</text>
+		<text>Ого! %s! Торговцы это с руками оторвут!</text>
 	</string>
 	<!-- Heli gossip -->
 	<string id="st_dyn_news_gossip_heli_1">
@@ -2043,45 +2100,45 @@
 		<text>Земля - Воздуху. Где подкрепление?!</text>
 	</string>
 	<string id="st_dyn_news_gossip_heli_5">
-		<text>Запрашиваю поддержку вертолёта, %s. Цель - %s.</text>
+		<text>Запрашиваю поддержку вертолёта, %s. Противник - %s.</text>
 	</string>
 	<string id="st_dyn_news_gossip_heli_6">
-		<text>Воздух ,я - Земля. Противник расположен %s. Это %s.</text>
+		<text>Воздух, я - Земля. Противник расположен %s. Это %s.</text>
 	</string>	
 	<string id="st_dyn_news_gossip_heli_7">
-		<text>Земля - Воздуху. Нужна помощь %s. Противник - %s. Уничтожить!</text>
+		<text>Земля - Воздуху. Нужна помощь %s. Цель - %s. Уничтожить!</text>
 	</string>
 	<!-- buy gossip -->
 	<string id="st_dyn_news_gossip_buy_1_1">
-		<text>Я думаю, %s меня наколол. Всё-таки %s стоит гораздо больше.</text>
+		<text>Я думаю, %s меня наколол. %s по такой цене - это вообще охренеть!</text>
 	</string>
 	<string id="st_dyn_news_gossip_buy_1_2">
-		<text>Когда %s будет хорошо платить? Меня интересует %s.</text>
+		<text>Когда %s обновит ассортимент товаров? %s есть хотя бы у других торговцев?</text>
 	</string>
 	<string id="st_dyn_news_gossip_buy_1_3">
-		<text>%s сегодня неплохо платит. Его %s интересует.</text>
+		<text>Если кто не в курсе - %s сегодня неплохо торгует. %s по вполне приемлемой цене.</text>
 	</string>
 	<string id="st_dyn_news_gossip_buy_1_4">
 		<text>Я разорюсь, если %s поднимет цены.</text>
 	</string>
 	<string id="st_dyn_news_gossip_buy_2_1">
-		<text>%s стоит слишком дорого...Вот невезуха.</text>
+		<text>%s сегодня по слишком высокой цене... Вот невезуха.</text>
 	</string>
 	<string id="st_dyn_news_gossip_buy_2_2">
-		<text>Где продаётся %s? %s сказал, что у него нет.</text>
+		<text>%s где-нибудь есть в продаже? %s сказал, что у него нет.</text>
 	</string>	
 	<string id="st_dyn_news_gossip_buy_2_3">
-		<text>Чёрт... %s сегодня для меня не по карману.</text>
+		<text>Чёрт... %s сегодня мне не по карману.</text>
 	</string>
 	<string id="st_dyn_news_gossip_buy_2_4">
-		<text>Приобретение : %s ! И даже не надейтесь найти мой тайник.</text>
+		<text>%s! Вот это находка! И даже не надейтесь найти мой тайник.</text>
 	</string>
 	<!-- kill wounded -->
 	<string id="st_dyn_news_gossip_kill_wounded_1">
 		<text>Один ещё живой. Это не надолго!</text>
 	</string>
 	<string id="st_dyn_news_gossip_kill_wounded_2">
-		<text>Быстро! Один вроде ещё живой.</text>
+		<text>Быстро! Один, вроде, ещё живой.</text>
 	</string>
 	<string id="st_dyn_news_gossip_kill_wounded_3">
 		<text>А ведь мёртвым прикидывался!</text>
@@ -2115,7 +2172,7 @@
 		<text>Как думаете - внесут за него выкуп?</text>
 	</string>
 	<string id="st_dyn_news_gossip_hostage_4">
-		<text>Я не думаю что твои друзья придут за тобой.</text>
+		<text>Я не думаю, что твои друзья придут за тобой.</text>
 	</string>
 	<string id="st_dyn_news_gossip_hostage_5">
 		<text>Он наших руках. Рассмотрим предложения о выкупе!</text>
@@ -2138,7 +2195,7 @@
 	</string>
 	<!-- Sentence Builders -->
 	<string id="st_dyn_news_builder_attacked_1">
-		<text>Вот попали ! Здесь</text>
+		<text>Вот попали! Здесь</text>
 	</string>
 	<string id="st_dyn_news_builder_attacked_2">
 		<text>Мы влипли! Тут</text>
@@ -2185,16 +2242,16 @@
 		<text>Вот это кино:</text>
 	</string>
 	<string id="st_dyn_news_builder_sight_3">
-		<text>Пару минут назад видел,как</text>
+		<text>Пару минут назад видел, как</text>
 	</string>
 	<string id="st_dyn_news_builder_sight_4">
 		<text>Недавно наблюдал такую картину:</text>
 	</string>
 	<string id="st_dyn_news_builder_sight_5">
-		<text>Только что видел,как</text>
+		<text>Только что видел, как</text>
 	</string>
 	<string id="st_dyn_news_builder_sight_6">
-		<text>Парни, видел,как</text>
+		<text>Парни, видел, как</text>
 	</string>
 	<string id="st_dyn_news_builder_sight_7">
 		<text>Только что наблюдал, как</text>
@@ -2229,13 +2286,13 @@
 		<text>Будьте начеку!</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_2">
-		<text>Весело, а ?</text>
+		<text>Весело, а?</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_3">
-		<text>Интересно,что случилось?</text>
+		<text>Интересно, что случилось?</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_4">
-		<text>Да, дела ...</text>
+		<text>Да, дела...</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_5">
 		<text>Кто-нибудь знает, что происходит?</text>
@@ -2244,7 +2301,7 @@
 		<text>К чему бы это?</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_7">
-		<text>Если, кто рядом - готовьтесь.</text>
+		<text>Обходите то место стороной.</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_8">
 		<text>Держитесь подальше.</text>
@@ -2256,7 +2313,7 @@
 		<text>Небезопасно.</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_11">
-		<text>Будьте начеку.</text>
+		<text>Остерегайтесь.</text>
 	</string>
 	<string id="st_dyn_news_builder_ending_12">
 		<text>Я бы держался подальше.</text>
@@ -2273,10 +2330,10 @@
 	
 	<!-- misc -->
 	<string id="st_dyn_news_ch_died">
-		<text>Погиб сталкер:</text>
+		<text>Некролог:</text>
 	</string>
 	<string id="st_dyn_news_ch_found">
-		<text>Найден мёртвым</text>
+		<text>Погиб</text>
 	</string>
 	<string id="st_dyn_news_ch_blowout">
 		<text>Выброс</text>

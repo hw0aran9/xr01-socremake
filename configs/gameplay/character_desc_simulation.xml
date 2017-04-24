@@ -13,9 +13,23 @@
     <visual>actors\stalker_ecologist\stalker_ecolog</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
+        [spawn_loadout] \n
+        wpn_mp5sd_c-more = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_ar15_eot = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_sr3m_1p29 = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_val = 1 \n
+        wpn_m16_acog = 1 \n
+        wpn_m16 = 1 \n
+        [spawn_loadout2] \n
+        wpn_pb = 1 \n
+        wpn_pmm = 1 \n
+        wpn_fort = 1 \n
+        wpn_walther40 = 1 \n
+        wpn_sig220 = 1 \n
         [spawn] \n
-        wpn_sig220 \n
-        ammo_11.43x23_hydro \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -35,9 +49,21 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_blue</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
+        [spawn_loadout] \n
+        wpn_val = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_lr300 = 1 \n
+        wpn_sr3m_kobra = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_ar15_eot = 1 \n
+        wpn_ar15 = 1 \n
+        [spawn_loadout2] \n
+        wpn_fnp45 = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_walther40 = 1 \n
         [spawn] \n
-        wpn_walther = 1 \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -57,9 +83,19 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_brown</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
+        [spawn_loadout] \n
+        wpn_vsk94 = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_mp7 = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_spas12 = 1 \n
+        [spawn_loadout2] \n
+        wpn_pm = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_walther40 = 1 \n
+        wpn_fort = 1 \n
         [spawn] \n
-        wpn_walther = 1 \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -79,9 +115,22 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-        [spawn] \n
+        [spawn_loadout] \n
+        wpn_mp5sd_acog = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_mp7 = 1 \n
+        wpn_vsk94 = 1 \n
+        wpn_9a91_kobra = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_lr300_ac11090 = 1 \n
+        wpn_lr300 = 1 \n
+        [spawn_loadout2] \n
+        wpn_mp440 = 1 \n
         wpn_walther = 1 \n
-        ammo_9x19_fmj = 1 \n
+        wpn_fiveseven = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_cz75 = 1 \n
+        [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -101,9 +150,21 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_white</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
-        [spawn] \n
+        [spawn_loadout] \n
+        wpn_pp2000 = 1 \n
+        wpn_ar15_acog = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_mossberg = 1 \n
+        wpn_remington870_ac11090 = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_spas12 = 1 \n
+        [spawn_loadout2] \n
+        wpn_pb = 1 \n
         wpn_walther = 1 \n
-        ammo_9x19_fmj = 1 \n
+        wpn_tt33 = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_fnp45 = 1 \n
+        [spawn] \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -123,9 +184,19 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_yellow</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
+        [spawn_loadout] \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_vsk94 = 1 \n
+        wpn_pp2000 = 1 \n
+        wpn_spas12 = 1 \n
+        wpn_vintorez = 1 \n
+        [spawn_loadout2] \n
+        wpn_pmm = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_glock17 = 1 \n
+        wpn_fiveseven = 1 \n
         [spawn] \n
-        wpn_walther = 1 \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -146,11 +217,22 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
+        [spawn_loadout] \n
+        wpn_val = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_sr3m_ekp = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_remington870_eot = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_mp5_ac11090 = 1 \n
+        wpn_mp5 = 1 \n
+        [spawn_loadout2] \n
+        wpn_sig220 = 1 \n
+        wpn_fiveseven = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_pmm = 1 \n
+        wpn_cz52 = 1 \n
         [spawn] \n
-        wpn_sig220 \n
-        ammo_11.43x23_hydro \n
-        wpn_l85  \n
-        ammo_5.56x45_ss190 = 1 \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -170,11 +252,20 @@
     <visual>actors\stalker_ecologist\stalker_ecolog_military</visual>
     <snd_config>characters_voice\human_03\ecolog\</snd_config>
     <supplies>
+        [spawn_loadout] \n
+        wpn_lr300 = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_pp2000 = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_val_kobra = 1 \n
+        wpn_val = 1 \n
+        [spawn_loadout2] \n
+        wpn_sig220 = 1 \n
+        wpn_fnp45 = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_walther40 = 1 \n
         [spawn] \n
-        wpn_walther = 1 \n
-        ammo_9x19_fmj = 1 \n
-        wpn_l85  \n
-        ammo_5.56x45_ss190 = 1 \n
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
     </supplies>
@@ -195,11 +286,20 @@
     <reputation>-542</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_sr3m = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_mp5_acog = 1 \n
+        wpn_mp5 = 1 \n
+        wpn_spas12 = 1 \n
+        wpn_mossberg = 1 \n
+        [spawn_loadout2] \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_pmm = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_glock17 = 1 \n
         [spawn] \n
-        wpn_l85  \n
-        ammo_5.56x45_ss190 = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -222,11 +322,21 @@
     <reputation>1485</reputation>
     <visual>actors\stalker_neutral\stalker_neutral_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_vsk94 = 1 \n
+        wpn_mossberg = 1 \n
+        wpn_mp5sd_eot = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_9a91_1p29 = 1 \n
+        wpn_9a91 = 1 \n
+        [spawn_loadout2] \n
+        wpn_walther40 = 1 \n
+        wpn_fort = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_fnp40 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -248,10 +358,20 @@
     <reputation>-795</reputation>
     <visual>actors\stalker_merc\stalker_merc_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_mossberg = 1 \n
+        wpn_sr3m_ekp = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_m16 = 1 \n
+        [spawn_loadout2] \n
+        wpn_tt33 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_usp = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
         [spawn] \n
-        wpn_mp5 \n
-        wpn_hpsa \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -273,11 +393,19 @@
     <reputation>-2018</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_remington870 = 1 \n
+        wpn_val = 1 \n
+        wpn_spas12 = 1 \n
+        wpn_vsk94 = 1 \n
+        wpn_mossberg = 1 \n
+        [spawn_loadout2] \n
+        wpn_pb = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_fort = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_beretta = 1 \n
         [spawn] \n
-        wpn_l85  \n
-        ammo_5.56x45_ss190 = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -299,11 +427,20 @@
     <reputation>-811</reputation>
     <visual>actors\stalker_soldier\stalker_soldier_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_m4a1 = 1 \n
+        wpn_val_ekp = 1 \n
+        wpn_val = 1 \n
+        wpn_lr300 = 1 \n
+        wpn_pp2000 = 1 \n
+        wpn_mp5sd = 1 \n
+        [spawn_loadout2] \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_glock21 = 1 \n
         [spawn] \n
-        wpn_abakan \n
-        ammo_5.45x39_fmj = 2 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items_nd.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -325,11 +462,22 @@
     <reputation>1960</reputation>
     <visual>actors\stalker_ecologist\stalker_ecolog_guard</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_sr3m_kobra = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_val_ekp = 1 \n
+        wpn_val = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_vintorez = 1 \n
+        wpn_vsk94_pso = 1 \n
+        wpn_vsk94 = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock35 = 1 \n
+        wpn_pb = 1 \n
+        wpn_pmm = 1 \n
+        wpn_cz75 = 1 \n
+        wpn_colt1911_sk3 = 1 \n
         [spawn] \n
-        wpn_lr300  \n
-        ammo_5.56x45_ss190 = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -352,12 +500,23 @@
     <reputation>-1960</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak101_1p29 = 1 \n
+        wpn_ak101 = 1 \n
+        wpn_val = 1 \n
+        wpn_mp5sd_ac11090 = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_ak105_kobra = 1 \n
+        wpn_ak105 = 1 \n
+        wpn_groza = 1 \n
+        [spawn_loadout2] \n
+        wpn_fiveseven = 1 \n
+        wpn_cz75 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_walther = 1 \n
+        wpn_aps = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_toz34 \n
-        ammo_12x70_buck = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -378,10 +537,23 @@
     <reputation>1630</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r_mask</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_mn91_pu = 1 \n
+        wpn_mn91 = 1 \n
+        wpn_akms_ekp = 1 \n
+        wpn_akms = 1 \n
+        wpn_l85_acog = 1 \n
+        wpn_l85 = 1 \n
+        wpn_ak47 = 1 \n
+        wpn_m16 = 1 \n
+        [spawn_loadout2] \n
+        wpn_fnp40 = 1 \n
+        wpn_walther40 = 1 \n
+        wpn_fnp45 = 1 \n
+        wpn_desert_eagle = 1 \n
+        wpn_mp440 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_bm16 \n
-        ammo_12x70_buck = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -402,12 +574,23 @@
     <reputation>1159</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r_mas2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_aks74_1p29 = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_val_pso = 1 \n
+        wpn_val = 1 \n
+        wpn_ak103_pso = 1 \n
+        wpn_ak103 = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_m14 = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_desert_eagle = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_toz34 \n
-        ammo_12x70_buck = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -428,10 +611,22 @@
     <reputation>2195</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r_gas</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_sig550_c-more = 1 \n
+        wpn_sig550 = 1 \n
+        wpn_groza = 1 \n
+        wpn_ar15_acog = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_g3 = 1 \n
+        wpn_svu = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock35 = 1 \n
+        wpn_aps = 1 \n
+        wpn_walther = 1 \n
+        wpn_cz52 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_toz34 \n
-        ammo_12x70_buck = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -452,10 +647,20 @@
     <reputation>1735</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_r2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_rpk = 1 \n
+        wpn_pp2000 = 1 \n
+        wpn_vintorez = 1 \n
+        wpn_sks = 1 \n
+        wpn_hpsa = 1 \n
+        [spawn_loadout2] \n
+        wpn_cz75 = 1 \n
+        wpn_colt1911_sk3 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_usp10 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_toz34 \n
-        ammo_12x70_buck = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -477,12 +682,22 @@
     <reputation>-1231</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak47 = 1 \n
+        wpn_akms_pso = 1 \n
+        wpn_akms = 1 \n
+        wpn_p90 = 1 \n
+        wpn_ak103_ekp = 1 \n
+        wpn_ak103 = 1 \n
+        wpn_remington870 = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock20 = 1 \n
+        wpn_glock35 = 1 \n
+        wpn_beretta96 = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_usp = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_mp5 \n
-        ammo_9x19_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -503,12 +718,22 @@
     <reputation>272</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_aks47 = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_g3_acog = 1 \n
+        wpn_g3 = 1 \n
+        wpn_svt40 = 1 \n
+        wpn_ar15_c-more = 1 \n
+        wpn_ar15 = 1 \n
+        [spawn_loadout2] \n
+        wpn_fnp45 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_beretta96 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_desert_eagle = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_toz34 \n
-        ammo_12x70_buck = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -529,12 +754,20 @@
     <reputation>-1690</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_a</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_aks47 = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_svt40 = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp10 = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_aps = 1 \n
+        wpn_usp = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_toz34 \n
-        ammo_12x76_zhekan = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -555,12 +788,21 @@
     <reputation>-1673</reputation>
     <visual>actors\stalker_nebo\stalker_neboa2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_aek971_1p29 = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_ak74 = 1 \n
+        wpn_hk416 = 1 \n
+        [spawn_loadout2] \n
+        wpn_mp412 = 1 \n
+        wpn_beretta96 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_tt33 = 1 \n
+        wpn_walther40 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_mp5 \n
-        ammo_9x19_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -582,11 +824,20 @@
     <reputation>546</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak102 = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_ak101_ekp = 1 \n
+        wpn_ak101 = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_groza = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock35 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_beretta96 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -608,11 +859,22 @@
     <reputation>-1718</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak102_ekp = 1 \n
+        wpn_ak102 = 1 \n
+        wpn_ak74_pso = 1 \n
+        wpn_ak74 = 1 \n
+        wpn_rpk74 = 1 \n
+        wpn_aks74_pso = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_g3a3 = 1 \n
+        [spawn_loadout2] \n
+        wpn_gsh18 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_ots33 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_glock17 = 1 \n
         [spawn] \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -634,11 +896,21 @@
     <reputation>587</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_smask1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak74u_1p29 = 1 \n
+        wpn_ak74u = 1 \n
+        wpn_aks47 = 1 \n
+        wpn_ak104_1p29 = 1 \n
+        wpn_ak104 = 1 \n
+        wpn_spas12 = 1 \n
+        wpn_svu = 1 \n
+        [spawn_loadout2] \n
+        wpn_gsh18 = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_desert_eagle = 1 \n
+        wpn_cz52 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -660,11 +932,22 @@
     <reputation>-1702</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_smask2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_m14 = 1 \n
+        wpn_g3a3_ac11090 = 1 \n
+        wpn_g3a3 = 1 \n
+        wpn_9a91_1p29 = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_vepr12_ekp = 1 \n
+        wpn_vepr12 = 1 \n
+        wpn_sr3m = 1 \n
+        [spawn_loadout2] \n
+        wpn_sig220 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_fnp45 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -686,11 +969,22 @@
     <reputation>-1482</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_old</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak74_pso = 1 \n
+        wpn_ak74 = 1 \n
+        wpn_ump40_acog = 1 \n
+        wpn_ump40 = 1 \n
+        wpn_m16 = 1 \n
+        wpn_ak74m_1p29 = 1 \n
+        wpn_ak74m = 1 \n
+        wpn_groza = 1 \n
+        [spawn_loadout2] \n
+        wpn_ots33 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_glock17 = 1 \n
+        wpn_glock20 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -712,11 +1006,20 @@
     <reputation>-463</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_merc</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_p90 = 1 \n
+        wpn_g3 = 1 \n
+        wpn_m14 = 1 \n
+        wpn_rpk74_pso = 1 \n
+        wpn_rpk74 = 1 \n
+        wpn_g3a3 = 1 \n
+        [spawn_loadout2] \n
+        wpn_tt33_2 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_walther40 = 1 \n
+        wpn_mp440 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -738,11 +1041,19 @@
     <reputation>-2076</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_gp5</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_protecta = 1 \n
+        wpn_svt40 = 1 \n
+        wpn_svu = 1 \n
+        wpn_scar-h = 1 \n
+        wpn_rpk = 1 \n
+        [spawn_loadout2] \n
+        wpn_colt1911 = 1 \n
+        wpn_mp412 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_beretta = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -764,11 +1075,21 @@
     <reputation>-667</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mas2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_hk416 = 1 \n
+        wpn_mp5 = 1 \n
+        wpn_ump40_ac11090 = 1 \n
+        wpn_ump40 = 1 \n
+        wpn_ak74u = 1 \n
+        wpn_sr3m_pso = 1 \n
+        wpn_sr3m = 1 \n
+        [spawn_loadout2] \n
+        wpn_fnp40 = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_usp10 = 1 \n
         [spawn] \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -790,11 +1111,21 @@
     <reputation>381</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mas3</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_m14 = 1 \n
+        wpn_sks = 1 \n
+        wpn_hk416_c-more = 1 \n
+        wpn_hk416 = 1 \n
+        wpn_akms_kobra = 1 \n
+        wpn_akms = 1 \n
+        wpn_remington870 = 1 \n
+        [spawn_loadout2] \n
+        wpn_tt33 = 1 \n
+        wpn_usp = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_tt33_2 = 1 \n
         [spawn] \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -816,12 +1147,21 @@
     <reputation>-1641</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_rpk = 1 \n
+        wpn_svt40_pu = 1 \n
+        wpn_svt40 = 1 \n
+        wpn_groza = 1 \n
+        wpn_protecta = 1 \n
+        wpn_mn91 = 1 \n
+        [spawn_loadout2] \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_glock35 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_glock17 = 1 \n
+        wpn_mp440 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_wincheaster1300 \n
-        ammo_12x76_zhekan = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -842,11 +1182,24 @@
     <reputation>-153</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_a</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_rpk74_1p29 = 1 \n
+        wpn_rpk74 = 1 \n
+        wpn_abakan_ekp = 1 \n
+        wpn_abakan = 1 \n
+        wpn_m4a1_acog = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_ak74_ekp = 1 \n
+        wpn_ak74 = 1 \n
+        wpn_saiga = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock17 = 1 \n
+        wpn_desert_eagle = 1 \n
+        wpn_beretta96 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_glock20 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_mp5 \n
-        ammo_9x19_fmj = 1 \n
-        wpn_hpsa \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -867,12 +1220,22 @@
     <reputation>-173</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_b</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak101 = 1 \n
+        wpn_ak104 = 1 \n
+        wpn_aek971_1p29 = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_ak74m_kobra = 1 \n
+        wpn_ak74m = 1 \n
+        wpn_sks = 1 \n
+        [spawn_loadout2] \n
+        wpn_mp440 = 1 \n
+        wpn_glock35 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_fnp45 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_mp5 \n
-        ammo_9x19_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -893,12 +1256,20 @@
     <reputation>461</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_rpk74 = 1 \n
+        wpn_pp2000 = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_ak102 = 1 \n
+        [spawn_loadout2] \n
+        wpn_tt33_2 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_fiveseven = 1 \n
+        wpn_fnp45 = 1 \n
+        wpn_cz75 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74u \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -919,12 +1290,22 @@
     <reputation>-1601</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_b</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_scar-h_ac11090 = 1 \n
+        wpn_scar-h = 1 \n
+        wpn_l85 = 1 \n
+        wpn_g3a3_acog = 1 \n
+        wpn_g3a3 = 1 \n
+        wpn_aks47 = 1 \n
+        wpn_svu = 1 \n
+        [spawn_loadout2] \n
+        wpn_walther = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_fnp45 = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_mp440 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74u \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -945,12 +1326,23 @@
     <reputation>-667</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2a</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_rpk = 1 \n
+        wpn_scar-h = 1 \n
+        wpn_mp5_ac11090 = 1 \n
+        wpn_mp5 = 1 \n
+        wpn_saiga_1p29 = 1 \n
+        wpn_saiga = 1 \n
+        wpn_mp5sd_acog = 1 \n
+        wpn_mp5sd = 1 \n
+        [spawn_loadout2] \n
+        wpn_walther40 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_aps = 1 \n
+        wpn_mp412 = 1 \n
+        wpn_tt33 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74u \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -971,12 +1363,23 @@
     <reputation>-147</reputation>
     <visual>actors\stalker_nebo\stalker_nebob2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_g3a3 = 1 \n
+        wpn_val_kobra = 1 \n
+        wpn_val = 1 \n
+        wpn_m4a1_ac11090 = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_ak103_pso = 1 \n
+        wpn_ak103 = 1 \n
+        wpn_mossberg = 1 \n
+        [spawn_loadout2] \n
+        wpn_mp412 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_aps = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_gsh18 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74u \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -997,12 +1400,24 @@
     <reputation>1093</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2b</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_mp5sd_ac11090 = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_ak104_pso = 1 \n
+        wpn_ak104 = 1 \n
+        wpn_ak12_acog = 1 \n
+        wpn_ak12 = 1 \n
+        wpn_ak105_kobra = 1 \n
+        wpn_ak105 = 1 \n
+        wpn_m16 = 1 \n
+        [spawn_loadout2] \n
+        wpn_tt33 = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_cz40 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74u \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1024,11 +1439,21 @@
     <reputation>908</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mask</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_hpsa = 1 \n
+        wpn_ak12_eot = 1 \n
+        wpn_ak12 = 1 \n
+        wpn_akms = 1 \n
+        wpn_ak104 = 1 \n
+        wpn_remington870_ac11090 = 1 \n
+        wpn_remington870 = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp10 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_fiveseven = 1 \n
         [spawn] \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1050,11 +1475,21 @@
     <reputation>705</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_smask1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_svd = 1 \n
+        wpn_akm_kobra = 1 \n
+        wpn_akm = 1 \n
+        wpn_ak74u = 1 \n
+        wpn_groza = 1 \n
+        wpn_9a91_ekp = 1 \n
+        wpn_9a91 = 1 \n
+        [spawn_loadout2] \n
+        wpn_walther = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_fiveseven = 1 \n
+        wpn_glock35 = 1 \n
+        wpn_colt1911 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1076,11 +1511,22 @@
     <reputation>-1746</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_smask2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_vepr12 = 1 \n
+        wpn_hk416_ac11090 = 1 \n
+        wpn_hk416 = 1 \n
+        wpn_rpk74_ekp = 1 \n
+        wpn_rpk74 = 1 \n
+        wpn_ak74m_1p29 = 1 \n
+        wpn_ak74m = 1 \n
+        wpn_ak47 = 1 \n
+        [spawn_loadout2] \n
+        wpn_fiveseven = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_fort \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1102,11 +1548,20 @@
     <reputation>-979</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_old</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_protecta = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        wpn_ak103 = 1 \n
+        wpn_pp2000 = 1 \n
+        wpn_ak102_ekp = 1 \n
+        wpn_ak102 = 1 \n
+        [spawn_loadout2] \n
+        wpn_ots33 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_glock17 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1128,11 +1583,20 @@
     <reputation>-1546</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_merc</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_m14 = 1 \n
+        wpn_protecta = 1 \n
+        wpn_ak105_1p29 = 1 \n
+        wpn_ak105 = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_l85 = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp40 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_walther40 = 1 \n
+        wpn_colt1911 = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1154,11 +1618,21 @@
     <reputation>2351</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_gp5</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak105 = 1 \n
+        wpn_rpk = 1 \n
+        wpn_remington870_c-more = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_l85 = 1 \n
+        wpn_p90_ac11090 = 1 \n
+        wpn_p90 = 1 \n
+        [spawn_loadout2] \n
+        wpn_mp443 = 1 \n
+        wpn_tt33 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_desert_eagle = 1 \n
         [spawn] \n
-        wpn_ak74u  \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_pm \n
-        ammo_9x18_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1180,11 +1654,19 @@
     <reputation>-1636</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mas2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_l85 = 1 \n
+        wpn_protecta = 1 \n
+        wpn_mp7 = 1 \n
+        wpn_m16 = 1 \n
+        wpn_aek971 = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock35 = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_beretta96 = 1 \n
+        wpn_mp443 = 1 \n
         [spawn] \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_2.xml"
@@ -1206,11 +1688,20 @@
     <reputation>-1313</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_s_mas3</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak103 = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_ak102_pso = 1 \n
+        wpn_ak102 = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_mossberg = 1 \n
+        [spawn_loadout2] \n
+        wpn_aps = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
         [spawn] \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
         grenade_rgd5 = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1232,12 +1723,24 @@
     <reputation>-108</reputation>
     <visual>actors\stalker_nebo\stalker_neboa2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_hk416 = 1 \n
+        wpn_ar15_ac11090 = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_lr300_c-more = 1 \n
+        wpn_lr300 = 1 \n
+        wpn_groza_pso = 1 \n
+        wpn_groza = 1 \n
+        wpn_aks74n_1p29 = 1 \n
+        wpn_aks74n = 1 \n
+        [spawn_loadout2] \n
+        wpn_cz75 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_colt1911_sk3 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_glock35 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_fmj = 1 \n
-        wpn_beretta  \n
-        ammo_9x19_fmj = 1 \n
         grenade_rgd5 = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1260,12 +1763,24 @@
     <reputation>-291</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_m4a1_ac11090 = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_sr3m_ekp = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_protecta = 1 \n
+        wpn_mp7_acog = 1 \n
+        wpn_mp7 = 1 \n
+        wpn_ar15_c-more = 1 \n
+        wpn_ar15 = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp = 1 \n
+        wpn_walther = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_fnp40 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1286,12 +1801,22 @@
     <reputation>-1991</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_saiga = 1 \n
+        wpn_aks74n = 1 \n
+        wpn_m4a1_ac11090 = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_g3 = 1 \n
+        wpn_ak102_1p29 = 1 \n
+        wpn_ak102 = 1 \n
+        [spawn_loadout2] \n
+        wpn_beretta96 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_mp412 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_usp10 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1312,12 +1837,24 @@
     <reputation>1018</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2a</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_remington870 = 1 \n
+        wpn_9a91_1p29 = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_l85_acog = 1 \n
+        wpn_l85 = 1 \n
+        wpn_akm_1p29 = 1 \n
+        wpn_akm = 1 \n
+        wpn_aek971_1p29 = 1 \n
+        wpn_aek971 = 1 \n
+        [spawn_loadout2] \n
+        wpn_glock21 = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_mp412 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_fiveseven = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1338,12 +1875,21 @@
     <reputation>383</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3a</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_groza = 1 \n
+        wpn_svu = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_scar-h = 1 \n
+        wpn_ak103_ekp = 1 \n
+        wpn_ak103 = 1 \n
+        [spawn_loadout2] \n
+        wpn_aps = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_walther40 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1364,12 +1910,23 @@
     <reputation>-2173</reputation>
     <visual>actors\stalker_nebo\stalker_nebo2b</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_l85 = 1 \n
+        wpn_ak103 = 1 \n
+        wpn_m16_acog = 1 \n
+        wpn_m16 = 1 \n
+        wpn_ak74_kobra = 1 \n
+        wpn_ak74 = 1 \n
+        wpn_hk416_ac11090 = 1 \n
+        wpn_hk416 = 1 \n
+        [spawn_loadout2] \n
+        wpn_aps = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_fnp40 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1390,12 +1947,20 @@
     <reputation>720</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3b</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_m4a1 = 1 \n
+        wpn_g3 = 1 \n
+        wpn_m14 = 1 \n
+        wpn_m16 = 1 \n
+        wpn_hk416 = 1 \n
+        [spawn_loadout2] \n
+        wpn_cz75 = 1 \n
+        wpn_tt33 = 1 \n
+        wpn_glock35 = 1 \n
+        wpn_usp10 = 1 \n
+        wpn_cz40 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
         grenade_rgd5 = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1417,12 +1982,22 @@
     <reputation>2040</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak104 = 1 \n
+        wpn_mp5sd_c-more = 1 \n
+        wpn_mp5sd = 1 \n
+        wpn_m16 = 1 \n
+        wpn_spas12 = 1 \n
+        wpn_ump40_ac11090 = 1 \n
+        wpn_ump40 = 1 \n
+        [spawn_loadout2] \n
+        wpn_ots33 = 1 \n
+        wpn_aps = 1 \n
+        wpn_fnp40 = 1 \n
+        wpn_usp40 = 1 \n
+        wpn_desert_eagle = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
         grenade_rgd5 = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1444,12 +2019,21 @@
     <reputation>712</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_akms = 1 \n
+        wpn_mp7 = 1 \n
+        wpn_l85 = 1 \n
+        wpn_groza_pso = 1 \n
+        wpn_groza = 1 \n
+        wpn_ak74u = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp = 1 \n
+        wpn_walther = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_glock35 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
         grenade_rgd5 = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1471,12 +2055,22 @@
     <reputation>837</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_abakan = 1 \n
+        wpn_aks74_ekp = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_ak74u_1p29 = 1 \n
+        wpn_ak74u = 1 \n
+        wpn_ak105 = 1 \n
+        wpn_mn91 = 1 \n
+        [spawn_loadout2] \n
+        wpn_beretta96 = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_walther40 = 1 \n
+        wpn_tt33_2 = 1 \n
+        wpn_fnp45 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        ammo_5.45x39_ap = 1 \n
-        wpn_fort \n
-        ammo_9x18_pmm = 1 \n
         grenade_rgd5 = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
@@ -1499,12 +2093,24 @@
     <reputation>942</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_aks74n = 1 \n
+        wpn_ak104_ekp = 1 \n
+        wpn_ak104 = 1 \n
+        wpn_aks74_pso = 1 \n
+        wpn_aks74 = 1 \n
+        wpn_sr3m_pso = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_g3_acog = 1 \n
+        wpn_g3 = 1 \n
+        [spawn_loadout2] \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_aps = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_glock17 = 1 \n
+        wpn_ots33 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_spas12 \n
-        wpn_beretta = 1 \n
-        ammo_12x76_zhekan = 1 \n
-        ammo_9x19_pbp = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1525,12 +2131,22 @@
     <reputation>333</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_3</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_abakan = 1 \n
+        wpn_saiga_ekp = 1 \n
+        wpn_saiga = 1 \n
+        wpn_m4a1_acog = 1 \n
+        wpn_m4a1 = 1 \n
+        wpn_mp7 = 1 \n
+        wpn_svd = 1 \n
+        [spawn_loadout2] \n
+        wpn_colt1911_sk3 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_colt1911_sk2 = 1 \n
+        wpn_walther = 1 \n
+        wpn_ots33 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        wpn_colt1911 \n
-        ammo_5.45x39_ap = 1 \n
-        ammo_11.43x23_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1551,12 +2167,21 @@
     <reputation>1028</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3a</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ak47 = 1 \n
+        wpn_vintorez = 1 \n
+        wpn_sig550 = 1 \n
+        wpn_akm = 1 \n
+        wpn_aks74_ekp = 1 \n
+        wpn_aks74 = 1 \n
+        [spawn_loadout2] \n
+        wpn_cz75 = 1 \n
+        wpn_tt33 = 1 \n
+        wpn_mp443 = 1 \n
+        wpn_sig220 = 1 \n
+        wpn_mp412 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_spas12 \n
-        wpn_beretta = 1 \n
-        ammo_12x76_zhekan = 1 \n
-        ammo_9x19_pbp = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1577,12 +2202,22 @@
     <reputation>2433</reputation>
     <visual>actors\stalker_nebo\stalker_nebo3b</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_mp7 = 1 \n
+        wpn_ak12_c-more = 1 \n
+        wpn_ak12 = 1 \n
+        wpn_9a91_1p29 = 1 \n
+        wpn_9a91 = 1 \n
+        wpn_svu = 1 \n
+        wpn_wincheaster1300 = 1 \n
+        [spawn_loadout2] \n
+        wpn_walther = 1 \n
+        wpn_desert_eagle = 1 \n
+        wpn_glock35 = 1 \n
+        wpn_beretta = 1 \n
+        wpn_usp = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        wpn_colt1911 \n
-        ammo_5.45x39_ap = 1 \n
-        ammo_11.43x23_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1603,12 +2238,21 @@
     <reputation>-1642</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_sr3m_kobra = 1 \n
+        wpn_sr3m = 1 \n
+        wpn_akm = 1 \n
+        wpn_l85 = 1 \n
+        wpn_aek971 = 1 \n
+        wpn_svu = 1 \n
+        [spawn_loadout2] \n
+        wpn_usp10 = 1 \n
+        wpn_ots33 = 1 \n
+        wpn_mp440 = 1 \n
+        wpn_glock21 = 1 \n
+        wpn_desert_eagle = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_spas12 \n
-        wpn_beretta = 1 \n
-        ammo_12x76_zhekan = 1 \n
-        ammo_9x19_pbp = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1629,12 +2273,23 @@
     <reputation>-1183</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_ar15_ac11090 = 1 \n
+        wpn_ar15 = 1 \n
+        wpn_remington870 = 1 \n
+        wpn_ak103 = 1 \n
+        wpn_sig550_eot = 1 \n
+        wpn_sig550 = 1 \n
+        wpn_mn91_pu = 1 \n
+        wpn_mn91 = 1 \n
+        [spawn_loadout2] \n
+        wpn_gsh18 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_ots33 = 1 \n
+        wpn_glock20 = 1 \n
+        wpn_colt1911 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_ak74 \n
-        wpn_colt1911 \n
-        ammo_5.45x39_ap = 1 \n
-        ammo_11.43x23_fmj = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1655,12 +2310,21 @@
     <reputation>-1403</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_seva_2</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_hpsa = 1 \n
+        wpn_svu = 1 \n
+        wpn_svd = 1 \n
+        wpn_ak104_kobra = 1 \n
+        wpn_ak104 = 1 \n
+        wpn_rpk = 1 \n
+        [spawn_loadout2] \n
+        wpn_gsh18 = 1 \n
+        wpn_cz52 = 1 \n
+        wpn_mp412 = 1 \n
+        wpn_cz40 = 1 \n
+        wpn_ots33 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_spas12 \n
-        wpn_beretta = 1 \n
-        ammo_12x76_zhekan = 1 \n
-        ammo_9x19_pbp = 1 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs.xml"
@@ -1681,12 +2345,21 @@
     <reputation>-1481</reputation>
     <visual>actors\stalker_nebo\stalker_nebo_exo_1</visual>
     <supplies>
+        [spawn_loadout] \n
+        wpn_mp7 = 1 \n
+        wpn_ak47 = 1 \n
+        wpn_ump40_c-more = 1 \n
+        wpn_ump40 = 1 \n
+        wpn_hpsa = 1 \n
+        wpn_m14 = 1 \n
+        [spawn_loadout2] \n
+        wpn_tt33_2 = 1 \n
+        wpn_fiveseven = 1 \n
+        wpn_gsh18 = 1 \n
+        wpn_colt1911 = 1 \n
+        wpn_glock35 = 1 \n
         [spawn] \n
         device_torch \n
-        wpn_protecta \n
-        ammo_12x76_zhekan = 1 \n
-        wpn_sig220 = 1 \n
-        ammo_11.43x23_hydro = 1 \n
         grenade_f1 = 4 \n
 #include "gameplay\character_items.xml"
 #include "gameplay\character_food.xml"

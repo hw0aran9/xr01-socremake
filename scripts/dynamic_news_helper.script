@@ -335,7 +335,11 @@ function send_tip(msg, header, timeout, showtime, sender, sound,icon_by)
 	end
 
 	db.actor:give_game_news(header, msg, ui_sender, timeout*1000, showtime*1000)
-
+--FonSwong--
+	if pda_FonSwong.other_news==true then
+		pda_FonSwong.ins_in_tbl(header,msg,ui_sender)
+	end
+--FonSwong--
 	return true
 end
 

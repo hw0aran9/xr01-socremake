@@ -3,9 +3,6 @@
 	    <auto_static x="0" y="0" width="273" height="768" stretch="1">
 		    <texture>ui_inGame2_repair_panel</texture>
 	    </auto_static>
-	    <auto_static x="-102" y="0" width="104" height="768" stretch="1">
-		    <texture>ui_inGame2_widescreen_sidepanels_left</texture>
-	    </auto_static>
 	</main>
 	<back x="0" y="0" width="273" height="768"/>
 	<scheme x="19" y="291" width="232" height="453" />

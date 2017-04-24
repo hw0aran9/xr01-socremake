@@ -1,0 +1,257 @@
+--[[
+Новости для "Зов Чернобыля"v10
+Можно включать и выключать в Опциях Игры, как и встроенные динамические новости. 
+Совместимость: совместимы абсолютно со всеми модами. Новости можно ставить в любом сочетании (хоть все сразу). 
+1. Новости от First_Lieutenant_Skelja. Версия 3.0. Включены правки от  senyaGTA. Исправлена ошибка с отсутствием утренних и вечерних новостей. Описание: аддончик добавляет статичные рандом новости, они будут крутиться все время, в разных интервалах, так что новости эти не надоедливые, также среди них будут и всякие подсказки, которые сможет разглядеть в новостях опытный игрок! Удаление: просто удалите файл zone_news_main.script
+2. Сообщения о смерти сталкеров (не фейк) + комментарии от сталкеров к погибшему (некрологи). Включены правки от  senyaGTA. Уменьшена вероятность их появления в 5 раз (ибо во время перестрелок надоедают). 
+Удаление: просто удалите файл zone_news_dead.script
+3. Динамические новости из Misery 2.1 от Dorian 23 Grey (адаптация Letozz). Исправлена совместимость с новостями от Скели. Удаление: просто удалите файл zone_news.script
+4. Новости от VanoSanturi для СоС . Удаление: просто удалите файл zone_news_vs.script
+5. Новости о приближающемся выбросе и пси-шторме(с реальным указанием возможного времени) от VanoSanturi адаптированные для СоС. Удаление: просто удалите файл zone_surge_news.script.
+]]
+-- ===============================================================================================
+--               ЗДЕСЬ НАСТРАИВАЕМ НОВОСТИ: КАК ЧАСТО ОНИ БУДУТ ПРИХОДИТЬ
+-- ===============================================================================================
+
+local percent_all =  80 -- общий процент выдаваемых новостей
+local percent_dead = 10 -- процент сообщений о смерти сталкеров
+local post_message = 70 -- процент комментариев-некрологов в новостях о смерти сталкеров
+local anti_spam =    30 -- процент антиспама (в новостях спама от VanoSanturi)
+local show_glonass = true -- о статусе Глонасс (true - показывать, false - нет)
+local hide_dead =    true -- Скрывать ли сообщения о смерти сталкеров при потере связи
+-- ============================================================================================
+--         промежутки времени, через которые будут приходить новости (в игровых секундах): 
+local time_random ={ --========================================================================
+9,
+35,
+40,
+100,
+120,
+300,
+360,
+400,
+500,
+540,
+550,
+600,
+700,
+720,
+750,
+800,
+900,
+1200,
+1800,
+3600,
+---------------------------------------------------------------------------------------------
+}  ------------------------------------------------------------------------------------------
+local news_tbl_b = {}   ---------------------------------------------------------------------
+local not_news = true   ---------------------------------------------------------------------
+local news_dead = 0     ---------------------------------------------------------------------
+local mod_warfare = false  ------------------------------------------------------------------
+local undegraund = false  -------------------------------------------------------------------
+function on_game_load() ---------------------------------------------------------------------
+-- ============================================================================================
+-- удельный вес каждого вида новостей:
+-- ============================================================================================
+
+local show_news= 		20	--рандомные новости от VanoSanturi
+local weather_news= 		2	--новости о погоде от VanoSanturi
+local fake_vubros_msg= 		2	--фейк-новости о выбросе от VanoSanturi
+local show_news_trade= 		2	--предложения о торговле от VanoSanturi
+local semeckiy_deth_news= 	2	--новости о смерти Семецкого от VanoSanturi
+local spam_news= 		2	--спам от VanoSanturi
+local news_of_qwest= 		5	--новости о квестах от VanoSanturi
+local surge_news= 		5	--новости о выбросе
+local psi_storm_news= 		2	--новости о пси-шторме
+local news_of_surge= 		2	--ещё одни новости о выбросе и пси-шторме
+local news_misery= 		20	--новости из Misery
+local news_main= 		31	--новости от Скели
+local sunset_news= 		5	--новости о закатах и восходах от Скели
+
+-- ============================================================================================
+-- Готово! Дальше лезть не надо !!!
+-- ============================================================================================
+
+
+-- проверяем наличие файлов новостей и заносим их в таблицу
+local news_tbl_a = {}
+
+   if zone_surge_news then
+	table.insert(news_tbl_a,{f_n = zone_surge_news.psi_storm_news,part = psi_storm_news})
+	table.insert(news_tbl_a,{f_n = zone_surge_news.surge_news,part = surge_news})
+   end
+   if zone_news_main then
+	table.insert(news_tbl_a,{f_n = zone_news_main.news_main,part = news_main})
+	table.insert(news_tbl_a,{f_n = zone_news_main.sunset_news,part = sunset_news})
+   end
+   if zone_news then
+	table.insert(news_tbl_a,{f_n = zone_news.news_ant,part = news_misery})
+   end
+   if zone_news_vs then
+	table.insert(news_tbl_a,{f_n = zone_news_vs.show_news,part = show_news})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.news_of_qwest,part = news_of_qwest})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.news_of_surge,part = news_of_surge})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.spam_news,part = spam_news,arg = anti_spam})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.weather_news,part = weather_news})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.semeckiy_deth_news,part = semeckiy_deth_news})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.fake_vubros_msg,part = fake_vubros_msg})
+	table.insert(news_tbl_a,{f_n = zone_news_vs.show_news_trade,part = show_news_trade})
+   end
+   if zone_news_dead ~= nil  then
+	news_dead = percent_dead
+   else  percent_dead = 0
+   end
+
+   if warfare_news and warfare then
+	mod_warfare = true
+   end
+
+local summa = 0
+   for k,v in pairs(news_tbl_a) do
+   local percent = tonumber(v.part)
+	summa = summa + percent
+   end
+
+   if summa > 0 then
+   local cent = 0
+   not_news = false
+	for k,v in pairs(news_tbl_a) do
+	local cet = tonumber(v.part)
+	cent = cent + (cet/summa)*1000
+	news_tbl_b[k] = {news = v.f_n,part = math.floor(cent),arg = v.arg}
+	end
+--Отключаем сигналы в подземках
+   local levels = level.name()
+	if (levels == "labx8") or (levels == "jupiter_underground") or (levels == "l03u_agr_underground") or (levels == "l04u_labx18") or (levels == "l08u_brainlab") or (levels == "l10u_bunker") or (levels == "l12u_sarcofag") or (levels == "l12u_control_monolith") or (levels == "l13u_warlab") then
+	undegraund = true
+	end
+   end
+end
+
+
+--Проверка Радиосвязи.
+local pda_on = false
+local pda_off = false
+local news_on = true
+
+function pda_status()
+   if surge_manager.is_started() or psi_storm_manager.is_started() or undegraund==true then  -- Во время выброса - связь не пашет.
+         if pda_off == true then  news_warfare(false) return end
+	 news_on = false
+         pda_off = true
+         pda_on = false
+           if hide_dead == true then
+              news_dead = 0
+           end
+         send_tip("Связь потеряна.")
+	 news_warfare(false)
+    else
+	 if pda_on == true then news_warfare(true) return end
+         send_tip("Связь установлена.")
+         news_dead = percent_dead
+         pda_on = true
+         pda_off = false
+	 news_on = true
+	 news_warfare(true)
+    end
+end
+
+function send_tip(news_text)
+   db.actor:give_game_news("Статус ГЛОНАСС:", "%c[default]" .. news_text, "ui_inGame2_Istoriya_dolga_vs", 0, 7000)
+   xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+end
+
+
+
+function random_news() -- рандомно выбираем файл новостей
+if news_on ~= true then return end
+    if has_alife_info("start_info_news") then
+      local rnd_value = math.random(0,1000)
+      local get_news = nil
+      local get_arg = nil
+      local min_value = 0
+	for k,v in pairs(news_tbl_b) do
+	local max_value = v.part
+	    if min_value<rnd_value and rnd_value<=max_value then
+		get_news = v.news
+		get_arg = v.arg
+	     break
+	    end
+	min_value = max_value
+	end
+
+	if get_news~=nil then
+	get_news(get_arg)
+	end
+    else
+	local alife = alife()
+	local se_actor = alife:actor()
+	db.actor:give_game_news("Сообщение:", "%c[255,160,160,160]Вас приветствует «Единая Сталкерская Сеть» на операционной системе Antdiablon с Server Pack 2 Weanchester. Если вы видите это сообщение, то у вас честный провайдер. Регистрация нового сталкера в сети... создание профиля... определение пола... идентификация завершена!\\n%c[255,255,160,0]" .. se_actor:character_name() .. "%c[255,160,160,160], добро пожаловать в Зону Отчуждения!", "ui_gunslinger_vs", 0, 30000)
+	xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+	db.actor:give_info_portion("start_info_news")
+    end
+end
+
+
+local time_news = 40000
+local time_pda_news = 0
+function actor_on_update()
+if not_news then return end
+    if (axr_main.config:r_value("mm_options","enable_dynamic_news",1,true) == true) then
+    local time = time_global()
+	if time_pda_news < time then
+	    if show_glonass==true then	    
+               pda_status()
+	    else news_warfare(true)
+	    end
+            time_pda_news = time + 10000
+	end  	
+        if time_news < time then	    
+            if math.random(0,99) < percent_all then
+              random_news()
+	    end
+        time = time_global()
+        time_news = time + (time_random[math.random(#time_random)])*1000
+	end   
+    end
+end
+
+function news_warfare(param)
+   if mod_warfare==true then
+	warfare_news.pda_status(param)
+   end
+end
+
+
+
+
+function npc_on_death_callback(victim, who)  --Новости о смерти сталкеров
+   if (axr_main.config:r_value("mm_options","enable_dynamic_news",1,true) == true) then
+      if math.random(1,99) < news_dead then         
+         zone_news_dead.death_npc(victim, who, post_message)
+      end
+   end
+end
+
+--[[ -- Это пусть пока побудет
+function on_game_start()
+RegisterScriptCallback("load_state", check_level)
+end
+
+function check_level()
+local level = alife():level_name(game_graph():vertex(alife():actor().m_game_vertex_id):level_id())
+local pda_off = false
+
+if db.actor and ((level == "labx8") or (level == "jupiter_underground") or (level == "l03u_agr_underground") or (level == "l04u_labx18") or (level == "l08u_brainlab") or (level == "l10u_bunker") or (level == "l12u_sarcofag") or (level == "l12u_control_monolith") or (level == "l13u_warlab")) then
+undegraund = true
+elseif (levels ~= "labx8") and (levels ~= "jupiter_underground") and (levels ~= "l03u_agr_underground") and (levels ~= "l04u_labx18") and (levels ~= "l08u_brainlab") and (levels ~= "l10u_bunker") and (levels ~= "l12u_sarcofag") and (levels ~= "l12u_control_monolith") and (levels ~= "l13u_warlab") then
+undegraund = false
+end
+
+end  ]]
+
+function on_game_start()
+RegisterScriptCallback("actor_on_update",actor_on_update)
+RegisterScriptCallback("npc_on_death_callback", npc_on_death_callback)
+RegisterScriptCallback("on_game_load",on_game_load)
+end

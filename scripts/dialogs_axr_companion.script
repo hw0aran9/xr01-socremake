@@ -1,3 +1,14 @@
+-- ============================================================
+--
+-- dialogs_axr_companion.script
+--	CoC 1.4.21 - DoctorX Questlines 1.20
+--
+--	Modified by: DoctorX
+--	Last revised: December 21, 2016
+--
+-- ============================================================
+
+
 --Scripting Dialog Made Easy
 
 local saved_dialog
@@ -223,14 +234,14 @@ end
 
 function is_non_story(actor,npc)
 	local squad = get_object_squad(npc)
-	if not (squad) then 
-		return false 
+	if not (squad) then
+		return false
 	end
 	if (get_object_story_id(squad.id)) then
 		return false
 	end
 	return true
-end 
+end
 
 function is_room_in_actor_squad(actor,npc)
 	local max_size = axr_companions.max_actor_squad_size + (has_alife_info("achieved_patriarch") and 2 or 0)
@@ -296,7 +307,7 @@ function become_actor_companion(actor,npc)
 	end
 
 	axr_companions.companion_squads[squad.id] = squad
-	
+
 	SIMBOARD:assign_squad_to_smart(squad, nil)
 
 	for k in squad:squad_members() do
@@ -308,25 +319,48 @@ function become_actor_companion(actor,npc)
 	end
 end
 
-function is_hostage_task_giver(a,b)
-	local npc = dialogs.who_is_npc(a,b)
-	local t = {"simulation_task_7", "simulation_task_8", "simulation_task_9", "simulation_task_10"}
-	local id = npc:id()
-	local se_obj = alife_object(id)
-	if not (se_obj) then 
-		return false 
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- is_hostage_task_giver function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Determines if the current NPC is a simulation hostage task giver
+--
+--	Usage:
+--		is_hostage_task_giver( )
+--
+--	Parameters:
+--		none
+--
+--	Return value (type: bool):
+--		Returns true if the NPC is a current simulation hostage task giver, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Modified by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Determine if current NPC is sim hostage giver:
+function is_hostage_task_giver( a, b )
+
+	-- Determine if current NPC is sim hostage task giver:
+	local npc = dialogs.who_is_npc( a, b )
+	local se_obj = npc and alife( ):object( npc:id( ) )
+	local giver_id = se_obj and (se_obj.group_id ~= 65535 and se_obj.group_id or se_obj.id)
+	if ( alun_utils.load_var( db.actor, ("drx_sl_hostage_giver_" .. giver_id), false ) ) then
+		return true
 	end
-	local tm = task_manager.get_task_manager()
-	local task_info = tm.task_info
-	local tsk
-	for k,task_id in pairs(t) do
-		tsk = task_info[task_id]
-		if (tsk) and (tsk.task_giver_id == se_obj.group_id or tsk.task_giver_id == id) then
-			return true
-		end
-	end
+
 	return false
+
 end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 function is_not_hostage_task_giver(a,b)
 	return not is_hostage_task_giver(a,b)

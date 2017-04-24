@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="windows-1251" ?>
+
+<!--===========================================================
+<
+< DIALOG MANAGER FOR JUPITER MAP
+<	CoC 1.4.08 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 07, 2016
+<
+<===========================================================-->
+
+
 <game_dialogs>
 <!-- jup_a6_freedom_trader_ashot -->
     <dialog id="jup_a6_freedom_trader_ashot_start">
@@ -16,48 +28,64 @@
             </phrase>
         </phrase_list>
     </dialog>
-<!-- ecolog_companion_task_2 -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- TUKAREV ESCORT JUPITER  SCIENTISTS  DIALOG
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 07, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- Tukarev Escort Jupiter Scientists dialog -->
 	<dialog id="ecolog_companion_task_2_dialog">
-        <phrase_list>
-		    <phrase id="0">
-                <text />
-                <next>1</next>
-            </phrase>
+		<phrase_list>
+			<phrase id="0">
+				<text />
+				<next>1</next>
+			</phrase>
 			<phrase id="1">
 				<text />
 				<next>111</next>
 				<next>112</next>
 				<next>113</next>
 			</phrase>
-		    <phrase id="111">
+			<phrase id="111">
 				<dont_has_info>ecolog_companion_task_2_started</dont_has_info>
 				<precondition>dialogs_jupiter.ecolog_companion_task_2_not_complete</precondition>
-                <text>ecolog_companion_task_1_start_dialog_1</text>
+				<text>ecolog_companion_task_1_start_dialog_1</text>
 				<give_info>ecolog_companion_task_2_started</give_info>
 				<next>1111</next>
-            </phrase>
-		    <phrase id="112">
+			</phrase>
+			<phrase id="112">
 				<has_info>ecolog_companion_task_2_started</has_info>
 				<precondition>dialogs_jupiter.ecolog_companion_task_2_not_complete</precondition>
-                <text>ecolog_companion_task_1_start_dialog_2</text>
+				<text>ecolog_companion_task_1_start_dialog_2</text>
 				<give_info>ecolog_companion_task_2_started</give_info>
 				<next>1111</next>
-            </phrase>
-		    <phrase id="113">
+			</phrase>
+			<phrase id="113">
 				<precondition>dialogs_jupiter.ecolog_companion_task_2_complete</precondition>
-                <text>ecolog_companion_task_1_complete</text>
+				<text>ecolog_companion_task_1_complete</text>
 				<next>1113</next>
-            </phrase>
+			</phrase>
 			<phrase id="1111">
 				<text>ecolog_companion_task_1_actor_reply</text>
 			</phrase>
 			<phrase id="1113">
 				<text>ecolog_companion_task_1_actor_reply</text>
-				<action>dialogs_jupiter.ecolog_companion_task_2_give_reward</action>
+				<!-- <action>dialogs_jupiter.ecolog_companion_task_2_give_reward</action> -->
 				<action>dialogs_jupiter.ecolog_companion_task_2_complete_task</action>
 			</phrase>
-        </phrase_list>
-    </dialog>
+		</phrase_list>
+	</dialog>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 	<!--  -->
      <dialog id="jup_a6_freedom_leader_employ_stalkers">
         <precondition>dialogs_jupiter.jup_b47_employ_squad</precondition>

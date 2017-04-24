@@ -226,12 +226,12 @@ function actor_on_before_death(whoID,flags)
 			["stalker"] = "novice_outfit",
 			["bandit"] = "bandit_novice_outfit",
 			["csky"] = "cs_novice_outfit",
-			["killer"] = "merc_novice_outfit",
-			["army"] = "military_novice_outfit",
+			["killer"] = "merc_outfit",
+			["army"] = "army_outfit",
 			["dolg"] = "dolg_novice_outfit",
 			["freedom"] = "svoboda_novice_outfit",
 			["ecolog"] = "ecolog_guard_outfit",
-			["monolith"] = "monolith_novice_outfit"
+			["monolith"] = "monolith_outfit"
 		}
 		give_object_to_actor(f[faction] or "novice_outfit")		
 	end 

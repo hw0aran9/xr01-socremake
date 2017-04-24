@@ -1,6 +1,29 @@
 <?xml version='1.0' encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< CHARACTER DESCRIPTIONS FOR JUPITER MAP
+<	CoC 1.4.21 - DoctorX Questlines 1.20
+<
+<	Modified by: DoctorX
+<	Last revised: December 21, 2016
+<
+<===========================================================-->
+
+
 <xml>
-	<!-- CoC Jup A6 -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Ashot (Freedom Trader) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
 	<specific_character id="jup_a6_freedom_trader_ashot" team_default = "1">
 		<name>jup_a6_freedom_trader_ashot_name</name>
 		<icon>ui_inGame2_ashot</icon>
@@ -16,13 +39,24 @@
 		<supplies></supplies>
 
 		<start_dialog>jup_a6_freedom_trader_ashot_start</start_dialog>
-		<actor_dialog>dm_ashot_and_yar_dialog</actor_dialog>
-		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
-		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-		<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
 		<actor_dialog>actor_break_dialog</actor_dialog>
+
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Yar (Freedom Broker) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="jup_b19_freedom_yar" team_default = "1">
 		<name>jup_b19_freedom_yar_name</name>
 		<icon>ui_inGame2_Dyadka_Yar</icon>
@@ -48,15 +82,17 @@
 #include "gameplay\character_drugs_3.xml"
 #include "gameplay\character_drugs_sci.xml"
 		</supplies>
+
 		<start_dialog>jup_b19_freedom_yar_start</start_dialog>
-		<actor_dialog>dm_ashot_and_yar_dialog</actor_dialog>
-		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
-		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-		<actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
 		<actor_dialog>dm_broker_dialog</actor_dialog>
 		<actor_dialog>actor_break_dialog</actor_dialog>
+
 #include "gameplay\character_criticals_4.xml"
-    </specific_character>	
+    </specific_character>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <!-- Jupiter A12 -->
     <specific_character id="jup_a12_stalker_assaulter" team_default = "1">
     <name>st_jup_a12_stalker_assaulter</name>
@@ -96,7 +132,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_a12_stalker_diplomat" team_default = "1">
     <name>st_jup_a12_stalker_diplomat</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -129,7 +165,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_a12_stalker_prisoner" team_default = "1">
     <name>st_jup_a12_stalker_prisoner</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -156,7 +192,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_a12_bandit_chief" team_default = "1">
     <name>st_jup_a12_bandit_chief</name>
     <icon>ui_inGame2_bandit_3_mask</icon>
@@ -184,7 +220,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_a12_bandit_guard" team_default = "1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_1</icon>
@@ -212,7 +248,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_a12_bandit_cashier" team_default = "1">
     <name>st_jup_a12_bandit_cashier</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -240,7 +276,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_a12_merc_cover" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -270,7 +306,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- B207 -->
     <specific_character id="jup_b207_merc_illicit_dealer" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
@@ -298,7 +334,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b207_merc_leader" team_default = "1">
     <name>jup_b207_merc_leader_name</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -324,7 +360,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b207_duty_security_squad_leader" team_default = "1">
     <name>st_jup_b207_duty_security_squad_leader_name</name>
     <icon>ui_inGame2_Dolg_4</icon>
@@ -351,7 +387,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b207_freedom_recon_squad_leader" team_default = "1">
     <name>st_jup_b207_freedom_recon_squad_leader_name</name>
     <icon>ui_inGame2_Freedom_3</icon>
@@ -378,7 +414,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b207_freedom_assault_squad_leader" team_default = "1">
     <name>st_jup_b207_freedom_assault_squad_leader_name</name>
     <icon>ui_inGame2_Freedom_4</icon>
@@ -405,7 +441,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!-- Лидер бандитов  -->
     <specific_character id="jup_a10_bandit_leader" team_default="1">
     <name>jup_a10_bandit_leader_name</name>
@@ -436,7 +472,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер Вано   -->
     <specific_character id="jup_a10_stalker_vano" team_default = "1">
     <name>jup_a10_stalker_vano</name>
@@ -480,7 +516,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_leader_monolith_skin" team_default="1">
     <name>jup_b4_monolith_squad_leader_name</name>
     <icon>ui_inGame2_Brodyaga_monolit</icon>
@@ -508,7 +544,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_leader_duty_skin" team_default="1">
     <name>jup_b4_monolith_squad_leader_name</name>
     <icon>ui_inGame2_Brodyaga_monolit</icon>
@@ -543,7 +579,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_leader_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_leader_name</name>
     <icon>ui_inGame2_Brodyaga_monolit</icon>
@@ -576,7 +612,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_leader_duty_mon_skin" team_default="1">
     <name>jup_b4_monolith_squad_leader_name</name>
     <icon>ui_inGame2_Brodyaga_monolit</icon>
@@ -611,7 +647,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_leader_freedom_mon_skin" team_default = "1">
     <name>jup_b4_monolith_squad_leader_name</name>
     <icon>ui_inGame2_Brodyaga_monolit</icon>
@@ -644,7 +680,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_1_monolith_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_1_name</name>
     <icon>ui_inGame2_monolit_3</icon>
@@ -672,7 +708,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_1_duty_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_1_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -702,7 +738,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_1_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_soldier_1_name</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -730,7 +766,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_2_monolith_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_2_name</name>
     <icon>ui_inGame2_monolit_3</icon>
@@ -758,7 +794,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_2_duty_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_2_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -788,7 +824,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_2_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_soldier_2_name</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -816,7 +852,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_3_monolith_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_3_name</name>
     <icon>ui_inGame2_monolit_2</icon>
@@ -844,7 +880,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_3_duty_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_3_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -874,7 +910,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_3_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_soldier_3_name</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -902,7 +938,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_4_monolith_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_4_name</name>
     <icon>ui_inGame2_monolit_2</icon>
@@ -930,7 +966,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_4_duty_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_4_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -960,7 +996,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_4_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_soldier_4_name</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -987,7 +1023,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_5_monolith_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_5_name</name>
     <icon>ui_inGame2_monolit_2</icon>
@@ -1015,7 +1051,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_5_duty_skin" team_default="1">
     <name>jup_b4_monolith_squad_soldier_5_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -1045,7 +1081,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_monolith_squad_soldier_5_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_soldier_5_name</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -1073,7 +1109,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_freedom_help" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Freedom_2_mask</icon>
@@ -1100,7 +1136,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_duty_help" team_default = "1">
     <name>GENERATE_NAME_lieutenant</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -1127,7 +1163,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b4_freedom_leader" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Freedom_3</icon>
@@ -1156,9 +1192,9 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
 
-    
+
+
     <!-- Сталкер Биохимик   -->
     <specific_character id="jup_b6_scientist_biochemist" team_default = "1">
     <name>jup_b6_scientist_biochemist</name>
@@ -1181,7 +1217,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер Ядерный Физик   -->
     <specific_character id="jup_b6_scientist_nuclear_physicist" team_default = "1">
     <name>jup_b6_scientist_nuclear_physicist</name>
@@ -1204,7 +1240,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b9_shliachin" team_default = "1">
     <name>jup_b9_shliachin_name</name>
     <icon>ui_inGame2_Soldier_2</icon>
@@ -1230,7 +1266,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сенька Пьяница  -->
     <specific_character id="jup_b10_stalker_drunk" team_default="1">
     <name>jup_b10_stalker_drunk</name>
@@ -1258,7 +1294,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <!-- Мертвый Сенька Пьяница  -->
     <specific_character id="jup_b10_stalker_drunk_dead" team_default="1">
     <name>jup_b10_stalker_drunk</name>
@@ -1277,8 +1313,18 @@
         [spawn] \n
     </supplies>
     </specific_character>
-    
-    <!-- Техник Азот   -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Nitro  (Loner Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="jup_b217_stalker_tech" team_default = "1">
     <name>jup_b217_stalker_tech</name>
     <icon>ui_inGame2_Azot</icon>
@@ -1302,15 +1348,28 @@
 #include "gameplay\character_food.xml"
 #include "gameplay\character_drugs_3.xml"
     </supplies>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>dm_tech_repair</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_mechanic_task_dialog</actor_dialog>
+		<actor_dialog>dm_tech_repair</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
-    <!-- Зверобой   -->
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Trapper (Loner Honcho) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="jup_b220_trapper" team_default = "1">
     <name>jup_b220_trapper</name>
     <icon>ui_inGame2_Zveroboy</icon>
@@ -1336,14 +1395,27 @@
 #include "gameplay\character_drugs_4.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>jup_b220_trapper_about_mutants</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>jup_b220_trapper_about_mutants</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
-    <!-- Техник Новиков   -->
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Tukarev  (Ecologist Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="jup_b6_scientist_tech" team_default = "1">
     <name>jup_b6_scientist_novikov</name>
     <icon>ui_inGame2_eco_tech</icon>
@@ -1363,14 +1435,20 @@
         [spawn] \n
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <start_dialog>jup_b6_scientist_medic_start</start_dialog>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>dm_tech_repair</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>jup_b6_scientist_medic_start</start_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_jup_b6_scientist_tech_meet_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>dm_tech_repair</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <!--Лидер Сталкеров   -->
     <specific_character id="jup_b1_stalker_1" team_default = "1">
     <name>jup_b1_stalker_1</name>
@@ -1401,7 +1479,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер 2 -->
     <specific_character id="jup_b1_stalker_2" team_default = "1">
     <name>jup_b1_stalker_2</name>
@@ -1432,7 +1510,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!-- Сталкер 3 -->
     <specific_character id="jup_b1_stalker_3" team_default = "1">
     <name>jup_b1_stalker_3</name>
@@ -1463,7 +1541,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!-- Сталкер 4  -->
     <specific_character id="jup_b1_stalker_4" team_default = "1">
     <name>jup_b1_stalker_4</name>
@@ -1494,7 +1572,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!--Лидер Сталкеров Опытный -->
     <specific_character id="jup_b1_pro_stalker_1" team_default = "1">
     <name>jup_b1_stalker_1</name>
@@ -1524,7 +1602,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер 2 Опытный -->
     <specific_character id="jup_b1_pro_stalker_2" team_default = "1">
     <name>jup_b1_stalker_2</name>
@@ -1553,7 +1631,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер 3 Опытный -->
     <specific_character id="jup_b1_pro_stalker_3" team_default = "1">
     <name>jup_b1_stalker_3</name>
@@ -1582,7 +1660,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер 4 Опытный-->
     <specific_character id="jup_b1_pro_stalker_4" team_default = "1">
     <name>jup_b1_stalker_4</name>
@@ -1611,7 +1689,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Наемные Сталкеры из Группировок для Б6-->
     <specific_character id="jup_b6_stalker_assaulter" team_default = "1">
     <name>st_jup_a12_stalker_assaulter</name>
@@ -1648,7 +1726,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_stalker_diplomat" team_default = "1">
     <name>st_jup_a12_stalker_diplomat</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -1684,7 +1762,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_stalker_prisoner" team_default = "1">
     <name>st_jup_a12_stalker_prisoner</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -1720,7 +1798,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_stalker_gonta" team_default="1">
     <name>st_zat_b106_stalker_gonta_name</name>
     <icon>ui_inGame2_Gonta</icon>
@@ -1766,7 +1844,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_stalker_garmata" team_default="1">
     <name>st_zat_b106_stalker_garmata_name</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -1800,7 +1878,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_stalker_crab" team_default="1">
     <name>st_zat_b106_stalker_crab_name</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -1834,7 +1912,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_freedom_stalker_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Freedom_2_mask</icon>
@@ -1867,7 +1945,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_freedom_stalker_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -1900,7 +1978,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_freedom_stalker_3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Freedom_2</icon>
@@ -1933,7 +2011,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_freedom_stalker_4" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_Freedom_1</icon>
@@ -1965,7 +2043,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_duty_stalker_1" team_default = "1">
     <name>GENERATE_NAME_captain</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -1998,7 +2076,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_duty_stalker_2" team_default = "1">
     <name>GENERATE_NAME_lieutenant</name>
     <icon>ui_inGame2_Dolg_1</icon>
@@ -2030,7 +2108,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_duty_stalker_3" team_default = "1">
     <name>GENERATE_NAME_sergeant</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -2063,7 +2141,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b6_duty_stalker_4" team_default = "1">
     <name>GENERATE_NAME_lieutenant</name>
     <icon>ui_inGame2_Dolg_1</icon>
@@ -2095,7 +2173,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!-- Сталкер "Сеня Щепка"   -->
     <specific_character id="jup_b25_stalker_senya" team_default = "1">
     <name>jup_b25_stalker_senya</name>
@@ -2123,7 +2201,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер "Флинт"   -->
     <specific_character id="jup_b25_freedom_flint" team_default = "1">
     <name>jup_b25_freedom_flint</name>
@@ -2158,7 +2236,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер медик "Костоправ"   -->
     <specific_character id="jup_a6_stalker_medik" team_default = "1">
     <name>jup_a6_stalker_medik</name>
@@ -2196,7 +2274,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер "Зулус"   -->
     <specific_character id="jup_b15_zulus" team_default = "1">
     <name>jup_b15_zulus</name>
@@ -2235,7 +2313,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер "Коряга" на Юпитере   -->
     <specific_character id="jup_b202_stalker_snag" team_default = "1">
     <name>zat_b33_stalker_snag</name>
@@ -2265,7 +2343,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Сталкер бармен "Гаваец"   -->
     <specific_character id="jup_a6_stalker_barmen" team_default = "1">
     <name>jup_a6_stalker_barmen</name>
@@ -2290,7 +2368,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Бандит раневшый Корягу  -->
     <specific_character id="jup_b202_bandit" team_default="1">
     <name>GENERATE_NAME_bandit</name>
@@ -2319,9 +2397,9 @@
 #include "gameplay\character_dialogs_no_guide.xml"
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
 
-    
+
+
     <specific_character id="jup_b19_merc_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -2349,7 +2427,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b19_merc_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -2377,7 +2455,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b19_merc_3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -2405,7 +2483,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b19_merc_4" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -2433,7 +2511,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b19_merc_5" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -2461,7 +2539,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <!-- Сталкер, проводник и добытчик артефактов для учёных. Впоследствии – проводник на Припяти.  -->
     <specific_character id="jup_b43_stalker_assistant" team_default = "1">
     <name>st_jup_b43_stalker_assistant</name>
@@ -2495,7 +2573,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!-- Основатель "Долга" генерал Таченко -->
     <specific_character id="jup_b46_duty_founder" team_default = "1">
     <name>jup_b46_duty_founder_name</name>
@@ -2514,7 +2592,7 @@
         jup_b46_duty_founder_pda \n
     </supplies>
     </specific_character>
-    
+
     <!-- Отряд основателя "Долга" (4 человека) -->
     <specific_character id="jup_b46_duty_founder_squad_01" team_default = "1">
     <name>jup_b46_duty_founder_squad_01_name</name>
@@ -2529,7 +2607,7 @@
     <money min="100" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_3</visual>
     </specific_character>
-    
+
     <specific_character id="jup_b46_duty_founder_squad_02" team_default = "1">
     <name>jup_b46_duty_founder_squad_02_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -2543,7 +2621,7 @@
     <money min="100" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2</visual>
     </specific_character>
-    
+
     <specific_character id="jup_b46_duty_founder_squad_03" team_default = "1">
     <name>jup_b46_duty_founder_squad_03_name</name>
     <icon>ui_inGame2_Dolg_3</icon>
@@ -2557,7 +2635,7 @@
     <money min="100" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_3</visual>
     </specific_character>
-    
+
     <specific_character id="jup_b46_duty_founder_squad_04" team_default = "1">
     <name>jup_b46_duty_founder_squad_04_name</name>
     <icon>ui_inGame2_Dolg_2</icon>
@@ -2571,8 +2649,18 @@
     <money min="100" max="3000" infinitive="0"/>
     <visual>actors\stalker_dolg\stalker_dolg_2</visual>
     </specific_character>
-    
-    <!-- Лидер "Свободы" Локи-->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Loki (Freedom Honcho) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="jup_a6_freedom_leader" team_default = "1">
     <name>jup_a6_freedom_leader</name>
     <icon>ui_inGame2_Loki</icon>
@@ -2598,22 +2686,29 @@
 #include "gameplay\character_drugs_sci.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <start_dialog>jup_a6_freedom_leader_start_dialog</start_dialog>
-    <actor_dialog>jup_a6_freedom_leader_duty_founder_pda</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_duty_sell_founder_pda</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_pripyat_group</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_b4_monolith_squad_dialog</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_b4_monolith_squad_dialog_redy_to_go</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_b207_hiding_place</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_employ_stalkers</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_b106_info_about_soroka</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_about_stolen_items</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_a9_sell_info</actor_dialog>
-    <actor_dialog>jup_a6_freedom_leader_about_you</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>jup_a6_freedom_leader_start_dialog</start_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_jup_a6_freedom_leader_meet_dialog</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_duty_founder_pda</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_duty_sell_founder_pda</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_pripyat_group</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_b4_monolith_squad_dialog</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_b4_monolith_squad_dialog_redy_to_go</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_b207_hiding_place</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_employ_stalkers</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_b106_info_about_soroka</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_about_stolen_items</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_a9_sell_info</actor_dialog>
+		<actor_dialog>jup_a6_freedom_leader_about_you</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
-    <!-- Лидер "Долга" Шульга-->
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+    <!-- Лидер "Долга" Шульга -->
     <specific_character id="jup_a6_duty_leader" team_default = "1">
     <name>jup_a6_duty_leader</name>
     <icon>ui_inGame2_Shulga</icon>
@@ -2651,7 +2746,7 @@
     <actor_dialog>jup_a6_duty_leader_about_you</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <!-- jup_b218_vano_in_suit -->
     <specific_character id="jup_b218_vano_in_suit" team_default = "1">
     <name>jup_a10_stalker_vano</name>
@@ -2682,7 +2777,7 @@
     <actor_dialog>jup_a10_stalker_vano_pripyat_how_are_you</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <!-- Jupiter b47 -->
     <specific_character id="jup_b47_merc_07" team_default = "1">
     <name>jup_b47_merc_07</name>
@@ -2712,7 +2807,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b47_merc_06" team_default = "1">
     <name>jup_b47_merc_06</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -2741,7 +2836,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b47_merc_05" team_default = "1">
     <name>jup_b47_merc_05</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -2770,7 +2865,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b47_merc_04" team_default = "1">
     <name>jup_b47_merc_04</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -2799,7 +2894,7 @@
 #include "gameplay\character_criticals_3.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b47_merc_03" team_default = "1">
     <name>jup_b47_merc_03</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -2828,7 +2923,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b47_merc_02" team_default = "1">
     <name>jup_b47_merc_02</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -2857,7 +2952,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b47_merc_01" team_default = "1">
     <name>jup_b47_merc_01</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -2885,7 +2980,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b219_stalker_tech" team_default = "1">
     <name>jup_b217_stalker_tech</name>
     <icon>ui_inGame2_Azot</icon>
@@ -2913,7 +3008,7 @@
 #include "gameplay\character_criticals_4.xml"
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="jup_b219_monolith_squad_leader_freedom_skin" team_default = "1">
     <name>jup_b4_monolith_squad_leader_name</name>
     <icon>ui_inGame2_Brodyaga_monolit</icon>
@@ -2939,7 +3034,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="jup_b219_vano" team_default = "1">
     <name>jup_a10_stalker_vano</name>
     <icon>ui_inGame2_Vano_nauchniy</icon>
@@ -2967,7 +3062,7 @@
     <actor_dialog>jup_a10_stalker_vano_pripyat_ready</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="jup_b219_soldier" team_default = "1">
     <name>pri_a15_sokolov_name</name>
     <icon>ui_inGame2_Sokolov_ecolog</icon>
@@ -2995,7 +3090,7 @@
 #include "gameplay\character_criticals_4.xml"
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="jup_b219_zulus" team_default = "1">
     <name>jup_b15_zulus</name>
     <icon>ui_inGame2_Zulus</icon>
@@ -3023,5 +3118,5 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
 </xml>

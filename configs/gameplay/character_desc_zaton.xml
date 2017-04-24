@@ -1,4 +1,16 @@
 <?xml version='1.0' encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< CHARACTER DESCRIPTIONS FOR ZATON MAP
+<	CoC 1.4.21 - DoctorX Questlines 1.20
+<
+<	Modified by: DoctorX
+<	Last revised: December 21, 2016
+<
+<===========================================================-->
+
+
 <xml>
     <specific_character id="zat_b30_owl_stalker_trader" team_default="1">
     <name>st_zat_b30_owl_stalker_trader_name</name>
@@ -28,7 +40,7 @@
     <actor_dialog>dm_broker_dialog</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="zat_b106_stalker_gonta" team_default="1">
     <name>st_zat_b106_stalker_gonta_name</name>
     <icon>ui_inGame2_Gonta</icon>
@@ -58,7 +70,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b106_stalker_garmata" team_default="1">
     <name>st_zat_b106_stalker_garmata_name</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -87,7 +99,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b106_stalker_crab" team_default="1">
     <name>st_zat_b106_stalker_crab_name</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -116,7 +128,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b14_stalker_1" team_default="1">
     <name>zat_b14_stalker_1_name</name>
     <icon>ui_inGame2_neutral_1</icon>
@@ -143,7 +155,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_a2_stalker_nimble" team_default="1">
     <name>st_zat_a2_stalker_nimble_name</name>
     <icon>ui_inGame2_neutral_1</icon>
@@ -177,7 +189,7 @@
     <actor_dialog>zat_b51_stalker_nimble_about</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="zat_b38_stalker_cop" team_default="1">
     <name>st_zat_b38_stalker_cop_name</name>
     <icon>ui_inGame2_Gluhar</icon>
@@ -205,7 +217,7 @@
 #include "gameplay\character_criticals_4.xml"
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="zat_b38_stalker_cop_dead" team_default="1">
     <name>st_zat_b38_stalker_cop_name</name>
     <icon>ui_inGame2_Gluhar</icon>
@@ -231,7 +243,7 @@
 #include "gameplay\character_drugs_2.xml"
     </supplies>
     </specific_character>
-    
+
     <specific_character id="zat_b38_stalker_hunter" team_default="1">
     <name>st_zat_b38_stalker_hunter_name</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -254,8 +266,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!--торговец Долга-->
+
+    <!--торговец Долга -->
     <specific_character id="zat_b7_duty_illicit_dealer" team_default="1">
     <name>st_zat_b7_duty_illicit_dealer_name</name>
     <icon>ui_inGame2_Dolg_4</icon>
@@ -287,7 +299,7 @@
     <actor_dialog>zat_b7_duty_illicit_dealer_b207_blackmail_with_pda_2</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="zat_b5_dealer_assistant_1" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -314,7 +326,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_dealer_assistant_2" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -341,8 +353,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!--бандиты-->
+
+    <!--бандиты -->
     <specific_character id="zat_b5_stalker_raider_1" team_default="1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -369,7 +381,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_raider_2" team_default="1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -396,7 +408,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_raider_3" team_default="1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_1</icon>
@@ -422,7 +434,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_raider_4" team_default="1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_1</icon>
@@ -448,8 +460,8 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!--бандит Кастет-->
+
+    <!--бандит Кастет -->
     <specific_character id="zat_b5_stalker_raider_leader" team_default="1">
     <name>st_zat_b7_stalker_raider_leader</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -476,7 +488,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b7_bandit_boss_dead" team_default="1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_4</icon>
@@ -503,8 +515,19 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!--бандит Султан_fake-->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Sultan  (Bandit Honcho) Character Description
+	<!--	(Moved to character_desc_darkvalley.xml
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ---------------------------------------------------------------------------------------------
+
     <specific_character id="zat_b7_bandit_boss_sultan" team_default="1">
     <name>st_zat_b7_bandit_boss_sultan_name</name>
     <icon>ui_inGame2_Sultan</icon>
@@ -535,8 +558,11 @@
     <actor_dialog>zat_b7_bandit_boss_sultan_about</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
-    <!--командир сталкеров-->
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+    <!--командир сталкеров -->
     <specific_character id="zat_b5_stalker_commander" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -564,7 +590,7 @@
     <!--<start_dialog>zat_b5_stalker_commander_dialog</start_dialog>-->
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_commander_b7" team_default="1">
     <name>st_zat_b7_stalker_squad_leader</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -592,7 +618,7 @@
     <!--<start_dialog>zat_b5_stalker_commander_dialog</start_dialog>-->
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_1" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -619,7 +645,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_2" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -646,7 +672,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_3" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -673,7 +699,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b5_stalker_4" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -700,8 +726,18 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
-    <!-- Бармен на базе сталкеров -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Beard (Loner Barman) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="zat_a2_stalker_barmen" team_default="1">
     <name>zat_a2_stalker_barmen_name</name>
     <icon>ui_inGame2_Boroda</icon>
@@ -727,13 +763,19 @@
 #include "gameplay\character_drugs_3.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <actor_dialog>zat_a2_stalker_barmen_actor_info</actor_dialog>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_zat_a2_stalker_barmen_meet_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>zat_a2_stalker_barmen_actor_info</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <!-- Медик-вампир -->
     <specific_character id="zat_b22_stalker_medic" team_default="1">
     <name>zat_b22_stalker_medic_name</name>
@@ -762,8 +804,18 @@
     <actor_dialog>zat_b22_stalker_medic_need_health_care</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
-    <!-- Техник на базе сталкеров -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Cardan (Loner Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="zat_a2_stalker_mechanic" team_default="1">
     <name>zat_a2_stalker_mechanic_name</name>
     <icon>ui_inGame2_Kardan</icon>
@@ -780,14 +832,18 @@
     <visual>actors\stalker_neutral\stalker_neutral_2_face_1</visual>
     <supplies></supplies>
 #include "gameplay\character_criticals_4.xml"
-        <start_dialog>zat_b3_stalker_tech_start</start_dialog>
-        <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-        <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-        <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-        <actor_dialog>dm_tech_repair</actor_dialog>
-        <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>zat_b3_stalker_tech_start</start_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_mechanic_task_dialog</actor_dialog>
+		<actor_dialog>dm_tech_repair</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
         </specific_character>
-        
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
         <!-- Восемь наемников из заблудившегося отряда -->
         <specific_character id="zat_b103_lost_merc_leader" team_default="1">
         <name>zat_b103_lost_merc_leader_name</name>
@@ -823,7 +879,7 @@
     <actor_dialog>zat_b103_lost_merc_leader_b40_about_merc_camp</actor_dialog>
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_1" team_default="1">
     <name>zat_b103_lost_merc_1_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -847,7 +903,7 @@
     </supplies>
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_2" team_default="1">
     <name>zat_b103_lost_merc_2_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -872,7 +928,7 @@
     </supplies>
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_3" team_default="1">
     <name>zat_b103_lost_merc_3_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -897,7 +953,7 @@
     </supplies>
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_4" team_default="1">
     <name>zat_b103_lost_merc_4_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -921,7 +977,7 @@
     </supplies>
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_5" team_default="1">
     <name>zat_b103_lost_merc_5_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -946,7 +1002,7 @@
     </supplies>
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_6" team_default="1">
     <name>zat_b103_lost_merc_6_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -970,7 +1026,7 @@
 #include "gameplay\character_drugs_3.xml"
     </supplies>
     </specific_character>
-    
+
     <specific_character id="zat_b103_lost_merc_7" team_default="1">
     <name>zat_b103_lost_merc_7_name</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -994,7 +1050,7 @@
 #include "gameplay\character_drugs_3.xml"
     </supplies>
     </specific_character>
-    
+
     <!-- Zaton B7 -->
     <specific_character id="zat_b7_stalker_raider_leader" team_default="1">
     <name>st_zat_b7_stalker_raider_leader</name>
@@ -1027,7 +1083,7 @@
     <actor_dialog>zat_b7_stalkers_raiders_actor_teleport_dialog</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <specific_character id="zat_b7_stalker_raider_1" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -1055,7 +1111,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b7_stalker_raider_2" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -1083,7 +1139,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b7_stalker_raider_3" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -1111,7 +1167,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b7_stalker_victim_1" team_default="1">
     <name>st_zat_b7_stalker_squad_leader</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -1145,7 +1201,7 @@
     <actor_dialog>zat_b7_stalker_squad_leader_come_with_me</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <!--										   b33																				   -->
     <specific_character id="zat_b33_stalker_snag" team_default="1">
     <name>zat_b33_stalker_snag</name>
@@ -1173,7 +1229,7 @@
 #include "gameplay\character_criticals_4.xml"
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <!-- Zaton B42 -->
     <specific_character id="zat_b42_mayron" team_default="1">
     <name>zat_b42_mayron_name</name>
@@ -1194,7 +1250,7 @@
 #include "gameplay\character_drugs.xml"
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Zaton B28 -->
     <specific_character id="zat_b28_draper" team_default="1">
     <name>zat_b28_draper_name</name>
@@ -1221,7 +1277,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b28_umerov" team_default="1">
     <name>zat_b28_umerov_name</name>
     <icon>ui_inGame2_Soldier_2</icon>
@@ -1247,7 +1303,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b28_smoliak" team_default="1">
     <name>zat_b28_smoliak_name</name>
     <icon>ui_inGame2_Soldier_2</icon>
@@ -1273,7 +1329,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- Zaton B29 -->
     <specific_character id="zat_b29_stalker_rival_1" team_default="1">
     <name>st_zat_b29_stalker_rival_1</name>
@@ -1306,7 +1362,7 @@
     <actor_dialog>zat_b30_stalker_rival_2_about_detector</actor_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b29_stalker_rival_2" team_default="1">
     <name>st_zat_b29_stalker_rival_2</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -1339,7 +1395,7 @@
     <actor_dialog>zat_b30_stalker_rival_2_about_detector</actor_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b29_stalker_rival_default_1" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -1370,7 +1426,7 @@
     <actor_dialog>zat_b29_stalker_rival_exchange_actor_dialog</actor_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b29_stalker_rival_default_2" team_default="1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2_mask</icon>
@@ -1401,7 +1457,18 @@
     <actor_dialog>zat_b29_stalker_rival_exchange_actor_dialog</actor_dialog>
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Noah (Loner Honcho) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="zat_b18_noah" team_default="1">
     <name>zat_b18_noah_name</name>
     <icon>ui_inGame2_Noy</icon>
@@ -1426,10 +1493,17 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <start_dialog>zat_b18_noah_start</start_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>zat_b18_noah_start</start_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_zat_b18_noah_meet_dialog</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <specific_character id="zat_b52_port_bandit_leader" team_default="1">
     <name>GENERATE_NAME_bandit</name>
     <icon>ui_inGame2_bandit_2</icon>
@@ -1457,7 +1531,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <!-- B 215 -->
     <specific_character id="zat_b215_stalker_guide" team_default="1">
     <name>zat_b215_stalker_guide_name</name>
@@ -1486,7 +1560,7 @@
     <start_dialog>zat_b215_stalker_guide_start</start_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <!-- B40 -->
     <specific_character id="zat_b40_merc_squad_leader_1" team_default="1">
     <name>zat_b40_merc_squad_leader_1_name</name>
@@ -1516,7 +1590,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b40_merc_squad_leader_2" team_default="1">
     <name>zat_b40_merc_squad_leader_2_name</name>
     <icon>ui_inGame2_merc_4</icon>
@@ -1545,7 +1619,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b20_noah_teleport" team_default="1">
     <name>zat_b18_noah_name</name>
     <icon>ui_inGame2_Noy</icon>
@@ -1574,7 +1648,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- b44 -->
     <specific_character id="zat_b44_stalker_barge" team_default="1">
     <name>zat_b44_stalker_barge_name</name>
@@ -1597,7 +1671,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <!-- b53 -->
     <!-- zat_b53_artefact_hunter_1 -->
     <specific_character id="zat_b53_artefact_hunter_1" team_default="1">
@@ -1627,7 +1701,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs_no_guide.xml"
     </specific_character>
-    
+
     <!-- zat_b53_artefact_hunter_2 -->
     <specific_character id="zat_b53_artefact_hunter_2" team_default="1">
     <name>zat_b53_artefact_hunter_2_name</name>
@@ -1656,7 +1730,7 @@
 #include "gameplay\character_criticals_4.xml"
 #include "gameplay\character_dialogs.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b38_stalker_corpse_1" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_1</icon>
@@ -1682,7 +1756,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b38_stalker_corpse_2" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_2</icon>
@@ -1707,7 +1781,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b38_stalker_corpse_3" team_default = "1">
     <name>GENERATE_NAME_stalker</name>
     <icon>ui_inGame2_neutral_3</icon>
@@ -1731,7 +1805,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b100_military_1" team_default="1">
     <name>zat_b100_army_1</name>
     <icon>ui_inGame2_Soldier_2</icon>
@@ -1757,7 +1831,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b100_military_2" team_default="1">
     <name>zat_b100_army_2</name>
     <icon>ui_inGame2_Soldier_2</icon>
@@ -1783,7 +1857,7 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="zat_b100_military_3" team_default="1">
     <name>zat_b100_army_3</name>
     <icon>ui_inGame2_Soldier_2</icon>
@@ -1809,5 +1883,5 @@
     </supplies>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
 </xml>

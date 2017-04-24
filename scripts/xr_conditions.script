@@ -1,15 +1,377 @@
+-- ============================================================
+--
+-- Preconditions for Tasks  (xr_conditions.script)
+--	CoC 1.4.22 - DoctorX Questlines 1.21
+--
+--	Modified by: DoctorX
+--	Last revised: December 24, 2016
+--
+-- ============================================================
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_is_enemy function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Checks if a faction is an enemy of the player's faction
+--
+--	Usage:
+--		drx_sl_is_enemy( p[1] )
+--
+--	Parameters:
+--		p[1] (type:string)
+--			- Faction to check is enemy of player (stalker, dolg, freedom, csky, ecolog, killer, army, bandit, monolith, or actor_(faction))
+--
+--	Return value (type: bool):
+--		Returns true if the faction is an enemy of the player faction, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Check if faction is enemy of player:
+function drx_sl_is_enemy( actor, npc, p )
+
+	if ( p[1] ~= nil ) then
+		return relation_registry.community_relation( p[1], alife( ):actor( ):community( ) ) <= -1000
+	else
+		return false
+	end
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_validate_assault_local_task function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Checks whether or not a local assault task can be given
+--
+--	Usage:
+--		drx_sl_validate_assault_local_task( p[1]:p[2]:p[3]:p[4] )
+--
+--	Parameters:
+-- 		p[1] (type: int)
+--			Greater than equal to number
+--		p[2] (type: int)
+--			Check if stay time is less than equal given seconds
+--		p[3] (type: bool)
+--			Allow check for target_smart param for squads; such as scripted target.
+--		p[4] (type: string)
+--			Faction of task giver ("stalker", "dolg", "freedom", "csky", "ecolog", "killer", "army", "bandit", or "monolith")
+--
+--	Return value (type: bool):
+--		Returns true if a local assault task can be given, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Validate local assault task:
+function drx_sl_validate_assault_local_task( actor, npc, p )
+
+	-- List of all factions:
+	local factions_list = {
+		"stalker",
+		"dolg",
+		"freedom",
+		"csky",
+		"ecolog",
+		"killer",
+		"army",
+		"bandit",
+		"monolith"
+	}
+
+	-- Build list of mutual enemy factions:
+	local enemy_faction_list = {}
+	for i = 1, #factions_list do
+		if ( (game_relations.is_factions_enemies( factions_list[i], p[4] )) and (relation_registry.community_relation( factions_list[i], alife( ):actor( ):community( ) ) <= -1000) ) then
+			table.insert( enemy_faction_list, factions_list[i] )
+		end
+	end
+
+	-- If no mutual enemies found then build list of NPC enemies:
+	if ( #enemy_faction_list < 1 ) then
+		for j = 1, #factions_list do
+			if ( game_relations.is_factions_enemies( factions_list[j], p[4] ) ) then
+				table.insert( enemy_faction_list, factions_list[j] )
+			end
+		end
+	end
+
+	-- Ensure an enemy faction was found:
+	if ( #enemy_faction_list < 1 ) then
+		return false
+	end
+
+	-- Check if at least one valid target location is available:
+	for name, v in pairs( SIMBOARD.smarts_by_names ) do
+		if ( (v.online) and (v.sim_avail == nil or v.sim_avail and xr_logic.pick_section_from_condlist( actor, v, v.sim_avail ) == "true") ) then
+			local smart = SIMBOARD.smarts_by_names[name]
+			if ( smart ) then
+				local smrt = SIMBOARD.smarts[smart.id]
+				if ( smrt ) then
+					local count = 0
+					for k, squad in pairs( smrt.squads ) do
+						if ( squad and simulation_objects.is_on_the_same_level( squad, smart ) and squad.current_target_id and squad.current_target_id == smart.id and squad.current_action == 1 ) then
+							if ( p[3] == "true" or not squad:get_script_target( ) ) then
+								if ( p[2] == "nil" or squad.stay_time and game.get_game_time( ):diffSec( squad.stay_time ) <= tonumber( p[2] ) ) then
+									for h = 1, #enemy_faction_list do
+										if ( squad.player_id == enemy_faction_list[h] ) then
+											count = (count + 1)
+											if ( count >= tonumber( p[1] ) ) then
+												squad.stay_time = game.get_game_time( )
+												return true
+											end
+											break
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	return false
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_validate_assault_remote_task function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Checks whether or not a remote assault task can be given
+--
+--	Usage:
+--		drx_sl_validate_assault_remote_task( p[1]:p[2]:p[3]:p[4] )
+--
+--	Parameters:
+-- 		p[1] (type: int)
+--			Greater than equal to number
+--		p[2] (type: int)
+--			Check if stay time is less than equal given seconds
+--		p[3] (type: bool)
+--			Allow check for target_smart param for squads; such as scripted target.
+--		p[4] (type: string)
+--			Faction of task giver ("stalker", "dolg", "freedom", "csky", "ecolog", "killer", "army", "bandit", or "monolith")
+--
+--	Return value (type: bool):
+--		Returns true if a remote assault task can be given, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Validate remote assault task:
+function drx_sl_validate_assault_remote_task( actor, npc, p )
+
+	-- List of all factions:
+	local factions_list = {
+		"stalker",
+		"dolg",
+		"freedom",
+		"csky",
+		"ecolog",
+		"killer",
+		"army",
+		"bandit",
+		"monolith"
+	}
+
+	-- Build list of mutual enemy factions:
+	local enemy_faction_list = {}
+	for i = 1, #factions_list do
+		if ( (game_relations.is_factions_enemies( factions_list[i], p[4] )) and (relation_registry.community_relation( factions_list[i], alife( ):actor( ):community( ) ) <= -1000) ) then
+			table.insert( enemy_faction_list, factions_list[i] )
+		end
+	end
+
+	-- If no mutual enemies found then build list of NPC enemies:
+	if ( #enemy_faction_list < 1 ) then
+		for j = 1, #factions_list do
+			if ( game_relations.is_factions_enemies( factions_list[j], p[4] ) ) then
+				table.insert( enemy_faction_list, factions_list[j] )
+			end
+		end
+	end
+
+	-- Ensure an enemy faction was found:
+	if ( #enemy_faction_list < 1 ) then
+		return false
+	end
+
+	-- Check if at least one valid target location is available:
+	for name, v in pairs( SIMBOARD.smarts_by_names ) do
+		if ( v.sim_avail == nil or v.sim_avail and xr_logic.pick_section_from_condlist( actor, v, v.sim_avail ) == "true" ) then
+			local smart = SIMBOARD.smarts_by_names[name]
+			if ( smart ) then
+				local smrt = SIMBOARD.smarts[smart.id]
+				if ( smrt ) then
+					local count = 0
+					for k, squad in pairs( smrt.squads ) do
+						if ( squad and simulation_objects.is_on_the_same_level( squad, smart ) and squad.current_target_id and squad.current_target_id == smart.id and squad.current_action == 1 ) then
+							if ( p[3] == "true" or not squad:get_script_target( ) ) then
+								if ( p[2] == "nil" or squad.stay_time and game.get_game_time( ):diffSec( squad.stay_time ) <= tonumber( p[2] ) ) then
+									for h = 1, #enemy_faction_list do
+										if ( squad.player_id == enemy_faction_list[h] ) then
+											count = (count + 1)
+											if ( count >= tonumber( p[1] ) ) then
+												squad.stay_time = game.get_game_time( )
+												return true
+											end
+											break
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	return false
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- drx_sl_validate_assault_mutant_task function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Checks whether or not an mutant assault task can be given
+--
+--	Usage:
+--		drx_sl_validate_assault_mutant_task( p[1]:p[2]:p[3] )
+--
+--	Parameters:
+-- 		p[1] (type: int)
+--			Greater than equal to number
+--		p[2] (type: int)
+--			Check if stay time is less than equal given seconds
+--		p[3] (type: bool)
+--			Allow check for target_smart param for squads; such as scripted target.
+--
+--	Return value (type: bool):
+--		Returns true if a mutant assault task can be given, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Created by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 13, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Validate mutant assault task:
+function drx_sl_validate_assault_mutant_task( actor, npc, p )
+
+	-- Check if at least one valid target location is available:
+	for name, v in pairs( SIMBOARD.smarts_by_names ) do
+		if ( (v.online) and (v.sim_avail == nil or v.sim_avail and xr_logic.pick_section_from_condlist( actor, v, v.sim_avail ) == "true") ) then
+			local smart = SIMBOARD.smarts_by_names[name]
+			if ( smart ) then
+				local smrt = SIMBOARD.smarts[smart.id]
+				if ( smrt ) then
+						local count = 0
+					for k, squad in pairs( smrt.squads ) do
+						if ( squad and simulation_objects.is_on_the_same_level( squad, smart ) and squad.current_target_id and squad.current_target_id == smart.id and squad.current_action == 1 ) then
+							if ( p[3] == "true" or not squad:get_script_target( ) ) then
+								if ( p[2] == "nil" or squad.stay_time and game.get_game_time( ):diffSec( squad.stay_time ) <= tonumber( p[2] ) ) then
+									if ( is_squad_monster[squad.player_id] ) then
+										count = (count + 1)
+										if ( count >= tonumber( p[1] ) ) then
+											squad.stay_time = game.get_game_time( )
+											return true
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	return false
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 --[[
 	modified by Alundaio (original: ???? GSC)
 -]]
 
--- used by tasks in precondition to randomly have it available to give the illusion to player that sim stalkers only sometimes have task
-function random_chance(actor,npc,p)
-	local r = p and p[1] and tonumber(p[1]) or 50
-	if (math.random(1,100) < r) then 
-		return true 
-	end 
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- random_chance function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Provides a random chance whether a task will be available
+--
+--	Usage:
+--		random_chance( p[1] )
+--
+--	Parameters:
+-- 		p[1] (type: int)
+--			Percent chance the task will be given
+--
+--	Return value (type: bool):
+--		Returns true if a task can be given, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Modified by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 14, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Decide if task should be available:
+function random_chance( actor, npc, p )
+
+	local r = p and p[1] and tonumber( p[1] ) or 50
+	if ( math.random( 1, 100 ) <= r ) then
+		return true
+	end
 	return false
-end 
+
+end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 -- checks if a task has stage of equal value
 -- param 1 - task_id
@@ -17,45 +379,45 @@ end
 function check_task_stage(actor,npc,p)
 	local tm = task_manager.get_task_manager()
 	local task_info = tm.task_info
-	if (task_info[p[1]] and task_info[p[1]].stage == tonumber(p[2])) then 
+	if (task_info[p[1]] and task_info[p[1]].stage == tonumber(p[2])) then
 		--printf("p[1] = %s stage=%s",p[1],p[2])
-		return true 
-	end 
+		return true
+	end
 	return false
-end 
+end
 
 function is_bounty(actor,npc,p)
 	local id = npc:id()
-	for task_id,npc_id in pairs(axr_task_manager.bounties_by_id) do 
-		if (npc_id == id) then 
-			return true 
+	for task_id,npc_id in pairs(axr_task_manager.bounties_by_id) do
+		if (npc_id == id) then
+			return true
 		end
 	end
 	return false
-end 
+end
 
 function npc_not_actor(actor,npc,p)
 	return npc:id() ~= 0 or false
-end 
+end
 
 function dist_to_task_target_anomaly_le(actor,npc,p)
 	local d = p[1]
-	if not (d) then 
-		return false 
+	if not (d) then
+		return false
 	end
-	
+
 	local name = db.actor and utils.load_var(db.actor,"task_target_anomaly")
-	if not (name) then 
-		return false 
-	end 
-	
-	local anomaly = db.anomaly_by_name[name]
-	if not (anomaly and anomaly.object) then 
-		return false 
+	if not (name) then
+		return false
 	end
-	
+
+	local anomaly = db.anomaly_by_name[name]
+	if not (anomaly and anomaly.object) then
+		return false
+	end
+
 	return heli_alife.distance_2d_sqr(npc:position(),anomaly.object:position()) <= tonumber(d)^2
-end 
+end
 
 function has_task_target_anomaly(actor,npc,p)
 	return db.actor and utils.load_var(db.actor,"task_target_anomaly") ~= nil
@@ -63,26 +425,26 @@ end
 
 function actor_has_companion_slot(actor,npc,p)
 	return db.actor and utils.load_var(db.actor,p[1] or "task_companion_slot_1") == nil
-end 
+end
 
---param 1 dist 
+--param 1 dist
 --param 2 smart_name (optional)
 function check_nearest_smart_dist_le(actor,npc,p)
 	if (smart_terrain.nearest_to_actor_smart.id and smart_terrain.nearest_to_actor_smart.dist > tonumber(p[1])) then
-		return false 
-	end 
-	
-	local smart = p[2] and SIMBOARD.smarts_by_names[p[2]]
-	if (smart and smart_terrain.nearest_to_actor_smart.id and smart.id == smart_terrain.nearest_to_actor_smart.id) then 
-		return true 
+		return false
 	end
-	
+
+	local smart = p[2] and SIMBOARD.smarts_by_names[p[2]]
+	if (smart and smart_terrain.nearest_to_actor_smart.id and smart.id == smart_terrain.nearest_to_actor_smart.id) then
+		return true
+	end
+
 	return false
-end 
+end
 
 function check_smart_dist_le(actor,npc,p)
 	local smart = p[2] and SIMBOARD.smarts_by_names[p[2]]
-	if (smart and smart.position:distance_to(npc:position()) <= (tonumber(p[1]) or 0)) then 
+	if (smart and smart.position:distance_to(npc:position()) <= (tonumber(p[1]) or 0)) then
 		return true
 	end
 	return false
@@ -93,74 +455,74 @@ end
 -----------------------
 function has_task(actor,npc,p)
 	local task_info = p[1] and task_manager.get_task_manager().task_info[p[1]]
-	if not (task_info) then 
-		return false 
-	end 
-	
+	if not (task_info) then
+		return false
+	end
+
 	return p[2] == nil or task_info.status == p[2]
 end
 
 function has_task_on_stage(actor,npc,p)
 	local task_info = p[1] and task_manager.get_task_manager().task_info[p[1]]
-	if not (task_info) then 
-		return false 
-	end 
-	
+	if not (task_info) then
+		return false
+	end
+
 	return task_info.stage == (tonumber(p[2] or 0) or 0)
 end
 
 function has_task_not_completed(actor,npc,p)
 	local task_info = p[1] and task_manager.get_task_manager().task_info[p[1]]
-	if not (task_info) then 
-		return false 
-	end 
-	
+	if not (task_info) then
+		return false
+	end
+
 	return task_info.status ~= "completed" and task_info.status ~= "fail"
 end
 
 function has_completed_task_prerequisites(actor,npc,p)
-	if not (p[1]) then 
-		return true 
+	if not (p[1]) then
+		return true
 	end
-	
+
 	local precond = task_manager.task_ini:r_string_ex(p[1],"precondition")
-	if (precond and precond ~= "") then 
+	if (precond and precond ~= "") then
 		precond = xr_logic.parse_condlist(npc, p[1], "precondition", task_manager.task_ini:r_string_ex(p[1],"precondition") or "true")
-		if (precond == "false") then 
-			return false 
-		end 
-		if (db.actor and xr_logic.pick_section_from_condlist(db.actor, npc, precond) == "false") then 
-			return false 
+		if (precond == "false") then
+			return false
+		end
+		if (db.actor and xr_logic.pick_section_from_condlist(db.actor, npc, precond) == "false") then
+			return false
 		end
 	end
-	
+
 	local prereq = task_manager.task_ini:r_string_ex(p[1],"prerequisites")
-	if (prereq == nil or prereq == "") then 
+	if (prereq == nil or prereq == "") then
 		return true
-	end 
-	
+	end
+
 	local tm = task_manager.get_task_manager()
 	local info = tm.task_info
-	
-	
+
+
 	if (info[p[1]]) then -- HAS TASK ALREADY!
-		return false 
+		return false
 	end
-	
+
 	prereq = alun_utils.str_explode(prereq,",")
-	
-	local tsk 
+
+	local tsk
 	for i=1,#prereq do
 		tsk = prereq[i]
 		if not (info[tsk]) then
 			--printf("no tsk %s",tsk)
-			return false 
-		end 
-		
+			return false
+		end
+
 		if (info[tsk].status ~= "completed" and info[tsk].status ~= "fail") then
 			--printf("task %s not completed %s",task,info[tsk].status)
-			return false 
-		end	
+			return false
+		end
 	end
 	return true
 end
@@ -200,11 +562,11 @@ end
 
 function sim_avail(actor,npc,p)
 	local smart = p[1] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
-	end 
+	if not (smart) then
+		return false
+	end
 	return smart.sim_avail == nil or smart.sim_avail and xr_logic.pick_section_from_condlist(actor, smart, smart.sim_avail) == "true" or false
-end 
+end
 
 -- param 1 = smart
 -- param 2 = section logic (omit 'logic@')
@@ -283,18 +645,18 @@ function is_enemy_actor(enemy, npc)
 end
 
 function is_enemy_actor_or_companion(enemy,npc)
-	if (IsMonster(enemy)) then 
-		return false 
+	if (IsMonster(enemy)) then
+		return false
 	end
 	if not (npc:relation(enemy) >= game_object.enemy) then
 		return false
 	end
 	local id = enemy:id()
-	if (id == 0) then 
-		return true 
-	end 
+	if (id == 0) then
+		return true
+	end
 	if (alife():has_info(id,"npcx_is_companion")) then
-		return true 
+		return true
 	end
 	return false
 end
@@ -525,20 +887,20 @@ function obj_in_zone(actor, zone, p)
 end
 
 -- checks if any npc who has jobs at a given smart is in a given zone
--- param 1 - smart name 
+-- param 1 - smart name
 -- param 2 - zone name
 function check_npc_from_gulag_in_zone(actor,npc,p)
 	local smart = p[1] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
+	if not (smart) then
+		return false
 	end
 	local zone = p[2] and db.zone_by_name[p[2]]
-	if not (zone) then 
-		return false 
+	if not (zone) then
+		return false
 	end
-	for id,se_obj in pairs(smart.npc_info) do 
-		if (se_obj.position and zone:inside(se_obj.position)) then 
-			return true 
+	for id,se_obj in pairs(smart.npc_info) do
+		if (se_obj.position and zone:inside(se_obj.position)) then
+			return true
 		end
 	end
 	return false
@@ -568,12 +930,12 @@ function story_obj_in_zone_by_name (actor, npc, p)
 end
 
 function actor_in_zone(actor, npc, p)
-	if not (db.actor) then 
-		return false 
+	if not (db.actor) then
+		return false
 	end
 	for i=1,#p do
 		local zone = db.zone_by_name[p[i]]
-		if (zone and zone:inside(db.actor:position())) then 
+		if (zone and zone:inside(db.actor:position())) then
 			return true
 		end
 	end
@@ -584,12 +946,12 @@ function actor_out_zone(actor, npc, p)
 	return not utils.npc_in_zone(db.actor, p[1])
 end
 function npc_in_zone(actor, npc, p)
-	if not (npc and type(npc.position) == "function") then 
-		return false 
+	if not (npc and type(npc.position) == "function") then
+		return false
 	end
 	for i=1,#p do
 		local zone = db.zone_by_name[p[i]]
-		if (zone and zone:inside(npc:position())) then 
+		if (zone and zone:inside(npc:position())) then
 			return true
 		end
 	end
@@ -776,31 +1138,61 @@ function is_alive_one(actor, npc, p)
 	return false
 end
 
--- проверка (по story_id) того, что проверяемыq npc жив
--- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
---       не успели проспавниться.
-function is_alive(actor, npc, p)
-	local id
+
+-- ////////////////////////////////////////////////////////////////////////////////////////////////
+--
+-- is_alive function
+--
+-- ------------------------------------------------------------------------------------------------
+--
+--	Description:
+--		- Determines whether or not a npc is alive
+--
+--	Usage:
+--		is_alive( p[1] )
+--
+--	Parameters:
+-- 		p[1] (type: string)
+--			ID of the NPC to check
+--
+--	Return value (type: bool):
+--		Returns true if the npc is alive, false otherwise
+--
+-- ------------------------------------------------------------------------------------------------
+--	Modified by DoctorX
+--	for DoctorX Questlines 1.6
+--	Last modified October 14, 2016
+-- ------------------------------------------------------------------------------------------------
+
+-- Check if NPC is alive:
+function is_alive( actor, npc, p )
+
+	local npc1
+
 	if npc == nil or (p and p[1]) then
-		id = get_story_object_id(p[1])
-	elseif (type(npc.id) == "number") then
-		id = npc.id
+		npc1 = get_story_object_id( p[1] )
+	elseif ( type( npc.id ) == "number" ) then
+		npc1 = npc.id
 	else
-		id = npc:id()
+		npc1 = npc:id( )
 	end
 
 	if npc1 == nil then
 		return false
 	end
 
-	local se_obj = id and alife_object(id)
+	npc1 = alife( ):object( npc1 )
 
-	if se_obj and IsStalker(nil,se_obj:clsid()) and se_obj:alive() then
+	if npc1 and IsStalker( npc1 ) and npc1:alive( ) then
 		return true
 	end
 
 	return false
+
 end
+
+-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 -- проверка (по story_id) все ли проверяемые сталкеры мертвы
 -- TODO: исправить ситуацию, когда выдается неправильный результат для обьектов, которые
@@ -1099,8 +1491,8 @@ end
 
 function actor_has_weapon (actor, npc)
 	local obj = actor:active_item()
-	if (obj and IsWeapon(obj)) then 
-		return true 
+	if (obj and IsWeapon(obj)) then
+		return true
 	end
 	return false
 end
@@ -1194,15 +1586,15 @@ end
 function npc_on_level(actor, npc, p)
 	local sim = alife()
 	local se_obj = p[1] and npc and (type(npc.id) == "function" and sim:object(npc:id()) or npc)
-	if not (se_obj) then 
-		return false 
+	if not (se_obj) then
+		return false
 	end
-	
+
 	local gg = game_graph()
-	if (sim:level_name(gg:vertex(se_obj.m_game_vertex_id):level_id()) == p[1]) then 
-		return true 
-	end 
-	
+	if (sim:level_name(gg:vertex(se_obj.m_game_vertex_id):level_id()) == p[1]) then
+		return true
+	end
+
 	return false
 end
 
@@ -1281,8 +1673,8 @@ function squad_has_enemy(actor, npc, p)
 	local obj_by_id = level.object_by_id
 	for k in squad:squad_members() do
 		local npc_obj = k.id and object_by_id(k.id)
-		if (npc_obj and npc_obj:best_enemy() ~= nil) then 
-			return true 
+		if (npc_obj and npc_obj:best_enemy() ~= nil) then
+			return true
 		end
 	end
 
@@ -1438,11 +1830,11 @@ function squad_npc_count_ge(actor, npc, p)
 end
 
 function surge_complete()
-	if (psi_storm_manager and psi_storm_manager.is_loaded()) then 
-		if not (psi_storm_manager.is_finished()) then 
+	if (psi_storm_manager and psi_storm_manager.is_loaded()) then
+		if not (psi_storm_manager.is_finished()) then
 			return false
 		end
-	end 
+	end
 	if (surge_manager and surge_manager.is_loaded()) then
 		return surge_manager.is_finished()
 	end
@@ -1450,11 +1842,11 @@ function surge_complete()
 end
 
 function surge_started()
-	if (psi_storm_manager and psi_storm_manager.is_loaded() and psi_storm_manager.is_started()) then 
-		return true 
-	end 
-	if (surge_manager and surge_manager.is_loaded() and surge_manager.is_started()) then 
-		return true 
+	if (psi_storm_manager and psi_storm_manager.is_loaded() and psi_storm_manager.is_started()) then
+		return true
+	end
+	if (surge_manager and surge_manager.is_loaded() and surge_manager.is_started()) then
+		return true
 	end
 	return false
 end
@@ -1552,14 +1944,14 @@ end
 
 function actor_nomove_nowpn()
 	local itm = db.actor ~= nil and db.actor:active_item()
-	if not (itm) then 
-		return true 
+	if not (itm) then
+		return true
 	end
-	if not (IsWeapon(itm)) then 
-		return true 
-	end 
-	if (db.actor:is_talking()) then 
-		return true 
+	if not (IsWeapon(itm)) then
+		return true
+	end
+	if (db.actor:is_talking()) then
+		return true
 	end
 	return false
 end
@@ -1942,8 +2334,8 @@ function zat_b29_rivals_dialog_precond(actor, npc)
 
 	local f_squad = false
 	local squad = get_object_squad(npc)
-	if not (squad) then 
-		return false 
+	if not (squad) then
+		return false
 	end
 	for k,v in pairs(squads_table) do
 		if squad:section_name() == v then
@@ -2126,8 +2518,8 @@ end
 
 -- Returns true if calling NPC has the surrender flag to actor
 function npc_surrendered(actor,npc,p)
-	if not (db.actor) then 
-		return false 
+	if not (db.actor) then
+		return false
 	end
 	local st = db.storage[npc:id()]
 	return st and st.victim_surrender == db.actor:id() or false
@@ -2263,8 +2655,8 @@ function squad_hit_by_smart(actor,npc,p)
 end
 
 function actor_look_away(actor,npc)
-	if not (db.actor) then 
-		return false 
+	if not (db.actor) then
+		return false
 	end
 	if (not db.actor:see(npc) or (alun_utils.angle_diff(db.actor:direction(), db.actor:position():sub(npc:position()))<90 and npc:position():distance_to(db.actor:position()) > 2.5) or npc:position():distance_to(db.actor:position())>100) then
 		return true
@@ -2312,7 +2704,7 @@ function squad_commander_active_section(actor,npc,p)
 	local squad = p[1] and get_object_squad(npc)
 	local st = squad and squad:commander_id() and db.storage[squad:commander_id()]
 	return st and st.active_section == p[1] or false
-end 
+end
 
 -- Returns true if a NPC on a given job has a patrol index equalling given
 -- param 1 is smart name
@@ -2340,11 +2732,11 @@ function job_on_point(actor,npc,p)
 			end
 			return false
 		end
-		
+
 		local path = obj:patrol()
 		local pos = path and patrol(path):point(tonumber(p[3]))
 		local dist = pos and obj:position():distance_to_sqr(pos)
-		
+
 		return dist <= tonumber(p[4])
 	end
 
@@ -2352,8 +2744,8 @@ function job_on_point(actor,npc,p)
 end
 
 -- Checks if npc distance is less than equal to given patrol point
--- param 1 is patrol path name 
--- param 2 is path index 
+-- param 1 is patrol path name
+-- param 2 is path index
 -- param 3 is distance less than equal
 function dist_to_point_le(actor,npc,p)
 	local pat = p[1] and level.patrol_path_exists(p[1]) and patrol(p[1])
@@ -2363,7 +2755,7 @@ function dist_to_point_le(actor,npc,p)
 		return dist <= tonumber(p[3])
 	end
 	return false
-end 
+end
 
 function beh_reached(actor,npc,p)
 	return p[1] and axr_beh.am_i_reached(npc,tonumber(p[1])) or axr_beh.am_i_reached(npc)
@@ -2494,57 +2886,57 @@ end
 
 function smart_squad_by_faction_in_radius(actor,npc,p)
 	local smart = p[1] and p[2] and p[3] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
-	end 
-	
+	if not (smart) then
+		return false
+	end
+
 	local smrt = SIMBOARD.smarts[smart.id]
-	if not (smrt) then 
-		return false 
-	end 
+	if not (smrt) then
+		return false
+	end
 
 	for k,squad in pairs(smrt.squads) do
 		if (squad and squad.player_id == p[2] and squad.position:distance_to_sqr(smart.position) <= tonumber(p[3])^2) then
 			return true
 		end
 	end
-	
+
 	return false
-end 
+end
 
 -- Returns true if squads by behavior faction (player_id) of a given count exist at smart out of squads currently entered in smart
--- param1 - smart_name 
+-- param1 - smart_name
 -- param2 - greater than equal to number
 -- param3 - check if stay time is less than equal given seconds
 -- param4 - include check for squads with scripted target (usually quest squads)
 -- param5+ - faction aka player_id
 
 function smart_stayed_squad_count_ge_by_faction(actor,npc,p)
-	if (#p < 5) then 
-		return false 
-	end 
-	
+	if (#p < 5) then
+		return false
+	end
+
 	local smart = SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
-	end 
-	
+	if not (smart) then
+		return false
+	end
+
 	local smrt = SIMBOARD.smarts[smart.id]
-	if not (smrt) then 
-		return false 
-	end 
+	if not (smrt) then
+		return false
+	end
 
 	local count = 0
 	for k,squad in pairs(smrt.squads) do
 		if (squad and simulation_objects.is_on_the_same_level(squad, smart) and squad.current_target_id and squad.current_target_id == smart.id and squad.current_action == 1) then
 			if (p[4] == "true" or not squad:get_script_target()) then
 				if (squad.stay_time) and (p[3] == "nil" or game.get_game_time():diffSec(squad.stay_time) <= (tonumber(p[3]) or 0)) then
-					for i=5,#p do 
+					for i=5,#p do
 						if (p[i] == "monster" and is_squad_monster[squad.player_id] or squad.player_id == p[i]) then
 							count = count + 1
 							if (count >= tonumber(p[2])) then
 								squad.stay_time = game.get_game_time()
-								return true 
+								return true
 							end
 							break
 						end
@@ -2553,9 +2945,9 @@ function smart_stayed_squad_count_ge_by_faction(actor,npc,p)
 			end
 		end
 	end
-	
+
 	return false
-end 
+end
 
 -- checks all smarts on actor level with above function
 -- param1 - greater than equal to number
@@ -2566,8 +2958,8 @@ function all_avail_smart_stayed_squad_count_ge_by_faction(actor,npc,p)
 	if (#p >= 4) then
 		for name,v in pairs(SIMBOARD.smarts_by_names) do
 			if (v.online) and (v.sim_avail == nil or v.sim_avail and xr_logic.pick_section_from_condlist(actor, v, v.sim_avail) == "true") then
-				if (smart_stayed_squad_count_ge_by_faction(actor,npc,{name,unpack(p)}) == true) then 
-					return true 
+				if (smart_stayed_squad_count_ge_by_faction(actor,npc,{name,unpack(p)}) == true) then
+					return true
 				end
 			end
 		end
@@ -2578,7 +2970,7 @@ end
 -- same as above but checks all levels
 function all_avail_smart_stayed_squad_count_ge_by_faction_ex(actor,npc,p)
 	if (#p >= 4) then
-	
+
 		local sim = alife()
 		local gg = game_graph()
 		local actor_level = sim:level_name(gg:vertex(sim:actor().m_game_vertex_id):level_id())
@@ -2587,8 +2979,8 @@ function all_avail_smart_stayed_squad_count_ge_by_faction_ex(actor,npc,p)
 			if (v.sim_avail == nil or v.sim_avail and xr_logic.pick_section_from_condlist(actor, v, v.sim_avail) == "true") then
 				local smart_level = alife():level_name(game_graph():vertex(v.m_game_vertex_id):level_id())
 				if (v.online or DEACTIVATE_SIM_ON_NON_LINKED_LEVELS ~= true or string.find(simulation_objects.config:r_value(actor_level,"target_maps",0,""),smart_level)) then
-					if (smart_stayed_squad_count_ge_by_faction(actor,npc,{name,unpack(p)}) == true) then 
-						return true 
+					if (smart_stayed_squad_count_ge_by_faction(actor,npc,{name,unpack(p)}) == true) then
+						return true
 					end
 				end
 			end
@@ -2598,19 +2990,19 @@ function all_avail_smart_stayed_squad_count_ge_by_faction_ex(actor,npc,p)
 end
 
 -- Returns true if squads by behavior faction (player_id) of a given count exist at smart out of entire population; including arriving
--- param1 - smart_name 
+-- param1 - smart_name
 -- param2 - faction aka player_id
 -- param3 - greater than equal to number
 function smart_squad_count_ge_by_faction(actor,npc,p)
 	local smart = p[1] and p[2] and p[3] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
-	end 
-	
+	if not (smart) then
+		return false
+	end
+
 	local smrt = SIMBOARD.smarts[smart.id]
-	if not (smrt) then 
-		return false 
-	end 
+	if not (smrt) then
+		return false
+	end
 
 	local count = 0
 	for k,squad in pairs(smrt.squads) do
@@ -2618,36 +3010,36 @@ function smart_squad_count_ge_by_faction(actor,npc,p)
 			count = count + 1
 		end
 	end
-	
+
 	return count >= tonumber(p[4])
-end 
+end
 
 function smart_population_count(actor,npc,p)
 	local smart = p[1] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
+	if not (smart) then
+		return false
 	end
-	
+
 	return p[2] and SIMBOARD.smarts[smart.id] and SIMBOARD.smarts[smart.id].population == tonumber(p[2]) or false
-end 
+end
 
 function smart_population_count_ge(actor,npc,p)
 	local smart = p[1] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
+	if not (smart) then
+		return false
 	end
-	
+
 	return p[2] and SIMBOARD.smarts[smart.id] and SIMBOARD.smarts[smart.id].population >= tonumber(p[2]) or false
-end 
+end
 
 function smart_population_count_le(actor,npc,p)
 	local smart = p[1] and SIMBOARD.smarts_by_names[p[1]]
-	if not (smart) then 
-		return false 
+	if not (smart) then
+		return false
 	end
-	
+
 	return p[2] and SIMBOARD.smarts[smart.id] and SIMBOARD.smarts[smart.id].population <= tonumber(p[2]) or false
-end 
+end
 
 -- Returns true if any instance of given community occupies a given smart
 -- param 1 is smart name
@@ -2673,13 +3065,13 @@ function is_community_arriving(actor,npc,p)
 	if not (smart) then
 		return false
 	end
-	
-	for id,se_obj in pairs(smart.arriving_npc) do 
-		if (se_obj and IsStalker(se_obj) and se_obj:character_community() == p[2]) then 
+
+	for id,se_obj in pairs(smart.arriving_npc) do
+		if (se_obj and IsStalker(se_obj) and se_obj:character_community() == p[2]) then
 			return true
 		end
 	end
-	
+
 	return false
 end
 
@@ -2689,22 +3081,22 @@ function community_arriving_dist_ge(actor,npc,p)
 	if not (smart) then
 		return false
 	end
-	
+
 	local exist
-	for id,se_obj in pairs(smart.arriving_npc) do 
+	for id,se_obj in pairs(smart.arriving_npc) do
 		if (se_obj and IsStalker(se_obj) and se_obj:character_community() == p[2]) then
 			exist = true
-			if (se_obj.position:distance_to_sqr(smart.position) >= tonumber(p[3] or 10000)) then 
+			if (se_obj.position:distance_to_sqr(smart.position) >= tonumber(p[3] or 10000)) then
 				return true
 			end
 		end
 	end
-	
+
 	-- community does not exist at smart return true
-	if not (exist) then 
-		return true 
+	if not (exist) then
+		return true
 	end
-	
+
 	return false
 end
 
@@ -2740,15 +3132,15 @@ end
 function npc_in_actor_community(actor,npc,p)
 	local comm = character_community(npc)
 	return db.actor and string.find(character_community(db.actor),comm) ~= nil
-end 
+end
 
 function actor_community(actor,npc,p)
-	if not (db.actor) then 
-		return false 
+	if not (db.actor) then
+		return false
 	end
 	for i=1,#p do
-		if (character_community(db.actor) == p[i]) then 
-			return true 
+		if (character_community(db.actor) == p[i]) then
+			return true
 		end
 	end
 	return false
@@ -2762,19 +3154,19 @@ function actor_goodwill_ge(actor,npc,p)
 end
 
 function task_giver_alive(actor,npc,p)
-	if not (p[1]) then 
-		return false 
+	if not (p[1]) then
+		return false
 	end
 	local tm = task_manager.get_task_manager()
 	local tsk = tm.task_info[p[1]]
 	if not (tsk) then
-		return true 
+		return true
 	end
 	local se_obj = tsk.task_giver_id and alife_object(tsk.task_giver_id)
 	if (se_obj) then
 		if (se_obj:clsid() == clsid.online_offline_group_s) then
 			return true -- if squad exist then atleast 1 npc should be alive
-		elseif (se_obj:alive()) then 
+		elseif (se_obj:alive()) then
 			return true
 		end
 	end
@@ -2783,16 +3175,16 @@ end
 
 function is_a_task_giver(actor,npc,p)
 	local tm = task_manager.get_task_manager()
-	for task_id,tsk in pairs(tm.task_info) do 
-		if (tsk.task_giver_id and tsk.task_giver_id == npc:id()) then 
-			return true 
+	for task_id,tsk in pairs(tm.task_info) do
+		if (tsk.task_giver_id and tsk.task_giver_id == npc:id()) then
+			return true
 		end
 	end
 	return false
 end
 
--- param1 - smart by name 
--- param2 - community 
+-- param1 - smart by name
+-- param2 - community
 -- param3 - if true, then it will check_npc_name for that faction (This is used for suitable in logic section)
 function smart_under_faction_control(actor,npc,p)
 	local board = SIMBOARD
@@ -2800,18 +3192,18 @@ function smart_under_faction_control(actor,npc,p)
 	if not (smart) then
 		return false
 	end
-	
-	if not (smart.faction and smart.faction_controlled) then 
-		return false 
+
+	if not (smart.faction and smart.faction_controlled) then
+		return false
 	end
-	
-	if not (p[2] and smart.faction == p[2]) then 
-		return false 
-	end 
-	
+
+	if not (p[2] and smart.faction == p[2]) then
+		return false
+	end
+
 	if (p[3] and p[3] == "true") then
-		if npc:name() == nil then 
-			return false 
+		if npc:name() == nil then
+			return false
 		end
 
 		local f = {
@@ -2825,19 +3217,19 @@ function smart_under_faction_control(actor,npc,p)
 			["csky"] = "csky",
 			["army"] = "military"
 		}
-		if not (f[p[2]]) then 
-			return false 
-		end 
-		
+		if not (f[p[2]]) then
+			return false
+		end
+
 		if string.find( npc:name(), f[p[2]] ) then
 			return true
 		end
 	else
 		return true
 	end
-	
+
 	return false
-end 
+end
 
 function smart_under_faction_war(actor,npc,p)
 	local board = SIMBOARD
@@ -2857,8 +3249,8 @@ end
 
 function heli_dist_to_max_bounding_le(actor,npc,p)
 	local heli = npc and npc:get_helicopter()
-	if not (heli) then 
-		return false 
+	if not (heli) then
+		return false
 	end
 	local d = p[1] and tonumber(p[1])
 	local dist = d and heli_alife.distance_2d_sqr(npc:position(),level.get_bounding_volume().max)
@@ -2951,8 +3343,8 @@ function bar_arena_fight_8_end (actor,npc)
 end
 
 function heli_exist_on_level(actor,npc)
-	if (is_empty(db.heli)) then 
-		return false 
+	if (is_empty(db.heli)) then
+		return false
 	end
 	return true
 end

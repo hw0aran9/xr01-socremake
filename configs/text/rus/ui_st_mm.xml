@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
+	<string id="ui_st_mp_create">
+		<text>Создать</text>
+	</string>
+	<string id="ui_st_mp_login">
+		<text>Ввод</text>
+	</string>
+	<string id="ui_st_mp_logout">
+		<text>Выход</text>
+	</string>
+	
 	<string id="Clear">
 		<text>Ясная</text>
 	</string>
@@ -442,6 +452,9 @@
 	<string id="ui_mm_debug_hud">
 		<text>Debug Hud</text>
 	</string>
+	<string id="ui_mm_dynamic_news">
+		<text>Динамические новости</text>
+	</string>
 	<string id="ui_mm_radio_mod">
 		<text>Музыка радио</text>
 	</string>
@@ -460,16 +473,46 @@
 	<string id="ui_mm_ai_die_in_anomaly">
 		<text>Смерть НПС в аномалиях</text>
 	</string>
-	<string id="ui_mm_dynamic_news">
-		<text>Динамические новости</text>
-	</string>
 	<string id="ui_mm_art_degrade">
 		<text>Портящиеся артефакты</text>
 	</string>
 	<string id="ui_mm_sleep_deprived">
 		<text>Недосыпание</text>
 	</string>
-        <string id="ui_mm_excl_dist">
+	<string id="ui_mm_food_irradiate">
+		<text>Облучение продуктов</text>
+	</string>
+	<string id="ui_mm_mask_hud">
+		<text>Динамический HUD</text>
+	</string>
+	<string id="ui_mm_shot_effects">
+		<text>Эффект попадания</text>
+	</string>
+	<string id="ui_mm_item_animation">
+		<text>Анимации:</text>
+	</string>
+	<string id="ui_mm_enhanced_animation">
+		<text>Улучшенные анимации</text>
+	</string>
+	<string id="ui_mm_consumable_animation">
+		<text>Тип анимаций</text>
+	</string>
+	<string id="ui_mm_slot_hud">
+		<text>Артефакты на поясе</text>
+	</string>
+	<string id="ui_mm_weapon_hide">
+		<text>Скрыть инфу об оружии</text>
+	</string>
+	<string id="ui_mm_weapon_heat">
+		<text>Перегрев оружия</text>
+	</string>
+	<string id="ui_mm_weapon_heat_ui">
+		<text>Индикатор перегрева</text>
+	</string>
+	<string id="ui_mm_weapon_mags">
+		<text>Патроны и магазины</text>
+	</string>
+	<string id="ui_mm_excl_dist">
                 <text>Радиус запрета спавна</text>
         </string>
 	<string id="ui_mm_char_portrait">
@@ -484,9 +527,6 @@
 	<string id="ui_mm_quicksave_cnt">
 		<text>Быстрое сохранение</text>
 	</string>
-	<string id="ui_mm_actor_hud">
-		<text>Динамический HUD</text>
-	</string>
 	<string id="ui_mm_alife_mutant_pop">
 		<text>Коэф-нт числа мутантов</text>
 	</string>
@@ -498,9 +538,6 @@
 	</string>
 	<string id="ui_mm_fov">
 		<text>Угол обзора</text>
-	</string>
-	<string id="ui_mm_slot_hud">
-		<text>Артефакты на поясе</text>
 	</string>
 	<string id="ui_mm_show_tracers">
 		<text>Трассеры пуль</text>

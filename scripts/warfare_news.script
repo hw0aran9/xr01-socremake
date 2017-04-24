@@ -1,0 +1,79 @@
+
+
+local enable_offline_news = warfare_options.options.enable_offline_news
+
+function pda_status(param)
+   if param==true then
+   enable_offline_news = warfare_options.options.enable_offline_news
+   else
+   enable_offline_news = false
+   end
+end
+
+
+local show_warfare_news = false
+local first_start = true
+local time_news
+
+function smart_warfare_news(time_glob)
+   if enable_offline_news==false then
+	show_warfare_news = false
+	first_start = true
+   elseif show_warfare_news==false then
+
+	if first_start == true then
+	time_news = time_glob + 50000  --180000
+	first_start = false
+	end
+	if time_news < time_glob then
+	show_warfare_news = true
+	end
+   end
+end
+
+local territory_tbl={}
+function get_news(smart)
+if (axr_main.config:r_value("mm_options","enable_dynamic_news",1,true) ~= true) then
+enable_offline_news = warfare_options.options.enable_offline_news
+end
+if enable_offline_news==false then return end
+local name_smarts = smart:name()
+local name_faction = smart.owning_faction
+
+   if show_warfare_news==false then
+	territory_tbl[name_smarts] = name_faction
+   elseif territory_tbl[name_smarts] ~= name_faction then
+
+	local old_faction = territory_tbl[name_smarts]
+	local new_faction = name_faction
+	local rnd_value = math.random(0,99)
+	local offline_news_display_percentage = warfare_options.options.offline_news_display_percentage
+
+	 if rnd_value<offline_news_display_percentage then
+	  local old_owning_faction = warfare_names.faction_names[old_faction]
+	  local new_owning_faction = warfare_names.faction_names[name_faction]
+	  local point_name = warfare_names.point_names[name_smarts] or name_smarts
+--[[
+local levelID = smart.m_game_vertex_id and game_graph():vertex(smart.m_game_vertex_id):level_id()
+		local levelName = levelID and alife():level_name(levelID)
+		local finalName = levelName and game.translate_string(levelName)
+		local level = game.translate_string(alife():level_name(game_graph():vertex(smart.m_game_vertex_id):level_id()))
+]]
+	  local news_text = "Сбой системы"
+		if old_faction==nil or old_faction == "none" then
+		news_text = "Группировка " .. new_owning_faction .. " установила контроль над территорией «" .. point_name .. "»."
+		elseif new_faction == "none" then
+		news_text = "Группировка " .. old_owning_faction .. " потеряла территорию «" .. point_name .. "»."
+		else
+		news_text = "Группировка " .. new_owning_faction .. " захватила территорию «" .. point_name .. "», ранее принадлежавшую группировке " .. old_owning_faction .. "."
+		end
+	  send_tip(news_text)
+	end
+   	territory_tbl[name_smarts] = name_faction
+   end
+end
+
+function send_tip(news_text)
+   db.actor:give_game_news("  Сводка:", "%c[default]" .. news_text, "ui_inGame2_PD_Lider", 0, 15000)
+   xr_sound.set_sound_play(db.actor:id(), "pda_tips")
+end

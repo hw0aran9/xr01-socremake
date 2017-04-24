@@ -10,7 +10,7 @@
 		<text>Звуковые эффекты</text>
 	</string>
 	<string id="ui_mm_cc_captioning">
-		<text>Игровые субтиты</text>
+		<text>Игровые субтитры</text>
 	</string>
 	<string id="ui_mm_cc_none">
 		<text>Без субтитров</text>
@@ -87,7 +87,7 @@
 		<text>[продувка шлюза]</text>
 	</string>
 	<string id="cc_effect-ambient-jupiter-jup_b46_spatial_bubble_idle">
-		<text>[шум пространственнщго пузыря]</text>
+		<text>[шум пространственного пузыря]</text>
 	</string>
 	<string id="cc_effect-ambient-jupiter-jup_b46_spatial_bubble_rupture">
 		<text>[пространственный пузырь лопнул]</text>

@@ -19,7 +19,7 @@
 	</weapon_jammed_static>
 
     <indicator_starvation x="911" y="649" width="13" height="16" stretch="1"/>
-    <indicator_bleeding x="925" y="648" width="13" height="16" stretch="1"/>
+    <indicator_bleeding x="0" y="0" width="1024" height="768" stretch="1"/>
     <indicator_radiation x="939" y="647" width="13" height="16" stretch="1"/>
     <indicator_overweight x="953" y="646.8" width="13" height="16" stretch="1"/>
     <indicator_weapon_broken x="967" y="647" width="13" height="16" stretch="1"/>

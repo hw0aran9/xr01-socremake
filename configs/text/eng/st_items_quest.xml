@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< QUEST ITEMS TEXT  STRINGS
+<	CoC 1.4.21 - DoctorX Questlines 1.20
+<
+<	Modified by: DoctorX
+<	Last revised: December 21, 2016
+<
+<===========================================================-->
+
+
 <string_table>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- STORYLINE QUEST ITEM TEXT  STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- DRX Storyline Documents Quest Item -->
+
+	<string id="drx_sl_quest_item_1_name">
+		<text>Documents</text>
+	</string>
+	<string id="drx_sl_quest_item_1_desc">
+		<text>Important documents. Return them for your reward.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- DRX Storyline Locked Case Quest Item -->
+
+	<string id="drx_sl_quest_item_2_name">
+		<text>Locked Case</text>
+	</string>
+	<string id="drx_sl_quest_item_2_desc">
+		<text>A locked case. Not sure what's inside but it's heavy. Better be worth it lugging this thing around.</text>
+	</string>
+
+	<!-- ----------------------------------------------------------------------------------------- -->
+	<!-- DRX Storyline PDA Quest Item -->
+
+	<string id="drx_sl_quest_item_3_name">
+		<text>PDA</text>
+	</string>
+	<string id="drx_sl_quest_item_3_desc">
+		<text>An encrypted PDA. You have been promised a reward for its return.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 <string id="bad_psy_helmet_desc">
 		<text>Prototype developed by scientists to protect people from psi-emissions. Needs adjusting.</text>
 	</string>

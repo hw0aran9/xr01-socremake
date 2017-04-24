@@ -51,10 +51,10 @@
 	    <texture id="ui_inGame2_circle_hunger_yellow" x="11" y="886" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_hunger_orange" x="11" y="927" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_hunger_red" x="11" y="969" width="33" height="35" />
-	    <texture id="ui_inGame2_circle_bloodloose_green" x="593" y="983" width="33" height="35" />
-	    <texture id="ui_inGame2_circle_bloodloose_yellow" x="58" y="886" width="33" height="35" />
-	    <texture id="ui_inGame2_circle_bloodloose_orange" x="58" y="927" width="33" height="35" />
-	    <texture id="ui_inGame2_circle_bloodloose_red" x="58" y="969" width="33" height="35" />
+	    <texture id="ui_inGame2_circle_bloodloose_green" x="1110" y="96" width="864" height="864" />
+	    <texture id="ui_inGame2_circle_bloodloose_yellow" x="1088" y="64" width="896" height="896" />
+	    <texture id="ui_inGame2_circle_bloodloose_orange" x="1056" y="32" width="960" height="960" />
+	    <texture id="ui_inGame2_circle_bloodloose_red" x="1024" y="0" width="1024" height="1024" />
 	    <texture id="ui_inGame2_circle_Overweight_green" x="641" y="983" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_Overweight_yellow" x="106" y="886" width="33" height="35" />
 	    <texture id="ui_inGame2_circle_Overweight_orange" x="106" y="927" width="33" height="35" />

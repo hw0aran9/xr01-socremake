@@ -8,12 +8,6 @@
 	    <auto_frameline x="709" y="57" width="76" height="27">
 	        <texture>ui_inGame2_pda_buttons_rightside</texture>
 	    </auto_frameline>
-	    <auto_static x="818" y="0" width="104" height="768" stretch="1">
-		    <texture>ui_inGame2_widescreen_sidepanels_right</texture>
-	    </auto_static>
-	    <auto_static x="-102" y="0" width="104" height="768" stretch="1">
-		    <texture>ui_inGame2_widescreen_sidepanels_left</texture>
-	    </auto_static>
 	</background_static>
 
 	<noice_static x="122" y="33" width="778" height="683" stretch="1">

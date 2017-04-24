@@ -217,7 +217,7 @@ function debug_ui:SetMsg(text,tmr)
 	self.msg_wnd:Show(true)
 	self.msg_wnd_text:SetText(text)
 	self.msg_wnd_text:AdjustHeightToText()
-	self.msg_wnd_text:SetWndSize(vector2():set(1024,self.msg_wnd_text:GetHeight()+10))
+	self.msg_wnd_text:SetWndSize(vector2():set(1024,self.msg_wnd_text:GetHeight()+44))
 	self.msg_wnd_text:SetWndPos(vector2():set(0,20))
 	
 	self.msg_wnd:SetWndSize(vector2():set(1024,self.msg_wnd_text:GetHeight()+44))

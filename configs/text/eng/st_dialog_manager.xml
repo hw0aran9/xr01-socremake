@@ -1,5 +1,337 @@
 <?xml version="1.0" encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< TEXT  STRINGS FOR DIALOGS
+<	CoC 1.4.21 - DoctorX Questlines 1.20
+<
+<	Modified by: DoctorX
+<	Last revised: December 21, 2016
+<
+<===========================================================-->
+
+
 <string_table>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MEET HONCHO DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ACTOR:  Meets honcho after being sent by another honcho: -->
+	<string id="st_drx_sl_meet_honcho">
+		<text>I've come to see you.</text>
+	</string>
+
+	<!-- ACTOR:  Accepts storyline task from honcho: -->
+	<string id="st_drx_sl_accept_task">
+		<text>Very well.</text>
+	</string>
+
+	<!-- HONCHO:  Affirmation of task acceptance: -->
+	<string id="st_drx_sl_task_accepted">
+		<text>Good luck stalker.</text>
+	</string>
+
+	<!-- ACTOR:  Leaves honcho: -->
+	<string id="st_drx_sl_actor_exit">
+		<text>Thanks.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE DEFAULT DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- DEFAULT END GAME TEXT: -->
+	<string id="drx_sl_default_endgame">
+		<text>You need to find the Wish Granter. It is located somewhere in Chernobyl NPP and will not be easy to get to. This is your only way out of here.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE LONER GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- SIDOROVICH STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_esc_m_trader_game_start_dialog_1_0">
+		<text>I want to find the Wish Granter.</text>
+	</string>
+	<string id="drx_sl_esc_m_trader_game_start_dialog_1_1">
+		<text>Sure easy, it's up in Chernobyl, the next bus leaves in twenty minutes, hehe... Listen stalker, there have been many people before you that have come here looking to find the Wish Granter, you know what they all have in common? They are all feeding the worms right now. The Wish Granter is just a legend, it doesn't exist. Even if it did exist do you know what your wish would be if you found it? That you never went looking for it in the first place. You want to get rich, is that it? You don't need to wish for your fortune. Someone like you can make plenty of money here in the Zone if you are smart. Here is what I will do for you; show me your PDA... Ah, there, I've loaded in a list of contacts, people here in the Zone who I know are looking to have work done. Go visit them when you are ready, some of them pay well. In the meantime, ask around camp, there is plenty of work here, heck, I even have some jobs I need done from time to time. It's an honest living, at least as honest as it gets here in the Zone.</text>
+	</string>
+
+	<!-- SIDOROVICH STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_esc_m_trader_start_game_1_endgame_1">
+		<text>Thank you stalker. Listen, I hear you came here looking to find the Wish Granter, yes? I have important news for you. The Wish Granter does exist, it is not merely a legend. If you are brave or foolish enough to go looking for it now may be your only chance. The Monolith are congregating in Pripyat leaving only a few to defend Chernobyl. Even still, it will not be easy to get to. The entire area is flooded with anomalies that will rip you to shreds, rad levels that will kill you standing, and psi fields that will turn your mind to soup. Make sure you are prepared. Good luck to you stalker.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE DUTY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- PETRENKO STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_game_start_dialog_1_0">
+		<text>I want to join Duty.</text>
+	</string>
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_game_start_dialog_1_1">
+		<text>Excellent! You have built quite a reputation for yourself stalker, we could use someone like you. Very well, let's get right to business. I need someone who knows how to navigate the Zone. We have many friends in various areas throughout the Zone who need our assistance but not many of our soldiers are able to reach them. I will send you to them They will tell you what they need done. Welcome aboard.</text>
+	</string>
+
+	<!-- PETRENKO STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_bar_dolg_general_petrenko_stalker_start_game_1_endgame_1">
+		<text>Good job. There is one other thing I need you to do, well, that needs to be done. You must find the Wish Granter. The Monolith are guarding it deep within Chernobyl NPP. It must be destroyed. Listen carefully, I know exactly what you must do. The Wish Granter grants wishes, right? That is its weakness. Find it and wish for it to be destroyed. Do not fall into the temptation to wish for your own selfish desires, this is for the greater good. Find the Wish Granter and wish it out of existence. This is what you must do. Good luck to you.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE FREEDOM GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- LUKASH STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_game_start_dialog_1_0">
+		<text>You wanted to see me, bro?</text>
+	</string>
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_game_start_dialog_1_1">
+		<text>Yes, I have a very important assignment for you. We can't expect to protect the Zone from exploitation if we stay holed up in these warehouses. I need you to travel the Zone and help spread our influence. I've loaded a list of contacts for you to meet with into your PDA. Visit them and see if there is anything you can do to for them. This will strengthen our local relations and increase our allies to help keep the Zone free, and could earn you some sweet cash in the process.</text>
+	</string>
+
+	<!-- LUKASH STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_mil_smart_terrain_7_7_freedom_leader_stalker_start_game_1_endgame_1">
+		<text>Thanks. Listen, you want to keep the Zone free, right? You're going about it the wrong way. Spreading good will one person at a time will do you no good. Everyone here is corrupt, they only care about their own needs. Even if you manage to change that opinion in someone, they will be dead soon, so what's the point? The solution is obvious. The Brain Scorcher has been disabled, and the path to the Wish Granter is open, but few people know that yet. If you can be the first to get there you can use it to wish for the Zone to protect itself. Find the Wish Granter, but avoid the temptation to use it for your own desires. It will not be easy, but if you truely want to preserve the Zone, this is what you must do. Good luck to you.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE CLEAR SKY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- COLD STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_game_start_dialog_1_0">
+		<text>I'm ready for my mission.</text>
+	</string>
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_game_start_dialog_1_1">
+		<text>Good, good. You know how important this mission is. You cannot fail. I regret we can't tell you any more about it, but the secrecy of this mission must be so absolute that there are parts even you must not know about. Just do as we planned. Meet with the people we discussed, their contact information is stored in your PDA. When the time is right all will be revealed. You will know exactly what you must do. Good luck to you.</text>
+	</string>
+
+	<!-- COLD STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_mar_smart_terrain_base_stalker_leader_marsh_start_game_1_endgame_1">
+		<text>Good work. You have done very well. Now is the time to fulfill your mission. The path to Chernobyl has been cleared. At the heart of the reactor lies the Monolith, the Wish Granter. Find it. Then you know what you must do.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE ECOLOGIST GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- SAKHAROV STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_yan_stalker_sakharov_game_start_dialog_1_0">
+		<text>You wanted to see me, boss?</text>
+	</string>
+	<string id="drx_sl_yan_stalker_sakharov_game_start_dialog_1_1">
+		<text>Oh, yes, yes. Good! I'm glad you're here. I have an important assignment for you. I want you to travel the Zone and learn as much as you can. There is so much out there we haven't yet discovered. Consider it... exploratory research. I've provided you with a list of contacts who will take care of you along your journey. Visit them, they can provide you with work or food or shelter. Explore and be curious! Be bold and adventurous! I expect your research will vastly increase our understanding of the Zone.</text>
+	</string>
+
+	<!-- SAKHAROV STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_yan_stalker_sakharov_start_game_1_endgame_1">
+		<text>Thanks. So, tell me, you've traveled the Zone and seen all of its wonders. But you haven't yet studied the biggest prize, have you? I speak of course of the Wish Granter. You can reach it now, if you prepare yourself. It will not be easy. Lethal levels of radiation, psi fields, mutants, and Monolith snipers all await you. But if you truely desire to understand the Zone, you must travel to where it all began, the NPP itself. Good luck to you.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MERCENARY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- DUSHMAN STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_cit_killers_merc_trader_stalker_game_start_dialog_1_0">
+		<text>So what can you tell me about our employer?</text>
+	</string>
+	<string id="drx_sl_cit_killers_merc_trader_stalker_game_start_dialog_1_1">
+		<text>Pff.. Who knows? No one seems to know much about him. All I know is his money is good and he's got a lot of it. But we gotta work to get it. This place is a living hell from what I've heard, a real life waking nightmare. Hell, with the shit I've already seen I believe it. Doesn't matter though, ain't nothing out there I can't kill. Anyway, enough bullshit. You've got your job to do and I got mine. You got your list of contacts to meet? Good. Stay frosty out there. Good luck.</text>
+	</string>
+
+	<!-- DUSHMAN STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_cit_killers_merc_trader_stalker_start_game_1_endgame_1">
+		<text>Thank you. Listen, I have a message for you. It comes straight from your employer. It seems you have impressed him greatly. He has a special mission for you and only you. You must find the Wish Granter. Once you do you must utter the following phrase; "princeps magis opulentus". Do this exact thing and your prince will reward you handsomely.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MILITARY GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- KUZNETSOV STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_game_start_dialog_1_0">
+		<text>Reporting for duty, sir.</text>
+	</string>
+	<string id="drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_game_start_dialog_1_1">
+		<text>Welcome to hell soldier. You must have pissed someone off pretty bad to pull this assignment. Well, listen to me and you'll stay alive. Keep your head on a swivel. Everyone and everything out here is trying to kill you. Stay low in a firefight and find good cover. Trust no one. Shoot first and ask questions later. Your tour of duty will take you all over the Zone, most of the time no one will be there to help you. Rely on your survival training. Meet with the contacts loaded into your PDA and they will give you your orders. Just complete your tour of duty and stay alive and you'll get to go home. You are dismissed.</text>
+	</string>
+
+	<!-- KUZNETSOV STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_start_game_1_endgame_1">
+		<text>Thank you soldier. You have done well for me, now I will do something for you, although you may not want to hear it. You are expecting to rotate out of here soon, yes? I'm afraid your commanders have other ideas. The cordon has closed in and has been locked down, nothing and no one are able to get in or out of the Zone anymore, including the military. You've been left here to die, and even your corpse will be left for worm food. You can't even escape in a body bag. But all hope is not lost for you, if you are daring. There is only one way left for you to get out of here, and it lies in Chernobyl. Buried deep within the NPP is the Wish Granter. If you can find it, and if you survive, you can use it to wish your way out of here. It is your only hope soldier. Good luck to you.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE BANDIT GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- SULTAN STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_zat_b7_bandit_boss_sultan_game_start_dialog_1_0">
+		<text>You want me to work for you? What's in it for me?</text>
+	</string>
+	<string id="drx_sl_zat_b7_bandit_boss_sultan_game_start_dialog_1_1">
+		<text>There are people here in the Zone who need things done for them. Some of these things cannot be done, shall we say; inside of regular channels. So they come to me. I arrange to take care of business for them and in return I expect them to pay me a very hefty sum. I will give you a list of these people. Go to them, do what they ask, and collect the payment. All I require is you give me 20 percent of what they pay when you are finished. Any money you make on the side while you're out there is your's to keep. Good deal, yes? It's more money than you would make pick-pocketing and looting stashes and sticking up rookies I guarantee. Just don't double-cross me, understand? I know everyone in this place and they can be very motivated to make examples of anyone who tries to rip me off. Now get out of my sight. I have some important business to attend to.</text>
+	</string>
+
+	<!-- SULTAN STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_zat_b7_bandit_boss_sultan_start_game_1_endgame_1">
+		<text>Wadda you want? .. *hic* .. Oh, itz you .. *hic* .. I know you. Hey, didja do that thing I wanted for ya to do? Ahhh, I knew you wouldn't let me down buddy, you're always buddy .. *hic* .. Here, join me inna drink.. inna.. where'z my bottle? .. *hic* .. It'z a celelelebration! Cus I'm gonna be rizssh! .. *hic* .. See, I just found out something that nobody else knows, but shzzh, you gotta keep it quiet, ok? Cuz if anyone elses knowz then they might beat me to it. See, now that the Brain Szzcortcher .. *hic* .. has been deactivated the path to the Wizzsh Granter is open. All I gotta do is fight my way through a few Monolith pricks and then it's the sweet life for me. I'm gonna wish for all kindsa money, and booze, and guns, and booze, and puzzzshh .. *hic* .. eey. Ya know what it mean, hehe .. *hic* .. So lizzen, just don't go tellin' no one what I juz been tellin' you about, okee? Cuz I'm gonna get there first and I'm gonna be rizssh bizssh!!</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE MONOLITH GAME DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- RABBIT STORYLINE START GAME 1 DIALOG -->
+	<string id="drx_sl_pri_monolith_monolith_trader_stalker_game_start_dialog_1_0">
+		<text>What can I do to serve the almighty Monolith?</text>
+	</string>
+	<string id="drx_sl_pri_monolith_monolith_trader_stalker_game_start_dialog_1_1">
+		<text>There is much work to be done, my brother. The Zone must be purged of the infidels. We must keep control of the mutant population. Your brothers need food and weapons. You will report to your Monolith elders and we will give you your assignments. You must do your part. Praise Monolith and may the Monolith bless you.</text>
+	</string>
+
+	<!-- RABBIT STORYLINE START GAME 1 END GAME 1 TEXT: -->
+	<string id="drx_sl_pri_monolith_monolith_trader_stalker_start_game_1_endgame_1">
+		<text>You have done well, and have proven your faith with the many deeds you have done.  You have earned the privilege of meeting the almighty Monolith. Not many are blessed enough to look into the eyes of god. Prepare an offering and pledge your devotion to our lord. The journey into the Sarcophagus will not be easy, and you must go alone. But listen, if your faith is pure the Monolith will call to you and show you the way.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- DRX STORYLINE CHANGE FACTIONS DIALOG STRINGS
+	<!--
+	<!--	Created by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<!-- ACTOR:  Requests to change factions: -->
+	<string id="st_drx_sl_change_factions_request">
+		<text>I want to change factions.</text>
+	</string>
+
+	<!-- ACTOR:  Accepts change factions task from npc -->
+	<string id="st_drx_sl_accept_change_factions_task">
+		<text>I'll do it.</text>
+	</string>
+
+	<!-- NPC:  Affirmation of task acceptance: -->
+	<string id="st_drx_sl_change_factions_task_accepted">
+		<text>See me when it's done.</text>
+	</string>
+
+	<!-- ACTOR:  Leaves npc: -->
+	<string id="st_drx_sl_change_factions_actor_exit">
+		<text>Okay.</text>
+	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 <!-- GENERAL -->
 	<string id="dm_universal_actor_start">
 		<text>I want to ask you something.</text>
@@ -606,7 +938,7 @@
 	</string>
 	<string id="dm_job_7">
 		<text>Head toward the scientists' bunker. I'm sure they have something. They are always looking for mercs or stalkers to help them out.</text>
-	</string>	
+	</string>
 	<string id="dm_job_8">
 		<text>Olivius is the man to see if you are looking to do some odd jobs. He is a trader who stays at the Dark Valley camp.</text>
 	</string>
@@ -615,7 +947,7 @@
 	</string>
 	<string id="dm_job_10">
 		<text>Sorry man, I've got nothing for you. Just dig in and help us hold on to what we've got.</text>
-	</string>	
+	</string>
 <!-- TIPS -->
 	<string id="dm_tips_general_1">
 		<text>Know anything useful?</text>
@@ -628,37 +960,37 @@
 	</string>
 	<string id="dm_tips_0">
 		<text>I really don't have any advice to give you.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_1">
 		<text>You shoot a guy in the face a couple times and he's finished. It won't matter what he's wearing as long as it ain't an exo.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_2">
 		<text>Use a grenade or two to get a guy to shift his ass. He won't be hiding there much longer if he sees a pineapple roll up next to him.</text>
 	</string>
 	<string id="dm_tips_3">
 		<text>If you have a fast enough trigger finger you can fire off both barrels of a shotgun at the same time. Keep that in mind if you run into a bloodsucker.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_4">
 		<text>Don't underestimate pistols, stalker. They're pretty handy if you ain't got much ammo left for your main shooter and they'll waste anything with light armour.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_5">
 		<text>If you're running a hit you can waste the poor bastard without being seen using a sniper rifle; you'll be able to whack him from much further than with your other shooters.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_6">
 		<text>You ain't gonna be able to hit shit if you're running while shooting. Find some cover to hide behind and lean out to shoot; you'll be far more accurate.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_7">
 		<text>Keep your gear in good condition. You gun will jam and your suit will be full of holes if you don't see a mechanic every now and then.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_8">
 		<text>Last time I went to see a mechanic he couldn't upgrade half my shit, asked me to go out and fetch tools for him. What, am I his errand boy now?</text>
-	</string>	
+	</string>
 	<string id="dm_tips_9">
 		<text>Ever met a guy who stood outside during an emission? Of course you haven't! Hide your ass whenever one hits unless you feel like having your brain boiled.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_10">
 		<text>Almost lost my legs the other day. Planted a whole cluster of butterfly mines to cover my ass when scavenging and forgot about them on my way back. They'll go off no matter who planted 'em.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_11">
 		<text>Just because the trader don't have a job for you doesn't mean none of us do. You can make some good money running errands for others, might find some good loot in the meantime too.</text>
 	</string>
@@ -667,7 +999,7 @@
 	</string>
 	<string id="dm_tips_13">
 		<text>Carry some spare ammo on you even if you don't think you need it. Nothing worse than having to fight off a horde of mutants with just your blade.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_14">
 		<text>You tried artefact hunting? Get a detector and go near some anomalous area, if the thing starts bleeping at you then there's one nearby. Though you'll need one of the expensive models to find the good shit.</text>
 	</string>
@@ -688,61 +1020,61 @@
 	</string>
 	<string id="dm_tips_20">
 		<text>If your helmet has night vision make sure to upgrade it. You'll be able to see further and clearer if you let a mechanic screw around with it for some cash.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_21">
 		<text>You aren't defenceless if you're out artefact hunting. So what if you're carrying your detector? You can still hold a pistol in the other hand.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_22">
 		<text>Plenty of places to sleep at if you need to pass the time. There's always a free bed at most camps, but you can take a sleeping bag out with you anywhere.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_23">
 		<text>Artefacts aren't all good news, they'll kill you slowly with their radiation unless you're protected. Keep in mind that there's artefacts which can absorb radiation too, though.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_24">
 		<text>Your knife ain't just a weapon for sneaking up on people with, you can bust open boxes, chests and locks with it too. Might find something cool inside too.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_25">
 		<text>If you keep finding yourself running out of breath then stop carrying so much shit. You can stash it away somewhere in a backpack, or sell it to a trader.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_26">
 		<text>If you want meds then go see a medic and if you want booze then go see barkeep; a lot of traders out here specialise in certain types of goods.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_27">
 		<text>You won't find artefacts at the same place all the time; they all change about after an emission. Remember that next time you're near an anomaly.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_28">
 		<text>The Zone has a life of its own, stalker. Just because there weren't any freaks about the last time you went some place doesn't mean they haven't moved in since.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_29">
 		<text>If you ain't got nothin' to deal with radiation poisoning then try to keep yourself alive until you can reach a medic. But then ask yourself: why aren't you carrying any vodka?</text>
 	</string>
 	<string id="dm_tips_30">
 		<text>Run and jump if something looks too far away, your momentum will carry you farther. Easy way to get away from some muties as they won't think to jump over shit.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_31">
 		<text>Selling artefacts isn't the only way to make some cash: offloading unneeded equipment can be a profitable business, too. Keep in mind that traders aren't usually interested in items that are broke.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_32">
 		<text>Crouch and sneak about if you don't wanna get seen or heard. Not ever battle is worth fighting, or maybe you just want to get the jump on someone?</text>
-	</string>	
+	</string>
 	<string id="dm_tips_33">
 		<text>You can attach scopes and launchers to your shooter y'know? There's just some things a mechanic just can't do. But you'll have to find the parts yourself...</text>
-	</string>	
+	</string>
 	<string id="dm_tips_34">
 		<text>There's different ways to take down different types of mutants, they all have their own weak spots. You can kick tushkanos and rats too y'know?</text>
 	</string>
 	<string id="dm_tips_35">
 		<text>Don't go hiding behind a door if some guy's shooting at you. Bullets don't care if there's anything between the two of you, it'll go straight through anything weak.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_36">
 		<text>Bandage yourself up if you get blasted or torn up by a mutant, the bleeding will cost you more in medkits than if you use a bandage to stop it before it gets too serious.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_37">
 		<text>If you're looking for tools for weapon modifications or suit upgrades, you should head to Sidorovich. He's been handing out stash coordinates along with cash for doing his jobs. You've got a better chance of finding equipment in stashes, rather than the body of some bandit.</text>
-	</string>	
+	</string>
 	<string id="dm_tips_38">
 		<text>Pay attention to radio chatter, because it's a damn good way to find out what's going on in the area. You'll be able to provide assistance to anyone in a gunfight or surrounded by mutants.</text>
-	</string>	
+	</string>
 <!-- Wounded -->
 	<string id="dm_wounded_general">
 		<text>Help!</text>
@@ -921,7 +1253,7 @@
 	<string id="st_surrender_victim_answer_6">
 		<text>Thank you!</text>
 	</string>
-	
+
 	<string id="st_surrender_victim_answer_default_bounty_1">
 		<text>Okay, okay, just don't kill me!</text>
 	</string>
@@ -937,7 +1269,7 @@
 	<string id="st_surrender_victim_answer_default_bounty_5">
 		<text>Go fuck yourself!</text>
 	</string>
-	
+
 	<string id="st_surrender_victim_answer_esc_m_trader_bounty_1">
 		<text>That bastard Sidorovich sent you, didn't he? What do you want!? Cash? Here, have my PDA and my money, just let me live!</text>
 	</string>
@@ -969,8 +1301,30 @@
 		<text>...</text>
 	</string>
 <!-- Broker -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- PDA BROKER DIALOG STRINGS
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.9
+	<!--	October 30, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
+	<string id="st_drx_broker_finish_1">
+		<text>I'll buy it.</text>
+	</string>
+	<string id="st_drx_broker_finish_2">
+		<text>Ok, I'll take it.</text>
+	</string>
+	<string id="st_drx_broker_finish_3">
+		<text>Here you go.</text>
+	</string>
+
 	<string id="st_broker_query">
-		<text>I may have something valuable you want.</text>
+		<text>I have some information if you are interested.</text>
 	</string>
 	<string id="st_broker_query_more">
 		<text>I have something else you may want.</text>
@@ -986,19 +1340,23 @@
 	</string>
 	<string id="st_broker_trade_valuable">
 		<text>%s; Very valuable. I'm interested, for sure.</text>
-	</string>	
+	</string>
 	<string id="st_broker_give_pda">
 		<text>Here.</text>
 	</string>
 	<string id="st_broker_npc_start_1">
-		<text>I'll be the judge of that, what do you have?</text>
+		<text>Depends on what you got.</text>
 	</string>
 	<string id="st_broker_npc_start_2">
-		<text>You better hope it is, because you are wasting my god damn time.</text>
+		<text>I might be. What do you have?</text>
 	</string>
 	<string id="st_broker_npc_start_3">
-		<text>This better be worth my time, what do you have?</text>
+		<text>I'm always interested. What I'm willing to pay for it depends on what it is.</text>
 	</string>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 		<string id="st_broker_npc_answer_pda_query">
 		<text>Alright, let me see.</text>
 	</string>
@@ -1212,7 +1570,7 @@
 	</string>
 	<string id="st_accepted_task_3">
 		<text>Glad you can be of assistance.</text>
-	</string>	
+	</string>
 	<string id="st_default_task_finished_1">
 		<text>Thank you, stalker, here is your reward.</text>
 	</string>
@@ -1234,7 +1592,7 @@
 	<string id="st_nevermind">
 		<text>On second thought, never mind. Come back later.</text>
 	</string>
-	
+
 	<!-- Task Cancelling -->
     <string id="dm_universal_actor_exit_sorry">
         <text>Sorry I couldn't help.</text>
@@ -1260,7 +1618,7 @@
     <string id="st_default_task_cancel_3">
         <text>I guess that is what I should have expected from a rookie.</text>
     </string>
-	
+
 	<!-- Repair -->
 	<string id="st_inventory_upgrade_reply_1">
 		<text>Your %s will be ready in %s minutes. Come back then.</text>

@@ -112,7 +112,11 @@ function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 	local news_text = game.translate_string(news_id)
 --	actor:give_game_news(news_caption, news_text, texture, timeout*1000, showtime)
 	actor:give_game_news(news_caption, news_text, texture, timeout*1000, showtime, 0)
-
+--FonSwong--
+	if pda_FonSwong.other_news==true then
+		pda_FonSwong.ins_in_tbl(news_caption,news_text,texture)
+	end
+--FonSwong--
 	return true
 end
 

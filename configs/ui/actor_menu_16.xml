@@ -11,16 +11,10 @@
 	    <auto_static x="375" y="0" width="546" height="768" stretch="1">
 		    <texture>ui_inGame2_inventory_back</texture>
 	    </auto_static>
-	    <auto_static x="920" y="0" width="104" height="768" stretch="1">
-		    <texture>ui_inGame2_widescreen_sidepanels_right</texture>
-	    </auto_static>
 	</main>
 
 	<left_background x="102" y="0" width="273" height="768" stretch="1">
 		<texture>ui_inGame2_left_side</texture>
-	    <auto_static x="-102" y="0" width="104" height="768" stretch="1">
-		    <texture>ui_inGame2_widescreen_sidepanels_left</texture>
-	    </auto_static>
 	</left_background>
 
 	<!-- Player Information -->

@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
+	<string id="ui_st_mp_create">
+		<text>Create</text>
+	</string>
+	<string id="ui_st_mp_login">
+		<text>Enter</text>
+	</string>
+	<string id="ui_st_mp_logout">
+		<text>Exit</text>
+	</string>
+	
 	<string id="Clear">
 		<text>Clear</text>
 	</string>
@@ -50,7 +60,7 @@
 	</string>
 	<string id="renderer_r2a">
 		<text>DirectX 9 (Basic)</text>
-	</string>
+ 	</string>
 	<string id="renderer_r2">
 		<text>DirectX 9 (Normal)</text>
 	</string>
@@ -62,7 +72,7 @@
 	</string>
 	<string id="renderer_r4">
 		<text>DirectX 11 (Enhanced)</text>
-	</string>
+ 	</string>
 	<string id="st_opt_high">
 		<text>High</text>
 	</string>
@@ -271,7 +281,7 @@
 		<text>Grass shadow</text>
 	</string>
     <string id="ui_mm_r__actor_shadow">
-    <text>Actor shadow</text>
+		<text>Actor shadow</text>
     </string>
 	<string id="ui_mm_r2_sun_quality">
 		<text>Sun quality</text>
@@ -433,11 +443,17 @@
 	<string id="st_cap_check_hardcore">
 		<text>Ironman mode</text>
 	</string>
+	<string id="st_cap_check_hardcore_aim">
+		<text>Hardcore AI aim</text>
+	</string>
 	<string id="st_cap_check_azazel_mode">
 		<text>Azazel mode</text>
-	</string>
+ 	</string>
 	<string id="ui_mm_debug_hud">
-		<text>Debug hud</text>
+		<text>Debug Hud</text>
+	</string>
+	<string id="ui_mm_dynamic_news">
+		<text>Dynamic News</text>
 	</string>
 	<string id="ui_mm_radio_mod">
 		<text>Radio music</text>
@@ -453,36 +469,63 @@
 	</string>
 	<string id="ui_mm_heli_spawn">
 		<text>Helicopter patrols</text>
-	</string>
+ 	</string>
 	<string id="ui_mm_ai_die_in_anomaly">
-		<text>AI die in anomalies</text>
-	</string>
-	<string id="ui_mm_dynamic_news">
-		<text>Dynamic news</text>
+		<text>AI Die in Anomaly</text>
 	</string>
 	<string id="ui_mm_art_degrade">
-		<text>Artefact degradation</text>
+		<text>Artifact degradation</text>
 	</string>
 	<string id="ui_mm_sleep_deprived">
-		<text>Sleep deprivation</text>
+		<text>Sleep Deprivation</text>
 	</string>
-    <string id="ui_mm_excl_dist">
-        <text>Online exclusion radius</text>
-    </string>
+	<string id="ui_mm_food_irradiate">
+		<text>Food Irradiation</text>
+	</string>
+	<string id="ui_mm_mask_hud">
+		<text>Dynamic Mask HUD</text>
+	</string>
+	<string id="ui_mm_shot_effects">
+		<text>Enhanced Shot Effects</text>
+	</string>
+	<string id="ui_mm_item_animation">
+		<text>Item Animations</text>
+	</string>
+	<string id="ui_mm_enhanced_animation">
+		<text>Enhanced Animations</text>
+	</string>
+	<string id="ui_mm_consumable_animation">
+		<text>Consumable Animations</text>
+	</string>
+	<string id="ui_mm_slot_hud">
+		<text>Belt Artifact HUD</text>
+	</string>
+	<string id="ui_mm_weapon_hide">
+		<text>Weapon Hide</text>
+	</string>
+	<string id="ui_mm_weapon_heat">
+		<text>Weapon Overheating</text>
+	</string>
+	<string id="ui_mm_weapon_heat_ui">
+		<text>Weapon heating HUD bar</text>
+	</string>
+	<string id="ui_mm_weapon_mags">
+		<text>Weapon Magazines</text>
+	</string>
+	<string id="ui_mm_excl_dist">
+		<text>Online exclusion radius</text>
+	</string>
 	<string id="ui_mm_char_portrait">
 		<text>Default portrait</text>
 	</string>
 	<string id="ui_mm_outfit_portrait">
-		<text>Portrait by outfit</text>
-	</string>
+		<text>Portrait by Outfit</text>
+ 	</string>
 	<string id="ui_mm_show_enemy_health">
 		<text>Show enemy health</text>
 	</string>
 	<string id="ui_mm_quicksave_cnt">
 		<text>Quicksave count</text>
-	</string>
-	<string id="ui_mm_actor_hud">
-		<text>Mask Overlay</text>
 	</string>
 	<string id="ui_mm_alife_mutant_pop">
 		<text>Population factor (mutants)</text>
@@ -496,10 +539,7 @@
 	<string id="ui_mm_fov">
 		<text>FOV</text>
 	</string>
-	<string id="ui_mm_slot_hud">
-		<text>Belt Artifact HUD</text>
-	</string>
-	<string id="ui_mm_show_tracers">
+        <string id="ui_mm_show_tracers">
 		<text>Show tracers</text>
 	</string>
 	<string id="ui_mm_release_dropped_items">

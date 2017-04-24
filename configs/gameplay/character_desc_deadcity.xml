@@ -1,10 +1,33 @@
 <?xml version='1.0' encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< CHARACTER DESCRIPTIONS FOR DEAD CITY MAP
+<	CoC 1.4.07 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 05, 2016
+<
+<===========================================================-->
+
+
 <xml>
-    <!-------------------------- MERC TRADER ------------------------>
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Dushman (Mercenary Trader) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="cit_killers_merc_trader_stalker" team_default="1">
     <name>cit_killers_merc_trader_stalker_name</name>
     <icon>ui_inGame2_merc_trade</icon>
-    <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
+    <bio>??????? ???????. ƒ???????¤ ?????????¤ ???????????.</bio>
     <class>cit_killers_merc_trader_stalker</class>
     <community>killer</community>
     <map_icon x="1" y="0"/>
@@ -24,18 +47,36 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals_5.xml"
-    <actor_dialog>dm_broker_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>drx_sl_cit_killers_merc_trader_stalker_game_start_dialog_1</actor_dialog>
+		<actor_dialog>drx_sl_cf_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_cit_killers_merc_trader_stalker_meet_dialog</actor_dialog>
+		<actor_dialog>dm_broker_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>drx_sl_change_faction_dialog</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
-    <!-------------------------- MERC MECHANIC ------------------------>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Hog (Mercenary Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 05, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="cit_killers_merc_mechanic_stalker" team_default="1">
     <name>cit_killers_merc_mechanic_stalker_name</name>
     <icon>ui_inGame2_merc_tech</icon>
-    <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
+    <bio>??????? ???????. ƒ???????¤ ?????????¤ ???????????.</bio>
     <class>cit_killers_merc_mechanic_stalker</class>
     <community>killer</community>
     <map_icon x="1" y="0"/>
@@ -55,11 +96,17 @@
 #include "gameplay\character_drugs_2.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>dm_tech_repair</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_cit_killers_merc_mechanic_stalker_meet_dialog</actor_dialog>
+		<actor_dialog>drx_sl_mechanic_task_dialog</actor_dialog>
+		<actor_dialog>dm_tech_repair</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 </xml>

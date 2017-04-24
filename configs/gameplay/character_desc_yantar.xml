@@ -1,6 +1,29 @@
 <?xml version='1.0' encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< CHARACTER DESCRIPTIONS FOR YANTAR MAP
+<	CoC 1.4.07 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 06, 2016
+<
+<===========================================================-->
+
+
 <xml>
-    <!-- SAKHAROV -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Professor Sakharov (Ecologist Trader) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="yan_stalker_sakharov" team_default = "1">
     <name>yan_st_sakharov_name</name>
     <icon>ui_inGame2_sakharov</icon>
@@ -21,17 +44,26 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals_1.xml"
-    <start_dialog>yan_stalker_sakharov_start</start_dialog>
-    <actor_dialog>yan_stalker_sakharov_about_brain_scorcher</actor_dialog>
-    <actor_dialog>yan_stalker_sakharov_bad_psi_helmet</actor_dialog>
-    <actor_dialog>yan_stalker_sakharov_good_psi_helmet</actor_dialog>
-    <actor_dialog>yan_stalker_sakharov_upgrade_psi_helmet</actor_dialog>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>yan_stalker_sakharov_start</start_dialog>
+		<actor_dialog>drx_sl_yan_stalker_sakharov_game_start_dialog_1</actor_dialog>
+		<actor_dialog>drx_sl_cf_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_yan_stalker_sakharov_meet_dialog</actor_dialog>
+		<actor_dialog>yan_stalker_sakharov_about_brain_scorcher</actor_dialog>
+		<actor_dialog>yan_stalker_sakharov_bad_psi_helmet</actor_dialog>
+		<actor_dialog>yan_stalker_sakharov_good_psi_helmet</actor_dialog>
+		<actor_dialog>yan_stalker_sakharov_upgrade_psi_helmet</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>drx_sl_change_faction_dialog</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <!-- KRUGLOV -->
     <specific_character id="yan_ecolog_kruglov" team_default = "1">
     <name>yan_kruglov_name</name>
@@ -59,8 +91,18 @@
     <actor_dialog>dm_add_repair</actor_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
-    <!-- SEMENOV -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Assistant Semenov (Ecologist Honcho) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 06, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="yan_ecolog_semenov" team_default = "1">
     <name>yan_semenov_name</name>
     <icon>ui_inGame2_ecolog_orange</icon>
@@ -83,16 +125,20 @@
         detector_simple \n
     </supplies>
 #include "gameplay\character_criticals_3.xml"
-    <start_dialog>yan_ecolog_semenov_start_dialog</start_dialog>
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>dm_is_actor_companion_dialog</actor_dialog>
-    <actor_dialog>dm_companion_patrol</actor_dialog>
-    <actor_dialog>dm_companion_leave</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>yan_ecolog_semenov_start_dialog</start_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>dm_is_actor_companion_dialog</actor_dialog>
+		<actor_dialog>dm_companion_patrol</actor_dialog>
+		<actor_dialog>dm_companion_leave</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
     <!-- VASILYEV -->
     <specific_character id="yan_ecolog_vasilyev" team_default = "1">
     <name>yan_vasilyev_name</name>
@@ -118,7 +164,7 @@
     <start_dialog>yan_ecolog_vasilyev_start_dialog</start_dialog>
     <actor_dialog>actor_break_dialog</actor_dialog>
     </specific_character>
-    
+
     <!-- Bunker mercs -->
     <specific_character id="yan_merc_01" team_default = "1">
     <name>yan_merc_01</name>
@@ -147,7 +193,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="yan_merc_02" team_default = "1">
     <name>yan_merc_02</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -176,7 +222,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="yan_merc_03" team_default = "1">
     <name>yan_merc_03</name>
     <icon>ui_inGame2_merc_2</icon>
@@ -205,7 +251,7 @@
     <actor_dialog>actor_break_dialog</actor_dialog>
 #include "gameplay\character_criticals_4.xml"
     </specific_character>
-    
+
     <specific_character id="yan_ghost" team_default = "1">
     <name>yan_ghost_name</name>
     <icon>ui_inGame2_ghost</icon>
@@ -227,5 +273,5 @@
         stalker_outfit \n
     </supplies>
     </specific_character>
-    
+
 </xml>

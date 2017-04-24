@@ -5,7 +5,9 @@
 #include "creatures\stalkers.ltx"
 #include "weapons\weapons.ltx"
 #include "misc\items.ltx"
-
+; FonSwong
+#include "misc\extension_pda_FonSwong.ltx"
+; FonSwong
 #include "creatures\actor.ltx"
 #include "zones\zones.ltx"
 #include "misc\postprocess.ltx"
@@ -112,7 +114,7 @@ specific_characters_files                = character_desc_general, character_des
 ;Set slot_persistent_* = false to treat actor inventory as a 'slot'. Setting highlight_equipped = true in the item section will highlight equipped items in inventory
 [inventory]
 take_dist                                = 2	                                       ; not used at all
-max_weight                               = 50
+max_weight                               = 100
 max_ruck                                 = 56
 max_belt                                 = 5	                                       ;16
 
@@ -210,10 +212,10 @@ min_burn_time                            = 10000	                               
 
 [hud_cursor]
 ;все размерv в процентах от длинv экрана
-cross_length                             = 0.015	                                       ;длина "палочки" прицела
+cross_length                             = 0.0010	                                       ;длина "палочки" прицела
 min_radius                               = 0.0	                                       ;минимальнvй радиус прицела (при нулевой дисперсии)
 max_radius                               = 1.0	                                       ;максимальнvй радиус
-radius_lerp_speed                        = 0.08	                                       ;скорость интерполљции положений прицела
+radius_lerp_speed                        = 0.0	                                       ;скорость интерполљции положений прицела
 cross_color                              = 0.7,0.7,0.7,0.5	                                       ;цвет прицела
 disp_scale                               = 0.08	                                       ;масштаб прицела (относительно радиан)
 

@@ -302,9 +302,9 @@ inv_grid_x                               = 2
 inv_grid_y                               = 13
 
 upgr_icon_x                              = 350
-upgr_icon_y                              = 770
-upgr_icon_width                          = 160
-upgr_icon_height                         = 145
+upgr_icon_y                              = 771
+upgr_icon_width                          = 158
+upgr_icon_height                         = 149
 
 cost                                     = 7500
 
@@ -318,7 +318,7 @@ radiation_protection                     = 0.0045
 chemical_burn_protection                 = 0.0300
 strike_protection                        = 0.04
 
-upgrades                                 = up_gr_firstab_helm_respirator
+upgrades                                 = up_gr_firstab_helm_m40
 upgrade_scheme                           = upgrade_scheme_helm_respirator
 
 [sect_helm_m40_immunities]
@@ -334,27 +334,249 @@ explosion_immunity                       = 0.03
 fire_wound_immunity                      = 0.025
 
 ;*****************************************************************
-;******************”Õ» ¿À‹Õ€≈ ÿÀ≈Ã€*******************************
+;************************* OUTFIT ADDON **************************
 ;*****************************************************************
 
-[helm_hardhat_snag]:helm_hardhat
-GroupControlSection                      = spawn_group
-discovery_dependency                     =
-$spawn                                   = "outfit\helm_hardhat_snag"
 
-cost                                     = 3000
+;---------------------------------------------------------------------------------------------
+;		Tactical M12 helmet
+;---------------------------------------------------------------------------------------------
 
-upgrades                                 = up_gr_firstab_helm_hardhat, up_gr_seconab_helm_hardhat
-installed_upgrades                       = up_firsta_helm_hardhat
-upgrade_scheme                           = upgrade_scheme_helm_hardhat
+[helm_tactic_2]:helmet_base
+$spawn                                   = "outfit\helm_tactic_2"
+visual                                   = dynamics\outfit\helm_tactic_2
+inv_name                                 = st_helm_tactic_2
+inv_name_short                           = st_helm_tactic_2
+description                              = st_helm_tactic_2_descr
 
-[helm_respirator_joker]:helm_respirator
-GroupControlSection                      = spawn_group
-discovery_dependency                     =
-$spawn                                   = "outfit\helm_respirator_joker"
+inv_weight                               = 3.5
+
+inv_grid_x                               = 44
+inv_grid_y                               = 32
+
+upgr_icon_x                              = 373
+upgr_icon_y                              = 950
+upgr_icon_width                          = 135
+upgr_icon_height                         = 142
+
+cost                                     = 17500
+
+nightvision_sect                         = effector_nightvision_1
+
+immunities_sect                          = sect_helm_tactic_2_immunities
+bones_koeff_protection                   = actor_helm_battle
+
+burn_protection                          = 0.0250
+shock_protection                         = 0.0900
+radiation_protection                     = 0.0075
+chemical_burn_protection                 = 0.0250
+telepatic_protection                     = 0.0600
+
+upgrades                                 = up_gr_firstab_helm_battle, up_gr_seconab_helm_battle
+upgrade_scheme                           = upgrade_scheme_helm_battle
+
+[sect_helm_tactic_2_immunities]
+burn_immunity                            = 0.02
+strike_immunity                          = 0.0
+shock_immunity                           = 0.02
+wound_immunity                           = 0.0
+wound_2_immunity                         = 0.0
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.025
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.015
+
+
+
+;---------------------------------------------------------------------------------------------
+;		Gas Mask Old
+;---------------------------------------------------------------------------------------------
+
+[helm_respirator_2]:helmet_base
+$spawn                                   = "outfit\helm_respirator_2"
+visual                                   = dynamics\outfit\helm_respirator
+inv_name                                 = st_helm_respirator
+inv_name_short                           = st_helm_respirator
+description                              = st_helm_respirator_2_descr
+
+inv_weight                               = 2.0
+
+inv_grid_x                               = 44
+inv_grid_y                               = 30
+
+upgr_icon_x                              = 401
+upgr_icon_y                              = 1129
+upgr_icon_width                          = 104
+upgr_icon_height                         = 141
+
+cost                                     = 2500
+
+immunities_sect                          = sect_helm_respirator_2_immunities
+bones_koeff_protection                   = actor_helm_respirator
+
+burn_protection                          = 0.03
+shock_protection                         = 0.12
+radiation_protection                     = 0.006
+chemical_burn_protection                 = 0.03
+strike_protection                        = 0.001
+
+upgrades                                 = up_gr_firstab_helm_respirator
+upgrade_scheme                           = upgrade_scheme_helm_respirator
+
+[sect_helm_respirator_2_immunities]
+burn_immunity                            = 0.03
+strike_immunity                          = 0.02
+shock_immunity                           = 0.02
+wound_immunity                           = 0.0
+wound_2_immunity                         = 0.0
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.02
+fire_wound_immunity                      = 0.02
+
+
+;---------------------------------------------------------------------------------------------
+;		Mask
+;---------------------------------------------------------------------------------------------
+
+[helm_facemask]:helmet_base
+$spawn                                   = "outfit\helm_facemask"
+visual                                   = dynamics\repair\textile_patch_b
+inv_name                                 = st_helm_facemask
+inv_name_short                           = st_helm_facemask
+description                              = st_helm_facemask_descr
+
+inv_weight                               = 0.1
+
+inv_grid_x                               = 46
+inv_grid_y                               = 32
+
+upgr_icon_x                              = 795
+upgr_icon_y                              = 622
+upgr_icon_width                          = 100
+upgr_icon_height                         = 138
+
+cost                                     = 250
+
+immunities_sect                          = sect_helm_facemask_immunities
+bones_koeff_protection                   = actor_helm_respirator
+
+burn_protection                          = 0.01
+shock_protection                         = 0.01
+radiation_protection                     = 0.002
+chemical_burn_protection                 = 0.01
+strike_protection                        = 0.0001
+
+[sect_helm_facemask_immunities]
+burn_immunity                            = 0.01
+strike_immunity                          = 0.005
+shock_immunity                           = 0.005
+wound_immunity                           = 0.0
+wound_2_immunity                         = 0.0
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.01
+explosion_immunity                       = 0.005
+fire_wound_immunity                      = 0.005
+
+
+;---------------------------------------------------------------------------------------------
+;		Respirator (half mask)
+;---------------------------------------------------------------------------------------------
+
+[helm_respirator_half]:helmet_base
+$spawn                                   = "outfit\helm_respirator_half"
+visual                                   = dynamics\outfit\helm_respirator
+inv_name                                 = st_helm_respirator_half
+inv_name_short                           = st_helm_respirator_half
+description                              = st_helm_respirator_half_descr
+
+inv_weight                               = 0.7
+
+inv_grid_x                               = 46
+inv_grid_y                               = 30
+
+upgr_icon_x                              = 277
+upgr_icon_y                              = 1129
+upgr_icon_width                          = 107
+upgr_icon_height                         = 141
+
+cost                                     = 3500
+
+immunities_sect                          = sect_helm_respirator_half_immunities
+bones_koeff_protection                   = actor_helm_respirator
+
+burn_protection                          = 0.035
+shock_protection                         = 0.06
+radiation_protection                     = 0.006
+chemical_burn_protection                 = 0.04
+
+upgrades                                 = up_gr_firstab_helm_respirator
+upgrade_scheme                           = upgrade_scheme_helm_respirator
+
+[sect_helm_respirator_half_immunities]
+burn_immunity                            = 0.03
+strike_immunity                          = 0.03
+shock_immunity                           = 0.03
+wound_immunity                           = 0.0
+wound_2_immunity                         = 0.0
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.03
+explosion_immunity                       = 0.03
+fire_wound_immunity                      = 0.03
+
+
+;---------------------------------------------------------------------------------------------
+;		GP-5
+;---------------------------------------------------------------------------------------------
+
+[helm_respirator_gp5]:helmet_base
+$spawn                                   = "outfit\helm_respirator_gp5"
+visual                                   = dynamics\outfit\helm_respirator_gp5
+inv_name                                 = st_helm_respirator_gp5
+inv_name_short                           = st_helm_respirator_gp5
+description                              = st_helm_respirator_gp5_descr
+
+inv_weight                               = 1.5
+
+inv_grid_x                               = 48
+inv_grid_y                               = 32
+
+upgr_icon_x                              = 11
+upgr_icon_y                              = 1123
+upgr_icon_width                          = 85
+upgr_icon_height                         = 162
 
 cost                                     = 6000
 
+immunities_sect                          = sect_helm_respirator_gp5_immunities
+bones_koeff_protection                   = actor_helm_respirator
+
+burn_protection                          = 0.04
+shock_protection                         = 0.16
+radiation_protection                     = 0.006
+chemical_burn_protection                 = 0.04
+strike_protection                        = 0.01
+
 upgrades                                 = up_gr_firstab_helm_respirator
-installed_upgrades                       = up_firsta_helm_respirator, up_firstc_helm_respirator
 upgrade_scheme                           = upgrade_scheme_helm_respirator
+
+[sect_helm_respirator_gp5_immunities]
+burn_immunity                            = 0.04
+strike_immunity                          = 0.04
+shock_immunity                           = 0.04
+wound_immunity                           = 0.0
+wound_2_immunity                         = 0.0
+radiation_immunity                       = 0.0
+telepatic_immunity                       = 0.0
+chemical_burn_immunity                   = 0.04
+explosion_immunity                       = 0.04
+fire_wound_immunity                      = 0.04
+
+
+
+[helm_respirator_joker]:helm_respirator
+[helm_hardhat_snag]:helm_hardhat

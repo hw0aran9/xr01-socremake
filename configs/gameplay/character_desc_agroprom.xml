@@ -1,12 +1,35 @@
 ﻿<?xml version='1.0' encoding="windows-1251"?>
+
+<!--===========================================================
+<
+< CHARACTER DESCRIPTIONS FOR AGROPROM MAP
+<	CoC 1.4.10 - DoctorX Questlines 1.6
+<
+<	Modified by: DoctorX
+<	Last revised: October 14, 2016
+<
+<===========================================================-->
+
+
 <xml>
-    <!-- MAJOR KUZNETSOV -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Major Kuznetsov (Military Honcho) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="agr_smart_terrain_1_6_near_2_military_colonel_kovalski" team_default = "1">
     <name>agr_kuznetsov_name</name>
     <icon>ui_inGame2_Kuznetsov</icon>
     <map_icon x="1" y="0">
     </map_icon>
-    <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
+    <bio>??????? ???????. ƒ???????¤ ?????????¤ ???????????.</bio>
     <class>agr_smart_terrain_1_6_near_2_military_colonel_kovalski</class>
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
@@ -27,16 +50,36 @@
 #include "gameplay\character_drugs_mil.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <start_dialog>hello_dialog</start_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_game_start_dialog_1</actor_dialog>
+		<actor_dialog>drx_sl_cf_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_agr_smart_terrain_1_6_near_2_military_colonel_kovalski_meet_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_dialog</actor_dialog>
+		<actor_dialog>drx_sl_change_faction_dialog</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
-    <!-------------------------- ARMY TRADER ------------------------>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Sergeant Spooner (Military Trader) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 14, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="agr_smart_terrain_1_6_army_trader_stalker" team_default="1">
     <name>agr_smart_terrain_1_6_army_trader_stalker_name</name>
     <icon>ui_inGame2_Spooner</icon>
     <map_icon x="1" y="0"/>
-    <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
+    <bio>??????? ???????. ƒ???????¤ ?????????¤ ???????????.</bio>
     <class>agr_smart_terrain_1_6_army_trader_stalker</class>
     <community>army</community>
     <terrain_sect>stalker_terrain</terrain_sect>
@@ -49,17 +92,29 @@
         [spawn] \n
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<start_dialog>hello_dialog</start_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
-    <!-------------------------- ARMY MECHANIC ------------------------>
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+	<!-- /////////////////////////////////////////////////////////////////////////////////////////////
+	<!--
+	<!-- Lieutenant Kirilov (Military Mechanic) Character Description
+	<!--
+	<!--	Modified by DoctorX
+	<!--	for DoctorX Questlines 1.6
+	<!--	October 04, 2016
+	<!--
+	<!-- ----------------------------------------------------------------------------------------- -->
+
     <specific_character id="agr_smart_terrain_1_6_army_mechanic_stalker" team_default="1">
     <name>agr_smart_terrain_1_6_army_mechanic_stalker_name</name>
     <icon>ui_inGame2_Kirilov</icon>
-    <bio>ќпытный сталкер. ƒетальна¤ информаци¤ отсутствует.</bio>
+    <bio>??????? ???????. ƒ???????¤ ?????????¤ ???????????.</bio>
     <class>agr_smart_terrain_1_6_army_mechanic_stalker</class>
     <community>army</community>
     <map_icon x="1" y="0"/>
@@ -81,11 +136,17 @@
 #include "gameplay\character_drugs.xml"
     </supplies>
 #include "gameplay\character_criticals_4.xml"
-    <actor_dialog>dm_ordered_task_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
-    <actor_dialog>dm_ordered_task_cancel_dialog</actor_dialog>
-    <actor_dialog>dm_tech_repair</actor_dialog>
-    <actor_dialog>actor_break_dialog</actor_dialog>
+
+		<actor_dialog>drx_sl_task_completed_dialog</actor_dialog>
+		<actor_dialog>dm_ordered_task_completed_dialog</actor_dialog>
+		<actor_dialog>drx_sl_agr_smart_terrain_1_6_army_mechanic_stalker_meet_dialog</actor_dialog>
+		<actor_dialog>drx_sl_mechanic_task_dialog</actor_dialog>
+		<actor_dialog>dm_tech_repair</actor_dialog>
+		<actor_dialog>actor_break_dialog</actor_dialog>
+
     </specific_character>
-    
+
+	<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
 </xml>

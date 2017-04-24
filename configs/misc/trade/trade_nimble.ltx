@@ -1,676 +1,1245 @@
-#include "trade_discounts.ltx"
-
+#include"trade_discounts.ltx"
 [trader]
-buy_condition                            = trade_generic_buy
-buy_item_condition_factor                = 0.7
-buy_supplies                             = {=actor_community(actor_stalker) =heavy_pockets_functor} supplies_heavy_pockets, supplies_generic
-discounts                                = {=actor_goodwill_ge(stalker:2000)} discount_10, {=actor_goodwill_ge(stalker:1800)} discount_9, {=actor_goodwill_ge(stalker:1600)} discount_8, {=actor_goodwill_ge(stalker:1400)} discount_7, {=actor_goodwill_ge(stalker:1200)} discount_6, {=actor_goodwill_ge(stalker:1000)} discount_5, {=actor_goodwill_ge(stalker:800)} discount_4, {=actor_goodwill_ge(stalker:600)} discount_3, {=actor_goodwill_ge(stalker:400)} discount_2, {=actor_goodwill_ge(stalker:200)} discount_1, discount_0
-price_profile                            = default
-sell_condition                           = trade_generic_sell
+buy_condition                                      = trade_generic_buy
+buy_item_condition_factor                          = 0.7
+buy_supplies                                       = supplies_generic
+discounts                                          = discount_0
+price_profile                                      = default
+sell_condition                                     = trade_generic_sell
 
 [trade_generic_sell]
-
-;D_PDA
-itm_pda_common                           = ;NO TRADE          
-itm_pda_rare                             = ;NO TRADE          
-itm_pda_uncommon                         = ;NO TRADE          
-pri_a25_explosive_charge_item            = ;NO TRADE          
-
-;II_ATTCH
-anomaly_scaner                           = ;NO TRADE          
-army_patch                               = 1.1, 2
-bad_psy_helmet                           = ;NO TRADE          
-bandit_patch                             = 1.2, 2
-cit_doctors_key                          = ;NO TRADE          
-csky_patch                               = 1.2, 2
-decoder                                  = ;NO TRADE          
-duty_patch                               = 1.2, 1.9
-ecolog_patch                             = 1.3, 2
-freedom_patch                            = 1.1, 1.9
-good_psy_helmet                          = ;NO TRADE          
-main_story_1_quest_case                  = ;NO TRADE          
-main_story_2_lab_x18_documents           = ;NO TRADE          
-main_story_3_lab_x16_documents           = ;NO TRADE          
-merc_patch                               = 1.1, 1.8
-monolith_patch                           = 1.3, 1.9
-mutant_part_boar_leg                     = ;NO TRADE          
-mutant_part_burer_hand                   = ;NO TRADE          
-mutant_part_cat_tail                     = ;NO TRADE          
-mutant_part_chimera_claw                 = ;NO TRADE          
-mutant_part_chimera_kogot                = ;NO TRADE          
-mutant_part_controller_glass             = ;NO TRADE          
-mutant_part_controller_hand              = ;NO TRADE          
-mutant_part_dog_tail                     = ;NO TRADE          
-mutant_part_flesh_eye                    = ;NO TRADE          
-mutant_part_fracture_hand                = ;NO TRADE          
-mutant_part_krovosos_jaw                 = ;NO TRADE          
-mutant_part_pseudogigant_eye             = ;NO TRADE          
-mutant_part_pseudogigant_hand            = ;NO TRADE          
-mutant_part_psevdodog_tail               = ;NO TRADE          
-mutant_part_snork_hand                   = ;NO TRADE          
-mutant_part_snork_leg                    = ;NO TRADE          
-mutant_part_tushkano_head                = ;NO TRADE          
-mutant_part_zombi_hand                   = ;NO TRADE          
-pri_a15_documents                        = ;NO TRADE          
-pri_a15_wpn_ak74                         = ;NO TRADE          
-pri_a15_wpn_ak74u                        = ;NO TRADE          
-pri_a15_wpn_svu                          = ;NO TRADE          
-pri_a15_wpn_wincheaster1300              = ;NO TRADE          
-pri_decoder_documents                    = ;NO TRADE          
-stalker_patch                            = 1.3, 2
-
-;DET_SIMP
-detector_simple                          = 1.2, 1.9
-
-;DET_ADVA
-detector_advanced                        = 1.1, 2
-
-;DET_ELIT
-detector_elite                           = 1.2, 1.9
-
-;DET_SCIE
-detector_scientific                      = 1.1, 1.9
-
-;ARTEFACT
-af_ameba_mica                            = 1.1, 1.8
-af_ameba_slime                           = 1.3, 1.8
-af_ameba_slug                            = 1.2, 2
-af_baloon                                = 1.2, 1.8
-af_blood                                 = 1.1, 1.8
-af_cristall                              = 1.2, 1.9
-af_cristall_flower                       = 1.1, 2
-af_drops                                 = 1.1, 1.8
-af_dummy_battery                         = 1.2, 2
-af_dummy_dummy                           = 1.3, 1.8
-af_dummy_glassbeads                      = 1.3, 2
-af_dummy_pellicle                        = 1.1, 1.9
-af_dummy_spring                          = 1.3, 2
-af_eye                                   = 1.3, 2
-af_fire                                  = 1.1, 1.9
-af_fireball                              = 1.3, 1.8
-af_glass                                 = 1.3, 1.8
-af_gold_fish                             = 1.1, 1.9
-af_gravi                                 = 1.1, 1.9
-af_ice                                   = 1.1, 2
-af_medusa                                = 1.1, 2
-af_mincer_meat                           = 1.1, 1.9
-af_night_star                            = 1.2, 1.8
-af_rusty_kristall                        = 1.3, 2
-af_rusty_sea                             = 1.3, 2
-af_rusty_thorn                           = 1.2, 1.8
-af_soul                                  = 1.3, 1.9
-af_vyvert                                = 1.3, 2
-
-;SCRPTART
-af_electra_flash                         = 1.2, 2
-af_electra_moonlight                     = 1.3, 1.8
-af_electra_sparkler                      = 1.2, 2
-af_fuzz_kolobok                          = 1.3, 1.9
-
-;II_FOOD
-antirad                                  = ;NO TRADE          
-bandage                                  = ;NO TRADE          
-bread                                    = ;NO TRADE          
-conserva                                 = ;NO TRADE          
-drug_anabiotic                           = ;NO TRADE          
-drug_antidot                             = ;NO TRADE          
-drug_booster                             = ;NO TRADE          
-drug_coagulant                           = ;NO TRADE          
-drug_psy_blockade                        = ;NO TRADE          
-drug_radioprotector                      = ;NO TRADE          
-energy_drink                             = ;NO TRADE          
-itm_gunsmith_toolkit                     = 1.1, 2
-itm_outfit_toolkit                       = 1.2, 1.8
-itm_repairkit_tier_1                     = 1.1, 2
-itm_repairkit_tier_2                     = 1.1, 2
-itm_repairkit_tier_3                     = 1.1, 2
-kolbasa                                  = ;NO TRADE          
-medkit                                   = ;NO TRADE          
-medkit_army                              = ;NO TRADE          
-medkit_scientic                          = ;NO TRADE          
-mutant_part_boar_chop                    = ;NO TRADE          
-mutant_part_chimera_meat                 = ;NO TRADE          
-mutant_part_dog_meat                     = ;NO TRADE          
-mutant_part_flesh_meat                   = ;NO TRADE          
-mutant_part_krovosos_meat                = ;NO TRADE          
-mutant_part_psevdodog_meat               = ;NO TRADE          
-mutant_part_tushkano_meat                = ;NO TRADE          
-vodka                                    = ;NO TRADE          
-
-;II_ANTIR
-artefact_container                       = ;NO TRADE          
-itm_actor_backpack                       = 1.3, 2
-itm_backpack                             = 1.2, 1.8
-itm_deployable_mgun                      = ;NO TRADE          
-itm_sleepbag                             = 1.2, 1.8
-test_container                           = ;NO TRADE          
-wpn_mine                                 = 1.3, 2
-
-;G_F1
-grenade_f1                               = 1.3, 2
-grenade_gd-05                            = 1.3, 1.9
-
-;G_RGD5
-grenade_rgd5                             = 1.1, 2
-
-;AMMO
-ammo_11.43x23_fmj                        = 1, 1.5
-ammo_11.43x23_hydro                      = 1.2, 1.7
-ammo_12x70_buck                          = 1.1, 1.6
-ammo_12x76_zhekan                        = 1.1, 1.7
-ammo_5.45x39_ap                          = 1.2, 1.5
-ammo_5.45x39_fmj                         = 1, 1.7
-ammo_5.56x45_ap                          = 1.1, 1.6
-ammo_5.56x45_ss190                       = 1.1, 1.5
-ammo_7.62x54_7h1                         = 1.1, 1.5
-ammo_9x18_fmj                            = 1, 1.6
-ammo_9x18_pmm                            = 1.2, 1.6
-ammo_9x19_fmj                            = 1.2, 1.7
-ammo_9x19_pbp                            = 1, 1.5
-ammo_9x39_ap                             = 1.1, 1.6
-ammo_9x39_pab9                           = 1.1, 1.6
-ammo_gauss                               = 1.2, 1.6
-ammo_gauss_cardan                        = 1.2, 1.7
-ammo_pkm_100                             = 1.2, 1.6
-
-;S_OG7B
-ammo_og-7b                               = 1, 1.6
-
-;S_VOG25
-ammo_vog-25                              = 1.1, 1.5
-
-;S_M209
-ammo_m209                                = 1.1, 1.8
-
-;WP_SCOPE
-wpn_addon_scope                          = 1.3, 1.8
-wpn_addon_scope_detector                 = 1.1, 1.9
-wpn_addon_scope_night                    = 1.1, 1.8
-wpn_addon_scope_susat                    = 1.1, 1.9
-wpn_addon_scope_susat_custom             = 1.2, 2
-wpn_addon_scope_susat_dusk               = 1.3, 1.8
-wpn_addon_scope_susat_night              = 1.1, 1.9
-wpn_addon_scope_susat_x1.6               = 1.1, 1.9
-wpn_addon_scope_x2.7                     = 1.3, 2
-
-;WP_SILEN
-wpn_addon_silencer                       = 1.2, 2
-
-;WP_GLAUN
-wpn_addon_grenade_launcher               = 1.1, 2
-wpn_addon_grenade_launcher_m203          = 1.3, 2
-
-;WP_AK74
-wpn_abakan                               = 1.5, 1.8
-wpn_ak74                                 = 1.6, 2
-wpn_ak74u                                = 1.6, 1.8
-wpn_ak74u_snag                           = 1.7, 1.9
-wpn_g36                                  = 1.5, 1.9
-wpn_g36_nimble                           = 1.7, 1.8
-wpn_groza                                = 1.5, 2
-wpn_groza_nimble                         = 1.5, 1.9
-wpn_groza_specops                        = 1.6, 2
-wpn_l85                                  = 1.7, 2
-wpn_lr300                                = 1.5, 1.9
-wpn_pkm                                  = 1.5, 1.8
-wpn_pkm_zulus                            = 1.6, 1.8
-wpn_sig550                               = 1.7, 1.8
-wpn_sig550_luckygun                      = 1.5, 1.9
-wpn_vintorez                             = 1.5, 1.9
-wpn_vintorez_nimble                      = 1.7, 1.8
-
-;WP_ASHTG
-wpn_protecta                             = 1.5, 1.8
-wpn_protecta_nimble                      = 1.7, 1.9
-wpn_spas12                               = 1.5, 2
-wpn_spas12_nimble                        = 1.7, 1.9
-wpn_wincheaster1300                      = 1.7, 1.8
-wpn_wincheaster1300_trapper              = 1.7, 1.8
-
-;WP_BINOC
-wpn_binoc                                = 1.5, 1.9
-
-;WP_BM16
-wpn_bm16                                 = 1.6, 2
-wpn_toz34                                = 1.5, 2
-
-;WP_GROZA
-wpn_fn2000                               = 1.7, 1.8
-wpn_fn2000_nimble                        = 1.7, 2
-
-;WP_HPSA
-wpn_hpsa                                 = 1.6, 2
-
-;WP_KNIFE
-wpn_knife                                = 1.7, 1.8
-
-;WP_LR300
-wpn_beretta                              = 1.5, 1.8
-wpn_mp5                                  = 1.7, 2
-wpn_mp5_nimble                           = 1.5, 1.9
-wpn_sig220                               = 1.7, 1.8
-wpn_sig220_nimble                        = 1.6, 2
-wpn_usp                                  = 1.5, 1.9
-wpn_usp_nimble                           = 1.6, 2
-wpn_walther                              = 1.7, 1.9
-
-;WP_PM
-wpn_colt1911                             = 1.6, 1.9
-wpn_desert_eagle                         = 1.6, 1.8
-wpn_desert_eagle_nimble                  = 1.5, 1.8
-wpn_fort                                 = 1.7, 1.9
-wpn_fort_snag                            = 1.5, 1.8
-wpn_pb                                   = 1.5, 1.8
-wpn_pm                                   = 1.5, 1.8
-wpn_pm_actor                             = 1.6, 2
-
-;WP_RG6
-wpn_rg-6                                 = 1.5, 1.9
-
-;WP_RPG7
-wpn_rpg7                                 = 1.5, 1.8
-
-;WP_SVD
-pri_a17_gauss_rifle                      = ;NO TRADE          
-wpn_gauss                                = 1.5, 1.9
-wpn_svd                                  = 1.5, 2
-wpn_svd_nimble                           = 1.7, 1.8
-
-;WP_SVU
-wpn_svu                                  = 1.5, 2
-wpn_svu_nimble                           = 1.5, 1.8
-
-;WP_VAL
-wpn_val                                  = 1.5, 1.9
-
-;EQU_STLK
-bandit_exo_outfit                        = 1.1, 1.9
-bandit_novice_outfit                     = 1.1, 1.9
-banditmerc_outfit                        = 1.2, 1.8
-cs_heavy_outfit                          = 1.3, 2
-cs_light_novice_outfit                   = 1.2, 1.8
-cs_light_outfit                          = 1.2, 1.8
-cs_medium_outfit                         = 1.3, 1.9
-cs_novice_outfit                         = 1.1, 1.9
-dolg_exo_outfit                          = 1.1, 2
-dolg_heavy_outfit                        = 1.2, 1.8
-dolg_novice_outfit                       = 1.3, 2
-dolg_outfit                              = 1.2, 2
-dolg_scientific_outfit                   = 1.3, 1.9
-ecolog_guard_outfit                      = 1.1, 1.8
-ecolog_outfit_green                      = 1.1, 2
-ecolog_outfit_orange                     = 1.1, 2
-exo_outfit                               = 1.3, 1.8
-merc_exo_outfit                          = 1.1, 1.9
-merc_novice_outfit                       = 1.1, 1.9
-merc_outfit                              = 1.2, 1.9
-merc_scientific_outfit                   = 1.2, 2
-military_exo_outfit                      = 1.1, 2
-military_novice_outfit                   = 1.1, 1.8
-military_outfit                          = 1.3, 1.8
-monolith_exo_outfit                      = 1.2, 2
-monolith_novice_outfit                   = 1.3, 1.8
-monolith_outfit                          = 1.3, 1.9
-monolith_scientific_outfit               = 1.1, 1.8
-novice_outfit                            = 1.2, 1.8
-scientific_outfit                        = 1.2, 2
-specops_outfit                           = 1.3, 1.8
-stalker_outfit                           = 1.2, 1.9
-stalker_outfit_barge                     = 1.2, 1.9
-svoboda_exo_outfit                       = 1.2, 1.9
-svoboda_heavy_outfit                     = 1.1, 2
-svoboda_heavy_outfit_2                   = 1.2, 1.8
-svoboda_light_outfit                     = 1.2, 1.9
-svoboda_novice_outfit                    = 1.1, 2
-svoboda_scientific_outfit                = 1.1, 2
-trenchcoat_outfit                        = 1.1, 1.9
-
-;E_HLMET
-helm_battle                              = 1.2, 2
-helm_hardhat                             = 1.3, 1.8
-helm_hardhat_snag                        = 1.3, 1.8
-helm_m40                                 = 1.3, 1.9
-helm_protective                          = 1.3, 1.9
-helm_respirator                          = 1.1, 1.9
-helm_respirator_joker                    = 1.2, 2
-helm_tactic                              = 1.2, 1.8
-deployable_mgun                          = ;NO TRADE          
-wpn_rpg7_missile                         = ;NO TRADE          
-yantar_deployable_mgun                   = ;NO TRADE          
+1p29                                               ; NO TRADE
+9x39scope                                          ; NO TRADE
+ac10632                                            ; NO TRADE
+ac11090                                            ; NO TRADE
+acog                                               ; NO TRADE
+addon                                              ; NO TRADE
+af_ameba_mica                                      ; NO TRADE
+af_ameba_slime                                     ; NO TRADE
+af_ameba_slug                                      ; NO TRADE
+af_baloon                                          ; NO TRADE
+af_blood                                           ; NO TRADE
+af_cristall                                        ; NO TRADE
+af_cristall_flower                                 ; NO TRADE
+af_drops                                           ; NO TRADE
+af_dummy_battery                                   ; NO TRADE
+af_dummy_dummy                                     ; NO TRADE
+af_dummy_glassbeads                                ; NO TRADE
+af_dummy_pellicle                                  ; NO TRADE
+af_dummy_spring                                    ; NO TRADE
+af_electra_flash                                   ; NO TRADE
+af_electra_moonlight                               ; NO TRADE
+af_electra_sparkler                                ; NO TRADE
+af_eye                                             ; NO TRADE
+af_fire                                            ; NO TRADE
+af_fireball                                        ; NO TRADE
+af_fuzz_kolobok                                    ; NO TRADE
+af_glass                                           ; NO TRADE
+af_gold_fish                                       ; NO TRADE
+af_gravi                                           ; NO TRADE
+af_ice                                             ; NO TRADE
+af_medusa                                          ; NO TRADE
+af_mincer_meat                                     ; NO TRADE
+af_night_star                                      ; NO TRADE
+af_rusty_kristall                                  ; NO TRADE
+af_rusty_sea                                       ; NO TRADE
+af_rusty_thorn                                     ; NO TRADE
+af_soul                                            ; NO TRADE
+af_vyvert                                          ; NO TRADE
+ammo_10x22_fmj                                     ; NO TRADE
+ammo_10x22_hp                                      ; NO TRADE
+ammo_10x25_fmj                                     ; NO TRADE
+ammo_10x25_hp                                      ; NO TRADE
+ammo_11.43x23_fmj                                  ; NO TRADE
+ammo_11.43x23_hydro                                ; NO TRADE
+ammo_12.7x55                                       ; NO TRADE
+ammo_12x70_buck                                    ; NO TRADE
+ammo_12x76_zhekan                                  ; NO TRADE
+ammo_12x76_zhekan_heli                             ; NO TRADE
+ammo_357_fmj                                       ; NO TRADE
+ammo_357_hp                                        ; NO TRADE
+ammo_4.6x30_ap                                     ; NO TRADE
+ammo_4.6x30_fmj                                    ; NO TRADE
+ammo_5.45x39_ap                                    ; NO TRADE
+ammo_5.45x39_fmj                                   ; NO TRADE
+ammo_5.56x45_ap                                    ; NO TRADE
+ammo_5.56x45_ss190                                 ; NO TRADE
+ammo_5.7x28_ss190                                  ; NO TRADE
+ammo_5.7x28_ss192                                  ; NO TRADE
+ammo_50_beowulf_hp                                 ; NO TRADE
+ammo_50_beowulf_jfp                                ; NO TRADE
+ammo_50ae_fmj                                      ; NO TRADE
+ammo_50ae_hp                                       ; NO TRADE
+ammo_6.8x43_fmj                                    ; NO TRADE
+ammo_6.8x43_sst                                    ; NO TRADE
+ammo_7.62x25_fmj                                   ; NO TRADE
+ammo_7.62x25_hp                                    ; NO TRADE
+ammo_7.62x39_ap                                    ; NO TRADE
+ammo_7.62x39_fmj                                   ; NO TRADE
+ammo_7.62x51_ap                                    ; NO TRADE
+ammo_7.62x51_fmj                                   ; NO TRADE
+ammo_7.62x54_7h1                                   ; NO TRADE
+ammo_7.62x54_fmj                                   ; NO TRADE
+ammo_8.58x70_ap                                    ; NO TRADE
+ammo_8.58x70_jsp                                   ; NO TRADE
+ammo_9x18_fmj                                      ; NO TRADE
+ammo_9x18_pmm                                      ; NO TRADE
+ammo_9x19_fmj                                      ; NO TRADE
+ammo_9x19_pbp                                      ; NO TRADE
+ammo_9x39_ap                                       ; NO TRADE
+ammo_9x39_pab9                                     ; NO TRADE
+ammo_gauss                                         ; NO TRADE
+ammo_gauss_cardan                                  ; NO TRADE
+ammo_m134                                          ; NO TRADE
+ammo_m209                                          ; NO TRADE
+ammo_og-7b                                         ; NO TRADE
+ammo_pkm_100                                       ; NO TRADE
+ammo_vog-25                                        ; NO TRADE
+anomaly_scaner                                     ; NO TRADE
+antirad                                            ; NO TRADE
+army_patch                                         ; NO TRADE
+artefact_container                                 ; NO TRADE
+bad_psy_helmet                                     ; NO TRADE
+bandage                                            ; NO TRADE
+bandit_exo_outfit                                  = 2,2
+bandit_novice_outfit                               ; NO TRADE
+bandit_patch                                       ; NO TRADE
+banditmerc_outfit                                  ; NO TRADE
+bread                                              ; NO TRADE
+c-more                                             ; NO TRADE
+cit_doctors_key                                    ; NO TRADE
+conserva                                           ; NO TRADE
+cs_heavy_outfit                                    ; NO TRADE
+cs_light_novice_outfit                             ; NO TRADE
+cs_light_outfit                                    ; NO TRADE
+cs_medium_outfit                                   ; NO TRADE
+cs_novice_outfit                                   ; NO TRADE
+csky_patch                                         ; NO TRADE
+decoder                                            ; NO TRADE
+deployable_mgun                                    ; NO TRADE
+detector_advanced                                  ; NO TRADE
+detector_elite                                     ; NO TRADE
+detector_scientific                                ; NO TRADE
+detector_simple                                    ; NO TRADE
+docter_sight                                       ; NO TRADE
+dolg_exo_outfit                                    = 2,2
+dolg_heavy_outfit                                  ; NO TRADE
+dolg_novice_outfit                                 ; NO TRADE
+dolg_outfit                                        ; NO TRADE
+dolg_scientific_outfit                             = 2,2
+drug_anabiotic                                     ; NO TRADE
+drug_antidot                                       ; NO TRADE
+drug_booster                                       ; NO TRADE
+drug_coagulant                                     ; NO TRADE
+drug_psy_blockade                                  ; NO TRADE
+drug_radioprotector                                ; NO TRADE
+duty_patch                                         ; NO TRADE
+ecolog_guard_outfit                                ; NO TRADE
+ecolog_outfit_green                                ; NO TRADE
+ecolog_outfit_orange                               ; NO TRADE
+ecolog_patch                                       ; NO TRADE
+ekp                                                ; NO TRADE
+energy_drink                                       ; NO TRADE
+eot                                                ; NO TRADE
+exo_outfit                                         = 2,2
+freedom_patch                                      ; NO TRADE
+good_psy_helmet                                    ; NO TRADE
+grenade_f1                                         ; NO TRADE
+grenade_gd-05                                      ; NO TRADE
+grenade_rgd5                                       ; NO TRADE
+helm_battle                                        ; NO TRADE
+helm_hardhat                                       ; NO TRADE
+helm_hardhat_snag                                  ; NO TRADE
+helm_m40                                           ; NO TRADE
+helm_protective                                    ; NO TRADE
+helm_respirator                                    ; NO TRADE
+helm_respirator_joker                              ; NO TRADE
+helm_tactic                                        ; NO TRADE
+itm_actor_backpack                                 ; NO TRADE
+itm_backpack                                       ; NO TRADE
+itm_deployable_mgun                                ; NO TRADE
+itm_gunsmith_toolkit                               ; NO TRADE
+itm_outfit_toolkit                                 ; NO TRADE
+itm_pda_common                                     ; NO TRADE
+itm_pda_rare                                       ; NO TRADE
+itm_pda_uncommon                                   ; NO TRADE
+itm_repairkit_tier_1                               ; NO TRADE
+itm_repairkit_tier_2                               ; NO TRADE
+itm_repairkit_tier_3                               ; NO TRADE
+itm_sleepbag                                       ; NO TRADE
+kobra                                              ; NO TRADE
+kolbasa                                            ; NO TRADE
+main_story_1_quest_case                            ; NO TRADE
+main_story_2_lab_x18_documents                     ; NO TRADE
+main_story_3_lab_x16_documents                     ; NO TRADE
+medkit                                             ; NO TRADE
+medkit_army                                        ; NO TRADE
+medkit_scientic                                    ; NO TRADE
+merc_exo_outfit                                    = 2,2
+merc_novice_outfit                                 ; NO TRADE
+merc_outfit                                        ; NO TRADE
+merc_patch                                         ; NO TRADE
+merc_scientific_outfit                             = 2,2
+military_exo_outfit                                = 2,2
+military_novice_outfit                             ; NO TRADE
+military_outfit                                    ; NO TRADE
+monolith_exo_outfit                                = 2,2
+monolith_novice_outfit                             ; NO TRADE
+monolith_outfit                                    ; NO TRADE
+monolith_patch                                     ; NO TRADE
+monolith_scientific_outfit                         = 2,2
+mutant_part_boar_chop                              ; NO TRADE
+mutant_part_boar_leg                               ; NO TRADE
+mutant_part_burer_hand                             ; NO TRADE
+mutant_part_cat_tail                               ; NO TRADE
+mutant_part_chimera_claw                           ; NO TRADE
+mutant_part_chimera_kogot                          ; NO TRADE
+mutant_part_chimera_meat                           ; NO TRADE
+mutant_part_controller_glass                       ; NO TRADE
+mutant_part_controller_hand                        ; NO TRADE
+mutant_part_dog_meat                               ; NO TRADE
+mutant_part_dog_tail                               ; NO TRADE
+mutant_part_flesh_eye                              ; NO TRADE
+mutant_part_flesh_meat                             ; NO TRADE
+mutant_part_fracture_hand                          ; NO TRADE
+mutant_part_krovosos_jaw                           ; NO TRADE
+mutant_part_krovosos_meat                          ; NO TRADE
+mutant_part_pseudogigant_eye                       ; NO TRADE
+mutant_part_pseudogigant_hand                      ; NO TRADE
+mutant_part_psevdodog_meat                         ; NO TRADE
+mutant_part_psevdodog_tail                         ; NO TRADE
+mutant_part_snork_hand                             ; NO TRADE
+mutant_part_snork_leg                              ; NO TRADE
+mutant_part_tushkano_head                          ; NO TRADE
+mutant_part_tushkano_meat                          ; NO TRADE
+mutant_part_zombi_hand                             ; NO TRADE
+novice_outfit                                      ; NO TRADE
+po4x34                                             ; NO TRADE
+pri_a15_documents                                  ; NO TRADE
+pri_a15_wpn_ak74                                   ; NO TRADE
+pri_a15_wpn_ak74u                                  ; NO TRADE
+pri_a15_wpn_svu                                    ; NO TRADE
+pri_a15_wpn_wincheaster1300                        ; NO TRADE
+pri_a17_gauss_rifle                                ; NO TRADE
+pri_a25_explosive_charge_item                      ; NO TRADE
+pri_decoder_documents                              ; NO TRADE
+pso                                                ; NO TRADE
+pu                                                 ; NO TRADE
+scientific_outfit                                  = 2,2
+specops_outfit                                     ; NO TRADE
+stalker_outfit                                     ; NO TRADE
+stalker_outfit_barge                               ; NO TRADE
+stalker_patch                                      ; NO TRADE
+svoboda_exo_outfit                                 = 2,2
+svoboda_heavy_outfit                               ; NO TRADE
+svoboda_heavy_outfit_2                             ; NO TRADE
+svoboda_light_outfit                               ; NO TRADE
+svoboda_novice_outfit                              ; NO TRADE
+svoboda_scientific_outfit                          = 2,2
+test_container                                     ; NO TRADE
+trenchcoat_outfit                                  ; NO TRADE
+vodka                                              ; NO TRADE
+wpn_9a91                                           = 2,2
+wpn_9a91_1p29                                      ; NO TRADE
+wpn_9a91_ekp                                       ; NO TRADE
+wpn_9a91_kobra                                     ; NO TRADE
+wpn_9a91_pso                                       ; NO TRADE
+wpn_abakan                                         ; NO TRADE
+wpn_abakan_1p29                                    ; NO TRADE
+wpn_abakan_ekp                                     ; NO TRADE
+wpn_abakan_kobra                                   ; NO TRADE
+wpn_abakan_pso                                     ; NO TRADE
+wpn_addon_grenade_launcher                         ; NO TRADE
+wpn_addon_grenade_launcher_ag36                    ; NO TRADE
+wpn_addon_grenade_launcher_m203                    ; NO TRADE
+wpn_addon_silencer                                 ; NO TRADE
+wpn_addon_silencer10                               ; NO TRADE
+wpn_addon_silencer12                               ; NO TRADE
+wpn_addon_silencer45                               ; NO TRADE
+wpn_addon_silencer50                               ; NO TRADE
+wpn_addon_silencer545                              ; NO TRADE
+wpn_addon_silencer556                              ; NO TRADE
+wpn_addon_silencer68                               ; NO TRADE
+wpn_addon_silencer762                              ; NO TRADE
+wpn_addon_silencer9x39                             ; NO TRADE
+wpn_aek971                                         ; NO TRADE
+wpn_aek971_1p29                                    ; NO TRADE
+wpn_aek971_ekp                                     ; NO TRADE
+wpn_aek971_kobra                                   ; NO TRADE
+wpn_aek971_pso                                     ; NO TRADE
+wpn_aek973                                         ; NO TRADE
+wpn_aek973_1p29                                    ; NO TRADE
+wpn_aek973_ekp                                     ; NO TRADE
+wpn_aek973_kobra                                   ; NO TRADE
+wpn_aek973_pso                                     ; NO TRADE
+wpn_ak101                                          ; NO TRADE
+wpn_ak101_1p29                                     ; NO TRADE
+wpn_ak101_ekp                                      ; NO TRADE
+wpn_ak101_kobra                                    ; NO TRADE
+wpn_ak101_pso                                      ; NO TRADE
+wpn_ak102                                          ; NO TRADE
+wpn_ak102_1p29                                     ; NO TRADE
+wpn_ak102_ekp                                      ; NO TRADE
+wpn_ak102_kobra                                    ; NO TRADE
+wpn_ak102_pso                                      ; NO TRADE
+wpn_ak103                                          ; NO TRADE
+wpn_ak103_1p29                                     ; NO TRADE
+wpn_ak103_ekp                                      ; NO TRADE
+wpn_ak103_kobra                                    ; NO TRADE
+wpn_ak103_pso                                      ; NO TRADE
+wpn_ak104                                          ; NO TRADE
+wpn_ak104_1p29                                     ; NO TRADE
+wpn_ak104_ekp                                      ; NO TRADE
+wpn_ak104_kobra                                    ; NO TRADE
+wpn_ak104_pso                                      ; NO TRADE
+wpn_ak105                                          ; NO TRADE
+wpn_ak105_1p29                                     ; NO TRADE
+wpn_ak105_ekp                                      ; NO TRADE
+wpn_ak105_kobra                                    ; NO TRADE
+wpn_ak105_pso                                      ; NO TRADE
+wpn_ak12                                           ; NO TRADE
+wpn_ak12_762                                       ; NO TRADE
+wpn_ak12_762_ac11090                               ; NO TRADE
+wpn_ak12_762_acog                                  ; NO TRADE
+wpn_ak12_762_c-more                                ; NO TRADE
+wpn_ak12_762_eot                                   ; NO TRADE
+wpn_ak12_ac11090                                   ; NO TRADE
+wpn_ak12_acog                                      ; NO TRADE
+wpn_ak12_c-more                                    ; NO TRADE
+wpn_ak12_eot                                       ; NO TRADE
+wpn_ak47                                           ; NO TRADE
+wpn_ak74                                           ; NO TRADE
+wpn_ak74_1p29                                      ; NO TRADE
+wpn_ak74_ekp                                       ; NO TRADE
+wpn_ak74_kobra                                     ; NO TRADE
+wpn_ak74_pso                                       ; NO TRADE
+wpn_ak74m                                          ; NO TRADE
+wpn_ak74m_1p29                                     ; NO TRADE
+wpn_ak74m_ekp                                      ; NO TRADE
+wpn_ak74m_kobra                                    ; NO TRADE
+wpn_ak74m_pso                                      ; NO TRADE
+wpn_ak74u                                          ; NO TRADE
+wpn_ak74u_1p29                                     ; NO TRADE
+wpn_ak74u_ekp                                      ; NO TRADE
+wpn_ak74u_snag                                     ; NO TRADE
+wpn_akm                                            ; NO TRADE
+wpn_akm_1p29                                       ; NO TRADE
+wpn_akm_ekp                                        ; NO TRADE
+wpn_akm_kobra                                      ; NO TRADE
+wpn_akm_pso                                        ; NO TRADE
+wpn_akms                                           ; NO TRADE
+wpn_akms_1p29                                      ; NO TRADE
+wpn_akms_ekp                                       ; NO TRADE
+wpn_akms_kobra                                     ; NO TRADE
+wpn_akms_pso                                       ; NO TRADE
+wpn_aks47                                          ; NO TRADE
+wpn_aks74                                          ; NO TRADE
+wpn_aks74_1p29                                     ; NO TRADE
+wpn_aks74_ekp                                      ; NO TRADE
+wpn_aks74_kobra                                    ; NO TRADE
+wpn_aks74_pso                                      ; NO TRADE
+wpn_aks74n                                         ; NO TRADE
+wpn_aks74n_1p29                                    ; NO TRADE
+wpn_aks74n_ekp                                     ; NO TRADE
+wpn_aks74n_kobra                                   ; NO TRADE
+wpn_aks74n_pso                                     ; NO TRADE
+wpn_aps                                            ; NO TRADE
+wpn_ar15                                           ; NO TRADE
+wpn_ar15_ac11090                                   ; NO TRADE
+wpn_ar15_acog                                      ; NO TRADE
+wpn_ar15_c-more                                    ; NO TRADE
+wpn_ar15_eot                                       ; NO TRADE
+wpn_aug                                            ; NO TRADE
+wpn_avt40                                          = 2,2
+wpn_avt40_pu                                       ; NO TRADE
+wpn_beretta                                        ; NO TRADE
+wpn_beretta96                                      ; NO TRADE
+wpn_binoc                                          ; NO TRADE
+wpn_bizon                                          ; NO TRADE
+wpn_bizon_1p29                                     ; NO TRADE
+wpn_bizon_ekp                                      ; NO TRADE
+wpn_bizon_kobra                                    ; NO TRADE
+wpn_bizon_pso                                      ; NO TRADE
+wpn_bm16                                           ; NO TRADE
+wpn_bm16_full                                      ; NO TRADE
+wpn_colt1911                                       ; NO TRADE
+wpn_colt1911_sk2                                   ; NO TRADE
+wpn_colt1911_sk3                                   ; NO TRADE
+wpn_coltde                                         ; NO TRADE
+wpn_cz40                                           ; NO TRADE
+wpn_cz52                                           ; NO TRADE
+wpn_cz75                                           ; NO TRADE
+wpn_desert_eagle                                   ; NO TRADE
+wpn_desert_eagle_357                               ; NO TRADE
+wpn_desert_eagle_nimble                            ; NO TRADE
+wpn_fiveseven                                      ; NO TRADE
+wpn_fn2000                                         ; NO TRADE
+wpn_fn2000_acog                                    ; NO TRADE
+wpn_fn2000_nimble                                  = 2,2
+wpn_fnp40                                          ; NO TRADE
+wpn_fnp45                                          ; NO TRADE
+wpn_fort                                           ; NO TRADE
+wpn_fort_snag                                      ; NO TRADE
+wpn_g3                                             ; NO TRADE
+wpn_g36                                            ; NO TRADE
+wpn_g36_nimble                                     = 2,2
+wpn_g36c                                           ; NO TRADE
+wpn_g36c_ac11090                                   ; NO TRADE
+wpn_g36c_acog                                      ; NO TRADE
+wpn_g36c_c-more                                    ; NO TRADE
+wpn_g36c_eot                                       ; NO TRADE
+wpn_g3_acog                                        ; NO TRADE
+wpn_g3a3                                           ; NO TRADE
+wpn_g3a3_ac11090                                   ; NO TRADE
+wpn_g3a3_acog                                      ; NO TRADE
+wpn_g3a3_c-more                                    ; NO TRADE
+wpn_g3a3_eot                                       ; NO TRADE
+wpn_g3sg1                                          ; NO TRADE
+wpn_galil                                          ; NO TRADE
+wpn_gauss                                          = 2,2
+wpn_glock17                                        ; NO TRADE
+wpn_glock20                                        ; NO TRADE
+wpn_glock21                                        ; NO TRADE
+wpn_glock35                                        ; NO TRADE
+wpn_groza                                          ; NO TRADE
+wpn_groza1                                         ; NO TRADE
+wpn_groza1_pso                                     ; NO TRADE
+wpn_groza_nimble                                   = 2,2
+wpn_groza_pso                                      ; NO TRADE
+wpn_gsh18                                          ; NO TRADE
+wpn_hk416                                          ; NO TRADE
+wpn_hk416_ac11090                                  ; NO TRADE
+wpn_hk416_acog                                     ; NO TRADE
+wpn_hk416_c-more                                   ; NO TRADE
+wpn_hk416_eot                                      ; NO TRADE
+wpn_hk417                                          ; NO TRADE
+wpn_hk417_acog                                     ; NO TRADE
+wpn_hk417_eot                                      ; NO TRADE
+wpn_hpsa                                           ; NO TRADE
+wpn_hpsa40                                         ; NO TRADE
+wpn_knife                                          ; NO TRADE
+wpn_l115a3                                         ; NO TRADE
+wpn_l85                                            ; NO TRADE
+wpn_l85_acog                                       ; NO TRADE
+wpn_l96                                            = 2,2
+wpn_lr300                                          ; NO TRADE
+wpn_lr300_ac11090                                  ; NO TRADE
+wpn_lr300_acog                                     ; NO TRADE
+wpn_lr300_c-more                                   ; NO TRADE
+wpn_lr300_eot                                      ; NO TRADE
+wpn_lr680                                          ; NO TRADE
+wpn_lr680_ac11090                                  ; NO TRADE
+wpn_lr680_acog                                     ; NO TRADE
+wpn_lr680_c-more                                   ; NO TRADE
+wpn_lr680_eot                                      ; NO TRADE
+wpn_m134                                           ; NO TRADE
+wpn_m14                                            ; NO TRADE
+wpn_m16                                            ; NO TRADE
+wpn_m16_68                                         ; NO TRADE
+wpn_m16_68_acog                                    ; NO TRADE
+wpn_m16_acog                                       ; NO TRADE
+wpn_m249                                           ; NO TRADE
+wpn_m249_eot                                       ; NO TRADE
+wpn_m249_nimble                                    = 2,2
+wpn_m249_nimble_eot                                ; NO TRADE
+wpn_m4a1                                           ; NO TRADE
+wpn_m4a1_50                                        = 2,2
+wpn_m4a1_50_ac11090                                ; NO TRADE
+wpn_m4a1_50_acog                                   ; NO TRADE
+wpn_m4a1_50_c-more                                 ; NO TRADE
+wpn_m4a1_50_eot                                    ; NO TRADE
+wpn_m4a1_ac11090                                   ; NO TRADE
+wpn_m4a1_acog                                      ; NO TRADE
+wpn_m4a1_c-more                                    ; NO TRADE
+wpn_m4a1_eot                                       ; NO TRADE
+wpn_m4bm                                           ; NO TRADE
+wpn_m4bm_ac11090                                   ; NO TRADE
+wpn_m4bm_acog                                      ; NO TRADE
+wpn_m4bm_c-more                                    ; NO TRADE
+wpn_m4bm_eot                                       ; NO TRADE
+wpn_m60                                            = 2,2
+wpn_mine                                           ; NO TRADE
+wpn_mn91                                           ; NO TRADE
+wpn_mn91_pu                                        ; NO TRADE
+wpn_mossberg                                       ; NO TRADE
+wpn_mp412                                          ; NO TRADE
+wpn_mp440                                          ; NO TRADE
+wpn_mp443                                          ; NO TRADE
+wpn_mp5                                            ; NO TRADE
+wpn_mp5_ac11090                                    ; NO TRADE
+wpn_mp5_acog                                       ; NO TRADE
+wpn_mp5_c-more                                     ; NO TRADE
+wpn_mp5_eot                                        ; NO TRADE
+wpn_mp5_nimble                                     = 2,2
+wpn_mp5_nimble_ac11090                             ; NO TRADE
+wpn_mp5_nimble_acog                                ; NO TRADE
+wpn_mp5_nimble_c-more                              ; NO TRADE
+wpn_mp5_nimble_eot                                 ; NO TRADE
+wpn_mp5sd                                          ; NO TRADE
+wpn_mp5sd_ac11090                                  ; NO TRADE
+wpn_mp5sd_acog                                     ; NO TRADE
+wpn_mp5sd_c-more                                   ; NO TRADE
+wpn_mp5sd_eot                                      ; NO TRADE
+wpn_mp5sd_nimble                                   = 2,2
+wpn_mp5sd_nimble_ac11090                           ; NO TRADE
+wpn_mp5sd_nimble_acog                              ; NO TRADE
+wpn_mp5sd_nimble_c-more                            ; NO TRADE
+wpn_mp5sd_nimble_eot                               ; NO TRADE
+wpn_mp7                                            ; NO TRADE
+wpn_mp7_acog                                       ; NO TRADE
+wpn_mp7_eot                                        ; NO TRADE
+wpn_ots33                                          ; NO TRADE
+wpn_p90                                            ; NO TRADE
+wpn_p90_ac11090                                    ; NO TRADE
+wpn_p90_acog                                       ; NO TRADE
+wpn_p90_c-more                                     ; NO TRADE
+wpn_pb                                             ; NO TRADE
+wpn_pkm                                            ; NO TRADE
+wpn_pkm_ekp                                        ; NO TRADE
+wpn_pkm_zulus                                      ; NO TRADE
+wpn_pkm_zulus_ekp                                  ; NO TRADE
+wpn_pm                                             ; NO TRADE
+wpn_pm_actor                                       ; NO TRADE
+wpn_pmm                                            ; NO TRADE
+wpn_pp2000                                         ; NO TRADE
+wpn_protecta                                       ; NO TRADE
+wpn_protecta_nimble                                = 2,2
+wpn_remington870                                   ; NO TRADE
+wpn_remington870_ac11090                           ; NO TRADE
+wpn_remington870_c-more                            ; NO TRADE
+wpn_remington870_eot                               ; NO TRADE
+wpn_rg-6                                           ; NO TRADE
+wpn_rpg7                                           ; NO TRADE
+wpn_rpk                                            ; NO TRADE
+wpn_rpk74                                          ; NO TRADE
+wpn_rpk74_1p29                                     ; NO TRADE
+wpn_rpk74_ekp                                      ; NO TRADE
+wpn_rpk74_pso                                      ; NO TRADE
+wpn_saiga                                          ; NO TRADE
+wpn_saiga_1p29                                     ; NO TRADE
+wpn_saiga_ekp                                      ; NO TRADE
+wpn_saiga_kobra                                    ; NO TRADE
+wpn_saiga_nimble                                   = 2,2
+wpn_saiga_nimble_1p29                              ; NO TRADE
+wpn_saiga_nimble_ekp                               ; NO TRADE
+wpn_saiga_nimble_kobra                             ; NO TRADE
+wpn_saiga_nimble_pso                               ; NO TRADE
+wpn_saiga_pso                                      ; NO TRADE
+wpn_scar-h                                         ; NO TRADE
+wpn_scar-h_ac11090                                 ; NO TRADE
+wpn_scar-h_acog                                    ; NO TRADE
+wpn_scar-h_c-more                                  ; NO TRADE
+wpn_scar-h_eot                                     ; NO TRADE
+wpn_sig220                                         ; NO TRADE
+wpn_sig220_nimble                                  = 2,2
+wpn_sig550                                         ; NO TRADE
+wpn_sig550_ac11090                                 ; NO TRADE
+wpn_sig550_acog                                    ; NO TRADE
+wpn_sig550_c-more                                  ; NO TRADE
+wpn_sig550_eot                                     ; NO TRADE
+wpn_sig550_luckygun                                ; NO TRADE
+wpn_sig550_luckygun_ac11090                        ; NO TRADE
+wpn_sig550_luckygun_acog                           ; NO TRADE
+wpn_sig550_luckygun_c-more                         ; NO TRADE
+wpn_sig550_luckygun_eot                            ; NO TRADE
+wpn_sks                                            ; NO TRADE
+wpn_sks_pu                                         ; NO TRADE
+wpn_spas12                                         ; NO TRADE
+wpn_spas12_nimble                                  = 2,2
+wpn_sr3m                                           = 2,2
+wpn_sr3m                                           = 2,2
+wpn_sr3m_1p29                                      ; NO TRADE
+wpn_sr3m_ekp                                       ; NO TRADE
+wpn_sr3m_kobra                                     ; NO TRADE
+wpn_sr3m_pso                                       ; NO TRADE
+wpn_stg58                                          ; NO TRADE
+wpn_stg58                                          ; NO TRADE
+wpn_stg58_acog                                     ; NO TRADE
+wpn_sv98                                           ; NO TRADE
+wpn_svd                                            ; NO TRADE
+wpn_svd_nimble                                     = 2,2
+wpn_svt40                                          = 2,2
+wpn_svt40                                          = 2,2
+wpn_svt40_pu                                       ; NO TRADE
+wpn_svu                                            ; NO TRADE
+wpn_svu_nimble                                     = 2,2
+wpn_toz34                                          ; NO TRADE
+wpn_toz34_sk1                                      ; NO TRADE
+wpn_toz34_so                                       ; NO TRADE
+wpn_toz34_so_sk1                                   ; NO TRADE
+wpn_trg22                                          ; NO TRADE
+wpn_trg42                                          ; NO TRADE
+wpn_tt33                                           ; NO TRADE
+wpn_tt33_2                                         ; NO TRADE
+wpn_ump40                                          ; NO TRADE
+wpn_ump40_ac11090                                  ; NO TRADE
+wpn_ump40_acog                                     ; NO TRADE
+wpn_ump40_c-more                                   ; NO TRADE
+wpn_ump40_eot                                      ; NO TRADE
+wpn_ump45                                          ; NO TRADE
+wpn_ump45_ac11090                                  ; NO TRADE
+wpn_ump45_acog                                     ; NO TRADE
+wpn_ump45_c-more                                   ; NO TRADE
+wpn_ump45_eot                                      ; NO TRADE
+wpn_usp                                            ; NO TRADE
+wpn_usp10                                          ; NO TRADE
+wpn_usp40                                          ; NO TRADE
+wpn_usp_nimble                                     ; NO TRADE
+wpn_val                                            ; NO TRADE
+wpn_val_1p29                                       ; NO TRADE
+wpn_val_ekp                                        ; NO TRADE
+wpn_val_kobra                                      ; NO TRADE
+wpn_val_pso                                        ; NO TRADE
+wpn_vepr12                                         ; NO TRADE
+wpn_vepr12_1p29                                    ; NO TRADE
+wpn_vepr12_ekp                                     ; NO TRADE
+wpn_vepr12_kobra                                   ; NO TRADE
+wpn_vepr12_pso                                     ; NO TRADE
+wpn_vintorez                                       ; NO TRADE
+wpn_vintorez_nimble                                = 2,2
+wpn_vks                                            = 2,2
+wpn_vsk94                                          ; NO TRADE
+wpn_vsk94_pso                                      ; NO TRADE
+wpn_vz65                                           ; NO TRADE
+wpn_walther                                        ; NO TRADE
+wpn_walther40                                      ; NO TRADE
+wpn_wincheaster1300                                ; NO TRADE
+wpn_wincheaster1300_trapper                        = 2,2
+yantar_deployable_mgun                             ; NO TRADE
 
 [trade_generic_buy]
-
-;D_PDA
-itm_pda_common                           = ;NO TRADE          
-itm_pda_rare                             = ;NO TRADE          
-itm_pda_uncommon                         = ;NO TRADE          
-pri_a25_explosive_charge_item            = ;NO TRADE          
-
-;II_ATTCH
-anomaly_scaner                           = ;NO TRADE          
-army_patch                               = 0.44, 0.31
-bad_psy_helmet                           = ;NO TRADE          
-bandit_patch                             = 0.63, 0.58
-cit_doctors_key                          = ;NO TRADE          
-csky_patch                               = 0.45, 0.4
-decoder                                  = ;NO TRADE          
-duty_patch                               = 0.56, 0.42
-ecolog_patch                             = 0.6, 0.54
-freedom_patch                            = 0.59, 0.47
-good_psy_helmet                          = ;NO TRADE          
-main_story_1_quest_case                  = ;NO TRADE          
-main_story_2_lab_x18_documents           = ;NO TRADE          
-main_story_3_lab_x16_documents           = ;NO TRADE          
-merc_patch                               = 0.53, 0.41
-monolith_patch                           = 0.43, 0.3
-mutant_part_boar_leg                     = ;NO TRADE          
-mutant_part_burer_hand                   = ;NO TRADE          
-mutant_part_cat_tail                     = ;NO TRADE          
-mutant_part_chimera_claw                 = ;NO TRADE          
-mutant_part_chimera_kogot                = ;NO TRADE          
-mutant_part_controller_glass             = ;NO TRADE          
-mutant_part_controller_hand              = ;NO TRADE          
-mutant_part_dog_tail                     = ;NO TRADE          
-mutant_part_flesh_eye                    = ;NO TRADE          
-mutant_part_fracture_hand                = ;NO TRADE          
-mutant_part_krovosos_jaw                 = ;NO TRADE          
-mutant_part_pseudogigant_eye             = ;NO TRADE          
-mutant_part_pseudogigant_hand            = ;NO TRADE          
-mutant_part_psevdodog_tail               = ;NO TRADE          
-mutant_part_snork_hand                   = ;NO TRADE          
-mutant_part_snork_leg                    = ;NO TRADE          
-mutant_part_tushkano_head                = ;NO TRADE          
-mutant_part_zombi_hand                   = ;NO TRADE          
-pri_a15_documents                        = ;NO TRADE          
-pri_a15_wpn_ak74                         = ;NO TRADE          
-pri_a15_wpn_ak74u                        = ;NO TRADE          
-pri_a15_wpn_svu                          = ;NO TRADE          
-pri_a15_wpn_wincheaster1300              = ;NO TRADE          
-pri_decoder_documents                    = ;NO TRADE          
-stalker_patch                            = 0.37, 0.22
-
-;DET_SIMP
-detector_simple                          = 0.27, 0.19
-
-;DET_ADVA
-detector_advanced                        = 0.57, 0.42
-
-;DET_ELIT
-detector_elite                           = 0.64, 0.52
-
-;DET_SCIE
-detector_scientific                      = 0.64, 0.54
-
-;ARTEFACT
-af_ameba_mica                            = 0.43, 0.27
-af_ameba_slime                           = 0.47, 0.47
-af_ameba_slug                            = 0.47, 0.39
-af_baloon                                = 0.49, 0.34
-af_blood                                 = 0.46, 0.43
-af_cristall                              = 0.48, 0.45
-af_cristall_flower                       = 0.44, 0.42
-af_drops                                 = 0.47, 0.39
-af_dummy_battery                         = 0.49, 0.34
-af_dummy_dummy                           = 0.45, 0.43
-af_dummy_glassbeads                      = 0.44, 0.35
-af_dummy_pellicle                        = 0.47, 0.46
-af_dummy_spring                          = 0.5, 0.39
-af_eye                                   = 0.5, 0.49
-af_fire                                  = 0.49, 0.44
-af_fireball                              = 0.44, 0.34
-af_glass                                 = 0.44, 0.34
-af_gold_fish                             = 0.47, 0.34
-af_gravi                                 = 0.47, 0.47
-af_ice                                   = 0.42, 0.33
-af_medusa                                = 0.4, 0.37
-af_mincer_meat                           = 0.48, 0.4
-af_night_star                            = 0.44, 0.35
-af_rusty_kristall                        = 0.4, 0.37
-af_rusty_sea                             = 0.43, 0.41
-af_rusty_thorn                           = 0.45, 0.39
-af_soul                                  = 0.41, 0.33
-af_vyvert                                = 0.48, 0.34
-
-;SCRPTART
-af_electra_flash                         = 0.43, 0.38
-af_electra_moonlight                     = 0.49, 0.48
-af_electra_sparkler                      = 0.4, 0.38
-af_fuzz_kolobok                          = 0.46, 0.44
-
-;II_FOOD
-antirad                                  = ;NO TRADE          
-bandage                                  = ;NO TRADE          
-bread                                    = ;NO TRADE          
-conserva                                 = ;NO TRADE          
-drug_anabiotic                           = ;NO TRADE          
-drug_antidot                             = ;NO TRADE          
-drug_booster                             = ;NO TRADE          
-drug_coagulant                           = ;NO TRADE          
-drug_psy_blockade                        = ;NO TRADE          
-drug_radioprotector                      = ;NO TRADE          
-energy_drink                             = ;NO TRADE          
-itm_gunsmith_toolkit                     = 0.59, 0.46
-itm_outfit_toolkit                       = 0.39, 0.25
-itm_repairkit_tier_1                     = 0.39, 0.25
-itm_repairkit_tier_2                     = 0.39, 0.25
-itm_repairkit_tier_3                     = 0.39, 0.25
-kolbasa                                  = ;NO TRADE          
-medkit                                   = ;NO TRADE          
-medkit_army                              = ;NO TRADE          
-medkit_scientic                          = ;NO TRADE          
-mutant_part_boar_chop                    = ;NO TRADE          
-mutant_part_chimera_meat                 = ;NO TRADE          
-mutant_part_dog_meat                     = ;NO TRADE          
-mutant_part_flesh_meat                   = ;NO TRADE          
-mutant_part_krovosos_meat                = ;NO TRADE          
-mutant_part_psevdodog_meat               = ;NO TRADE          
-mutant_part_tushkano_meat                = ;NO TRADE          
-vodka                                    = ;NO TRADE          
-
-;II_ANTIR
-artefact_container                       = ;NO TRADE          
-itm_actor_backpack                       = 0.59, 0.47
-itm_backpack                             = 0.7, 0.69
-itm_deployable_mgun                      = ;NO TRADE          
-itm_sleepbag                             = 0.28, 0.16
-test_container                           = ;NO TRADE          
-wpn_mine                                 = 0.69, 0.6
-
-;G_F1
-grenade_f1                               = 0.25, 0.11
-grenade_gd-05                            = 0.23, 0.16
-
-;G_RGD5
-grenade_rgd5                             = 0.28, 0.14
-
-;AMMO
-ammo_11.43x23_fmj                        = 0.63, 0.49
-ammo_11.43x23_hydro                      = 0.62, 0.61
-ammo_12x70_buck                          = 0.68, 0.56
-ammo_12x76_zhekan                        = 0.64, 0.64
-ammo_5.45x39_ap                          = 0.66, 0.51
-ammo_5.45x39_fmj                         = 0.6, 0.47
-ammo_5.56x45_ap                          = 0.6, 0.58
-ammo_5.56x45_ss190                       = 0.68, 0.65
-ammo_7.62x54_7h1                         = 0.67, 0.57
-ammo_9x18_fmj                            = 0.69, 0.65
-ammo_9x18_pmm                            = 0.68, 0.66
-ammo_9x19_fmj                            = 0.6, 0.54
-ammo_9x19_pbp                            = 0.66, 0.57
-ammo_9x39_ap                             = 0.69, 0.67
-ammo_9x39_pab9                           = 0.65, 0.51
-ammo_gauss                               = 0.66, 0.52
-ammo_gauss_cardan                        = 0.69, 0.66
-ammo_pkm_100                             = 0.7, 0.67
-
-;S_OG7B
-ammo_og-7b                               = 0.6, 0.59
-
-;S_VOG25
-ammo_vog-25                              = 0.64, 0.57
-
-;S_M209
-ammo_m209                                = 0.52, 0.47
-
-;WP_SCOPE
-wpn_addon_scope                          = 0.27, 0.2
-wpn_addon_scope_detector                 = 0.22, 0.17
-wpn_addon_scope_night                    = 0.22, 0.14
-wpn_addon_scope_susat                    = 0.22, 0.13
-wpn_addon_scope_susat_custom             = 0.24, 0.19
-wpn_addon_scope_susat_dusk               = 0.2, 0.1
-wpn_addon_scope_susat_night              = 0.2, 0.14
-wpn_addon_scope_susat_x1.6               = 0.29, 0.26
-wpn_addon_scope_x2.7                     = 0.3, 0.22
-
-;WP_SILEN
-wpn_addon_silencer                       = 0.28, 0.17
-
-;WP_GLAUN
-wpn_addon_grenade_launcher               = 0.29, 0.21
-wpn_addon_grenade_launcher_m203          = 0.29, 0.21
-
-;WP_AK74
-wpn_abakan                               = 0.19, 0.1
-wpn_ak74                                 = 0.24, 0.09
-wpn_ak74u                                = 0.18, 0.14
-wpn_ak74u_snag                           = 0.23, 0.11
-wpn_g36                                  = 0.22, 0.21
-wpn_g36_nimble                           = 0.23, 0.14
-wpn_groza                                = 0.19, 0.13
-wpn_groza_nimble                         = 0.24, 0.17
-wpn_groza_specops                        = 0.25, 0.23
-wpn_l85                                  = 0.23, 0.14
-wpn_lr300                                = 0.25, 0.15
-wpn_pkm                                  = 0.23, 0.21
-wpn_pkm_zulus                            = 0.19, 0.13
-wpn_sig550                               = 0.23, 0.09
-wpn_sig550_luckygun                      = 0.22, 0.08
-wpn_vintorez                             = 0.21, 0.19
-wpn_vintorez_nimble                      = 0.25, 0.21
-
-;WP_ASHTG
-wpn_protecta                             = 0.19, 0.12
-wpn_protecta_nimble                      = 0.21, 0.19
-wpn_spas12                               = 0.18, 0.17
-wpn_spas12_nimble                        = 0.19, 0.19
-wpn_wincheaster1300                      = 0.18, 0.06
-wpn_wincheaster1300_trapper              = 0.18, 0.14
-
-;WP_BINOC
-wpn_binoc                                = 0.25, 0.12
-
-;WP_BM16
-wpn_bm16                                 = 0.18, 0.09
-wpn_toz34                                = 0.25, 0.15
-
-;WP_GROZA
-wpn_fn2000                               = 0.23, 0.21
-wpn_fn2000_nimble                        = 0.24, 0.11
-
-;WP_HPSA
-wpn_hpsa                                 = 0.25, 0.25
-
-;WP_KNIFE
-wpn_knife                                = 0.18, 0.18
-
-;WP_LR300
-wpn_beretta                              = 0.18, 0.05
-wpn_mp5                                  = 0.2, 0.13
-wpn_mp5_nimble                           = 0.2, 0.14
-wpn_sig220                               = 0.25, 0.23
-wpn_sig220_nimble                        = 0.24, 0.18
-wpn_usp                                  = 0.2, 0.07
-wpn_usp_nimble                           = 0.22, 0.08
-wpn_walther                              = 0.24, 0.18
-
-;WP_PM
-wpn_colt1911                             = 0.19, 0.04
-wpn_desert_eagle                         = 0.19, 0.19
-wpn_desert_eagle_nimble                  = 0.2, 0.07
-wpn_fort                                 = 0.22, 0.21
-wpn_fort_snag                            = 0.22, 0.12
-wpn_pb                                   = 0.24, 0.15
-wpn_pm                                   = 0.23, 0.1
-wpn_pm_actor                             = 0.2, 0.07
-
-;WP_RG6
-wpn_rg-6                                 = 0.2, 0.07
-
-;WP_RPG7
-wpn_rpg7                                 = 0.2, 0.07
-
-;WP_SVD
-pri_a17_gauss_rifle                      = ;NO TRADE          
-wpn_gauss                                = 0.25, 0.11
-wpn_svd                                  = 0.19, 0.05
-wpn_svd_nimble                           = 0.23, 0.08
-
-;WP_SVU
-wpn_svu                                  = 0.25, 0.16
-wpn_svu_nimble                           = 0.24, 0.15
-
-;WP_VAL
-wpn_val                                  = 0.22, 0.15
-
-;EQU_STLK
-bandit_exo_outfit                        = 0.64, 0.54
-bandit_novice_outfit                     = 0.25, 0.22
-banditmerc_outfit                        = 0.55, 0.45
-cs_heavy_outfit                          = 0.41, 0.37
-cs_light_novice_outfit                   = 0.51, 0.47
-cs_light_outfit                          = 0.55, 0.48
-cs_medium_outfit                         = 0.54, 0.51
-cs_novice_outfit                         = 0.33, 0.22
-dolg_exo_outfit                          = 0.44, 0.37
-dolg_heavy_outfit                        = 0.5, 0.36
-dolg_novice_outfit                       = 0.43, 0.41
-dolg_outfit                              = 0.37, 0.35
-dolg_scientific_outfit                   = 0.7, 0.59
-ecolog_guard_outfit                      = 0.69, 0.69
-ecolog_outfit_green                      = 0.27, 0.25
-ecolog_outfit_orange                     = 0.25, 0.21
-exo_outfit                               = 0.56, 0.53
-merc_exo_outfit                          = 0.39, 0.25
-merc_novice_outfit                       = 0.56, 0.5
-merc_outfit                              = 0.52, 0.4
-merc_scientific_outfit                   = 0.64, 0.49
-military_exo_outfit                      = 0.48, 0.48
-military_novice_outfit                   = 0.36, 0.3
-military_outfit                          = 0.64, 0.51
-monolith_exo_outfit                      = 0.59, 0.54
-monolith_novice_outfit                   = 0.38, 0.25
-monolith_outfit                          = 0.65, 0.55
-monolith_scientific_outfit               = 0.39, 0.38
-novice_outfit                            = 0.57, 0.42
-scientific_outfit                        = 0.62, 0.5
-specops_outfit                           = 0.48, 0.48
-stalker_outfit                           = 0.7, 0.6
-stalker_outfit_barge                     = 0.3, 0.29
-svoboda_exo_outfit                       = 0.56, 0.48
-svoboda_heavy_outfit                     = 0.29, 0.25
-svoboda_heavy_outfit_2                   = 0.44, 0.38
-svoboda_light_outfit                     = 0.51, 0.39
-svoboda_novice_outfit                    = 0.38, 0.29
-svoboda_scientific_outfit                = 0.42, 0.31
-trenchcoat_outfit                        = 0.4, 0.4
-
-;E_HLMET
-helm_battle                              = 0.33, 0.29
-helm_hardhat                             = 0.42, 0.42
-helm_hardhat_snag                        = 0.38, 0.33
-helm_m40                                 = 0.38, 0.31
-helm_protective                          = 0.4, 0.33
-helm_respirator                          = 0.38, 0.25
-helm_respirator_joker                    = 0.7, 0.67
-helm_tactic                              = 0.41, 0.35
-deployable_mgun                          = ;NO TRADE          
-wpn_rpg7_missile                         = ;NO TRADE          
-yantar_deployable_mgun                   = ;NO TRADE          
+1p29                                               ; NO TRADE
+9x39scope                                          ; NO TRADE
+ac10632                                            ; NO TRADE
+ac11090                                            ; NO TRADE
+acog                                               ; NO TRADE
+addon                                              ; NO TRADE
+af_ameba_mica                                      ; NO TRADE
+af_ameba_slime                                     ; NO TRADE
+af_ameba_slug                                      ; NO TRADE
+af_baloon                                          ; NO TRADE
+af_blood                                           ; NO TRADE
+af_cristall                                        ; NO TRADE
+af_cristall_flower                                 ; NO TRADE
+af_drops                                           ; NO TRADE
+af_dummy_battery                                   ; NO TRADE
+af_dummy_dummy                                     ; NO TRADE
+af_dummy_glassbeads                                ; NO TRADE
+af_dummy_pellicle                                  ; NO TRADE
+af_dummy_spring                                    ; NO TRADE
+af_electra_flash                                   ; NO TRADE
+af_electra_moonlight                               ; NO TRADE
+af_electra_sparkler                                ; NO TRADE
+af_eye                                             ; NO TRADE
+af_fire                                            ; NO TRADE
+af_fireball                                        ; NO TRADE
+af_fuzz_kolobok                                    ; NO TRADE
+af_glass                                           ; NO TRADE
+af_gold_fish                                       ; NO TRADE
+af_gravi                                           ; NO TRADE
+af_ice                                             ; NO TRADE
+af_medusa                                          ; NO TRADE
+af_mincer_meat                                     ; NO TRADE
+af_night_star                                      ; NO TRADE
+af_rusty_kristall                                  ; NO TRADE
+af_rusty_sea                                       ; NO TRADE
+af_rusty_thorn                                     ; NO TRADE
+af_soul                                            ; NO TRADE
+af_vyvert                                          ; NO TRADE
+ammo_10x22_fmj                                     ; NO TRADE
+ammo_10x22_hp                                      ; NO TRADE
+ammo_10x25_fmj                                     ; NO TRADE
+ammo_10x25_hp                                      ; NO TRADE
+ammo_11.43x23_fmj                                  ; NO TRADE
+ammo_11.43x23_hydro                                ; NO TRADE
+ammo_12.7x55                                       ; NO TRADE
+ammo_12x70_buck                                    ; NO TRADE
+ammo_12x76_zhekan                                  ; NO TRADE
+ammo_12x76_zhekan_heli                             ; NO TRADE
+ammo_357_fmj                                       ; NO TRADE
+ammo_357_hp                                        ; NO TRADE
+ammo_4.6x30_ap                                     ; NO TRADE
+ammo_4.6x30_fmj                                    ; NO TRADE
+ammo_5.45x39_ap                                    ; NO TRADE
+ammo_5.45x39_fmj                                   ; NO TRADE
+ammo_5.56x45_ap                                    ; NO TRADE
+ammo_5.56x45_ss190                                 ; NO TRADE
+ammo_5.7x28_ss190                                  ; NO TRADE
+ammo_5.7x28_ss192                                  ; NO TRADE
+ammo_50_beowulf_hp                                 ; NO TRADE
+ammo_50_beowulf_jfp                                ; NO TRADE
+ammo_50ae_fmj                                      ; NO TRADE
+ammo_50ae_hp                                       ; NO TRADE
+ammo_6.8x43_fmj                                    ; NO TRADE
+ammo_6.8x43_sst                                    ; NO TRADE
+ammo_7.62x25_fmj                                   ; NO TRADE
+ammo_7.62x25_hp                                    ; NO TRADE
+ammo_7.62x39_ap                                    ; NO TRADE
+ammo_7.62x39_fmj                                   ; NO TRADE
+ammo_7.62x51_ap                                    ; NO TRADE
+ammo_7.62x51_fmj                                   ; NO TRADE
+ammo_7.62x54_7h1                                   ; NO TRADE
+ammo_7.62x54_fmj                                   ; NO TRADE
+ammo_8.58x70_ap                                    ; NO TRADE
+ammo_8.58x70_jsp                                   ; NO TRADE
+ammo_9x18_fmj                                      ; NO TRADE
+ammo_9x18_pmm                                      ; NO TRADE
+ammo_9x19_fmj                                      ; NO TRADE
+ammo_9x19_pbp                                      ; NO TRADE
+ammo_9x39_ap                                       ; NO TRADE
+ammo_9x39_pab9                                     ; NO TRADE
+ammo_gauss                                         ; NO TRADE
+ammo_gauss_cardan                                  ; NO TRADE
+ammo_m134                                          ; NO TRADE
+ammo_m209                                          ; NO TRADE
+ammo_og-7b                                         ; NO TRADE
+ammo_pkm_100                                       ; NO TRADE
+ammo_vog-25                                        ; NO TRADE
+anomaly_scaner                                     ; NO TRADE
+antirad                                            ; NO TRADE
+army_patch                                         ; NO TRADE
+artefact_container                                 ; NO TRADE
+bad_psy_helmet                                     ; NO TRADE
+bandage                                            ; NO TRADE
+bandit_exo_outfit                                  = 2,2
+bandit_novice_outfit                               ; NO TRADE
+bandit_patch                                       ; NO TRADE
+banditmerc_outfit                                  ; NO TRADE
+bread                                              ; NO TRADE
+c-more                                             ; NO TRADE
+cit_doctors_key                                    ; NO TRADE
+conserva                                           ; NO TRADE
+cs_heavy_outfit                                    ; NO TRADE
+cs_light_novice_outfit                             ; NO TRADE
+cs_light_outfit                                    ; NO TRADE
+cs_medium_outfit                                   ; NO TRADE
+cs_novice_outfit                                   ; NO TRADE
+csky_patch                                         ; NO TRADE
+decoder                                            ; NO TRADE
+deployable_mgun                                    ; NO TRADE
+detector_advanced                                  ; NO TRADE
+detector_elite                                     ; NO TRADE
+detector_scientific                                ; NO TRADE
+detector_simple                                    ; NO TRADE
+docter_sight                                       ; NO TRADE
+dolg_exo_outfit                                    = 2,2
+dolg_heavy_outfit                                  ; NO TRADE
+dolg_novice_outfit                                 ; NO TRADE
+dolg_outfit                                        ; NO TRADE
+dolg_scientific_outfit                             = 2,2
+drug_anabiotic                                     ; NO TRADE
+drug_antidot                                       ; NO TRADE
+drug_booster                                       ; NO TRADE
+drug_coagulant                                     ; NO TRADE
+drug_psy_blockade                                  ; NO TRADE
+drug_radioprotector                                ; NO TRADE
+duty_patch                                         ; NO TRADE
+ecolog_guard_outfit                                ; NO TRADE
+ecolog_outfit_green                                ; NO TRADE
+ecolog_outfit_orange                               ; NO TRADE
+ecolog_patch                                       ; NO TRADE
+ekp                                                ; NO TRADE
+energy_drink                                       ; NO TRADE
+eot                                                ; NO TRADE
+exo_outfit                                         = 2,2
+freedom_patch                                      ; NO TRADE
+good_psy_helmet                                    ; NO TRADE
+grenade_f1                                         ; NO TRADE
+grenade_gd-05                                      ; NO TRADE
+grenade_rgd5                                       ; NO TRADE
+helm_battle                                        ; NO TRADE
+helm_hardhat                                       ; NO TRADE
+helm_hardhat_snag                                  ; NO TRADE
+helm_m40                                           ; NO TRADE
+helm_protective                                    ; NO TRADE
+helm_respirator                                    ; NO TRADE
+helm_respirator_joker                              ; NO TRADE
+helm_tactic                                        ; NO TRADE
+itm_actor_backpack                                 ; NO TRADE
+itm_backpack                                       ; NO TRADE
+itm_deployable_mgun                                ; NO TRADE
+itm_gunsmith_toolkit                               ; NO TRADE
+itm_outfit_toolkit                                 ; NO TRADE
+itm_pda_common                                     ; NO TRADE
+itm_pda_rare                                       ; NO TRADE
+itm_pda_uncommon                                   ; NO TRADE
+itm_repairkit_tier_1                               ; NO TRADE
+itm_repairkit_tier_2                               ; NO TRADE
+itm_repairkit_tier_3                               ; NO TRADE
+itm_sleepbag                                       ; NO TRADE
+kobra                                              ; NO TRADE
+kolbasa                                            ; NO TRADE
+main_story_1_quest_case                            ; NO TRADE
+main_story_2_lab_x18_documents                     ; NO TRADE
+main_story_3_lab_x16_documents                     ; NO TRADE
+medkit                                             ; NO TRADE
+medkit_army                                        ; NO TRADE
+medkit_scientic                                    ; NO TRADE
+merc_exo_outfit                                    = 2,2
+merc_novice_outfit                                 ; NO TRADE
+merc_outfit                                        ; NO TRADE
+merc_patch                                         ; NO TRADE
+merc_scientific_outfit                             = 2,2
+military_exo_outfit                                = 2,2
+military_novice_outfit                             ; NO TRADE
+military_outfit                                    ; NO TRADE
+monolith_exo_outfit                                = 2,2
+monolith_novice_outfit                             ; NO TRADE
+monolith_outfit                                    ; NO TRADE
+monolith_patch                                     ; NO TRADE
+monolith_scientific_outfit                         = 2,2
+mutant_part_boar_chop                              ; NO TRADE
+mutant_part_boar_leg                               ; NO TRADE
+mutant_part_burer_hand                             ; NO TRADE
+mutant_part_cat_tail                               ; NO TRADE
+mutant_part_chimera_claw                           ; NO TRADE
+mutant_part_chimera_kogot                          ; NO TRADE
+mutant_part_chimera_meat                           ; NO TRADE
+mutant_part_controller_glass                       ; NO TRADE
+mutant_part_controller_hand                        ; NO TRADE
+mutant_part_dog_meat                               ; NO TRADE
+mutant_part_dog_tail                               ; NO TRADE
+mutant_part_flesh_eye                              ; NO TRADE
+mutant_part_flesh_meat                             ; NO TRADE
+mutant_part_fracture_hand                          ; NO TRADE
+mutant_part_krovosos_jaw                           ; NO TRADE
+mutant_part_krovosos_meat                          ; NO TRADE
+mutant_part_pseudogigant_eye                       ; NO TRADE
+mutant_part_pseudogigant_hand                      ; NO TRADE
+mutant_part_psevdodog_meat                         ; NO TRADE
+mutant_part_psevdodog_tail                         ; NO TRADE
+mutant_part_snork_hand                             ; NO TRADE
+mutant_part_snork_leg                              ; NO TRADE
+mutant_part_tushkano_head                          ; NO TRADE
+mutant_part_tushkano_meat                          ; NO TRADE
+mutant_part_zombi_hand                             ; NO TRADE
+novice_outfit                                      ; NO TRADE
+po4x34                                             ; NO TRADE
+pri_a15_documents                                  ; NO TRADE
+pri_a15_wpn_ak74                                   ; NO TRADE
+pri_a15_wpn_ak74u                                  ; NO TRADE
+pri_a15_wpn_svu                                    ; NO TRADE
+pri_a15_wpn_wincheaster1300                        ; NO TRADE
+pri_a17_gauss_rifle                                ; NO TRADE
+pri_a25_explosive_charge_item                      ; NO TRADE
+pri_decoder_documents                              ; NO TRADE
+pso                                                ; NO TRADE
+pu                                                 ; NO TRADE
+scientific_outfit                                  = 2,2
+specops_outfit                                     ; NO TRADE
+stalker_outfit                                     ; NO TRADE
+stalker_outfit_barge                               ; NO TRADE
+stalker_patch                                      ; NO TRADE
+svoboda_exo_outfit                                 = 2,2
+svoboda_heavy_outfit                               ; NO TRADE
+svoboda_heavy_outfit_2                             ; NO TRADE
+svoboda_light_outfit                               ; NO TRADE
+svoboda_novice_outfit                              ; NO TRADE
+svoboda_scientific_outfit                          = 2,2
+test_container                                     ; NO TRADE
+trenchcoat_outfit                                  ; NO TRADE
+vodka                                              ; NO TRADE
+wpn_9a91                                           = 2,2
+wpn_9a91_1p29                                      ; NO TRADE
+wpn_9a91_ekp                                       ; NO TRADE
+wpn_9a91_kobra                                     ; NO TRADE
+wpn_9a91_pso                                       ; NO TRADE
+wpn_abakan                                         ; NO TRADE
+wpn_abakan_1p29                                    ; NO TRADE
+wpn_abakan_ekp                                     ; NO TRADE
+wpn_abakan_kobra                                   ; NO TRADE
+wpn_abakan_pso                                     ; NO TRADE
+wpn_addon_grenade_launcher                         ; NO TRADE
+wpn_addon_grenade_launcher_ag36                    ; NO TRADE
+wpn_addon_grenade_launcher_m203                    ; NO TRADE
+wpn_addon_silencer                                 ; NO TRADE
+wpn_addon_silencer10                               ; NO TRADE
+wpn_addon_silencer12                               ; NO TRADE
+wpn_addon_silencer45                               ; NO TRADE
+wpn_addon_silencer50                               ; NO TRADE
+wpn_addon_silencer545                              ; NO TRADE
+wpn_addon_silencer556                              ; NO TRADE
+wpn_addon_silencer68                               ; NO TRADE
+wpn_addon_silencer762                              ; NO TRADE
+wpn_addon_silencer9x39                             ; NO TRADE
+wpn_aek971                                         ; NO TRADE
+wpn_aek971_1p29                                    ; NO TRADE
+wpn_aek971_ekp                                     ; NO TRADE
+wpn_aek971_kobra                                   ; NO TRADE
+wpn_aek971_pso                                     ; NO TRADE
+wpn_aek973                                         ; NO TRADE
+wpn_aek973_1p29                                    ; NO TRADE
+wpn_aek973_ekp                                     ; NO TRADE
+wpn_aek973_kobra                                   ; NO TRADE
+wpn_aek973_pso                                     ; NO TRADE
+wpn_ak101                                          ; NO TRADE
+wpn_ak101_1p29                                     ; NO TRADE
+wpn_ak101_ekp                                      ; NO TRADE
+wpn_ak101_kobra                                    ; NO TRADE
+wpn_ak101_pso                                      ; NO TRADE
+wpn_ak102                                          ; NO TRADE
+wpn_ak102_1p29                                     ; NO TRADE
+wpn_ak102_ekp                                      ; NO TRADE
+wpn_ak102_kobra                                    ; NO TRADE
+wpn_ak102_pso                                      ; NO TRADE
+wpn_ak103                                          ; NO TRADE
+wpn_ak103_1p29                                     ; NO TRADE
+wpn_ak103_ekp                                      ; NO TRADE
+wpn_ak103_kobra                                    ; NO TRADE
+wpn_ak103_pso                                      ; NO TRADE
+wpn_ak104                                          ; NO TRADE
+wpn_ak104_1p29                                     ; NO TRADE
+wpn_ak104_ekp                                      ; NO TRADE
+wpn_ak104_kobra                                    ; NO TRADE
+wpn_ak104_pso                                      ; NO TRADE
+wpn_ak105                                          ; NO TRADE
+wpn_ak105_1p29                                     ; NO TRADE
+wpn_ak105_ekp                                      ; NO TRADE
+wpn_ak105_kobra                                    ; NO TRADE
+wpn_ak105_pso                                      ; NO TRADE
+wpn_ak12                                           ; NO TRADE
+wpn_ak12_762                                       ; NO TRADE
+wpn_ak12_762_ac11090                               ; NO TRADE
+wpn_ak12_762_acog                                  ; NO TRADE
+wpn_ak12_762_c-more                                ; NO TRADE
+wpn_ak12_762_eot                                   ; NO TRADE
+wpn_ak12_ac11090                                   ; NO TRADE
+wpn_ak12_acog                                      ; NO TRADE
+wpn_ak12_c-more                                    ; NO TRADE
+wpn_ak12_eot                                       ; NO TRADE
+wpn_ak47                                           ; NO TRADE
+wpn_ak74                                           ; NO TRADE
+wpn_ak74_1p29                                      ; NO TRADE
+wpn_ak74_ekp                                       ; NO TRADE
+wpn_ak74_kobra                                     ; NO TRADE
+wpn_ak74_pso                                       ; NO TRADE
+wpn_ak74m                                          ; NO TRADE
+wpn_ak74m_1p29                                     ; NO TRADE
+wpn_ak74m_ekp                                      ; NO TRADE
+wpn_ak74m_kobra                                    ; NO TRADE
+wpn_ak74m_pso                                      ; NO TRADE
+wpn_ak74u                                          ; NO TRADE
+wpn_ak74u_1p29                                     ; NO TRADE
+wpn_ak74u_ekp                                      ; NO TRADE
+wpn_ak74u_snag                                     ; NO TRADE
+wpn_akm                                            ; NO TRADE
+wpn_akm_1p29                                       ; NO TRADE
+wpn_akm_ekp                                        ; NO TRADE
+wpn_akm_kobra                                      ; NO TRADE
+wpn_akm_pso                                        ; NO TRADE
+wpn_akms                                           ; NO TRADE
+wpn_akms_1p29                                      ; NO TRADE
+wpn_akms_ekp                                       ; NO TRADE
+wpn_akms_kobra                                     ; NO TRADE
+wpn_akms_pso                                       ; NO TRADE
+wpn_aks47                                          ; NO TRADE
+wpn_aks74                                          ; NO TRADE
+wpn_aks74_1p29                                     ; NO TRADE
+wpn_aks74_ekp                                      ; NO TRADE
+wpn_aks74_kobra                                    ; NO TRADE
+wpn_aks74_pso                                      ; NO TRADE
+wpn_aks74n                                         ; NO TRADE
+wpn_aks74n_1p29                                    ; NO TRADE
+wpn_aks74n_ekp                                     ; NO TRADE
+wpn_aks74n_kobra                                   ; NO TRADE
+wpn_aks74n_pso                                     ; NO TRADE
+wpn_aps                                            ; NO TRADE
+wpn_ar15                                           ; NO TRADE
+wpn_ar15_ac11090                                   ; NO TRADE
+wpn_ar15_acog                                      ; NO TRADE
+wpn_ar15_c-more                                    ; NO TRADE
+wpn_ar15_eot                                       ; NO TRADE
+wpn_aug                                            ; NO TRADE
+wpn_avt40                                          = 2,2
+wpn_avt40_pu                                       ; NO TRADE
+wpn_beretta                                        ; NO TRADE
+wpn_beretta96                                      ; NO TRADE
+wpn_binoc                                          ; NO TRADE
+wpn_bizon                                          ; NO TRADE
+wpn_bizon_1p29                                     ; NO TRADE
+wpn_bizon_ekp                                      ; NO TRADE
+wpn_bizon_kobra                                    ; NO TRADE
+wpn_bizon_pso                                      ; NO TRADE
+wpn_bm16                                           ; NO TRADE
+wpn_bm16_full                                      ; NO TRADE
+wpn_colt1911                                       ; NO TRADE
+wpn_colt1911_sk2                                   ; NO TRADE
+wpn_colt1911_sk3                                   ; NO TRADE
+wpn_coltde                                         ; NO TRADE
+wpn_cz40                                           ; NO TRADE
+wpn_cz52                                           ; NO TRADE
+wpn_cz75                                           ; NO TRADE
+wpn_desert_eagle                                   ; NO TRADE
+wpn_desert_eagle_357                               ; NO TRADE
+wpn_desert_eagle_nimble                            ; NO TRADE
+wpn_fiveseven                                      ; NO TRADE
+wpn_fn2000                                         ; NO TRADE
+wpn_fn2000_acog                                    ; NO TRADE
+wpn_fn2000_nimble                                  = 2,2
+wpn_fnp40                                          ; NO TRADE
+wpn_fnp45                                          ; NO TRADE
+wpn_fort                                           ; NO TRADE
+wpn_fort_snag                                      ; NO TRADE
+wpn_g3                                             ; NO TRADE
+wpn_g36                                            ; NO TRADE
+wpn_g36_nimble                                     = 2,2
+wpn_g36c                                           ; NO TRADE
+wpn_g36c_ac11090                                   ; NO TRADE
+wpn_g36c_acog                                      ; NO TRADE
+wpn_g36c_c-more                                    ; NO TRADE
+wpn_g36c_eot                                       ; NO TRADE
+wpn_g3_acog                                        ; NO TRADE
+wpn_g3a3                                           ; NO TRADE
+wpn_g3a3_ac11090                                   ; NO TRADE
+wpn_g3a3_acog                                      ; NO TRADE
+wpn_g3a3_c-more                                    ; NO TRADE
+wpn_g3a3_eot                                       ; NO TRADE
+wpn_g3sg1                                          ; NO TRADE
+wpn_galil                                          ; NO TRADE
+wpn_gauss                                          = 2,2
+wpn_glock17                                        ; NO TRADE
+wpn_glock20                                        ; NO TRADE
+wpn_glock21                                        ; NO TRADE
+wpn_glock35                                        ; NO TRADE
+wpn_groza                                          ; NO TRADE
+wpn_groza1                                         ; NO TRADE
+wpn_groza1_pso                                     ; NO TRADE
+wpn_groza_nimble                                   = 2,2
+wpn_groza_pso                                      ; NO TRADE
+wpn_gsh18                                          ; NO TRADE
+wpn_hk416                                          ; NO TRADE
+wpn_hk416_ac11090                                  ; NO TRADE
+wpn_hk416_acog                                     ; NO TRADE
+wpn_hk416_c-more                                   ; NO TRADE
+wpn_hk416_eot                                      ; NO TRADE
+wpn_hk417                                          ; NO TRADE
+wpn_hk417_acog                                     ; NO TRADE
+wpn_hk417_eot                                      ; NO TRADE
+wpn_hpsa                                           ; NO TRADE
+wpn_hpsa40                                         ; NO TRADE
+wpn_knife                                          ; NO TRADE
+wpn_l115a3                                         ; NO TRADE
+wpn_l85                                            ; NO TRADE
+wpn_l85_acog                                       ; NO TRADE
+wpn_l96                                            = 2,2
+wpn_lr300                                          ; NO TRADE
+wpn_lr300_ac11090                                  ; NO TRADE
+wpn_lr300_acog                                     ; NO TRADE
+wpn_lr300_c-more                                   ; NO TRADE
+wpn_lr300_eot                                      ; NO TRADE
+wpn_lr680                                          ; NO TRADE
+wpn_lr680_ac11090                                  ; NO TRADE
+wpn_lr680_acog                                     ; NO TRADE
+wpn_lr680_c-more                                   ; NO TRADE
+wpn_lr680_eot                                      ; NO TRADE
+wpn_m134                                           ; NO TRADE
+wpn_m14                                            ; NO TRADE
+wpn_m16                                            ; NO TRADE
+wpn_m16_68                                         ; NO TRADE
+wpn_m16_68_acog                                    ; NO TRADE
+wpn_m16_acog                                       ; NO TRADE
+wpn_m249                                           ; NO TRADE
+wpn_m249_eot                                       ; NO TRADE
+wpn_m249_nimble                                    = 2,2
+wpn_m249_nimble_eot                                ; NO TRADE
+wpn_m4a1                                           ; NO TRADE
+wpn_m4a1_50                                        = 2,2
+wpn_m4a1_50_ac11090                                ; NO TRADE
+wpn_m4a1_50_acog                                   ; NO TRADE
+wpn_m4a1_50_c-more                                 ; NO TRADE
+wpn_m4a1_50_eot                                    ; NO TRADE
+wpn_m4a1_ac11090                                   ; NO TRADE
+wpn_m4a1_acog                                      ; NO TRADE
+wpn_m4a1_c-more                                    ; NO TRADE
+wpn_m4a1_eot                                       ; NO TRADE
+wpn_m4bm                                           ; NO TRADE
+wpn_m4bm_ac11090                                   ; NO TRADE
+wpn_m4bm_acog                                      ; NO TRADE
+wpn_m4bm_c-more                                    ; NO TRADE
+wpn_m4bm_eot                                       ; NO TRADE
+wpn_m60                                            = 2,2
+wpn_mine                                           ; NO TRADE
+wpn_mn91                                           ; NO TRADE
+wpn_mn91_pu                                        ; NO TRADE
+wpn_mossberg                                       ; NO TRADE
+wpn_mp412                                          ; NO TRADE
+wpn_mp440                                          ; NO TRADE
+wpn_mp443                                          ; NO TRADE
+wpn_mp5                                            ; NO TRADE
+wpn_mp5_ac11090                                    ; NO TRADE
+wpn_mp5_acog                                       ; NO TRADE
+wpn_mp5_c-more                                     ; NO TRADE
+wpn_mp5_eot                                        ; NO TRADE
+wpn_mp5_nimble                                     = 2,2
+wpn_mp5_nimble_ac11090                             ; NO TRADE
+wpn_mp5_nimble_acog                                ; NO TRADE
+wpn_mp5_nimble_c-more                              ; NO TRADE
+wpn_mp5_nimble_eot                                 ; NO TRADE
+wpn_mp5sd                                          ; NO TRADE
+wpn_mp5sd_ac11090                                  ; NO TRADE
+wpn_mp5sd_acog                                     ; NO TRADE
+wpn_mp5sd_c-more                                   ; NO TRADE
+wpn_mp5sd_eot                                      ; NO TRADE
+wpn_mp5sd_nimble                                   = 2,2
+wpn_mp5sd_nimble_ac11090                           ; NO TRADE
+wpn_mp5sd_nimble_acog                              ; NO TRADE
+wpn_mp5sd_nimble_c-more                            ; NO TRADE
+wpn_mp5sd_nimble_eot                               ; NO TRADE
+wpn_mp7                                            ; NO TRADE
+wpn_mp7_acog                                       ; NO TRADE
+wpn_mp7_eot                                        ; NO TRADE
+wpn_ots33                                          ; NO TRADE
+wpn_p90                                            ; NO TRADE
+wpn_p90_ac11090                                    ; NO TRADE
+wpn_p90_acog                                       ; NO TRADE
+wpn_p90_c-more                                     ; NO TRADE
+wpn_pb                                             ; NO TRADE
+wpn_pkm                                            ; NO TRADE
+wpn_pkm_ekp                                        ; NO TRADE
+wpn_pkm_zulus                                      ; NO TRADE
+wpn_pkm_zulus_ekp                                  ; NO TRADE
+wpn_pm                                             ; NO TRADE
+wpn_pm_actor                                       ; NO TRADE
+wpn_pmm                                            ; NO TRADE
+wpn_pp2000                                         ; NO TRADE
+wpn_protecta                                       ; NO TRADE
+wpn_protecta_nimble                                = 2,2
+wpn_remington870                                   ; NO TRADE
+wpn_remington870_ac11090                           ; NO TRADE
+wpn_remington870_c-more                            ; NO TRADE
+wpn_remington870_eot                               ; NO TRADE
+wpn_rg-6                                           ; NO TRADE
+wpn_rpg7                                           ; NO TRADE
+wpn_rpk                                            ; NO TRADE
+wpn_rpk74                                          ; NO TRADE
+wpn_rpk74_1p29                                     ; NO TRADE
+wpn_rpk74_ekp                                      ; NO TRADE
+wpn_rpk74_pso                                      ; NO TRADE
+wpn_saiga                                          ; NO TRADE
+wpn_saiga_1p29                                     ; NO TRADE
+wpn_saiga_ekp                                      ; NO TRADE
+wpn_saiga_kobra                                    ; NO TRADE
+wpn_saiga_nimble                                   = 2,2
+wpn_saiga_nimble_1p29                              ; NO TRADE
+wpn_saiga_nimble_ekp                               ; NO TRADE
+wpn_saiga_nimble_kobra                             ; NO TRADE
+wpn_saiga_nimble_pso                               ; NO TRADE
+wpn_saiga_pso                                      ; NO TRADE
+wpn_scar-h                                         ; NO TRADE
+wpn_scar-h_ac11090                                 ; NO TRADE
+wpn_scar-h_acog                                    ; NO TRADE
+wpn_scar-h_c-more                                  ; NO TRADE
+wpn_scar-h_eot                                     ; NO TRADE
+wpn_sig220                                         ; NO TRADE
+wpn_sig220_nimble                                  = 2,2
+wpn_sig550                                         ; NO TRADE
+wpn_sig550_ac11090                                 ; NO TRADE
+wpn_sig550_acog                                    ; NO TRADE
+wpn_sig550_c-more                                  ; NO TRADE
+wpn_sig550_eot                                     ; NO TRADE
+wpn_sig550_luckygun                                ; NO TRADE
+wpn_sig550_luckygun_ac11090                        ; NO TRADE
+wpn_sig550_luckygun_acog                           ; NO TRADE
+wpn_sig550_luckygun_c-more                         ; NO TRADE
+wpn_sig550_luckygun_eot                            ; NO TRADE
+wpn_sks                                            ; NO TRADE
+wpn_sks_pu                                         ; NO TRADE
+wpn_spas12                                         ; NO TRADE
+wpn_spas12_nimble                                  = 2,2
+wpn_sr3m                                           = 2,2
+wpn_sr3m                                           = 2,2
+wpn_sr3m_1p29                                      ; NO TRADE
+wpn_sr3m_ekp                                       ; NO TRADE
+wpn_sr3m_kobra                                     ; NO TRADE
+wpn_sr3m_pso                                       ; NO TRADE
+wpn_stg58                                          ; NO TRADE
+wpn_stg58                                          ; NO TRADE
+wpn_stg58_acog                                     ; NO TRADE
+wpn_sv98                                           ; NO TRADE
+wpn_svd                                            ; NO TRADE
+wpn_svd_nimble                                     = 2,2
+wpn_svt40                                          = 2,2
+wpn_svt40                                          = 2,2
+wpn_svt40_pu                                       ; NO TRADE
+wpn_svu                                            ; NO TRADE
+wpn_svu_nimble                                     = 2,2
+wpn_toz34                                          ; NO TRADE
+wpn_toz34_sk1                                      ; NO TRADE
+wpn_toz34_so                                       ; NO TRADE
+wpn_toz34_so_sk1                                   ; NO TRADE
+wpn_trg22                                          ; NO TRADE
+wpn_trg42                                          ; NO TRADE
+wpn_tt33                                           ; NO TRADE
+wpn_tt33_2                                         ; NO TRADE
+wpn_ump40                                          ; NO TRADE
+wpn_ump40_ac11090                                  ; NO TRADE
+wpn_ump40_acog                                     ; NO TRADE
+wpn_ump40_c-more                                   ; NO TRADE
+wpn_ump40_eot                                      ; NO TRADE
+wpn_ump45                                          ; NO TRADE
+wpn_ump45_ac11090                                  ; NO TRADE
+wpn_ump45_acog                                     ; NO TRADE
+wpn_ump45_c-more                                   ; NO TRADE
+wpn_ump45_eot                                      ; NO TRADE
+wpn_usp                                            ; NO TRADE
+wpn_usp10                                          ; NO TRADE
+wpn_usp40                                          ; NO TRADE
+wpn_usp_nimble                                     ; NO TRADE
+wpn_val                                            ; NO TRADE
+wpn_val_1p29                                       ; NO TRADE
+wpn_val_ekp                                        ; NO TRADE
+wpn_val_kobra                                      ; NO TRADE
+wpn_val_pso                                        ; NO TRADE
+wpn_vepr12                                         ; NO TRADE
+wpn_vepr12_1p29                                    ; NO TRADE
+wpn_vepr12_ekp                                     ; NO TRADE
+wpn_vepr12_kobra                                   ; NO TRADE
+wpn_vepr12_pso                                     ; NO TRADE
+wpn_vintorez                                       ; NO TRADE
+wpn_vintorez_nimble                                = 2,2
+wpn_vks                                            = 2,2
+wpn_vsk94                                          ; NO TRADE
+wpn_vsk94_pso                                      ; NO TRADE
+wpn_vz65                                           ; NO TRADE
+wpn_walther                                        ; NO TRADE
+wpn_walther40                                      ; NO TRADE
+wpn_wincheaster1300                                ; NO TRADE
+wpn_wincheaster1300_trapper                        = 2,2
+yantar_deployable_mgun                             ; NO TRADE
 
 [supplies_generic]
-
-
-[supplies_heavy_pockets]:supplies_generic
-
-
+bandit_exo_outfit                                  = 1,1
+dolg_exo_outfit                                    = 1,1
+dolg_scientific_outfit                             = 1,1
+exo_outfit                                         = 1,1
+merc_exo_outfit                                    = 1,1
+merc_scientific_outfit                             = 1,1
+military_exo_outfit                                = 1,1
+monolith_exo_outfit                                = 1,1
+monolith_scientific_outfit                         = 1,1
+scientific_outfit                                  = 1,1
+svoboda_exo_outfit                                 = 1,1
+svoboda_scientific_outfit                          = 1,1
+wpn_9a91                                           = 1,1
+wpn_avt40                                          = 1,1
+wpn_fn2000_nimble                                  = 1,1
+wpn_g36_nimble                                     = 1,1
+wpn_gauss                                          = 1,1
+wpn_groza_nimble                                   = 1,1
+wpn_l96                                            = 1,1
+wpn_m249_nimble                                    = 1,1
+wpn_m4a1_50                                        = 1,1
+wpn_m60                                            = 1,1
+wpn_mp5_nimble                                     = 1,1
+wpn_mp5sd_nimble                                   = 1,1
+wpn_protecta_nimble                                = 1,1
+wpn_saiga_nimble                                   = 1,1
+wpn_sig220_nimble                                  = 1,1
+wpn_spas12_nimble                                  = 1,1
+wpn_sr3m                                           = 1,1
+wpn_svd_nimble                                     = 1,1
+wpn_svt40                                          = 1,1
+wpn_svu_nimble                                     = 1,1
+wpn_vintorez_nimble                                = 1,1
+wpn_vks                                            = 1,1
+wpn_wincheaster1300_trapper                        = 1,1

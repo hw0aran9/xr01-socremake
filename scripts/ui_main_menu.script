@@ -8,7 +8,7 @@
 
 
 
-local SKIP_FACTION_SELECTION = true -- TRUE to disable faction selection menu and start normally
+local SKIP_FACTION_SELECTION = false -- TRUE to disable faction selection menu and start normally
 
 
 
@@ -53,7 +53,7 @@ function main_menu:InitControls()
 
 	local _ver = xml:InitStatic		("static_version",self)
 	local mm						= _G.main_menu.get_main_menu()
-	_ver:TextControl():SetText		("Shadow of Chernobyl remake ver.  " .. (_G.GAME_VERSION))
+	_ver:TextControl():SetText		(_G.GAME_VERSION)
 	
 	-- Message Window 
 	self.msg_wnd = xml:InitFrame("msg_wnd:background",self)
@@ -365,7 +365,7 @@ function main_menu:SetMsg(text,tmr)
 	self.msg_wnd:Show(true)
 	self.msg_wnd_text:SetText(text)
 	self.msg_wnd_text:AdjustHeightToText()
-	self.msg_wnd_text:SetWndSize(vector2():set(1024,self.msg_wnd_text:GetHeight()+10))
+	self.msg_wnd_text:SetWndSize(vector2():set(1024,self.msg_wnd_text:GetHeight()+44))
 	self.msg_wnd_text:SetWndPos(vector2():set(0,20))
 	
 	self.msg_wnd:SetWndSize(vector2():set(1024,self.msg_wnd_text:GetHeight()+44))
