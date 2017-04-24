@@ -8,7 +8,7 @@
 
 
 
-local SKIP_FACTION_SELECTION = false -- TRUE to disable faction selection menu and start normally
+local SKIP_FACTION_SELECTION = true -- TRUE to disable faction selection menu and start normally
 
 
 
