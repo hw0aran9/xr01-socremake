@@ -185,11 +185,9 @@ val_smatr_terrain_6_4_box
 val_smatr_terrain_7_6_box
 val_smatr_terrain_8_6_box
 val_kolbasa
-val_level_changer_to_darkscape
 val_level_changer_to_garbage_1
 val_level_changer_to_garbage_2
 val_level_changer_to_labx18
-val_level_changer_to_tc
 _lights_hanging_lamp
 _lights_hanging_lamp_0014
 light_alarm_glass
