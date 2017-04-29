@@ -110,12 +110,12 @@ bip01_pelvis 				= 0.5, 1, 0.3
 bip01_spine 		 		= 1.0, 1, 0.8
 bip01_spine1 		 		= 1.0, 1, 0.8
 bip01_spine2 		 		= 1.0, 1, 0.8
-bip01_neck 			 		= 1.0, 0, 1.0
-bip01_head 			 		= 2.0, 0, 1.0, 	3
-eyelid_1 			 		= 2.0, 0, 1.0, 	3
-eye_left 			 		= 2.0, 0, 1.0, 	3
-eye_right 			 		= 2.0, 0, 1.0, 	3
-jaw_1 		 		 		= 2.0, 0, 1.0
+bip01_neck 			 		= 3.0, 0, 3.0
+bip01_head 			 		= 5.0, 0, 5.0, 	3
+eyelid_1 			 		= 7.0, 0, 7.0, 	3
+eye_left 			 		= 7.0, 0, 7.0, 	3
+eye_right 			 		= 7.0, 0, 7.0, 	3
+jaw_1 		 		 		= 5.0, 0, 5.0
 
 bip01_l_clavicle	 		= 0.35, 10, 0.45
 bip01_l_upperarm	 		= 0.25, 10, 0.45
@@ -230,7 +230,7 @@ radiation_immunity 			= 0.5
 telepatic_immunity 			= 0.5
 chemical_burn_immunity 		= 0.5
 explosion_immunity 			= 0.5
-fire_wound_immunity  		= 1.0
+fire_wound_immunity  		= 1.5
 wound_2_immunity  			= 1.0
 
 [stalker_condition]
@@ -257,7 +257,7 @@ use_limping_state			= off
 limping_threshold			= 0.05
 
 ;открытые раны
-bleeding_v					= 0.0	;потеря крови при номинальной ране в секунду
+bleeding_v					= 0.05	;потеря крови при номинальной ране в секунду
 wound_incarnation_v			= 0.001		;крутизна кривой заживления (какой процент раны останется после заживления в игровую секунду)
 min_wound_size				= 0.01
 
@@ -397,7 +397,7 @@ sound_perceive_section			= stalker_sound_perceive
 vision_danger_section			= stalker_vision_danger
 vision_free_section				= stalker_vision_free
 eye_fov							= 90
-eye_range						= 150
+eye_range						= 120
 far_plane_factor				= 1.0		; фактор дальности тумана
 fog_density_factor				= 0.05		; фактор плотности тумана
 
